@@ -3501,31 +3501,31 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="CoverExteriorColorName">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="CoverInteriorColorName">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="EndsheetsLayoutColorName">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="EndsheetsPrintingColorName">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                      
+
 
                     <elementSpec ident="Binding">
                         <classes>
@@ -3641,6 +3641,43 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="PrintImagesBlackWhite">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- 
+<!ELEMENT Share EMPTY>
+<!ATTLIST Share
+	Type CDATA #REQUIRED
+	Quantity CDATA #REQUIRED
+> -->
+                    <elementSpec ident="Shares">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="Share"/>
+                            </rng:oneOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="CompoundObjectID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="Share">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                           <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Quantity">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
