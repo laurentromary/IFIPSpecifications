@@ -608,21 +608,21 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
-                    
+
+
                     <elementSpec ident="ConferenceReference">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
-                    
+
+
                     <!-- <!ENTITY % GrantsModel "(MetadataGrant, AbstractGrant?, BodyPDFGrant?, BodyHTMLGrant?, BibliographyGrant?, ESMGrant?)">
 <!ELEMENT ChapterGrants (%GrantsModel;)>
 <
 >
                     -->
-                    
+
                     <elementSpec ident="ChapterGrants">
                         <classes>
                             <memberOf key="att.Typed"/>
@@ -631,7 +631,7 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="MetadataGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -640,7 +640,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="AbstractGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -649,7 +649,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BodyPDFGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -658,7 +658,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BodyHTMLGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -667,7 +667,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BibliographyGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -676,7 +676,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="ESMGrant">
                         <classes>
                             <memberOf key="att.Granted"/>
@@ -685,7 +685,7 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-                   
+
 
                     <!-- (PageHeaders?, AuthorGroup?, CollaboratorGroup?, TocChapter?, Abstract*, KeywordGroup*, AbbreviationGroup?, ArticleNote*)> -->
                     <elementSpec ident="ChapterHeader">
@@ -3761,7 +3761,7 @@
                             <memberOf key="att.Typed"/>
                         </classes>
                         <content>
-                           <rng:empty/>
+                            <rng:empty/>
                         </content>
                         <attList>
                             <attDef ident="Quantity">
@@ -4019,7 +4019,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="S700ElectronicDistributionDeadline">
                         <content>
                             <rng:oneOrMore>
@@ -4713,7 +4713,7 @@
                             </attDef>
                         </attList>
                     </classSpec>
-                    
+
                     <classSpec ident="att.Granted" type="atts">
                         <attList>
                             <attDef ident="Grant" usage="opt">
@@ -5345,22 +5345,22 @@
 <!ELEMENT AdditionalCoverFirstPage (#PCDATA)>
 <!ELEMENT AdditionalCoverLastPage (#PCDATA)>
 <!ELEMENT CoverFigure (MediaObject)>-->
-                    
+
                     <!-- MathML elements -->
                     <!-- Note: Springer does not use namespaces ... sigh -->
-                    
+
                     <elementSpec ident="math">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mrow">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mi">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5373,13 +5373,20 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mo">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
+                        <attList>
+                            <attDef ident="stretchy">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mspace">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5392,13 +5399,13 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="msub">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mn">
                         <content>
                             <rng:ref name="macro.anyXML"/>
