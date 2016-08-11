@@ -412,6 +412,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="MediaType">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
