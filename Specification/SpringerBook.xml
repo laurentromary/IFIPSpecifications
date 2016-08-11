@@ -2413,16 +2413,23 @@
                         </content>
                     </elementSpec>
 
-
+                    <!-- <!ELEMENT ChapterContext 
+                        (SeriesID?, SubSeriesID?, (BookSetID, BookSetTitle)*, VolumePackageID?, PartID?, SubPartID?, BookID?, BookTitle?)>
+                    -->
 
                     <elementSpec ident="ChapterContext">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
                                     <rng:ref name="SeriesID"/>
+                                    <rng:ref name="SubSeriesID"/>
+                                    <rng:ref name="BookSetID"/>
+                                    <rng:ref name="BookSetTitle"/>
+                                    <rng:ref name="VolumePackageID"/>
+                                    <rng:ref name="PartID"/>
+                                    <rng:ref name="SubPartID"/>
                                     <rng:ref name="BookID"/>
                                     <rng:ref name="BookTitle"/>
-                                    <rng:ref name="PartID"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
