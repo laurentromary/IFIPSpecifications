@@ -4538,7 +4538,7 @@
                     <!-- <!ELEMENT EquationSource (%EquationSourceModel;)*> -->
                     <elementSpec ident="EquationSource">
                         <content>
-                            <rng:text/>
+                            <rng:ref name="macro.anyXML"/>
                         </content>
                         <attList>
                             <attDef ident="Format">
@@ -5345,6 +5345,39 @@
 <!ELEMENT AdditionalCoverFirstPage (#PCDATA)>
 <!ELEMENT AdditionalCoverLastPage (#PCDATA)>
 <!ELEMENT CoverFigure (MediaObject)>-->
+                    
+                    <!-- MathML elements -->
+                    <!-- Note: Springer does not use namespaces ... sigh -->
+                    
+                    <elementSpec ident="math">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mrow">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mi">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mo">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mspace">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
                     <!-- Defining Text Macros -->
 
