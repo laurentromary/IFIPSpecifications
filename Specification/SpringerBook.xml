@@ -2201,13 +2201,25 @@
 
                     <elementSpec ident="Heading">
                         <content>
-                            <rng:text/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.simpleText"/>
+                                    <rng:ref name="model.referenceElements"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="SubHeading">
                         <content>
-                            <rng:text/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.simpleText"/>
+                                    <rng:ref name="model.referenceElements"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
