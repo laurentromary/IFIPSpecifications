@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T06:57:08Z. .CC-BY
+DTD generated from ODD source 2016-08-11T07:05:24Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -696,7 +696,7 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory|ChapterGrants)+)>
+<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory|ChapterGrants|ConferenceReference)+)>
 <!ATTLIST ChapterInfo
  %att.numbered.attributes;
  %att.OutputMedium.attributes;
@@ -822,6 +822,8 @@ CompoundObjectID CDATA #IMPLIED >
  %att.ID.attributes; >
 <!--doc: -->
 <!ELEMENT ConferenceInfo (%model.ConferenceInfoPart;)+>
+<!--doc: -->
+<!ELEMENT ConferenceReference  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Contact (%model.ContactPart;)+>
 <!--doc: -->
@@ -1073,7 +1075,8 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
 <!ELEMENT InternalRef (RefSource,RefTarget+)>
 <!ATTLIST InternalRef
- %att.ID.attributes; >
+ %att.ID.attributes;
+RefID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT IssueID  (#PCDATA)>
 <!--doc: -->
