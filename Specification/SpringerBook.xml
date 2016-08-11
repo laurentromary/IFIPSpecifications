@@ -2820,7 +2820,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
 
                     <elementSpec ident="ConfEventName">
                         <content>
@@ -3857,14 +3857,20 @@
 
                     <elementSpec ident="FixedPublicationDate">
                         <content>
-                            <rng:oneOrMore>
-                                <rng:ref name="model.DatePart"/>
-                                <rng:ref name="Hour"/>
-                                <rng:ref name="Reason"/>
-                            </rng:oneOrMore>
+                            <rng:group>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.DatePart"/>
+                                </rng:oneOrMore>
+                                <rng:optional>
+                                    <rng:ref name="Hour"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="Reason"/>
+                                </rng:optional>
+                            </rng:group>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="Reason">
                         <content>
                             <rng:text/>
