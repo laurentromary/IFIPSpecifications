@@ -2909,14 +2909,36 @@
                         </attList>
                     </elementSpec>
 
+                    <!-- 
+                    <!ELEMENT BookJobSheet 
+                    (PublisherInfo, (SeriesInfo+, SubSeriesInfo?, SeriesHeader?)?, BookInfo, AuthorGroup?, EditorGroup?, CollaboratorGroup?, ProductionInfo)>
+                    -->
+
                     <elementSpec ident="BookJobSheet">
                         <content>
                             <rng:group>
                                 <rng:ref name="PublisherInfo"/>
-                                <rng:ref name="SeriesInfo"/>
-                                <rng:ref name="SeriesHeader"/>
+                                <rng:optional>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="SeriesInfo"/>
+                                    </rng:oneOrMore>
+                                    <rng:optional>
+                                        <rng:ref name="SubSeriesInfo"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="SeriesHeader"/>
+                                    </rng:optional>
+                                </rng:optional>
                                 <rng:ref name="BookInfo"/>
-                                <rng:ref name="EditorGroup"/>
+                                <rng:optional>
+                                    <rng:ref name="AuthorGroup"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="EditorGroup"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="CollaboratorGroup"/>
+                                </rng:optional>
                                 <rng:ref name="ProductionInfo"/>
                             </rng:group>
                         </content>
