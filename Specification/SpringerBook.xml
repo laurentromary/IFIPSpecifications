@@ -1816,8 +1816,6 @@
                         </content>
                     </elementSpec>
 
-
-
                     <elementSpec ident="ConfEventAbbreviation">
                         <classes>
                             <memberOf key="model.ConferenceInfoPart"/>
@@ -3432,9 +3430,7 @@
 
                     <elementSpec ident="CoverProductionInfo">
                         <content>
-                            <rng:optional>
-                                <rng:ref name="SpineWidth"/>
-                            </rng:optional>
+                            <rng:ref name="macro.anyXML"/>
                         </content>
                         <attList>
                             <attDef ident="Style">
@@ -3505,6 +3501,31 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="CoverExteriorColorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="CoverInteriorColorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="EndsheetsLayoutColorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="EndsheetsPrintingColorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                      
 
                     <elementSpec ident="Binding">
                         <classes>
