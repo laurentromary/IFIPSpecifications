@@ -1893,6 +1893,9 @@
                     </elementSpec>
 
                     <elementSpec ident="Author">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                        </classes>
                         <content>
                             <rng:group>
                                 <rng:ref name="AuthorName"/>
@@ -1991,6 +1994,7 @@
 
                     <elementSpec ident="Para">
                         <classes>
+                            <memberOf key="att.ID"/>
                             <memberOf key="model.fullTextBlock"/>
                         </classes>
                         <content>
