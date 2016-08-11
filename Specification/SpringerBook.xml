@@ -1761,6 +1761,20 @@
 
                     <!-- Description of conferences -->
 
+                    <!-- <!ELEMENT ConferenceInfo ((ConfEventName | ConfSeriesName), ConfSeriesID*, ConfEventID*, ConfEventAbbreviation?, ConfNumber?, ConfEventLocation, (ConfEventDate | (ConfEventDateStart, ConfEventDateEnd)), ConfEventURL?)>
+<!ELEMENT ConfEventName (%SimpleTextModel;)*>
+<!ELEMENT ConfSeriesName (%SimpleTextModel;)*>
+<!ATTLIST ConfSeriesName 
+	ID ID #IMPLIED
+>
+<!ELEMENT ConfEventAbbreviation (#PCDATA)>
+<!ELEMENT ConfEventLocation (%SimpleTextModel; | City | Country)*>
+
+<content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+-->
+
                     <elementSpec ident="ConferenceInfo">
                         <content>
                             <rng:oneOrMore>
@@ -1778,6 +1792,29 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
+
+                    <elementSpec ident="ConfSeriesID">
+                        <classes>
+                            <!-- <!ATTLIST ConfSeriesID	Type (Springer | DBLP) #REQUIRED> -->
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="ConfEventID">
+                        <classes>
+                            <!-- <!ATTLIST ConfEventID	Type (Springer) #REQUIRED>
+                            -->
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
+
 
                     <elementSpec ident="ConfEventAbbreviation">
                         <classes>
@@ -1809,6 +1846,15 @@
                                     <rng:ref name="Country"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="ConfEventURL">
+                        <classes>
+                            <memberOf key="model.ConferenceInfoPart"/>
+                        </classes>
+                        <content>
+                            <rng:text/>
                         </content>
                     </elementSpec>
 
@@ -2836,10 +2882,9 @@
 
                     <elementSpec ident="ConfEventName">
                         <content>
-                            <rng:text/>
+                            <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-
 
 
                     <elementSpec ident="NumberInSeries">
