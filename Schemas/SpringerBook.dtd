@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T06:43:31Z. .CC-BY
+DTD generated from ODD source 2016-08-11T06:55:19Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -364,6 +364,10 @@ NumberingDepth CDATA #IMPLIED'>
 Type CDATA #IMPLIED'>
 <!ENTITY % att.Typed.attributes '
  %att.Typed.attribute.Type;'> 
+<!ENTITY % att.Granted.attribute.Grant '
+Grant CDATA #IMPLIED'>
+<!ENTITY % att.Granted.attributes '
+ %att.Granted.attribute.Grant;'> 
 <!ENTITY % att.FileChildrenQualifiers.attribute.FileRef '
 FileRef CDATA #IMPLIED'>
 
@@ -466,6 +470,10 @@ LastPage CDATA #IMPLIED >
  %att.ID.attributes;
  %att.OutputMedium.attributes; >
 <!--doc: -->
+<!ELEMENT AbstractGrant EMPTY>
+<!ATTLIST AbstractGrant
+ %att.Granted.attributes; >
+<!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara)*)>
 <!--doc: -->
 <!ELEMENT Affiliation (OrgDivision|OrgName|OrgAddress)+>
@@ -524,6 +532,10 @@ CorrespondingAffiliationID CDATA #IMPLIED >
 <!ATTLIST Bibliography
  %att.ID.attributes; >
 <!--doc: -->
+<!ELEMENT BibliographyGrant EMPTY>
+<!ATTLIST BibliographyGrant
+ %att.Granted.attributes; >
+<!--doc: -->
 <!ELEMENT Binding  (#PCDATA)>
 <!ATTLIST Binding
  %att.Typed.attributes;
@@ -537,6 +549,14 @@ CompoundObjectID CDATA #IMPLIED >
 <!ELEMENT Body ((%model.fullTextBlock;)*,(Section1)*)>
 <!--doc: -->
 <!ELEMENT BodyFrontmatter ((Frontispiece)?,(Dedication)?,(Foreword)*,(Preface)*,(BookNotes)?,(Toc)?)>
+<!--doc: -->
+<!ELEMENT BodyHTMLGrant EMPTY>
+<!ATTLIST BodyHTMLGrant
+ %att.Granted.attributes; >
+<!--doc: -->
+<!ELEMENT BodyPDFGrant EMPTY>
+<!ATTLIST BodyPDFGrant
+ %att.Granted.attributes; >
 <!--doc: -->
 <!ELEMENT BodyRef EMPTY>
 <!ATTLIST BodyRef
@@ -666,13 +686,17 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterFirstPage  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT ChapterGrants %macro.anyXML;>
+<!ATTLIST ChapterGrants
+ %att.Typed.attributes; >
+<!--doc: -->
 <!ELEMENT ChapterHeader (AuthorGroup?,Abstract*,KeywordGroup*,ArticleNote*)>
 <!--doc: -->
 <!ELEMENT ChapterHistory (RegistrationDate|OnlineDate)+>
 <!--doc: -->
 <!ELEMENT ChapterID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory)+)>
+<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory|ChapterGrants)+)>
 <!ATTLIST ChapterInfo
  %att.numbered.attributes;
  %att.OutputMedium.attributes;
@@ -912,6 +936,10 @@ ContainsColorImages CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT EAN  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT ESMGrant EMPTY>
+<!ATTLIST ESMGrant
+ %att.Granted.attributes; >
+<!--doc: -->
 <!ELEMENT EditionNumber  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Editor (EditorName,Contact?)>
@@ -1088,6 +1116,10 @@ Supplier CDATA #IMPLIED >
 <!ELEMENT MediaObject ((Caption)?,(ImageObject)+)>
 <!ATTLIST MediaObject
  %att.ID.attributes; >
+<!--doc: -->
+<!ELEMENT MetadataGrant EMPTY>
+<!ATTLIST MetadataGrant
+ %att.Granted.attributes; >
 <!--doc: -->
 <!ELEMENT Month  (#PCDATA)>
 <!--doc: -->

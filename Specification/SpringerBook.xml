@@ -585,6 +585,7 @@
                                     <rng:ref name="ChapterHistory"/>
                                     <rng:ref name="ChapterRelatedObject"/>
                                     <rng:ref name="ChapterCategory"/>
+                                    <rng:ref name="ChapterGrants"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
@@ -606,6 +607,76 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+                    
+                    <!-- <!ENTITY % GrantsModel "(MetadataGrant, AbstractGrant?, BodyPDFGrant?, BodyHTMLGrant?, BibliographyGrant?, ESMGrant?)">
+<!ELEMENT ChapterGrants (%GrantsModel;)>
+<
+>
+                    -->
+                    
+                    <elementSpec ident="ChapterGrants">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="MetadataGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="AbstractGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="BodyPDFGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="BodyHTMLGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="BibliographyGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="ESMGrant">
+                        <classes>
+                            <memberOf key="att.Granted"/>
+                        </classes>
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+                   
 
                     <!-- (PageHeaders?, AuthorGroup?, CollaboratorGroup?, TocChapter?, Abstract*, KeywordGroup*, AbbreviationGroup?, ArticleNote*)> -->
                     <elementSpec ident="ChapterHeader">
@@ -4612,6 +4683,16 @@
                             <attDef ident="role">
                                 <desc>A contextual role or relationship for the person, family, corporate body, or geographic location. In linking elements such as <gi>ptr</gi>, information that
                                     explains to application software the part that a remote resource plays in a link.</desc>
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </classSpec>
+                    
+                    <classSpec ident="att.Granted" type="atts">
+                        <attList>
+                            <attDef ident="Grant" usage="opt">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
