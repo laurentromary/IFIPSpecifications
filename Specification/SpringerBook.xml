@@ -1797,6 +1797,7 @@
                         <classes>
                             <!-- <!ATTLIST ConfSeriesID	Type (Springer | DBLP) #REQUIRED> -->
                             <memberOf key="att.Typed"/>
+                            <memberOf key="model.ConferenceInfoPart"/>
                         </classes>
                         <content>
                             <rng:text/>
@@ -1808,6 +1809,7 @@
                             <!-- <!ATTLIST ConfEventID	Type (Springer) #REQUIRED>
                             -->
                             <memberOf key="att.Typed"/>
+                            <memberOf key="model.ConferenceInfoPart"/>
                         </classes>
                         <content>
                             <rng:text/>
