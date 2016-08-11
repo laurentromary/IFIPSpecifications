@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T07:12:42Z. .CC-BY
+DTD generated from ODD source 2016-08-11T07:16:03Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1579,12 +1579,20 @@ TaskType CDATA #IMPLIED >
 <!ELEMENT math %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT mi %macro.anyXML;>
+<!ATTLIST mi
+mathvariant CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT mn %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT mo %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT mrow %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT mspace %macro.anyXML;>
+<!ATTLIST mspace
+width CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT msub %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT row %macro.anyXML;>
 <!--doc: -->
