@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T04:42:55Z. .CC-BY
+DTD generated from ODD source 2016-08-11T04:52:56Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -962,6 +962,8 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT FirstPage  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT FixedPublicationDate (%model.DatePart;,Hour,Reason)+>
+<!--doc: -->
 <!ELEMENT Footnote (Para)*>
 <!ATTLIST Footnote
  %att.ID.attributes; >
@@ -993,6 +995,8 @@ TrimWidthInch CDATA #IMPLIED >
 <!ELEMENT GivenName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Heading  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT Hour  (#PCDATA)>
 <!--doc:groups together all IFIP specific descriptors (TC, SC, etc.) -->
 <!ELEMENT IFIPentity (TC|WG|SIG)*>
 <!ATTLIST IFIPentity
@@ -1249,6 +1253,8 @@ CorrectionsRequired CDATA #IMPLIED >
 <!ELEMENT QualifyingProductionNotesProof  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesSpringerDotCom  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT Reason  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT RefSource %macro.SimpleTextModel;>
 <!--doc: -->

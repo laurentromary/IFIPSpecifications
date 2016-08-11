@@ -2815,6 +2815,12 @@
                         </content>
                     </elementSpec>
 
+                    <elementSpec ident="Hour">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
 
                     <elementSpec ident="ConfEventName">
                         <content>
@@ -3847,6 +3853,22 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="FixedPublicationDate">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="model.DatePart"/>
+                                <rng:ref name="Hour"/>
+                                <rng:ref name="Reason"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="Reason">
+                        <content>
+                            <rng:text/>
+                        </content>
                     </elementSpec>
 
                     <!-- ....................................................................... -->
