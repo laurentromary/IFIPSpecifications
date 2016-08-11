@@ -718,11 +718,15 @@
                                     <rng:ref name="Heading"/>
                                 </rng:optional>
                                 <rng:oneOrMore>
-                                    <rng:ref name="SimplePara"/>
+                                    <rng:choice>
+                                        <rng:ref name="SimplePara"/>
+                                        <rng:ref name="FormalPara"/>
+                                    </rng:choice>
                                 </rng:oneOrMore>
                             </rng:group>
                         </content>
                     </elementSpec>
+
 
                     <elementSpec ident="NoBody">
                         <content>
@@ -2134,12 +2138,11 @@
                     </elementSpec>
 
                     <elementSpec ident="SimplePara">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
                         <content>
-                            <!-- <!ELEMENT SimplePara (%SimpleTextModel; | Figure | Table | %ReferenceElements;)*>
-<!ATTLIST SimplePara
-	OutputMedium %OutputMediumAttrValues; #IMPLIED
-	Type %ParaTypeAttrValues; #IMPLIED
-> -->
                             <rng:zeroOrMore>
                                 <rng:choice>
                                     <rng:text/>
@@ -2150,6 +2153,33 @@
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
+                    </elementSpec>
+
+                    <elementSpec ident="FormalPara">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
+                        <content>
+                            <rng:group>
+                                <rng:ref name="Heading"/>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Para"/>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="ID" usage="opt">
+                                <datatype>
+                                    <rng:data type="ID"/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="RenderingStyle" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="KeywordGroup">
@@ -5405,7 +5435,7 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mover">
                         <content>
                             <rng:ref name="macro.anyXML"/>
