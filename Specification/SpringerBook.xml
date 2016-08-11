@@ -2159,6 +2159,7 @@
                         <classes>
                             <memberOf key="att.Typed"/>
                             <memberOf key="att.OutputMedium"/>
+                            <memberOf key="model.fullTextBlock"/>
                         </classes>
                         <content>
                             <rng:group>

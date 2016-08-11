@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T08:18:34Z. .CC-BY
+DTD generated from ODD source 2016-08-11T08:30:19Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -111,11 +111,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
 <!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
 <!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
 <!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
-<!ENTITY % model.fullTextBlock "Para |Table |Figure |MediaObject"> 
-<!ENTITY % model.fullTextBlock_sequence "Para, Table, Figure, MediaObject"> 
-<!ENTITY % model.fullTextBlock_sequenceOptional "Para?, Table?, Figure?, MediaObject?"> 
-<!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, Table*, Figure*, MediaObject*"> 
-<!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, Table+, Figure+, MediaObject+"> 
+<!ENTITY % model.fullTextBlock "Para |FormalPara |Table |Figure |MediaObject"> 
+<!ENTITY % model.fullTextBlock_sequence "Para, FormalPara, Table, Figure, MediaObject"> 
+<!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
+<!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, FormalPara*, Table*, Figure*, MediaObject*"> 
+<!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, FormalPara+, Table+, Figure+, MediaObject+"> 
 <!-- end of predeclared classes -->
 
 <!ENTITY % model.nameLike.agent ""> 
@@ -434,11 +434,11 @@ Content CDATA #IMPLIED'>
 <!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
 <!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
 <!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
-<!ENTITY % model.fullTextBlock "Para |Table |Figure |MediaObject"> 
-<!ENTITY % model.fullTextBlock_sequence "Para, Table, Figure, MediaObject"> 
-<!ENTITY % model.fullTextBlock_sequenceOptional "Para?, Table?, Figure?, MediaObject?"> 
-<!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, Table*, Figure*, MediaObject*"> 
-<!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, Table+, Figure+, MediaObject+"> 
+<!ENTITY % model.fullTextBlock "Para |FormalPara |Table |Figure |MediaObject"> 
+<!ENTITY % model.fullTextBlock_sequence "Para, FormalPara, Table, Figure, MediaObject"> 
+<!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
+<!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, FormalPara*, Table*, Figure*, MediaObject*"> 
+<!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, FormalPara+, Table+, Figure+, MediaObject+"> 
 <!ENTITY % att.DisplayOrder.attribute.DisplayOrder '
 DisplayOrder (Western|Eastern) #IMPLIED'>
 <!ENTITY % att.DisplayOrder.attributes '
@@ -1052,7 +1052,7 @@ TrimWidthInch CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT GivenName  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Heading  (#PCDATA)>
+<!ELEMENT Heading (#PCDATA|%model.simpleText;|%model.referenceElements;)*>
 <!--doc: -->
 <!ELEMENT Hour  (#PCDATA)>
 <!--doc:groups together all IFIP specific descriptors (TC, SC, etc.) -->
@@ -1441,7 +1441,7 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Street  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT SubHeading  (#PCDATA)>
+<!ELEMENT SubHeading (#PCDATA|%model.simpleText;|%model.referenceElements;)*>
 <!--doc: -->
 <!ELEMENT SubPart (SubPartInfo,(SubPartHeader)?,(BookFrontmatter)?,(Chapter)+)>
 <!ATTLIST SubPart
