@@ -4565,9 +4565,10 @@
                                 <rng:ref name="EquationNumber"/>
                             </rng:optional>
                             <rng:oneOrMore>
-                                <rng:choice/>
-                                <rng:ref name="MediaObject"/>
-                                <rng:ref name="EquationSource"/>
+                                <rng:choice>
+                                    <rng:ref name="MediaObject"/>
+                                    <rng:ref name="EquationSource"/>
+                                </rng:choice>
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
