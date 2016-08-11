@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T08:35:02Z. .CC-BY
+DTD generated from ODD source 2016-08-11T08:39:20Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1587,6 +1587,8 @@ TaskType CDATA #IMPLIED >
  %att.TableQualifiers.attributes; >
 <!--doc: -->
 <!ELEMENT math %macro.anyXML;>
+<!ATTLIST math
+display CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mi %macro.anyXML;>
 <!ATTLIST mi
@@ -1611,6 +1613,18 @@ accent CDATA #IMPLIED >
 width CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT msub %macro.anyXML;>
+<!--doc: -->
+<!ELEMENT msup %macro.anyXML;>
+<!--doc: -->
+<!ELEMENT mtable %macro.anyXML;>
+<!ATTLIST mtable
+columnspacing CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT mtd %macro.anyXML;>
+<!ATTLIST mtd
+columnalign CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT mtr %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT row %macro.anyXML;>
 <!--doc: -->

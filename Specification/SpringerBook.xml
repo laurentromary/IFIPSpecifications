@@ -5397,6 +5397,13 @@
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
+                        <attList>
+                            <attDef ident="display">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="mrow">
@@ -5475,6 +5482,46 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+                    
+                    <elementSpec ident="mtable">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="columnspacing">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    
+                    <elementSpec ident="mtr">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mtd">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="columnalign">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="msup">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
 
                     <!-- Defining Text Macros -->
 
