@@ -2325,6 +2325,13 @@
                         <content>
                             <rng:text/>
                         </content>
+                        <attList>
+                            <attDef ident="Code">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <!-- ChapterInfo and sub-elements -->
