@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T06:55:19Z. .CC-BY
+DTD generated from ODD source 2016-08-11T06:57:08Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1341,6 +1341,8 @@ grayscaleProfile CDATA #IMPLIED >
 <!ELEMENT S600TypesetterDeadline (%model.DatePart;)+>
 <!--doc: -->
 <!ELEMENT S650TypesetterDeadline (%model.DatePart;)+>
+<!--doc: -->
+<!ELEMENT S700ElectronicDistributionDeadline (%model.DatePart;)+>
 <!--doc: -->
 <!ELEMENT S700PrinterDeadline (%model.DatePart;)+>
 <!--doc: -->

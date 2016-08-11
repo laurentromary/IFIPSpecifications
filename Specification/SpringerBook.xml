@@ -4003,6 +4003,14 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="S700ElectronicDistributionDeadline">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="model.DatePart"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="S700PrinterDeadline">
                         <content>
