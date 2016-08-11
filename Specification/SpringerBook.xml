@@ -5405,11 +5405,24 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="mover">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="mn">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
+                        <attList>
+                            <attDef ident="mathvariant">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <!-- Defining Text Macros -->
