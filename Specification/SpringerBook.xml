@@ -2163,10 +2163,10 @@
                         <content>
                             <rng:group>
                                 <rng:ref name="Heading"/>
+                                <rng:oneOrMore>
+                                    <rng:ref name="Para"/>
+                                </rng:oneOrMore>
                             </rng:group>
-                            <rng:zeroOrMore>
-                                <rng:ref name="Para"/>
-                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="ID" usage="opt">
