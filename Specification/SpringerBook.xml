@@ -2746,12 +2746,7 @@
                             <memberOf key="model.referenceElements"/>
                         </classes>
                         <content>
-                            <rng:group>
-                                <rng:ref name="RefSource"/>
-                                <rng:oneOrMore>
-                                    <rng:ref name="RefTarget"/>
-                                </rng:oneOrMore>
-                            </rng:group>
+                            <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                         <attList>
                             <attDef ident="RefID">
@@ -5522,7 +5517,13 @@
                         </content>
                     </elementSpec>
                     
-
+                    <elementSpec ident="msubsup">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    
                     <!-- Defining Text Macros -->
 
                     <macroSpec type="pe" ident="macro.SimpleTextModel">

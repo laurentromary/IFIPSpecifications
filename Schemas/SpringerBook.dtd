@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-11T08:39:20Z. .CC-BY
+DTD generated from ODD source 2016-08-11T08:44:04Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1080,7 +1080,7 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
 <!ELEMENT InstitutionalAuthorName (%model.NamePart;)*>
 <!--doc: -->
-<!ELEMENT InternalRef (RefSource,RefTarget+)>
+<!ELEMENT InternalRef %macro.SimpleTextModel;>
 <!ATTLIST InternalRef
  %att.ID.attributes;
 RefID CDATA #IMPLIED >
@@ -1613,6 +1613,8 @@ accent CDATA #IMPLIED >
 width CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT msub %macro.anyXML;>
+<!--doc: -->
+<!ELEMENT msubsup %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT msup %macro.anyXML;>
 <!--doc: -->
