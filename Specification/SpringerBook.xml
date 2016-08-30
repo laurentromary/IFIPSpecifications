@@ -1112,6 +1112,7 @@
                     <elementSpec ident="Part">
                         <classes>
                             <memberOf key="att.ID"/>
+                            <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
                             <rng:ref name="PartInfo"/>
