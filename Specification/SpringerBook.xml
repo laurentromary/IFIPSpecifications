@@ -535,7 +535,14 @@
 
 
                     <!-- Book chapter and sub-elements -->
-
+                    <!--<!ELEMENT Chapter (ChapterInfo, ChapterHeader?, (NoBody | BodyRef+ | (Body, BodyRef*)), ChapterBackmatter?)>
+                    <!ATTLIST Chapter
+                    ID ID #REQUIRED
+                    Language %LanguageAttrValues; #REQUIRED
+                    OutputMedium %OutputMediumAttrValues; #IMPLIED
+                    %DCTMAtts; 
+                    >
+-->
                     <elementSpec ident="Chapter">
                         <classes>
                             <memberOf key="att.language"/>
@@ -545,10 +552,20 @@
                         <content>
                             <rng:group>
                                 <rng:ref name="ChapterInfo"/>
-                                <rng:ref name="ChapterHeader"/>
+                                <rng:optional>
+                                    <rng:ref name="ChapterHeader"/>
+                                </rng:optional>
                                 <rng:choice>
                                     <rng:ref name="NoBody"/>
-                                    <rng:ref name="Body"/>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="BodyRef"/>
+                                    </rng:oneOrMore>
+                                    <rng:group>
+                                        <rng:ref name="Body"/>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="BodyRef"/>
+                                        </rng:zeroOrMore>
+                                    </rng:group>
                                 </rng:choice>
                                 <rng:optional>
                                     <rng:ref name="BodyRef"/>
@@ -5478,7 +5495,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mtable">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5491,14 +5508,14 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
-                    
+
+
                     <elementSpec ident="mtr">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mtd">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5517,14 +5534,14 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="msubsup">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
-                    
+
+
                     <!-- Defining Text Macros -->
 
                     <macroSpec type="pe" ident="macro.SimpleTextModel">
