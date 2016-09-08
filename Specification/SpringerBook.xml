@@ -384,6 +384,7 @@
                                     <rng:ref name="BookElectronicISBN"/>
                                     <rng:ref name="BookChapterCount"/>
                                     <rng:ref name="BookCopyright"/>
+                                    <rng:ref name="BookHistory"/>
                                     <rng:ref name="BookContext"/>
                                     <rng:ref name="ConferenceInfo"/>
                                     <rng:ref name="EditionNumber"/>
@@ -969,11 +970,25 @@
                                     <rng:ref name="CopyrightStandardText"/>
                                     <rng:ref name="TrademarkQualifierText"/>
                                     <rng:ref name="ProductLiability"/>
-
+                                    <rng:ref name="CopyrightComment"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
+                    
+                   <!-- <!ELEMENT BookHistory (OnlineDate?, PrintDate?)>-->
+                    
+                    <elementSpec ident="BookHistory">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="OnlineDate"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="PrintDate"/>
+                            </rng:optional>
+                        </content>
+                    </elementSpec>
+                    
 
                     <elementSpec ident="CopyrightHolderName">
                         <content>
@@ -987,6 +1002,17 @@
                     <elementSpec ident="CopyrightYear">
                         <content>
                             <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="CopyrightComment">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="SimplePara"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -2597,6 +2623,14 @@
                     </elementSpec>
 
                     <elementSpec ident="OnlineDate">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="model.DatePart"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="PrintDate">
                         <content>
                             <rng:oneOrMore>
                                 <rng:ref name="model.DatePart"/>
@@ -5576,6 +5610,8 @@
                             </rng:zeroOrMore>
                         </content>
                     </macroSpec>
+                    
+                    
 
                     <macroSpec type="pe" ident="macro.NameModel">
                         <content>

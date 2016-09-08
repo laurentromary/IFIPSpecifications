@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-08-30T06:00:44Z. .CC-BY
+DTD generated from ODD source 2016-09-08T07:29:53Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -582,7 +582,7 @@ PDFType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BookContext ((SeriesID)?,(SubSeriesID)?,(BookSetID,BookSetTitle)*,(VolumePackageID)?)>
 <!--doc: -->
-<!ELEMENT BookCopyright (CopyrightHolderName|CopyrightYear|SpringerReferenceLine|SpringerLocationsLine|CopyrightStandardText|TrademarkQualifierText|ProductLiability)+>
+<!ELEMENT BookCopyright (CopyrightHolderName|CopyrightYear|SpringerReferenceLine|SpringerLocationsLine|CopyrightStandardText|TrademarkQualifierText|ProductLiability|CopyrightComment)+>
 <!--doc: -->
 <!ELEMENT BookDOI  (#PCDATA)>
 <!--doc: -->
@@ -606,9 +606,11 @@ PDFType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BookHeader (EditorGroup)>
 <!--doc: -->
+<!ELEMENT BookHistory ((OnlineDate)?,(PrintDate)?)>
+<!--doc: -->
 <!ELEMENT BookID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT BookInfo ((IFIPentity)*,(BookID|BookTitle|BookSubTitle|BookVolumeNumber|BookSequenceNumber|BookDOI|BookTitleID|BookPrintISBN|BookElectronicISBN|BookChapterCount|BookCopyright|BookContext|ConferenceInfo|EditionNumber|BookEdition|PaperInfo|BookSubjectGroup|BookstoreLocation|CatalogingInformation|BookClassification)+)>
+<!ELEMENT BookInfo ((IFIPentity)*,(BookID|BookTitle|BookSubTitle|BookVolumeNumber|BookSequenceNumber|BookDOI|BookTitleID|BookPrintISBN|BookElectronicISBN|BookChapterCount|BookCopyright|BookHistory|BookContext|ConferenceInfo|EditionNumber|BookEdition|PaperInfo|BookSubjectGroup|BookstoreLocation|CatalogingInformation|BookClassification)+)>
 <!ATTLIST BookInfo
  %att.language.attributes;
  %att.numbered.attributes;
@@ -836,6 +838,8 @@ CompoundObjectID CDATA #IMPLIED >
 <!ELEMENT CopyEditing EMPTY>
 <!ATTLIST CopyEditing
 Category CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT CopyrightComment (#PCDATA|SimplePara)*>
 <!--doc: -->
 <!ELEMENT CopyrightHolderName  (#PCDATA)>
 <!--doc: -->
@@ -1234,6 +1238,8 @@ Delivery (Complete|Incomplete|None) #REQUIRED >
  %att.language.attributes; >
 <!--doc: -->
 <!ELEMENT Prefix  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT PrintDate (%model.DatePart;)+>
 <!--doc: -->
 <!ELEMENT PrintRun EMPTY>
 <!ATTLIST PrintRun
