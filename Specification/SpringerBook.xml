@@ -5580,7 +5580,29 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="mfenced">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="open">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="close">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="separators">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
 
                     <!-- Defining Text Macros -->
 
