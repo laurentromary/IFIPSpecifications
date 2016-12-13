@@ -975,9 +975,9 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
-                   <!-- <!ELEMENT BookHistory (OnlineDate?, PrintDate?)>-->
-                    
+
+                    <!-- <!ELEMENT BookHistory (OnlineDate?, PrintDate?)>-->
+
                     <elementSpec ident="BookHistory">
                         <content>
                             <rng:optional>
@@ -988,7 +988,7 @@
                             </rng:optional>
                         </content>
                     </elementSpec>
-                    
+
 
                     <elementSpec ident="CopyrightHolderName">
                         <content>
@@ -1004,7 +1004,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="CopyrightComment">
                         <content>
                             <rng:zeroOrMore>
@@ -2629,7 +2629,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="PrintDate">
                         <content>
                             <rng:oneOrMore>
@@ -4534,7 +4534,7 @@
 
                     <elementSpec ident="tgroup">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.tbl.tgroup.mdl"/>
                         </content>
                         <attList>
                             <attDef ident="cols">
@@ -4555,6 +4555,12 @@
                     </elementSpec>
 
                     <elementSpec ident="tbody">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="thead">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
@@ -5610,8 +5616,8 @@
                             </rng:zeroOrMore>
                         </content>
                     </macroSpec>
-                    
-                    
+
+
 
                     <macroSpec type="pe" ident="macro.NameModel">
                         <content>
@@ -5639,6 +5645,22 @@
                             </rng:optional>
                         </content>
                     </macroSpec>
+
+                    <macroSpec type="pe" ident="macro.tbl.tgroup.mdl">
+                        <content>
+                            <rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="colspec"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="thead"/>
+                                </rng:optional>
+                                <rng:ref name="tbody"/>
+                            </rng:group>
+                        </content>
+                    </macroSpec>
+
+
 
 
                     <!-- Model classes - spread declarations to be gathered here... -->
