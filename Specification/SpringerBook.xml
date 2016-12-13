@@ -5510,19 +5510,6 @@
                         </content>
                     </elementSpec>
 
-                    <elementSpec ident="mover">
-                        <content>
-                            <rng:ref name="macro.anyXML"/>
-                        </content>
-                        <attList>
-                            <attDef ident="accent">
-                                <datatype>
-                                    <rng:text/>
-                                </datatype>
-                            </attDef>
-                        </attList>
-                    </elementSpec>
-
                     <elementSpec ident="mn">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5580,19 +5567,88 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mtext">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mfrac">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+
+                    <elementSpec ident="munder">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="accentunder">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="align">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="center"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
                     
+                    <elementSpec ident="mover">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="accent">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="align">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="center"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="munderover">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="accent">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="accentunder">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="align">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="center"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
                     <elementSpec ident="mfenced">
                         <content>
                             <rng:ref name="macro.anyXML"/>
