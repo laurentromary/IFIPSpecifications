@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-13T20:52:02Z. .CC-BY
+DTD generated from ODD source 2016-12-13T20:54:01Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1596,7 +1596,8 @@ char CDATA #IMPLIED >
 <!ATTLIST entry
  %att.TableQualifiers.attributes;
 namest CDATA #IMPLIED
-nameend CDATA #IMPLIED >
+nameend CDATA #IMPLIED
+morerows CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT math %macro.anyXML;>
 <!ATTLIST math

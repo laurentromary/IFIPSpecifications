@@ -4591,6 +4591,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="morerows">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
