@@ -4552,6 +4552,13 @@
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
+                        <attList>
+                            <attDef ident="char">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="tbody">
@@ -4573,6 +4580,18 @@
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
+                        <attList>
+                            <attDef ident="namest">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="nameend">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="row">
