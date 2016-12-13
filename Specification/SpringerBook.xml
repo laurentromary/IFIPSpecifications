@@ -4596,6 +4596,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="char">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
