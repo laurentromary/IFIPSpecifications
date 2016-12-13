@@ -5581,6 +5581,12 @@
                         </content>
                     </elementSpec>
                     
+                    <elementSpec ident="mtext">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
                     <elementSpec ident="mfenced">
                         <content>
                             <rng:ref name="macro.anyXML"/>
