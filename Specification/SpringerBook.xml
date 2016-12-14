@@ -791,6 +791,7 @@
                     <elementSpec ident="Section1">
                         <classes>
                             <memberOf key="att.ID"/>
+                            <memberOf key="att.Typed"/>
                         </classes>
                         <content>
                             <rng:ref name="Heading"/>
@@ -809,6 +810,7 @@
                     <elementSpec ident="Section2">
                         <classes>
                             <memberOf key="att.ID"/>
+                            <memberOf key="att.Typed"/>
                         </classes>
                         <content>
                             <rng:ref name="Heading"/>
@@ -827,6 +829,7 @@
                     <elementSpec ident="Section3">
                         <classes>
                             <memberOf key="att.ID"/>
+                            <memberOf key="att.Typed"/>
                         </classes>
                         <content>
                             <rng:ref name="Heading"/>
@@ -3044,9 +3047,7 @@
 
                     <elementSpec ident="InstitutionalAuthorName">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="model.NamePart"/>
-                            </rng:zeroOrMore>
+                            <rng:text/>
                         </content>
                     </elementSpec>
 

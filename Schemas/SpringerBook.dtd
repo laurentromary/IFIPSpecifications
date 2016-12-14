@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-14T13:51:46Z. .CC-BY
+DTD generated from ODD source 2016-12-14T14:45:14Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1091,7 +1091,7 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
 <!ELEMENT InlineMediaObject (ImageObject)+>
 <!--doc: -->
-<!ELEMENT InstitutionalAuthorName (%model.NamePart;)*>
+<!ELEMENT InstitutionalAuthorName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT InternalRef %macro.SimpleTextModel;>
 <!ATTLIST InternalRef
@@ -1385,15 +1385,18 @@ SupplierSPACEID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Section1 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*,(Section2)*)>
 <!ATTLIST Section1
- %att.ID.attributes; >
+ %att.ID.attributes;
+ %att.Typed.attributes; >
 <!--doc: -->
 <!ELEMENT Section2 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*,(Section3)*)>
 <!ATTLIST Section2
- %att.ID.attributes; >
+ %att.ID.attributes;
+ %att.Typed.attributes; >
 <!--doc: -->
 <!ELEMENT Section3 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*)>
 <!ATTLIST Section3
- %att.ID.attributes; >
+ %att.ID.attributes;
+ %att.Typed.attributes; >
 <!--doc:groups together all the Springer metadata associated to a book related publication (book or book chapter) -->
 <!ELEMENT Series (SeriesInfo,(SeriesHeader?,(Book|SubSeries)*))>
 <!--doc: -->
