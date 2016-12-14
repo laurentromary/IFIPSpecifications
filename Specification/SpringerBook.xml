@@ -5667,6 +5667,18 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="msqrt">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="mpadded">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="munder">
                         <content>
