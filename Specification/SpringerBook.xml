@@ -2761,6 +2761,9 @@
                             <rng:optional>
                                 <rng:ref name="Acknowledgments"/>
                             </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Appendix"/>
+                            </rng:zeroOrMore>
                             <rng:optional>
                                 <rng:ref name="Bibliography"/>
                             </rng:optional>
