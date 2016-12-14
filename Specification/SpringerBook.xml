@@ -4644,6 +4644,12 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="tfooter">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="entry">
                         <classes>
