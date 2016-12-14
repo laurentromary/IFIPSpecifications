@@ -956,6 +956,62 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
+                    
+                    <!-- Appendix -->
+                    
+                    <elementSpec ident="Appendix">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="TocAppendix"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="Section1"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <!--<!ELEMENT TocAppendix (Heading?, SubHeading?, (TocEntry, (Author | InstitutionalAuthor)*)?, TocSection1*)>-->
+                    
+                    <elementSpec ident="TocAppendix">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="SubHeading"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:choice>
+                                        <rng:ref name="Author"/>
+                                        <rng:ref name="InstitutionalAuthor"/>
+                                    </rng:choice>
+                                </rng:zeroOrMore>
+                            </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="TocSection1"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="TocSection1">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT TocSection1 (TocEntry, TocSection2*)>
+<!ELEMENT TocSection2 (TocEntry, TocSection3*)>
+<!ELEMENT TocSection3 (TocEntry, TocSection4*)>
+<!ELEMENT TocSection4 (TocEntry, TocSection5*)>
+<!ELEMENT TocSection5 (TocEntry, TocSection6*)>
+<!ELEMENT TocSection6 (TocEntry, TocSection7*)>
+<!ELEMENT TocSection7 (TocEntry)> -->
 
                     <!-- Start of Book Copyright informaiton -->
 
