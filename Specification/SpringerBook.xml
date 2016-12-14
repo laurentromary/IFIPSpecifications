@@ -3178,8 +3178,21 @@
                             <rng:oneOrMore>
                                 <rng:ref name="SimplePara"/>
                             </rng:oneOrMore>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Credit"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="Credit">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    
 
                     <!-- end of Captions -->
 
@@ -5571,7 +5584,171 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                         <attList>
+                          
+                            <!-- form (prefix | infix | postfix) #IMPLIED -->
+                            <attDef ident="form">
+                                <valList>
+                                    <valItem ident="prefix"/>
+                                    <valItem ident="infix"/>
+                                    <valItem ident="postfix"/>
+                                </valList>
+                            </attDef>
+                            <!-- fence (true | false) #IMPLIED -->
+                            <attDef ident="fence">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- separator (true | false) #IMPLIED -->
+                            <attDef ident="separator">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- lspace %length; #IMPLIED -->
+                            <attDef ident="lspace">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- rspace %length; #IMPLIED -->
+                            <attDef ident="rspace">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- stretchy (true | false) #IMPLIED -->
                             <attDef ident="stretchy">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- symmetric (true | false) #IMPLIED -->
+                            <attDef ident="symmetric">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- maxsize CDATA #IMPLIED -->
+                            <attDef ident="maxsize">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- minsize %length; #IMPLIED -->
+                            <attDef ident="minsize">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- largeop (true | false) #IMPLIED -->
+                            <attDef ident="largeop">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- movablelimits (true | false) #IMPLIED -->
+                            <attDef ident="movablelimits">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- accent (true | false) #IMPLIED -->
+                            <attDef ident="accent">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <!-- linebreak (auto | newline | nobreak | goodbreak | badbreak) #IMPLIED -->
+                            <attDef ident="linebreak">
+                                <valList>
+                                    <valItem ident="auto"/>
+                                    <valItem ident="newline"/>
+                                    <valItem ident="nobreak"/>
+                                    <valItem ident="goodbreak"/>
+                                    <valItem ident="badbreak"/>
+                                </valList>
+                            </attDef>
+                            <!-- lineleading %length; #IMPLIED -->
+                            <attDef ident="lineleading">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- linebreakstyle (before | after | duplicate | infixlinebreakstyle) #IMPLIED -->
+                            <attDef ident="linebreakstyle">
+                                <valList>
+                                    <valItem ident="before"/>
+                                    <valItem ident="after"/>
+                                    <valItem ident="duplicate"/>
+                                    <valItem ident="infixlinebreakstyle"/>
+                                </valList>
+                            </attDef>
+                            <!-- linebreakmultchar CDATA #IMPLIED -->
+                            <attDef ident="linebreakmultchar">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- indentalign (left | center | right | auto | id) #IMPLIED -->
+                            <attDef ident="indentalign">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="center"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="auto"/>
+                                    <valItem ident="id"/>
+                                </valList>
+                            </attDef>
+                            <!-- indentshift %length; #IMPLIED -->
+                            <attDef ident="indentshift">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- indenttarget CDATA #IMPLIED -->
+                            <attDef ident="indenttarget">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- indentalignfirst (left | center | right | auto | id | indentalign) #IMPLIED -->
+                            <attDef ident="indentalignfirst">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="center"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="auto"/>
+                                    <valItem ident="id"/>
+                                    <valItem ident="indentalign"/>
+                                </valList>
+                            </attDef>
+                            <!-- indentshiftfirst CDATA #IMPLIED -->
+                            <attDef ident="indentshiftfirst">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <!-- indentalignlast (left | center | right | auto | id | indentalign) #IMPLIED -->
+                            <attDef ident="indentalignlast">
+                                <valList>
+                                    <valItem ident="left"/>
+                                    <valItem ident="center"/>
+                                    <valItem ident="right"/>
+                                    <valItem ident="auto"/>
+                                    <valItem ident="id"/>
+                                    <valItem ident="indentalign"/>
+                                </valList>
+                            </attDef>
+                            <!-- indentshiftlast CDATA #IMPLIED -->
+                            <attDef ident="indentshiftlast">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
@@ -5584,6 +5761,11 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                         <attList>
+                            <attDef ident="width">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                             <attDef ident="width">
                                 <datatype>
                                     <rng:text/>
