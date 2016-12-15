@@ -839,6 +839,25 @@
                             <rng:zeroOrMore>
                                 <rng:ref name="model.fullTextBlock"/>
                             </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Section4"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="Section4">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="Heading"/>
+                            <rng:optional>
+                                <rng:ref name="AuthorGroup"/>
+                            </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="model.fullTextBlock"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -959,9 +978,9 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- Appendix -->
-                    
+
                     <elementSpec ident="Appendix">
                         <classes>
                             <memberOf key="att.ID"/>
@@ -976,9 +995,9 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <!--<!ELEMENT TocAppendix (Heading?, SubHeading?, (TocEntry, (Author | InstitutionalAuthor)*)?, TocSection1*)>-->
-                    
+
                     <elementSpec ident="TocAppendix">
                         <content>
                             <rng:optional>
@@ -1001,13 +1020,13 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="TocSection1">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT TocSection1 (TocEntry, TocSection2*)>
 <!ELEMENT TocSection2 (TocEntry, TocSection3*)>
 <!ELEMENT TocSection3 (TocEntry, TocSection4*)>
@@ -3184,7 +3203,7 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="Credit">
                         <content>
                             <rng:oneOrMore>
@@ -3192,8 +3211,8 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
-                    
+
+
 
                     <!-- end of Captions -->
 
@@ -4645,7 +4664,7 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="tfooter">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5591,7 +5610,7 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                         <attList>
-                          
+
                             <!-- form (prefix | infix | postfix) #IMPLIED -->
                             <attDef ident="form">
                                 <valList>
@@ -5856,13 +5875,54 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
+                    <elementSpec ident="mstyle">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="scriptlevel">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="displaystyle">
+                                <valList>
+                                    <valItem ident="true"/>
+                                    <valItem ident="false"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="scriptsizemultiplier">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="scriptminsize">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="infixlinebreakstyle">
+                                <valList>
+                                    <valItem ident="before"/>
+                                    <valItem ident="after"/>
+                                    <valItem ident="duplicate"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="decimalpoint">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
                     <elementSpec ident="msqrt">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mpadded">
                         <content>
                             <rng:ref name="macro.anyXML"/>
@@ -5916,7 +5976,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mover">
                         <content>
                             <rng:ref name="macro.anyXML"/>

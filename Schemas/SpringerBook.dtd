@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-14T14:45:14Z. .CC-BY
+DTD generated from ODD source 2016-12-15T15:02:58Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1393,8 +1393,13 @@ SupplierSPACEID CDATA #IMPLIED >
  %att.ID.attributes;
  %att.Typed.attributes; >
 <!--doc: -->
-<!ELEMENT Section3 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*)>
+<!ELEMENT Section3 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*,(Section4)*)>
 <!ATTLIST Section3
+ %att.ID.attributes;
+ %att.Typed.attributes; >
+<!--doc: -->
+<!ELEMENT Section4 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*)>
+<!ATTLIST Section4
  %att.ID.attributes;
  %att.Typed.attributes; >
 <!--doc:groups together all the Springer metadata associated to a book related publication (book or book chapter) -->
@@ -1681,6 +1686,15 @@ width CDATA #IMPLIED
 width CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT msqrt %macro.anyXML;>
+<!--doc: -->
+<!ELEMENT mstyle %macro.anyXML;>
+<!ATTLIST mstyle
+scriptlevel CDATA #IMPLIED
+displaystyle CDATA  #IMPLIED
+scriptsizemultiplier CDATA #IMPLIED
+scriptminsize CDATA #IMPLIED
+infixlinebreakstyle CDATA  #IMPLIED
+decimalpoint CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT msub %macro.anyXML;>
 <!--doc: -->
