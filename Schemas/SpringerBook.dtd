@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-15T15:02:58Z. .CC-BY
+DTD generated from ODD source 2016-12-15T15:10:39Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1459,7 +1459,7 @@ CompoundObjectID CDATA #IMPLIED >
  %att.language.attributes;
 Country CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT Stack  (#PCDATA)>
+<!ELEMENT Stack (#PCDATA|Subscript|Superscript)*>
 <!--doc: -->
 <!ELEMENT State  (#PCDATA)>
 <!--doc: -->
@@ -1683,7 +1683,9 @@ voffset CDATA #IMPLIED >
 <!ELEMENT mspace %macro.anyXML;>
 <!ATTLIST mspace
 width CDATA #IMPLIED
-width CDATA #IMPLIED >
+height CDATA #IMPLIED
+depth CDATA #IMPLIED
+linebreak CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT msqrt %macro.anyXML;>
 <!--doc: -->

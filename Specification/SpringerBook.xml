@@ -5100,7 +5100,13 @@
                             <memberOf key="model.verySimpleText"/>
                         </classes>
                         <content>
-                            <rng:text/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="Subscript"/>
+                                    <rng:ref name="Superscript"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -5792,10 +5798,25 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
-                            <attDef ident="width">
+                            <attDef ident="height">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
+                            </attDef>
+                            <attDef ident="depth">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="linebreak">
+                                <valList>
+                                    <valItem ident="auto"/>
+                                    <valItem ident="newline"/>
+                                    <valItem ident="nobreak"/>
+                                    <valItem ident="goodbreak"/>
+                                    <valItem ident="badbreak"/>
+                                    <valItem ident="indentingnewline"/>
+                                </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
