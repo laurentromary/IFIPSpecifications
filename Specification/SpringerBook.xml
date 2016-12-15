@@ -844,7 +844,7 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="Section4">
                         <classes>
                             <memberOf key="att.ID"/>
@@ -1099,6 +1099,12 @@
                             <memberOf key="att.language"/>
                         </classes>
                         <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="SimplePara"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                             <rng:text/>
                         </content>
                         <attList>
@@ -2560,7 +2566,23 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="OrgID">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                        </classes>
+                        <content>
+                            <rng:text/>
+                        </content>
+                        <attList>
+                            <attDef ident="Level">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
                     <elementSpec ident="OrgAddress">
                         <content>
                             <rng:oneOrMore>
