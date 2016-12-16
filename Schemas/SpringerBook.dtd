@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-16T14:41:40Z. .CC-BY
+DTD generated from ODD source 2016-12-16T15:14:07Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -379,11 +379,15 @@ ItemType CDATA #IMPLIED'>
 
 <!ENTITY % att.FileChildrenQualifiers.attribute.Content '
 Content CDATA #IMPLIED'>
+
+<!ENTITY % att.FileChildrenQualifiers.attribute.ObjectID '
+ObjectID CDATA #IMPLIED'>
 <!ENTITY % att.FileChildrenQualifiers.attributes '
  %att.FileChildrenQualifiers.attribute.FileRef;
  %att.FileChildrenQualifiers.attribute.TargetType;
  %att.FileChildrenQualifiers.attribute.ItemType;
- %att.FileChildrenQualifiers.attribute.Content;'> 
+ %att.FileChildrenQualifiers.attribute.Content;
+ %att.FileChildrenQualifiers.attribute.ObjectID;'> 
 <!ENTITY % model.ConferenceInfoPart "ConfSeriesName |ConfSeriesID |ConfEventID |ConfEventAbbreviation |ConfNumber |ConfEventLocation |ConfEventURL |ConfEventDateStart |ConfEventDateEnd"> 
 <!ENTITY % model.ConferenceInfoPart_sequence "ConfSeriesName, ConfSeriesID, ConfEventID, ConfEventAbbreviation, ConfNumber, ConfEventLocation, ConfEventURL, ConfEventDateStart, ConfEventDateEnd"> 
 <!ENTITY % model.ConferenceInfoPart_sequenceOptional "ConfSeriesName?, ConfSeriesID?, ConfEventID?, ConfEventAbbreviation?, ConfNumber?, ConfEventLocation?, ConfEventURL?, ConfEventDateStart?, ConfEventDateEnd?"> 
@@ -1587,7 +1591,8 @@ StartPage CDATA #IMPLIED
 RunningHead CDATA #IMPLIED
 LogoOnFirstPage CDATA #IMPLIED
 EndsheetsContent CDATA #IMPLIED
-StandardFrontmatter CDATA #IMPLIED >
+StandardFrontmatter CDATA #IMPLIED
+Profile CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT URL  (#PCDATA)>
 <!--doc: -->

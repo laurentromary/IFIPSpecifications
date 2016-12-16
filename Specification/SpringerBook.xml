@@ -3638,6 +3638,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="Profile">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
@@ -4990,6 +4995,11 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="Content" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ObjectID" usage="opt">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
