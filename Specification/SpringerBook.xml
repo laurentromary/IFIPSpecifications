@@ -1105,7 +1105,6 @@
                                     <rng:ref name="SimplePara"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
-                            <rng:text/>
                         </content>
                         <attList>
                             <attDef ident="Country" usage="opt">
