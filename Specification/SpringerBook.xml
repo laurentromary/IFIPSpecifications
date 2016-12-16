@@ -2547,6 +2547,7 @@
                         <content>
                             <rng:oneOrMore>
                                 <rng:choice>
+                                    <rng:ref name="OrgID"/>
                                     <rng:ref name="OrgDivision"/>
                                     <rng:ref name="OrgName"/>
                                     <rng:ref name="OrgAddress"/>
@@ -2566,7 +2567,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="OrgID">
                         <classes>
                             <memberOf key="att.Typed"/>
@@ -2582,7 +2583,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="OrgAddress">
                         <content>
                             <rng:oneOrMore>

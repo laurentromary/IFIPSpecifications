@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-15T19:13:45Z. .CC-BY
+DTD generated from ODD source 2016-12-16T14:39:27Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -478,7 +478,7 @@ LastPage CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara)*)>
 <!--doc: -->
-<!ELEMENT Affiliation (OrgDivision|OrgName|OrgAddress)+>
+<!ELEMENT Affiliation (OrgID|OrgDivision|OrgName|OrgAddress)+>
 <!ATTLIST Affiliation
  %att.ID.attributes; >
 <!--doc: -->
