@@ -3054,6 +3054,7 @@
                                     <rng:ref name="EditionNumber"/>
                                     <rng:ref name="InstitutionalAuthorName"/>
                                     <rng:ref name="BibBookDOI"/>
+                                    <rng:ref name="ISBN"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-16T15:14:07Z. .CC-BY
+DTD generated from ODD source 2016-12-20T07:15:22Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -525,7 +525,7 @@ CorrespondingAffiliationID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BibAuthorName (%model.NamePart;)*>
 <!--doc: -->
-<!ELEMENT BibBook (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|InstitutionalAuthorName|BibBookDOI)*>
+<!ELEMENT BibBook (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|InstitutionalAuthorName|BibBookDOI|ISBN)*>
 <!--doc: -->
 <!ELEMENT BibBookDOI  (#PCDATA)>
 <!--doc: -->
