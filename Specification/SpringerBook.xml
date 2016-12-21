@@ -729,6 +729,7 @@
                     <elementSpec ident="ArticleNote">
                         <classes>
                             <memberOf key="att.Typed"/>
+                            <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
                             <rng:group>
@@ -1395,9 +1396,9 @@
                             <rng:oneOrMore>
                                 <rng:ref name="Chapter"/>
                             </rng:oneOrMore>
-                            <!--<rng:optional>
+                            <rng:optional>
                                 <rng:ref name="BookBackmatter"/>
-                            </rng:optional>-->
+                            </rng:optional>
                         </content>
                     </elementSpec>
 
@@ -3235,7 +3236,7 @@
 
                     <elementSpec ident="BibComments">
                         <content>
-                            <rng:text/>
+                            <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
 
