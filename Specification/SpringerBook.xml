@@ -1947,6 +1947,14 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
+                    
+                    <!--  <!ELEMENT BodyBackmatter ((Appendix*, Glossary?, Bibliography?, Index*, Colophon?) | PDFExtract)> -->
+                    
+                    <elementSpec ident="BodyBackmatter">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
 
                     <!-- ....................................................................... -->
