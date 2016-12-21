@@ -1990,13 +1990,57 @@
                         </content>
                     </elementSpec>
                     <!--<!ELEMENT IndexDiv (Heading, SubHeading?, IndexEntry+)>
-                    <!ELEMENT IndexEntry (PrimaryIE, (SeeIE | SeeAlsoIE)*, (SecondaryIE, (SeeIE | SeeAlsoIE | TertiaryIE)*)*)>
-                    <!ELEMENT PrimaryIE (%SimpleTextModel;)*>
-                    <!ELEMENT SecondaryIE (%SimpleTextModel;)*>
-                    <!ELEMENT TertiaryIE (%SimpleTextModel;)*>
-                    <!ELEMENT SeeIE (%SimpleTextModel;)*>
-                    <!ELEMENT SeeAlsoIE (%SimpleTextModel;)*>-->
+                    
+                    -->
+                    
+                    <!-- <!ELEMENT IndexEntry (PrimaryIE, (SeeIE | SeeAlsoIE)*, (SecondaryIE, (SeeIE | SeeAlsoIE | TertiaryIE)*)*)> -->
+                    
+                    <elementSpec ident="IndexEntry">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT PrimaryIE (%SimpleTextModel;)*> -->
+                    
+                    <elementSpec ident="PrimaryIE">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT SecondaryIE (%SimpleTextModel;)*>
+                     -->
 
+                    <elementSpec ident="SecondaryIE">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT TertiaryIE (%SimpleTextModel;)*> -->
+                    
+                    <elementSpec ident="TertiaryIE">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT SeeIE (%SimpleTextModel;)*> -->
+                    
+                    <elementSpec ident="SeeIE">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT SeeAlsoIE (%SimpleTextModel;)*> -->
+                    
+                    <elementSpec ident="SeeAlsoIE">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                    </elementSpec>
 
                     <!-- ....................................................................... -->
                     <!-- Page Headers                                                            -->

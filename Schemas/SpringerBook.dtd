@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-21T15:12:47Z. .CC-BY
+DTD generated from ODD source 2016-12-21T15:18:22Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1100,6 +1100,8 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!ATTLIST Index
  %att.ID.attributes; >
 <!--doc: -->
+<!ELEMENT IndexEntry %macro.anyXML;>
+<!--doc: -->
 <!ELEMENT Initials  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT InlineEquation (InlineMediaObject|EquationSource)+>
@@ -1270,6 +1272,8 @@ Delivery (Complete|Incomplete|None) #REQUIRED >
 <!--doc: -->
 <!ELEMENT Prefix  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT PrimaryIE %macro.SimpleTextModel;>
+<!--doc: -->
 <!ELEMENT PrintDate (%model.DatePart;)+>
 <!--doc: -->
 <!ELEMENT PrintRun EMPTY>
@@ -1405,6 +1409,8 @@ grayscaleProfile CDATA #IMPLIED >
 PublicationObjectID CDATA #IMPLIED
 SupplierSPACEID CDATA #IMPLIED >
 <!--doc: -->
+<!ELEMENT SecondaryIE %macro.SimpleTextModel;>
+<!--doc: -->
 <!ELEMENT Section1 (Heading,(AuthorGroup)?,(%model.fullTextBlock;)*,(Section2)*)>
 <!ATTLIST Section1
  %att.ID.attributes;
@@ -1424,6 +1430,10 @@ SupplierSPACEID CDATA #IMPLIED >
 <!ATTLIST Section4
  %att.ID.attributes;
  %att.Typed.attributes; >
+<!--doc: -->
+<!ELEMENT SeeAlsoIE %macro.SimpleTextModel;>
+<!--doc: -->
+<!ELEMENT SeeIE %macro.SimpleTextModel;>
 <!--doc:groups together all the Springer metadata associated to a book related publication (book or book chapter) -->
 <!ELEMENT Series (SeriesInfo,(SeriesHeader?,(Book|SubSeries)*))>
 <!--doc: -->
@@ -1563,6 +1573,8 @@ Float CDATA #IMPLIED >
 <!ELEMENT TechnicalInfo %macro.anyXML;>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
+<!--doc: -->
+<!ELEMENT TertiaryIE %macro.SimpleTextModel;>
 <!--doc: -->
 <!ELEMENT TextSpecifications EMPTY>
 <!ATTLIST TextSpecifications
