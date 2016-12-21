@@ -1947,14 +1947,55 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <!--  <!ELEMENT BodyBackmatter ((Appendix*, Glossary?, Bibliography?, Index*, Colophon?) | PDFExtract)> -->
-                    
+
                     <elementSpec ident="BodyBackmatter">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+
+                    <!-- ....................................................................... -->
+                    <!-- Index                                                                   -->
+                    <!-- ....................................................................... -->
+
+                    <!-- <!ELEMENT Index (Heading, SubHeading?, (IndexDiv* | IndexEntry*))> 
+                    <!ATTLIST Index
+                    ID ID #REQUIRED
+                    >
+                    -->
+
+                    <elementSpec ident="Index">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+
+                    <!--<!ELEMENT SeriesIndex (Heading, SubHeading?, (IndexDiv* | IndexEntry*))>-->
+                    <elementSpec ident="SeriesIndex">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+
+                    <!--<!ELEMENT SubSeriesIndex (Heading, SubHeading?, (IndexDiv* | IndexEntry*))>-->
+
+                    <elementSpec ident="SubSeriesIndex">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
+                    <!--<!ELEMENT IndexDiv (Heading, SubHeading?, IndexEntry+)>
+                    <!ELEMENT IndexEntry (PrimaryIE, (SeeIE | SeeAlsoIE)*, (SecondaryIE, (SeeIE | SeeAlsoIE | TertiaryIE)*)*)>
+                    <!ELEMENT PrimaryIE (%SimpleTextModel;)*>
+                    <!ELEMENT SecondaryIE (%SimpleTextModel;)*>
+                    <!ELEMENT TertiaryIE (%SimpleTextModel;)*>
+                    <!ELEMENT SeeIE (%SimpleTextModel;)*>
+                    <!ELEMENT SeeAlsoIE (%SimpleTextModel;)*>-->
 
 
                     <!-- ....................................................................... -->
