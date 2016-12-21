@@ -1888,6 +1888,12 @@
                                 <rng:oneOrMore>
                                     <rng:ref name="BodyRef"/>
                                 </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:ref name="BodyBackmatter"/>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="BodyRef"/>
+                                    </rng:zeroOrMore>
+                                </rng:group>
                             </rng:choice>
                         </content>
                     </elementSpec>

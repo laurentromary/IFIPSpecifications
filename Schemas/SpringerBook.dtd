@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-21T15:18:22Z. .CC-BY
+DTD generated from ODD source 2016-12-21T15:22:18Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -582,7 +582,7 @@ PDFType CDATA #IMPLIED >
 <!ATTLIST Book
  %att.language.attributes; >
 <!--doc: -->
-<!ELEMENT BookBackmatter ((BookBackmatterInfo)?,(BookBackmatterHeader)?,(NoBody|BodyRef+))>
+<!ELEMENT BookBackmatter ((BookBackmatterInfo)?,(BookBackmatterHeader)?,(NoBody|BodyRef+|(BodyBackmatter,BodyRef*)))>
 <!ATTLIST BookBackmatter
  %att.OutputMedium.attributes; >
 <!--doc: -->
