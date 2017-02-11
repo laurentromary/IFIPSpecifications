@@ -1998,23 +1998,23 @@
                     <!--<!ELEMENT IndexDiv (Heading, SubHeading?, IndexEntry+)>
                     
                     -->
-                    
+
                     <!-- <!ELEMENT IndexEntry (PrimaryIE, (SeeIE | SeeAlsoIE)*, (SecondaryIE, (SeeIE | SeeAlsoIE | TertiaryIE)*)*)> -->
-                    
+
                     <elementSpec ident="IndexEntry">
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT PrimaryIE (%SimpleTextModel;)*> -->
-                    
+
                     <elementSpec ident="PrimaryIE">
                         <content>
                             <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT SecondaryIE (%SimpleTextModel;)*>
                      -->
 
@@ -2023,25 +2023,25 @@
                             <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT TertiaryIE (%SimpleTextModel;)*> -->
-                    
+
                     <elementSpec ident="TertiaryIE">
                         <content>
                             <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT SeeIE (%SimpleTextModel;)*> -->
-                    
+
                     <elementSpec ident="SeeIE">
                         <content>
                             <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT SeeAlsoIE (%SimpleTextModel;)*> -->
-                    
+
                     <elementSpec ident="SeeAlsoIE">
                         <content>
                             <rng:ref name="macro.SimpleTextModel"/>
@@ -2974,7 +2974,39 @@
                         </content>
                     </elementSpec>
 
+                    <!-- 
+                    <!ELEMENT Bibliography (Heading, (BibSection | Citation)+)>
+<!ATTLIST Bibliography
+	ID ID #REQUIRED
+	OutputMedium %OutputMediumAttrValues; #IMPLIED
+>
+<!ELEMENT BibSection (Heading, Citation+)>
+<!ATTLIST BibSection
+	ID ID #REQUIRED
+>
+                    -->
+
                     <elementSpec ident="Bibliography">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
+                        <content>
+                            <rng:group>
+                                <rng:optional>
+                                    <rng:ref name="Heading"/>
+                                </rng:optional>
+                                <rng:zeroOrMore>
+                                    <rng:choice>
+                                        <rng:ref name="BibSection"/>
+                                        <rng:ref name="Citation"/>
+                                    </rng:choice>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="BibSection">
                         <classes>
                             <memberOf key="att.ID"/>
                         </classes>

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-12-21T15:22:18Z. .CC-BY
+DTD generated from ODD source 2017-02-11T10:13:51Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -538,11 +538,16 @@ CorrespondingAffiliationID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BibEditorName (%model.NamePart;)*>
 <!--doc: -->
+<!ELEMENT BibSection (Heading?,Citation*)>
+<!ATTLIST BibSection
+ %att.ID.attributes; >
+<!--doc: -->
 <!ELEMENT BibUnstructured (#PCDATA|%model.simpleText;|ExternalRef)*>
 <!--doc: -->
-<!ELEMENT Bibliography (Heading?,Citation*)>
+<!ELEMENT Bibliography (Heading?,(BibSection|Citation)*)>
 <!ATTLIST Bibliography
- %att.ID.attributes; >
+ %att.ID.attributes;
+ %att.OutputMedium.attributes; >
 <!--doc: -->
 <!ELEMENT BibliographyGrant EMPTY>
 <!ATTLIST BibliographyGrant
