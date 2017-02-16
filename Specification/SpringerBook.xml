@@ -4516,6 +4516,13 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+                    
+                    <elementSpec ident="RemarkTo">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
 
                     <elementSpec ident="ProofRecipient">
                         <content>
