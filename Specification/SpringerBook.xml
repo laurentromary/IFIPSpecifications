@@ -3157,6 +3157,7 @@
                                     <rng:ref name="NoChapterTitle"/>
                                     <rng:ref name="BibChapterDOI"/>
                                     <rng:ref name="BibBookDOI"/>
+                                    <rng:ref name="ISBN"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
