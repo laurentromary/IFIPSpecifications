@@ -2856,9 +2856,50 @@
                             <rng:group>
                                 <rng:ref name="CopyrightHolderName"/>
                                 <rng:ref name="CopyrightYear"/>
+                                <rng:optional>
+                                    <rng:ref name="CopyrightComment"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="License"/>
+                                </rng:optional>
                             </rng:group>
                         </content>
                     </elementSpec>
+                    
+                    <!-- <!ELEMENT License (SimplePara+)>
+<!ATTLIST License
+	Type (OpenAccess) #REQUIRED
+	SubType CDATA #IMPLIED
+	Version CDATA #IMPLIED
+> -->
+
+                    <elementSpec ident="License">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="SubType">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Version">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                        
+                    </elementSpec>
+
+                   
 
                     <elementSpec ident="ChapterHistory">
                         <content>
@@ -4517,13 +4558,13 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="RemarkTo">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
 
                     <elementSpec ident="ProofRecipient">
                         <content>

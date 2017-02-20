@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-02-20T14:25:07Z. .CC-BY
+DTD generated from ODD source 2017-02-20T14:41:06Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -711,7 +711,7 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterContext (SeriesID|SubSeriesID|BookSetID|BookSetTitle|VolumePackageID|PartID|SubPartID|BookID|BookTitle)*>
 <!--doc: -->
-<!ELEMENT ChapterCopyright (CopyrightHolderName,CopyrightYear)>
+<!ELEMENT ChapterCopyright (CopyrightHolderName,CopyrightYear,CopyrightComment?,License?)>
 <!--doc: -->
 <!ELEMENT ChapterDOI  (#PCDATA)>
 <!--doc: -->
@@ -1151,6 +1151,12 @@ Supplier CDATA #IMPLIED >
 <!ELEMENT LastPage  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT LayoutColorName  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT License (SimplePara)*>
+<!ATTLIST License
+Type CDATA #IMPLIED
+SubType CDATA #IMPLIED
+Version CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ListItem (ItemNumber,ItemContent)>
 <!--doc: -->
