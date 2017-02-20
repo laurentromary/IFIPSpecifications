@@ -4963,6 +4963,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="colwidth" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </classSpec>
 

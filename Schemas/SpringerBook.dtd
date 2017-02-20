@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-02-20T14:19:39Z. .CC-BY
+DTD generated from ODD source 2017-02-20T14:25:07Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -336,10 +336,14 @@ colname CDATA #IMPLIED'>
 
 <!ENTITY % att.TableQualifiers.attribute.align '
 align CDATA #IMPLIED'>
+
+<!ENTITY % att.TableQualifiers.attribute.colwidth '
+colwidth CDATA #IMPLIED'>
 <!ENTITY % att.TableQualifiers.attributes '
  %att.TableQualifiers.attribute.colnum;
  %att.TableQualifiers.attribute.colname;
- %att.TableQualifiers.attribute.align;'> 
+ %att.TableQualifiers.attribute.align;
+ %att.TableQualifiers.attribute.colwidth;'> 
 <!ENTITY % att.OutputMedium.attribute.OutputMedium '
 OutputMedium CDATA #IMPLIED'>
 <!ENTITY % att.OutputMedium.attributes '
