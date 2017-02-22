@@ -2406,6 +2406,7 @@
                     <elementSpec ident="Para">
                         <classes>
                             <memberOf key="att.ID"/>
+                            <memberOf key="att.Typed"/>
                             <memberOf key="model.fullTextBlock"/>
                         </classes>
                         <content>
@@ -2865,7 +2866,7 @@
                             </rng:group>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT License (SimplePara+)>
 <!ATTLIST License
 	Type (OpenAccess) #REQUIRED
@@ -2896,10 +2897,10 @@
                                 </datatype>
                             </attDef>
                         </attList>
-                        
+
                     </elementSpec>
 
-                   
+
 
                     <elementSpec ident="ChapterHistory">
                         <content>
@@ -5428,7 +5429,6 @@
                         </content>
                     </elementSpec>
 
-
                     <elementSpec ident="CitationRef">
                         <classes>
                             <memberOf key="model.referenceElements"/>
@@ -5438,6 +5438,11 @@
                         </content>
                         <attList>
                             <attDef ident="CitationID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="AdditionalCitationIDS">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
