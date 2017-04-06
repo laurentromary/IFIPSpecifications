@@ -6118,6 +6118,19 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="menclose">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                        <attList>
+                            <attDef ident="notation">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
 
                     <elementSpec ident="mn">
                         <content>

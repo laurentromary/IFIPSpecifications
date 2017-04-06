@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-02-22T13:58:16Z. .CC-BY
+DTD generated from ODD source 2017-04-06T13:49:13Z. .CC-BY
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -1680,6 +1680,10 @@ char CDATA #IMPLIED >
 <!ELEMENT math %macro.anyXML;>
 <!ATTLIST math
 display CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT menclose %macro.anyXML;>
+<!ATTLIST menclose
+notation CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mfenced %macro.anyXML;>
 <!ATTLIST mfenced
