@@ -3825,6 +3825,190 @@
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT TitleUpperCase EMPTY>
+                        <!ATTLIST TitleUpperCase
+                            Letters (InitialWord | InitialLetters | Nonstandard) #REQUIRED> -->
+
+                    <elementSpec ident="TitleUpperCase">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Letters">
+                                <valList>
+                                    <valItem ident="InitialWord"/>
+                                    <valItem ident="InitialLetters"/>
+                                    <valItem ident="Nonstandard"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- 
+                    <!ELEMENT AuthorInformationStyle EMPTY>
+                    <!ATTLIST AuthorInformationStyle
+                        Biography (Permitted | Desired | Required | No) #REQUIRED
+                        Photograph (Permitted | Desired | Required | No) #REQUIRED
+                        CapturePrefix (Yes | No) #IMPLIED
+                        >-->
+
+                    <elementSpec ident="AuthorInformationStyle">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Biography">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                    <valItem ident="No"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="Photograph">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                    <valItem ident="No"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="CapturePrefix">
+                                <valList>
+                                    <valItem ident="Yes"/>
+                                    <valItem ident="No"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT AbstractInDocumentLanguage EMPTY>
+                        <!ATTLIST AbstractInDocumentLanguage
+                        Type (Required | Desired | Permitted | NotPermitted) #REQUIRED
+                        > -->
+
+                    <elementSpec ident="AbstractInDocumentLanguage">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                    <valItem ident="NotPermitted"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT AbstractAdditionalLanguage EMPTY>
+                        <!ATTLIST AbstractAdditionalLanguage
+                        Language %LanguageAttrValues; #REQUIRED
+                        Type (Required | Desired | Permitted) #REQUIRED
+                        > -->
+
+                    <elementSpec ident="AbstractAdditionalLanguage">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT StructuredAbstract EMPTY>
+                        <!ATTLIST StructuredAbstract
+                        Type (Required | Desired | Permitted | NotPermitted) #REQUIRED
+                        > -->
+
+                    <elementSpec ident="StructuredAbstract">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                    <valItem ident="NotPermitted"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT KeywordsInDocumentLanguage EMPTY>
+                        <!ATTLIST KeywordsInDocumentLanguage
+                        Type (Required | Desired | Permitted | NotPermitted) #REQUIRED
+                        > -->
+
+                    <elementSpec ident="KeywordsInDocumentLanguage">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Permitted"/>
+                                    <valItem ident="Desired"/>
+                                    <valItem ident="Required"/>
+                                    <valItem ident="NotPermitted"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <!-- <!ELEMENT CitationStyle EMPTY>
+                        <!ATTLIST CitationStyle
+                        Type (Numbered | NameYear | Alphanumeric | Nonstandard) #REQUIRED
+                        > -->
+                    
+                    <elementSpec ident="CitationStyle">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Numbered"/>
+                                    <valItem ident="NameYear"/>
+                                    <valItem ident="Alphanumeric"/>
+                                    <valItem ident="Nonstandard"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT BodyMarkup EMPTY>
+                        <!ATTLIST BodyMarkup
+                        Type (XML | TEX | XMLandTEX | None) #REQUIRED
+                        > -->
+                    
+                    <elementSpec ident="BodyMarkup">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="XML"/>
+                                    <valItem ident="TEX"/>
+                                    <valItem ident="XMLandTEX"/>
+                                    <valItem ident="None"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+
                     <elementSpec ident="Typesetting">
                         <content>
                             <rng:empty/>

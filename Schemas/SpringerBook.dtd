@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-06-27T06:05:56Z. .CC-BY
+DTD generated from ODD source 2017-06-27T06:21:46Z. .CC-BY
 TEI Edition: Version 3.1.0. Last updated on
 	15th December 2016, revision d3f5e70
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -480,9 +480,17 @@ LastPage CDATA #IMPLIED >
  %att.ID.attributes;
  %att.OutputMedium.attributes; >
 <!--doc: -->
+<!ELEMENT AbstractAdditionalLanguage EMPTY>
+<!ATTLIST AbstractAdditionalLanguage
+Type CDATA  #IMPLIED >
+<!--doc: -->
 <!ELEMENT AbstractGrant EMPTY>
 <!ATTLIST AbstractGrant
  %att.Granted.attributes; >
+<!--doc: -->
+<!ELEMENT AbstractInDocumentLanguage EMPTY>
+<!ATTLIST AbstractInDocumentLanguage
+Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara)*)>
 <!--doc: -->
@@ -519,6 +527,12 @@ AffiliationIDS CDATA #IMPLIED
 CorrespondingAffiliationID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT AuthorGroup (Author+,Affiliation*)>
+<!--doc: -->
+<!ELEMENT AuthorInformationStyle EMPTY>
+<!ATTLIST AuthorInformationStyle
+Biography CDATA  #IMPLIED
+Photograph CDATA  #IMPLIED
+CapturePrefix CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT AuthorName (%model.NamePart;)+>
 <!ATTLIST AuthorName
@@ -576,6 +590,10 @@ CompoundObjectID CDATA #IMPLIED >
 <!ELEMENT BodyHTMLGrant EMPTY>
 <!ATTLIST BodyHTMLGrant
  %att.Granted.attributes; >
+<!--doc: -->
+<!ELEMENT BodyMarkup EMPTY>
+<!ATTLIST BodyMarkup
+Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT BodyPDFGrant EMPTY>
 <!ATTLIST BodyPDFGrant
@@ -766,6 +784,10 @@ Characteristic CDATA  #IMPLIED >
 <!ATTLIST CitationRef
 CitationID CDATA #IMPLIED
 AdditionalCitationIDS CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT CitationStyle EMPTY>
+<!ATTLIST CitationStyle
+Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT City  (#PCDATA)>
 <!--doc: -->
@@ -1149,6 +1171,10 @@ Supplier CDATA #IMPLIED >
  %att.language.attributes;
  %att.OutputMedium.attributes; >
 <!--doc: -->
+<!ELEMENT KeywordsInDocumentLanguage EMPTY>
+<!ATTLIST KeywordsInDocumentLanguage
+Type CDATA  #IMPLIED >
+<!--doc: -->
 <!ELEMENT LastPage  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT LayoutColorName  (#PCDATA)>
@@ -1518,6 +1544,10 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Street  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT StructuredAbstract EMPTY>
+<!ATTLIST StructuredAbstract
+Type CDATA  #IMPLIED >
+<!--doc: -->
 <!ELEMENT SubHeading (#PCDATA|%model.simpleText;|%model.referenceElements;)*>
 <!--doc: -->
 <!ELEMENT SubPart (SubPartInfo,(SubPartHeader)?,(BookFrontmatter)?,(Chapter)+,(BookBackmatter)?)>
@@ -1603,6 +1633,10 @@ Bleeds CDATA #IMPLIED
 TypeareaHeight CDATA #IMPLIED
 TypeareaWidth CDATA #IMPLIED
 PaperStock CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT TitleUpperCase EMPTY>
+<!ATTLIST TitleUpperCase
+Letters CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Toc (Heading,(SubHeading)?,(TocFront)*,(TocPart|TocChapter)*,(TocBack)*)>
 <!--doc: -->
