@@ -3965,12 +3965,37 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+
+                    <!-- <!ELEMENT BibliographyStyle EMPTY>
+                        <!ATTLIST BibliographyStyle
+                        Type (Basic | Vancouver | APA | MathPhysSci | APS | Chemistry | Chicago | AsInManuscript) #REQUIRED
+                        > -->
                     
+                    <elementSpec ident="BibliographyStyle">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="Basic"/>
+                                    <valItem ident="Vancouver"/>
+                                    <valItem ident="APA"/>
+                                    <valItem ident="MathPhysSci"/>
+                                    <valItem ident="APS"/>
+                                    <valItem ident="Chemistry"/>
+                                    <valItem ident="Chicago"/>
+                                    <valItem ident="AsInManuscript"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
                     <!-- <!ELEMENT CitationStyle EMPTY>
                         <!ATTLIST CitationStyle
                         Type (Numbered | NameYear | Alphanumeric | Nonstandard) #REQUIRED
                         > -->
-                    
+
                     <elementSpec ident="CitationStyle">
                         <content>
                             <rng:empty/>
@@ -3991,7 +4016,7 @@
                         <!ATTLIST BodyMarkup
                         Type (XML | TEX | XMLandTEX | None) #REQUIRED
                         > -->
-                    
+
                     <elementSpec ident="BodyMarkup">
                         <content>
                             <rng:empty/>
@@ -4007,7 +4032,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
 
                     <elementSpec ident="Typesetting">
                         <content>
