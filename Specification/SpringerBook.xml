@@ -3970,7 +3970,7 @@
                         <!ATTLIST BibliographyStyle
                         Type (Basic | Vancouver | APA | MathPhysSci | APS | Chemistry | Chicago | AsInManuscript) #REQUIRED
                         > -->
-                    
+
                     <elementSpec ident="BibliographyStyle">
                         <content>
                             <rng:empty/>
@@ -4419,6 +4419,25 @@
                         <content>
                             <rng:empty/>
                         </content>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT PrintQuality EMPTY>
+                        <!ATTLIST PrintQuality
+                        Level (Normal | High) #REQUIRED
+                        > -->
+                    
+                    <elementSpec ident="PrintQuality">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Level">
+                                <valList>
+                                    <valItem ident="Normal"/>
+                                    <valItem ident="High"/>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="PrintRun">
