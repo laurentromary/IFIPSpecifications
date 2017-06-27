@@ -3504,17 +3504,14 @@
                         <content>
                             <rng:group>
                                 <rng:ref name="PublisherInfo"/>
-                                <rng:optional>
-                                    <rng:oneOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:choice>
                                         <rng:ref name="SeriesInfo"/>
-                                    </rng:oneOrMore>
-                                    <rng:optional>
                                         <rng:ref name="SubSeriesInfo"/>
-                                    </rng:optional>
-                                    <rng:optional>
                                         <rng:ref name="SeriesHeader"/>
-                                    </rng:optional>
-                                </rng:optional>
+                                        <rng:ref name="SubSeriesHeader"/>
+                                    </rng:choice>
+                                </rng:zeroOrMore>
                                 <rng:ref name="BookInfo"/>
                                 <rng:optional>
                                     <rng:ref name="AuthorGroup"/>
@@ -6118,7 +6115,7 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="menclose">
                         <content>
                             <rng:ref name="macro.anyXML"/>
