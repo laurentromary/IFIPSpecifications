@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-06-27T06:21:46Z. .CC-BY
+DTD generated from ODD source 2017-06-27T06:28:33Z. .CC-BY
 TEI Edition: Version 3.1.0. Last updated on
 	15th December 2016, revision d3f5e70
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -570,6 +570,10 @@ CapturePrefix CDATA  #IMPLIED >
 <!ELEMENT BibliographyGrant EMPTY>
 <!ATTLIST BibliographyGrant
  %att.Granted.attributes; >
+<!--doc: -->
+<!ELEMENT BibliographyStyle EMPTY>
+<!ATTLIST BibliographyStyle
+Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Binding  (#PCDATA)>
 <!ATTLIST Binding
@@ -1318,6 +1322,10 @@ Delivery (Complete|Incomplete|None) #REQUIRED >
 <!ELEMENT PrimaryIE %macro.SimpleTextModel;>
 <!--doc: -->
 <!ELEMENT PrintDate (%model.DatePart;)+>
+<!--doc: -->
+<!ELEMENT PrintQuality EMPTY>
+<!ATTLIST PrintQuality
+Level CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT PrintRun EMPTY>
 <!ATTLIST PrintRun
