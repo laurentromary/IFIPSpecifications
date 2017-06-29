@@ -6512,6 +6512,11 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="mathsize">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
