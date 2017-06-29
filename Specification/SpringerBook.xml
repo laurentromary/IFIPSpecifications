@@ -2302,6 +2302,22 @@
                             </rng:group>
                         </content>
                     </elementSpec>
+                    
+                    <!-- 
+                    <!ELEMENT Author (AuthorName, Role?, OtherCredit?, Contact?, (Biography | Figure)?)>
+<!ATTLIST Author
+	AffiliationIDS IDREFS #IMPLIED
+	CorrespondingAffiliationID IDREF #IMPLIED
+	PresentAffiliationID IDREF #IMPLIED
+	OnBehalfOfID IDREF #IMPLIED
+	SAPID CDATA #IMPLIED
+	SpringerReferenceID CDATA #IMPLIED
+	ORCID CDATA #IMPLIED
+	EqualContribution %BooleanAttrValues; #IMPLIED
+	Deceased %BooleanAttrValues; #IMPLIED
+	ID ID #IMPLIED
+>
+                    -->
 
                     <elementSpec ident="Author">
                         <classes>
@@ -2322,6 +2338,16 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="CorrespondingAffiliationID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="PresentAffiliationID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ORCID">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
