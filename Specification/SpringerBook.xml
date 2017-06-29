@@ -2548,7 +2548,18 @@
                         </content>
 
                     </elementSpec>
-
+                    
+                    <!-- 
+                    <!ELEMENT Editor (EditorName, Role?, OtherCredit?, Contact?, (Biography | Figure)?)>
+                    <!ATTLIST Editor
+                    AffiliationIDS IDREFS #IMPLIED
+                    PresentAffiliationID IDREF #IMPLIED
+                    SAPID CDATA #IMPLIED
+                    SpringerReferenceID CDATA #IMPLIED
+                    ORCID CDATA #IMPLIED
+                    >
+                     -->
+                   
                     <elementSpec ident="Editor">
                         <content>
                             <rng:group>
@@ -2560,6 +2571,16 @@
                         </content>
                         <attList>
                             <attDef ident="AffiliationIDS">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="PresentAffiliationID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ORCID">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
