@@ -2302,7 +2302,7 @@
                             </rng:group>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- 
                     <!ELEMENT Author (AuthorName, Role?, OtherCredit?, Contact?, (Biography | Figure)?)>
 <!ATTLIST Author
@@ -2548,7 +2548,7 @@
                         </content>
 
                     </elementSpec>
-                    
+
                     <!-- 
                     <!ELEMENT Editor (EditorName, Role?, OtherCredit?, Contact?, (Biography | Figure)?)>
                     <!ATTLIST Editor
@@ -2559,7 +2559,7 @@
                     ORCID CDATA #IMPLIED
                     >
                      -->
-                   
+
                     <elementSpec ident="Editor">
                         <content>
                             <rng:group>
@@ -2736,19 +2736,19 @@
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT Affiliation ((OrgDivision?, OrgName)?, (OrgAddress | URL))> -->
                     <elementSpec ident="Affiliation">
                         <classes>
                             <memberOf key="att.ID"/>
                         </classes>
                         <content>
-                            <rng:oneOrMore>
-                                <rng:choice>
-                                    <rng:ref name="OrgID"/>
+                            <rng:group>
+                                <rng:optional>
                                     <rng:ref name="OrgDivision"/>
-                                    <rng:ref name="OrgName"/>
-                                    <rng:ref name="OrgAddress"/>
-                                </rng:choice>
-                            </rng:oneOrMore>
+                                </rng:optional>
+                                <rng:ref name="OrgName"/>
+                                <rng:ref name="OrgAddress"/>
+                            </rng:group>
                         </content>
                     </elementSpec>
 
@@ -4472,7 +4472,7 @@
                         <!ATTLIST PrintQuality
                         Level (Normal | High) #REQUIRED
                         > -->
-                    
+
                     <elementSpec ident="PrintQuality">
                         <content>
                             <rng:empty/>

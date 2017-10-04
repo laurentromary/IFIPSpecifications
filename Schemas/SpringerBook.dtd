@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2017-06-29T19:40:33Z. .CC-BY
-TEI Edition: Version 3.1.0. Last updated on
-	15th December 2016, revision d3f5e70
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
+DTD generated from ODD source 2017-10-04T15:24:11Z. .CC-BY
+TEI Edition: Version 3.2.0. Last updated on
+	10th July 2017, revision 0fcf651
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
 
 -->
 
@@ -29,13 +29,13 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
 
 <!ENTITY % teidata.language ' CDATA ' >
 
-<!ENTITY % teidata.namespace ' CDATA ' >
-
 <!ENTITY % teidata.outputMeasurement ' CDATA ' >
 
 <!ENTITY % teidata.pointer ' CDATA ' >
 
 <!ENTITY % teidata.versionNumber ' CDATA ' >
+
+<!ENTITY % teidata.xpath ' CDATA' >
 
 <!ENTITY % teidata.word ' CDATA ' >
 
@@ -494,7 +494,7 @@ Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara)*)>
 <!--doc: -->
-<!ELEMENT Affiliation (OrgID|OrgDivision|OrgName|OrgAddress)+>
+<!ELEMENT Affiliation (OrgDivision?,OrgName,OrgAddress)>
 <!ATTLIST Affiliation
  %att.ID.attributes; >
 <!--doc: -->
