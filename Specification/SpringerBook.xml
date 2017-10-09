@@ -3755,7 +3755,26 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="EditorialContact">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="EditorialContactName"/>
+                                    <rng:ref name="Contact"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="EditorialContactName">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="model.NamePart"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                   
                     <!-- ....................................................................... -->
                     <!-- EditorialInfo                                                               -->
                     <!-- ....................................................................... -->

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-10-04T15:24:11Z. .CC-BY
+DTD generated from ODD source 2017-10-09T09:17:13Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -1019,6 +1019,10 @@ ORCID CDATA #IMPLIED >
 <!ELEMENT EditorName (%model.NamePart;)*>
 <!ATTLIST EditorName
  %att.DisplayOrder.attributes; >
+<!--doc: -->
+<!ELEMENT EditorialContact (EditorialContactName|Contact)*>
+<!--doc: -->
+<!ELEMENT EditorialContactName (%model.NamePart;)+>
 <!--doc: -->
 <!ELEMENT EditorialInfo (PublishingSegment)*>
 <!--doc: -->
