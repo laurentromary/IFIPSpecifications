@@ -2744,6 +2744,9 @@
                         <content>
                             <rng:group>
                                 <rng:optional>
+                                    <rng:ref name="OrgID"/>
+                                </rng:optional>
+                                <rng:optional>
                                     <rng:ref name="OrgDivision"/>
                                 </rng:optional>
                                 <rng:ref name="OrgName"/>
@@ -3755,7 +3758,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="EditorialContact">
                         <content>
                             <rng:zeroOrMore>
@@ -3766,7 +3769,7 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="EditorialContactName">
                         <content>
                             <rng:oneOrMore>
@@ -3774,7 +3777,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                   
+
                     <!-- ....................................................................... -->
                     <!-- EditorialInfo                                                               -->
                     <!-- ....................................................................... -->
