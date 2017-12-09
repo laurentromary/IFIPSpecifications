@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-11-07T06:44:40Z. .CC-BY
+DTD generated from ODD source 2017-12-09T18:04:55Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -1425,7 +1425,8 @@ CorrectionsRequired CDATA #IMPLIED >
 <!ELEMENT RefTarget  (#PCDATA)>
 <!ATTLIST RefTarget
 TargetType CDATA #IMPLIED
-Address CDATA #IMPLIED >
+Address CDATA #IMPLIED
+TargetRefID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT RegistrationDate (%model.DatePart;)+>
 <!--doc: -->
