@@ -3250,6 +3250,7 @@
                                     <rng:ref name="PublisherLocation"/>
                                     <rng:ref name="SeriesTitle"/>
                                     <rng:ref name="BibEditorName"/>
+                                    <rng:ref name="BibInstitutionalEditorName"/>
                                     <rng:ref name="ConfEventName"/>
                                     <rng:ref name="ConfEventLocation"/>
                                     <rng:ref name="ConfEventDate"/>
@@ -3375,6 +3376,12 @@
                     </elementSpec>
 
                     <elementSpec ident="InstitutionalAuthorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="BibInstitutionalEditorName">
                         <content>
                             <rng:text/>
                         </content>

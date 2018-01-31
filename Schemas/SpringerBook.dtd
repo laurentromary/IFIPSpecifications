@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-01-31T15:51:53Z. .CC-BY
+DTD generated from ODD source 2018-01-31T15:57:07Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -550,13 +550,15 @@ CapturePrefix CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT BibBookDOI  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT BibChapter (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|NoChapterTitle|BibChapterDOI|BibBookDOI|ISBN)*>
+<!ELEMENT BibChapter (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|BibInstitutionalEditorName|ConfEventName|ConfEventLocation|ConfEventDate|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|NoChapterTitle|BibChapterDOI|BibBookDOI|ISBN)*>
 <!--doc: -->
 <!ELEMENT BibChapterDOI  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT BibComments %macro.SimpleTextModel;>
 <!--doc: -->
 <!ELEMENT BibEditorName (%model.NamePart;)*>
+<!--doc: -->
+<!ELEMENT BibInstitutionalEditorName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT BibSection (Heading?,Citation*)>
 <!ATTLIST BibSection
