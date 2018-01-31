@@ -2438,6 +2438,14 @@
                         <content>
                             <rng:ref name="macro.FullTextModel"/>
                         </content>
+                        <attList>
+                            <attDef ident="TextBreak">
+                                <valList type="closed">
+                                    <valItem ident="Yes"/>
+                                    <valItem ident="No"/>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="SimplePara">

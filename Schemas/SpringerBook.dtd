@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2017-12-09T18:04:55Z. .CC-BY
+DTD generated from ODD source 2018-01-31T15:51:53Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -1267,7 +1267,8 @@ Level CDATA #IMPLIED >
 <!ELEMENT Para %macro.FullTextModel;>
 <!ATTLIST Para
  %att.ID.attributes;
- %att.Typed.attributes; >
+ %att.Typed.attributes;
+TextBreak (Yes|No) #IMPLIED >
 <!--doc: -->
 <!ELEMENT Part (PartInfo,(BookFrontmatter)?,(BodyRef)*,(SubPart)*,(Chapter)*,(BookFrontmatter)?)>
 <!ATTLIST Part
