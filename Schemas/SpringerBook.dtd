@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-01-31T15:57:07Z. .CC-BY
+DTD generated from ODD source 2018-02-07T18:48:39Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -492,7 +492,7 @@ Type CDATA  #IMPLIED >
 <!ATTLIST AbstractInDocumentLanguage
 Type CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT Acknowledgments ((Heading)?,(SimplePara)*)>
+<!ELEMENT Acknowledgments ((Heading)?,(SimplePara|FormalPara)+)>
 <!--doc: -->
 <!ELEMENT Affiliation (OrgID?,OrgDivision?,OrgName,OrgAddress)>
 <!ATTLIST Affiliation

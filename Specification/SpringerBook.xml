@@ -3063,14 +3063,19 @@
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT Acknowledgments (Heading?, (SimplePara | FormalPara)+)> -->
+
                     <elementSpec ident="Acknowledgments">
                         <content>
                             <rng:optional>
                                 <rng:ref name="Heading"/>
                             </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="SimplePara"/>
-                            </rng:zeroOrMore>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:ref name="SimplePara"/>
+                                    <rng:ref name="FormalPara"/>
+                                </rng:choice>
+                            </rng:oneOrMore>
                         </content>
                     </elementSpec>
 
