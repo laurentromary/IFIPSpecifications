@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-02-07T18:48:39Z. .CC-BY
+DTD generated from ODD source 2018-03-05T17:13:52Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -1757,6 +1757,7 @@ mathvariant CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mo %macro.anyXML;>
 <!ATTLIST mo
+mathvariant CDATA #IMPLIED
 form CDATA  #IMPLIED
 fence CDATA  #IMPLIED
 separator CDATA  #IMPLIED
