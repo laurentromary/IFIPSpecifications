@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-03-28T14:32:01Z. .CC-BY
+DTD generated from ODD source 2018-03-28T14:49:14Z. .CC-BY
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -806,7 +806,8 @@ Type CDATA  #IMPLIED >
 <!ELEMENT Collaborator (CollaboratorName,Contact?)>
 <!ATTLIST Collaborator
  %att.Typed.attributes;
-AffiliationIDS CDATA #IMPLIED >
+AffiliationIDS CDATA #IMPLIED
+ORCID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CollaboratorGroup (Collaborator+,Affiliation*)>
 <!--doc: -->
