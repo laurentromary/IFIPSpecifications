@@ -3259,6 +3259,8 @@
                                     <rng:ref name="ConfEventName"/>
                                     <rng:ref name="ConfEventLocation"/>
                                     <rng:ref name="ConfEventDate"/>
+                                    <rng:ref name="ConfEventDateStart"/>
+                                    <rng:ref name="ConfEventDateEnd"/>
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
@@ -3304,6 +3306,8 @@
                                     <rng:ref name="ConfEventName"/>
                                     <rng:ref name="ConfEventLocation"/>
                                     <rng:ref name="ConfEventDate"/>
+                                    <rng:ref name="ConfEventDateStart"/>
+                                    <rng:ref name="ConfEventDateEnd"/>
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
@@ -3339,6 +3343,8 @@
                                     <rng:ref name="ConfEventName"/>
                                     <rng:ref name="ConfEventLocation"/>
                                     <rng:ref name="ConfEventDate"/>
+                                    <rng:ref name="ConfEventDateStart"/>
+                                    <rng:ref name="ConfEventDateEnd"/>
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
