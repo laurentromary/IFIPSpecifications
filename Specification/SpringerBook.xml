@@ -934,11 +934,15 @@
                         </content>
                     </elementSpec>
 
+                    <!-- BookSubjectGroup (BookSubject+, SubjectCollection?)> -->
                     <elementSpec ident="BookSubjectGroup">
                         <content>
-                            <rng:zeroOrMore>
+                            <rng:oneOrMore>
                                 <rng:ref name="BookSubject"/>
-                            </rng:zeroOrMore>
+                            </rng:oneOrMore>
+                            <rng:optional>
+                                <rng:ref name="SubjectCollection"/>
+                            </rng:optional>
                         </content>
                     </elementSpec>
 
@@ -956,6 +960,19 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="Priority">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="SubjectCollection">
+                        <content>
+                            <rng:text/>
+                        </content>
+                        <attList>
+                            <attDef ident="Code">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
