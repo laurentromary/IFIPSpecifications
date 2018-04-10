@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2018-04-10T05:03:18Z. .CC-BY
-TEI Edition: Version 3.2.0. Last updated on
-	10th July 2017, revision 0fcf651
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
+DTD generated from ODD source 2018-04-10T05:08:56Z. .CC-BY
+TEI Edition: Version 3.3.0. Last updated on
+	31st January 2018, revision f4d8439
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
 
 -->
 
@@ -494,7 +494,7 @@ Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara|FormalPara)+)>
 <!--doc: -->
-<!ELEMENT Affiliation (OrgID*,OrgDivision?,OrgName,OrgAddress)>
+<!ELEMENT Affiliation (OrgID*,OrgDivision?,OrgName?,(OrgAddress|URL))>
 <!ATTLIST Affiliation
  %att.ID.attributes; >
 <!--doc: -->

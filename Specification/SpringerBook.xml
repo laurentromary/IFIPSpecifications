@@ -2762,8 +2762,13 @@
                                 <rng:optional>
                                     <rng:ref name="OrgDivision"/>
                                 </rng:optional>
-                                <rng:ref name="OrgName"/>
-                                <rng:ref name="OrgAddress"/>
+                                <rng:optional>
+                                    <rng:ref name="OrgName"/>
+                                </rng:optional>
+                                <rng:choice>
+                                    <rng:ref name="OrgAddress"/>
+                                    <rng:ref name="URL"/>
+                                </rng:choice>
                             </rng:group>
                         </content>
                     </elementSpec>
