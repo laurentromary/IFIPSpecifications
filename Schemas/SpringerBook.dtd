@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-04-10T05:08:56Z. .CC-BY
+DTD generated from ODD source 2018-04-10T05:13:12Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -615,7 +615,8 @@ PDFType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Book (BookInfo,Cover?,BookHeader?,(NoBody|(BodyRef*,BookFrontmatter?,(Part+|Chapter+)?,BookBackmatter?)|BookOnlineFirst))>
 <!ATTLIST Book
- %att.language.attributes; >
+ %att.language.attributes;
+ %att.OutputMedium.attributes; >
 <!--doc: -->
 <!ELEMENT BookBackmatter ((BookBackmatterInfo)?,(BookBackmatterHeader)?,(NoBody|BodyRef+|(BodyBackmatter,BodyRef*)))>
 <!ATTLIST BookBackmatter

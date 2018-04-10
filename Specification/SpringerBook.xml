@@ -304,10 +304,10 @@
 
                     <!-- Series/Book and sub-elements -->
 
-
                     <elementSpec ident="Book">
                         <classes>
                             <memberOf key="att.language"/>
+                            <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
                             <rng:group>
