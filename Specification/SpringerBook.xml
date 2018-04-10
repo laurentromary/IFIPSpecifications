@@ -2756,9 +2756,9 @@
                         </classes>
                         <content>
                             <rng:group>
-                                <rng:optional>
+                                <rng:zeroOrMore>
                                     <rng:ref name="OrgID"/>
-                                </rng:optional>
+                                </rng:zeroOrMore>
                                 <rng:optional>
                                     <rng:ref name="OrgDivision"/>
                                 </rng:optional>
