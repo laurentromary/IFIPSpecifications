@@ -766,6 +766,9 @@
                     </elementSpec>
 
                     <elementSpec ident="BodyRef">
+                        <classes>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
                         <content>
                             <rng:empty/>
                         </content>
