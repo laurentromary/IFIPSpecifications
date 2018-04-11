@@ -2534,6 +2534,13 @@
                                 </rng:oneOrMore>
                             </rng:group>
                         </content>
+                        <attList>
+                            <attDef ident="Source">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="Heading">

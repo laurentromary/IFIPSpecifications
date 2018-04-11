@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-04-10T05:24:23Z. .CC-BY
+DTD generated from ODD source 2018-04-11T14:08:24Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -1186,7 +1186,8 @@ Supplier CDATA #IMPLIED >
 <!ELEMENT KeywordGroup (Heading?,Keyword+)>
 <!ATTLIST KeywordGroup
  %att.language.attributes;
- %att.OutputMedium.attributes; >
+ %att.OutputMedium.attributes;
+Source CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT KeywordsInDocumentLanguage EMPTY>
 <!ATTLIST KeywordsInDocumentLanguage
