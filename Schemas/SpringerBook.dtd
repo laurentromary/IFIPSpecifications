@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-04-11T14:08:24Z. .CC-BY
+DTD generated from ODD source 2018-04-12T13:24:23Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -1274,6 +1274,7 @@ Level CDATA #IMPLIED >
 <!ATTLIST Para
  %att.ID.attributes;
  %att.Typed.attributes;
+ %att.OutputMedium.attributes;
 TextBreak (Yes|No) #IMPLIED >
 <!--doc: -->
 <!ELEMENT Part (PartInfo,(BookFrontmatter)?,(BodyRef)*,(SubPart)*,(Chapter)*,(BookFrontmatter)?)>
