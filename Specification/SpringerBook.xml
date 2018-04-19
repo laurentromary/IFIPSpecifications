@@ -1070,6 +1070,7 @@
                                     <rng:ref name="TrademarkQualifierText"/>
                                     <rng:ref name="ProductLiability"/>
                                     <rng:ref name="CopyrightComment"/>
+                                    <rng:ref name="License"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-04-12T13:24:23Z. .CC-BY
+DTD generated from ODD source 2018-04-19T13:49:24Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -639,7 +639,7 @@ PDFType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BookContext ((SeriesID)?,(SubSeriesID)?,(BookSetID,BookSetTitle)*,(VolumePackageID)?)>
 <!--doc: -->
-<!ELEMENT BookCopyright (CopyrightHolderName|CopyrightYear|SpringerReferenceLine|SpringerLocationsLine|CopyrightStandardText|TrademarkQualifierText|ProductLiability|CopyrightComment)+>
+<!ELEMENT BookCopyright (CopyrightHolderName|CopyrightYear|SpringerReferenceLine|SpringerLocationsLine|CopyrightStandardText|TrademarkQualifierText|ProductLiability|CopyrightComment|License)+>
 <!--doc: -->
 <!ELEMENT BookDOI  (#PCDATA)>
 <!--doc: -->
