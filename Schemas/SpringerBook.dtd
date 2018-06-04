@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-04-19T13:49:24Z. .CC-BY
+DTD generated from ODD source 2018-06-04T13:16:08Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -546,11 +546,11 @@ CapturePrefix CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT BibAuthorName (%model.NamePart;)*>
 <!--doc: -->
-<!ELEMENT BibBook (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|InstitutionalAuthorName|BibBookDOI|ISBN)*>
+<!ELEMENT BibBook (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|Occurrence|BibComments|Eds|EditionNumber|InstitutionalAuthorName|BibBookDOI|ISBN)*>
 <!--doc: -->
 <!ELEMENT BibBookDOI  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT BibChapter (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|BibInstitutionalEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|BibComments|Eds|EditionNumber|NoChapterTitle|BibChapterDOI|BibBookDOI|ISBN)*>
+<!ELEMENT BibChapter (BibAuthorName|InstitutionalAuthorName|Etal|Year|ChapterTitle|ChapterSubTitle|BookTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|BibInstitutionalEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|Occurrence|BibComments|Eds|EditionNumber|NoChapterTitle|BibChapterDOI|BibBookDOI|ISBN)*>
 <!--doc: -->
 <!ELEMENT BibChapterDOI  (#PCDATA)>
 <!--doc: -->
@@ -1127,6 +1127,8 @@ TrimWidthInch CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT GivenName  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT Handle  (#PCDATA)>
+<!--doc: -->
 <!ELEMENT Heading (#PCDATA|%model.simpleText;|%model.referenceElements;)*>
 <!--doc: -->
 <!ELEMENT Hour  (#PCDATA)>
@@ -1240,6 +1242,10 @@ Version CDATA #IMPLIED >
 <!ELEMENT NoInitials EMPTY>
 <!--doc: -->
 <!ELEMENT NumberInSeries  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT Occurrence (Handle|URL)>
+<!ATTLIST Occurrence
+Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT OnlineDate (%model.DatePart;)+>
 <!--doc: -->

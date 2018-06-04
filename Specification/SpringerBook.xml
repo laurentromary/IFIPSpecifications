@@ -3303,6 +3303,7 @@
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
+                                    <rng:ref name="Occurrence"/>
                                     <rng:ref name="BibComments"/>
                                     <rng:ref name="Eds"/>
                                     <rng:ref name="EditionNumber"/>
@@ -3387,6 +3388,7 @@
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
+                                    <rng:ref name="Occurrence"/>
                                     <rng:ref name="BibComments"/>
                                     <rng:ref name="Eds"/>
                                     <rng:ref name="EditionNumber"/>
@@ -3523,6 +3525,42 @@
                     </elementSpec>
 
                     <elementSpec ident="LastPage">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
+                    <!--<!ELEMENT Occurrence (Handle | URL)>
+                    <!ATTLIST Occurrence
+                    Type (DOI | COI | PID | ZLBID | AMSID | URL | ISIID | Bibcode | PMCID) #REQUIRED
+                    >
+                    <!ELEMENT Handle (#PCDATA)>-->
+                    
+                    <elementSpec ident="Occurrence">
+                        <content>
+                            <rng:choice>
+                                <rng:ref name="Handle"/>
+                                <rng:ref name="URL"/>
+                            </rng:choice>
+                        </content>
+                        <attList>
+                            <attDef ident="Type">
+                                <valList>
+                                    <valItem ident="DOI"/>
+                                    <valItem ident="COI"/>
+                                    <valItem ident="PID"/>
+                                    <valItem ident="ZLBID"/>
+                                    <valItem ident="AMSID"/>
+                                    <valItem ident="URL"/>
+                                    <valItem ident="ISIID"/>
+                                    <valItem ident="Bibcode"/>
+                                    <valItem ident="PMCID"/>                                    
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <elementSpec ident="Handle">
                         <content>
                             <rng:text/>
                         </content>
