@@ -3351,6 +3351,7 @@
                                     <rng:ref name="NumberInSeries"/>
                                     <rng:ref name="FirstPage"/>
                                     <rng:ref name="LastPage"/>
+                                    <rng:ref name="Occurrence"/>
                                     <rng:ref name="VolumeID"/>
                                     <rng:ref name="IssueID"/>
                                     <rng:ref name="BibComments"/>
