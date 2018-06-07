@@ -6396,6 +6396,12 @@
                             <rng:ref name="macro.anyXML"/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="mroot">
+                        <content>
+                            <rng:ref name="macro.anyXML"/>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="mi">
                         <content>
