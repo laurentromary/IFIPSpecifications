@@ -2310,12 +2310,17 @@
 
 
                     <!-- ChapterHeader subelements -->
+                    
+                    <!-- <!ELEMENT AuthorGroup ((Author | InstitutionalAuthor)+, Affiliation*)> -->
 
                     <elementSpec ident="AuthorGroup">
                         <content>
                             <rng:group>
                                 <rng:oneOrMore>
-                                    <rng:ref name="Author"/>
+                                    <rng:choice>
+                                        <rng:ref name="Author"/>
+                                        <rng:ref name="InstitutionalAuthor"/>
+                                    </rng:choice>
                                 </rng:oneOrMore>
                                 <rng:zeroOrMore>
                                     <rng:ref name="Affiliation"/>
