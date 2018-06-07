@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-06-04T13:34:57Z. .CC-BY
+DTD generated from ODD source 2018-06-07T12:19:39Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -496,7 +496,8 @@ Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Affiliation (OrgID*,OrgDivision?,OrgName?,(OrgAddress|URL))>
 <!ATTLIST Affiliation
- %att.ID.attributes; >
+ %att.ID.attributes;
+ObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT AplusplusRootFile EMPTY>
 <!ATTLIST AplusplusRootFile
@@ -519,6 +520,11 @@ Type CDATA  #IMPLIED >
 <!ELEMENT ArticleTitle %macro.SimpleTextModel;>
 <!ATTLIST ArticleTitle
  %att.language.attributes; >
+<!--doc: -->
+<!ELEMENT AudioObject (Caption)*>
+<!ATTLIST AudioObject
+FileRef CDATA #IMPLIED
+AudioID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Author (AuthorName,Contact?)>
 <!ATTLIST Author
@@ -950,6 +956,10 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Credit (SimplePara)+>
 <!--doc: -->
+<!ELEMENT DataObject (Caption)*>
+<!ATTLIST DataObject
+FileRef CDATA #IMPLIED >
+<!--doc: -->
 <!ELEMENT Day  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Deadline %macro.anyXML;>
@@ -1159,7 +1169,7 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!ATTLIST InlineEquation
  %att.ID.attributes; >
 <!--doc: -->
-<!ELEMENT InlineMediaObject (ImageObject)+>
+<!ELEMENT InlineMediaObject (ImageObject|VideoObject|AudioObject|DataObject|TextObject)+>
 <!--doc: -->
 <!ELEMENT InstitutionalAuthorName  (#PCDATA)>
 <!--doc: -->
@@ -1217,7 +1227,7 @@ Version CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ManuscriptNumberOfTables  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT MediaObject ((Caption)?,(ImageObject)+)>
+<!ELEMENT MediaObject ((Caption)*,(ImageObject|VideoObject|AudioObject|DataObject|TextObject)+)>
 <!ATTLIST MediaObject
  %att.ID.attributes; >
 <!--doc: -->
@@ -1660,6 +1670,10 @@ Float CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT TertiaryIE %macro.SimpleTextModel;>
 <!--doc: -->
+<!ELEMENT TextObject (Para)*>
+<!ATTLIST TextObject
+FileRef CDATA #IMPLIED >
+<!--doc: -->
 <!ELEMENT TextSpecifications EMPTY>
 <!ATTLIST TextSpecifications
 GutterMargin CDATA #IMPLIED
@@ -1716,6 +1730,11 @@ Profile CDATA #IMPLIED >
 <!ELEMENT UnorderedList ((Heading)?,(ItemContent)+)>
 <!ATTLIST UnorderedList
 Mark CDATA  #REQUIRED >
+<!--doc: -->
+<!ELEMENT VideoObject (Caption)*>
+<!ATTLIST VideoObject
+FileRef CDATA #IMPLIED
+VideoID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT VolumeID  (#PCDATA)>
 <!--doc: -->

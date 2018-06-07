@@ -2800,6 +2800,13 @@
                                 </rng:choice>
                             </rng:group>
                         </content>
+                        <attList>
+                            <attDef ident="ObjectID" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="OrgDivision">
@@ -3530,13 +3537,13 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <!--<!ELEMENT Occurrence (Handle | URL)>
                     <!ATTLIST Occurrence
                     Type (DOI | COI | PID | ZLBID | AMSID | URL | ISIID | Bibcode | PMCID) #REQUIRED
                     >
                     <!ELEMENT Handle (#PCDATA)>-->
-                    
+
                     <elementSpec ident="Occurrence">
                         <content>
                             <rng:choice>
@@ -3555,12 +3562,12 @@
                                     <valItem ident="URL"/>
                                     <valItem ident="ISIID"/>
                                     <valItem ident="Bibcode"/>
-                                    <valItem ident="PMCID"/>                                    
+                                    <valItem ident="PMCID"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="Handle">
                         <content>
                             <rng:text/>
@@ -6037,16 +6044,91 @@
                             <memberOf key="model.fullTextBlock"/>
                         </classes>
                         <content>
-                            <rng:optional>
+                            <rng:zeroOrMore>
                                 <rng:ref name="Caption"/>
-                            </rng:optional>
+                            </rng:zeroOrMore>
                             <rng:oneOrMore>
                                 <rng:choice>
                                     <rng:ref name="ImageObject"/>
+                                    <rng:ref name="VideoObject"/>
+                                    <rng:ref name="AudioObject"/>
+                                    <rng:ref name="DataObject"/>
+                                    <rng:ref name="TextObject"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="VideoObject">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Caption"/>
+                            </rng:zeroOrMore>       
+                        </content>
+                        <attList>
+                            <attDef ident="FileRef">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="VideoID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <elementSpec ident="AudioObject">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Caption"/>
+                            </rng:zeroOrMore>       
+                        </content>
+                        <attList>
+                            <attDef ident="FileRef">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="AudioID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <elementSpec ident="DataObject">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Caption"/>
+                            </rng:zeroOrMore>       
+                        </content>
+                        <attList>
+                            <attDef ident="FileRef">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <elementSpec ident="TextObject">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Para"/>
+                            </rng:zeroOrMore>       
+                        </content>
+                        <attList>
+                            <attDef ident="FileRef">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                 
 
                     <!-- <!ELEMENT InlineMediaObject ((VideoObject | AudioObject | ImageObject | DataObject), (VideoObject | AudioObject | ImageObject | DataObject | TextObject)*)>
  -->
@@ -6059,6 +6141,10 @@
                             <rng:oneOrMore>
                                 <rng:choice>
                                     <rng:ref name="ImageObject"/>
+                                    <rng:ref name="VideoObject"/>
+                                    <rng:ref name="AudioObject"/>
+                                    <rng:ref name="DataObject"/>
+                                    <rng:ref name="TextObject"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
@@ -6229,35 +6315,6 @@
 	Float %BooleanAttrValues; #REQUIRED
 	Category (Schema | Structure | Standard | Logo) #REQUIRED
 >
-<!ELEMENT InlineMediaObject ((VideoObject | AudioObject | ImageObject | DataObject), (VideoObject | AudioObject | ImageObject | DataObject | TextObject)*)>
-
-<!ELEMENT VideoObject (Caption*)>
-<!ATTLIST VideoObject
-	FileRef CDATA #REQUIRED
-	VideoID CDATA #IMPLIED
-	%DCTMLinkAtts; 
->
-<!ELEMENT AudioObject (Caption*)>
-<!ATTLIST AudioObject
-	FileRef CDATA #REQUIRED
-	AudioID CDATA #IMPLIED
-	%DCTMLinkAtts; 
->
-<!ELEMENT ImageObject (Caption*)>
-<!ATTLIST ImageObject
-	FileRef CDATA #REQUIRED
-	Format (GIF | TIFF | EPS | JPEG | PNG | SVG) #REQUIRED
-	Color (Color | BlackWhite) #REQUIRED
-	Type (Linedraw | Halftone | LinedrawHalftone) #REQUIRED
-	Rendition (Print | HTML | ProofPDF | Preview) #REQUIRED
-	%DCTMLinkAtts; 
->
-<!ELEMENT DataObject (Caption*)>
-<!ATTLIST DataObject
-	FileRef CDATA #REQUIRED
-	%DCTMLinkAtts; 
->
-<!ELEMENT TextObject (Para)+>
 <!ELEMENT Cover (CoverInfo, CoverFigure?, BodyRef*)>
 <!ATTLIST Cover
 	Type (TwoPage | FourPage) #IMPLIED
