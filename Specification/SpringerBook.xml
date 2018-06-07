@@ -3434,6 +3434,48 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
+                    
+                    <!--
+                        <!ELEMENT InstitutionalAuthor (InstitutionalAuthorName, Contact?)>
+<!ATTLIST InstitutionalAuthor
+	AffiliationIDS IDREFS #IMPLIED
+	CorrespondingAffiliationID IDREF #IMPLIED
+	SAPID CDATA #IMPLIED
+	SpringerReferenceID CDATA #IMPLIED
+	ID ID #IMPLIED
+>
+                    -->
+                    
+                    <elementSpec ident="InstitutionalAuthor">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                        </classes>
+                        <content>
+                            <rng:group>
+                                <rng:ref name="InstitutionalAuthorName"/>
+                                <rng:optional>
+                                    <rng:ref name="Contact"/>
+                                </rng:optional>
+                            </rng:group>
+                        </content>
+                        <attList>
+                            <attDef ident="AffiliationIDS">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="SAPID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="SpringerReferenceID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
 
                     <elementSpec ident="InstitutionalAuthorName">
                         <content>

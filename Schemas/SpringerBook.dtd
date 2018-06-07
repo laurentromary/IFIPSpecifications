@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-06-07T12:19:39Z. .CC-BY
+DTD generated from ODD source 2018-06-07T12:42:09Z. .CC-BY
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -1171,6 +1171,13 @@ Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
 <!ELEMENT InlineMediaObject (ImageObject|VideoObject|AudioObject|DataObject|TextObject)+>
 <!--doc: -->
+<!ELEMENT InstitutionalAuthor (InstitutionalAuthorName,Contact?)>
+<!ATTLIST InstitutionalAuthor
+ %att.ID.attributes;
+AffiliationIDS CDATA #IMPLIED
+SAPID CDATA #IMPLIED
+SpringerReferenceID CDATA #IMPLIED >
+<!--doc: -->
 <!ELEMENT InstitutionalAuthorName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT InternalRef %macro.SimpleTextModel;>
@@ -1689,7 +1696,7 @@ Letters CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT Toc (Heading,(SubHeading)?,(TocFront)*,(TocPart|TocChapter)*,(TocBack)*)>
 <!--doc: -->
-<!ELEMENT TocAppendix ((Heading)?,(SubHeading)?,(TocEntry,Author*)?,(TocSection1)*)>
+<!ELEMENT TocAppendix ((Heading)?,(SubHeading)?,(TocEntry,(Author|InstitutionalAuthor)*)?,(TocSection1)*)>
 <!--doc: -->
 <!ELEMENT TocBack %macro.SimpleTextModel;>
 <!ATTLIST TocBack
