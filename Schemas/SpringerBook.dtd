@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2018-06-07T12:49:24Z. .CC-BY
-TEI Edition: Version 3.3.0. Last updated on
-	31st January 2018, revision f4d8439
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
+DTD generated from ODD source 2018-12-01T07:06:07Z. .CC-BY
+TEI Edition: Version 3.4.0. Last updated on
+	23rd July 2018, revision 1fa0b54
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
 
 -->
 
@@ -451,9 +451,11 @@ ObjectID CDATA #IMPLIED'>
 DisplayOrder (Western|Eastern) #IMPLIED'>
 <!ENTITY % att.DisplayOrder.attributes '
  %att.DisplayOrder.attribute.DisplayOrder;'> 
+<!ENTITY % att.MathStyle.attribute.mathvariant '
+mathvariant (normal|bold|italic|bold-italic|double-struck|bold-fraktur|script|bold-script|fraktur|sans-serif|bold-sans-serif|sans-serif-italic|sans-serif-bold-italic|monospace) "normal" '>
+<!ENTITY % att.MathStyle.attributes '
+ %att.MathStyle.attribute.mathvariant;'> 
 <!-- start rest of patterns -->
-
-<!ENTITY % macro.anyXML ' ANY' >
 
 <!ENTITY % macro.SimpleTextModel '(#PCDATA|%model.simpleText;)*' >
 
@@ -597,7 +599,7 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Body ((%model.fullTextBlock;)*,(Section1)*)>
 <!--doc: -->
-<!ELEMENT BodyBackmatter %macro.anyXML;>
+<!ELEMENT BodyBackmatter  EMPTY>
 <!--doc: -->
 <!ELEMENT BodyFrontmatter ((Frontispiece)?,(Dedication)?,(Foreword)*,(Preface)*,(BookNotes)?,(Toc)?)>
 <!--doc: -->
@@ -751,7 +753,7 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterFirstPage  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT ChapterGrants %macro.anyXML;>
+<!ELEMENT ChapterGrants  EMPTY>
 <!ATTLIST ChapterGrants
  %att.Typed.attributes; >
 <!--doc: -->
@@ -837,7 +839,7 @@ PrintingColorCount CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CompanyName  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CompoundBookObjectInfo %macro.anyXML;>
+<!ELEMENT CompoundBookObjectInfo  EMPTY>
 <!ATTLIST CompoundBookObjectInfo
  %att.ID.attributes;
  %att.Typed.attributes;
@@ -858,7 +860,7 @@ PrintImagesBlackWhite CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CompoundObjectNumberOfRomanPages  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CompoundObjectTechnicalInfo %macro.anyXML;>
+<!ELEMENT CompoundObjectTechnicalInfo  EMPTY>
 <!--doc: -->
 <!ELEMENT CompoundObjectTotalNumberOfPages  (#PCDATA)>
 <!ATTLIST CompoundObjectTotalNumberOfPages
@@ -902,7 +904,7 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ContactPersonName (%model.NamePart;)+>
 <!--doc: -->
-<!ELEMENT ContentFiles %macro.anyXML;>
+<!ELEMENT ContentFiles  EMPTY>
 <!--doc: -->
 <!ELEMENT CopyEditing EMPTY>
 <!ATTLIST CopyEditing
@@ -939,7 +941,7 @@ Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT CoverLastPage  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CoverProductionInfo %macro.anyXML;>
+<!ELEMENT CoverProductionInfo  EMPTY>
 <!ATTLIST CoverProductionInfo
 Style CDATA #IMPLIED
 PaperStock CDATA #IMPLIED
@@ -962,7 +964,7 @@ FileRef CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Day  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Deadline %macro.anyXML;>
+<!ELEMENT Deadline  EMPTY>
 <!--doc: -->
 <!ELEMENT Dedication ((Heading)?,(SimplePara)+)>
 <!--doc: -->
@@ -1006,7 +1008,7 @@ TocElectronicPDF CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Description (Para)+>
 <!--doc: -->
-<!ELEMENT DiscreteBookObjectInfo %macro.anyXML;>
+<!ELEMENT DiscreteBookObjectInfo  EMPTY>
 <!ATTLIST DiscreteBookObjectInfo
  %att.ID.attributes;
 CompoundObjectID CDATA #IMPLIED >
@@ -1066,7 +1068,7 @@ FontCategory CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT EquationNumber  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT EquationSource %macro.anyXML;>
+<!ELEMENT EquationSource  EMPTY>
 <!ATTLIST EquationSource
 Format (TEX|MATHML|MATHTYPE|XML) #IMPLIED
 NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
@@ -1087,14 +1089,14 @@ NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
 Float (Yes|No) #REQUIRED
 Category (Schema|Structure|Standard|Logo) #REQUIRED >
 <!--doc: -->
-<!ELEMENT File %macro.anyXML;>
+<!ELEMENT File  EMPTY>
 <!ATTLIST File
 DiscreteObjectID CDATA #IMPLIED
 CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT FilesToPublisher %macro.anyXML;>
+<!ELEMENT FilesToPublisher  EMPTY>
 <!--doc: -->
-<!ELEMENT FilesToSupplier %macro.anyXML;>
+<!ELEMENT FilesToSupplier  EMPTY>
 <!--doc: -->
 <!ELEMENT FirstPage  (#PCDATA)>
 <!--doc: -->
@@ -1133,7 +1135,7 @@ TrimWidthInch CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Frontispiece (Figure)>
 <!--doc: -->
-<!ELEMENT FullServiceVendor %macro.anyXML;>
+<!ELEMENT FullServiceVendor  EMPTY>
 <!--doc: -->
 <!ELEMENT GivenName  (#PCDATA)>
 <!--doc: -->
@@ -1157,11 +1159,11 @@ Color (Color|BlackWhite) #REQUIRED
 Type (Linedraw|Halftone|LinedrawHalftone) #IMPLIED
 Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
-<!ELEMENT Index %macro.anyXML;>
+<!ELEMENT Index  EMPTY>
 <!ATTLIST Index
  %att.ID.attributes; >
 <!--doc: -->
-<!ELEMENT IndexEntry %macro.anyXML;>
+<!ELEMENT IndexEntry  EMPTY>
 <!--doc: -->
 <!ELEMENT Initials  (#PCDATA)>
 <!--doc: -->
@@ -1226,7 +1228,7 @@ Version CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Literal (#PCDATA|Emphasis)*>
 <!--doc: -->
-<!ELEMENT ManuscriptInfo %macro.anyXML;>
+<!ELEMENT ManuscriptInfo  EMPTY>
 <!--doc: -->
 <!ELEMENT ManuscriptNumberOfGraphics  (#PCDATA)>
 <!--doc: -->
@@ -1316,7 +1318,7 @@ TextBreak (Yes|No) #IMPLIED >
  %att.OutputMedium.attributes;
 TocLevels CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT PartInfoGroup %macro.anyXML;>
+<!ELEMENT PartInfoGroup  EMPTY>
 <!--doc: -->
 <!ELEMENT PartNumber  (#PCDATA)>
 <!--doc: -->
@@ -1390,13 +1392,13 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ProductionEditorName (%model.NamePart;)+>
 <!--doc: -->
-<!ELEMENT ProductionInfo %macro.anyXML;>
+<!ELEMENT ProductionInfo  EMPTY>
 <!--doc: -->
 <!ELEMENT ProofInfo (ProofRecipient)*>
 <!ATTLIST ProofInfo
 ProofStage CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT ProofRecipient %macro.anyXML;>
+<!ELEMENT ProofRecipient  EMPTY>
 <!ATTLIST ProofRecipient
 ProofType CDATA #IMPLIED
 CorrectionsRequired CDATA #IMPLIED >
@@ -1421,7 +1423,7 @@ CorrectionsRequired CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT PurchaseOrderNumber  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT QualifyingProductionNotes %macro.anyXML;>
+<!ELEMENT QualifyingProductionNotes  EMPTY>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesAds  (#PCDATA)>
 <!--doc: -->
@@ -1542,7 +1544,7 @@ SupplierSPACEID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT SeriesID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT SeriesIndex %macro.anyXML;>
+<!ELEMENT SeriesIndex  EMPTY>
 <!--doc: -->
 <!ELEMENT SeriesInfo (SeriesID|SeriesPrintISSN|SeriesElectronicISSN|SeriesTitle|SeriesAbbreviatedTitle)+>
 <!ATTLIST SeriesInfo
@@ -1635,7 +1637,7 @@ TocLevels CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT SubSeriesID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT SubSeriesIndex %macro.anyXML;>
+<!ELEMENT SubSeriesIndex  EMPTY>
 <!--doc: -->
 <!ELEMENT SubSeriesInfo (SubSeriesID,(SubSeriesPrintISSN)?,(SubSeriesElectronicISSN)?,SubSeriesTitle,(SubSeriesSubTitle)?,(SubSeriesAbbreviatedTitle)?)>
 <!ATTLIST SubSeriesInfo
@@ -1662,16 +1664,16 @@ Code CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Superscript (#PCDATA|Emphasis)*>
 <!--doc: -->
-<!ELEMENT Supplier %macro.anyXML;>
+<!ELEMENT Supplier  EMPTY>
 <!--doc:provides a technical committee number -->
 <!ELEMENT TC  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Table %macro.anyXML;>
+<!ELEMENT Table  EMPTY>
 <!ATTLIST Table
  %att.ID.attributes;
 Float CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT TechnicalInfo %macro.anyXML;>
+<!ELEMENT TechnicalInfo  EMPTY>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
 <!--doc: -->
@@ -1715,7 +1717,7 @@ PageNumber CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT TocPart (TocEntry,(Author)*,(TocChapter)*)>
 <!--doc: -->
-<!ELEMENT TocSection1 %macro.anyXML;>
+<!ELEMENT TocSection1  EMPTY>
 <!--doc: -->
 <!ELEMENT TrademarkQualifierText  (#PCDATA)>
 <!ATTLIST TrademarkQualifierText
@@ -1753,18 +1755,18 @@ VideoID CDATA #IMPLIED >
 <!ATTLIST WorkItem
  %att.FileChildrenQualifiers.attributes; >
 <!--doc: -->
-<!ELEMENT WorkflowInfo %macro.anyXML;>
+<!ELEMENT WorkflowInfo  EMPTY>
 <!ATTLIST WorkflowInfo
 TaskType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Year  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT colspec %macro.anyXML;>
+<!ELEMENT colspec  EMPTY>
 <!ATTLIST colspec
  %att.TableQualifiers.attributes;
 char CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT entry %macro.anyXML;>
+<!ELEMENT entry  EMPTY>
 <!ATTLIST entry
  %att.TableQualifiers.attributes;
 namest CDATA #IMPLIED
@@ -1772,31 +1774,31 @@ nameend CDATA #IMPLIED
 morerows CDATA #IMPLIED
 char CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT math %macro.anyXML;>
+<!ELEMENT math  EMPTY>
 <!ATTLIST math
 display CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT menclose %macro.anyXML;>
+<!ELEMENT menclose  EMPTY>
 <!ATTLIST menclose
 notation CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mfenced %macro.anyXML;>
+<!ELEMENT mfenced  EMPTY>
 <!ATTLIST mfenced
 open CDATA #IMPLIED
 close CDATA #IMPLIED
 separators CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mfrac %macro.anyXML;>
+<!ELEMENT mfrac  EMPTY>
 <!--doc: -->
-<!ELEMENT mi %macro.anyXML;>
+<!ELEMENT mi  EMPTY>
 <!ATTLIST mi
 mathvariant CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mn %macro.anyXML;>
+<!ELEMENT mn  EMPTY>
 <!ATTLIST mn
 mathvariant CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mo %macro.anyXML;>
+<!ELEMENT mo  EMPTY>
 <!ATTLIST mo
 mathvariant CDATA #IMPLIED
 form CDATA  #IMPLIED
@@ -1823,12 +1825,12 @@ indentshiftfirst CDATA #IMPLIED
 indentalignlast CDATA  #IMPLIED
 indentshiftlast CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mover %macro.anyXML;>
+<!ELEMENT mover  EMPTY>
 <!ATTLIST mover
 accent CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT mpadded %macro.anyXML;>
+<!ELEMENT mpadded  EMPTY>
 <!ATTLIST mpadded
 height CDATA #IMPLIED
 depth CDATA #IMPLIED
@@ -1836,20 +1838,20 @@ width CDATA #IMPLIED
 lspace CDATA #IMPLIED
 voffset CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mroot %macro.anyXML;>
+<!ELEMENT mroot  EMPTY>
 <!--doc: -->
-<!ELEMENT mrow %macro.anyXML;>
+<!ELEMENT mrow  EMPTY>
 <!--doc: -->
-<!ELEMENT mspace %macro.anyXML;>
+<!ELEMENT mspace  EMPTY>
 <!ATTLIST mspace
 width CDATA #IMPLIED
 height CDATA #IMPLIED
 depth CDATA #IMPLIED
 linebreak CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT msqrt %macro.anyXML;>
+<!ELEMENT msqrt  EMPTY>
 <!--doc: -->
-<!ELEMENT mstyle %macro.anyXML;>
+<!ELEMENT mstyle  EMPTY>
 <!ATTLIST mstyle
 scriptlevel CDATA #IMPLIED
 displaystyle CDATA  #IMPLIED
@@ -1859,40 +1861,42 @@ infixlinebreakstyle CDATA  #IMPLIED
 decimalpoint CDATA #IMPLIED
 mathsize CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT msub %macro.anyXML;>
+<!ELEMENT msub  EMPTY>
 <!--doc: -->
-<!ELEMENT msubsup %macro.anyXML;>
+<!ELEMENT msubsup  EMPTY>
 <!--doc: -->
-<!ELEMENT msup %macro.anyXML;>
+<!ELEMENT msup  EMPTY>
 <!--doc: -->
-<!ELEMENT mtable %macro.anyXML;>
+<!ELEMENT mtable  EMPTY>
 <!ATTLIST mtable
 columnspacing CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mtd %macro.anyXML;>
+<!ELEMENT mtd  EMPTY>
 <!ATTLIST mtd
 columnalign CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mtext %macro.anyXML;>
+<!ELEMENT mtext  EMPTY>
+<!ATTLIST mtext
+ %att.MathStyle.attributes; >
 <!--doc: -->
-<!ELEMENT mtr %macro.anyXML;>
+<!ELEMENT mtr  EMPTY>
 <!--doc: -->
-<!ELEMENT munder %macro.anyXML;>
+<!ELEMENT munder  EMPTY>
 <!ATTLIST munder
 accentunder CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT munderover %macro.anyXML;>
+<!ELEMENT munderover  EMPTY>
 <!ATTLIST munderover
 accent CDATA  #IMPLIED
 accentunder CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT row %macro.anyXML;>
+<!ELEMENT row  EMPTY>
 <!--doc: -->
-<!ELEMENT tbody %macro.anyXML;>
+<!ELEMENT tbody  EMPTY>
 <!--doc: -->
-<!ELEMENT tfooter %macro.anyXML;>
+<!ELEMENT tfooter  EMPTY>
 <!--doc: -->
 <!ELEMENT tgroup %macro.tbl.tgroup.mdl;>
 <!ATTLIST tgroup
@@ -1901,5 +1905,5 @@ colsep CDATA #IMPLIED
 rowsep CDATA #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT thead %macro.anyXML;>
+<!ELEMENT thead  EMPTY>
 <!-- end elements -->

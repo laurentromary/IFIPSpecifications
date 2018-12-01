@@ -6712,6 +6712,9 @@
                     </elementSpec>
 
                     <elementSpec ident="mtext">
+                        <classes>
+                            <memberOf key="att.MathStyle"></memberOf>
+                        </classes>
                         <content>
                             <rng:ref name="macro.anyXML"/>
                         </content>
@@ -6995,6 +6998,36 @@
                                 <valList type="closed">
                                     <valItem ident="Western"/>
                                     <valItem ident="Eastern"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </classSpec>
+                    
+                    <!-- Presentational attributes in MathML -->
+                    
+                    <classSpec ident="att.MathStyle" type="atts">
+                        <attList>
+                            <!--                     
+                    mathsize	small | normal | big | number v-unit	inherited
+                    mathcolor	#rgb | #rrggbb | html-color-name	inherited
+                    mathbackground	#rgb | #rrggbb | html-color-name -->
+                            <attDef ident="mathvariant" usage="opt">
+                                <defaultVal>normal</defaultVal>
+                                <valList type="closed">
+                                    <valItem ident="normal"/>
+                                    <valItem ident="bold"/>
+                                    <valItem ident="italic"/>
+                                    <valItem ident="bold-italic"/>
+                                    <valItem ident="double-struck"/>
+                                    <valItem ident="bold-fraktur"/>
+                                    <valItem ident="script"/>
+                                    <valItem ident="bold-script"/>
+                                    <valItem ident="fraktur"/>
+                                    <valItem ident="sans-serif"/>
+                                    <valItem ident="bold-sans-serif"/>
+                                    <valItem ident="sans-serif-italic"/>
+                                    <valItem ident="sans-serif-bold-italic"/>
+                                    <valItem ident="monospace"/>                                    
                                 </valList>
                             </attDef>
                         </attList>

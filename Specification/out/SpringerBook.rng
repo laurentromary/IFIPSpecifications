@@ -1,0 +1,4512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:tei="http://www.tei-c.org/ns/1.0"
+         xmlns:teix="http://www.tei-c.org/ns/Examples"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns=""><!--
+Schema generated from ODD source 2018-11-30T16:02:39Z. .
+TEI Edition: Version 3.4.0. Last updated on
+	23rd July 2018, revision 1fa0b54
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
+  
+--><!--CC-BY-->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <define name="macro.SimpleTextModel">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.simpleText"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="macro.FullTextModel">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.fullText"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="model.nameLike.agent">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike.agent_sequence">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.nameLike.agent_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.hiLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.hiLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.emphLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.emphLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.dateLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.dateLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.measureLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.measureLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.offsetLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.offsetLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.editorial_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.editorial_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.pPart.transcriptional_sequence">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.pPart.transcriptional_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.placeNamePart_sequence">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.placeNamePart_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.placeStateLike">
+      <choice>
+         <ref name="model.placeNamePart"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_alternation">
+      <choice>
+         <ref name="model.placeNamePart_alternation"/>
+      </choice>
+   </define>
+   <define name="model.placeStateLike_sequence">
+      <ref name="model.placeNamePart_sequence"/>
+   </define>
+   <define name="model.placeStateLike_sequenceOptional">
+      <optional>
+         <ref name="model.placeNamePart_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.placeStateLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.placeStateLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.placeNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="model.quoteLike">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.quoteLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.quoteLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_alternation">
+      <notAllowed/>
+   </define>
+   <define name="model.addressLike_sequence">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptional">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceOptionalRepeatable">
+      <empty/>
+   </define>
+   <define name="model.addressLike_sequenceRepeatable">
+      <notAllowed/>
+   </define>
+   <define name="model.nameLike">
+      <choice>
+         <ref name="model.nameLike.agent"/>
+         <ref name="model.offsetLike"/>
+         <ref name="model.placeStateLike"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_alternation">
+      <choice>
+         <ref name="model.nameLike.agent_alternation"/>
+         <ref name="model.offsetLike_alternation"/>
+         <ref name="model.placeStateLike_alternation"/>
+      </choice>
+   </define>
+   <define name="model.nameLike_sequence">
+      <ref name="model.nameLike.agent_sequence"/>
+      <ref name="model.offsetLike_sequence"/>
+      <ref name="model.placeStateLike_sequence"/>
+   </define>
+   <define name="model.nameLike_sequenceOptional">
+      <optional>
+         <ref name="model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.offsetLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="model.placeStateLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="model.nameLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.nameLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.offsetLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="model.placeStateLike_sequenceRepeatable"/>
+      </oneOrMore>
+   </define>
+   <define name="Publisher">
+      <element name="Publisher">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together all the Springer metadata associated to a book related publication (book or book chapter)</a:documentation>
+         <group>
+            <ref name="PublisherInfo"/>
+            <ref name="Series"/>
+         </group>
+      </element>
+   </define>
+   <define name="IFIPentity">
+      <element name="IFIPentity">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together all IFIP specific descriptors (TC, SC, etc.)</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="TC"/>
+               <ref name="WG"/>
+               <ref name="SIG"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="subline">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>StateoftheArtSurvey</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Survey</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Tutorial</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Festschrift</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="TC">
+      <element name="TC">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a technical committee number</a:documentation>
+         <text/>
+      </element>
+   </define>
+   <define name="WG">
+      <element name="WG">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a working group number</a:documentation>
+         <text/>
+      </element>
+   </define>
+   <define name="SIG">
+      <element name="SIG">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a SIG number</a:documentation>
+         <text/>
+      </element>
+   </define>
+   <define name="PublisherInfo">
+      <element name="PublisherInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">basic publisher identification</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="PublisherName"/>
+               <ref name="PublisherLocation"/>
+               <ref name="PublisherImprintName"/>
+               <ref name="PublisherURL"/>
+               <ref name="PublisherLogo"/>
+               <ref name="CoPublisher"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="PublisherName">
+      <element name="PublisherName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name of the publisher</a:documentation>
+         <text/>
+         <ref name="att.DisplayOrder.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="PublisherLocation">
+      <element name="PublisherLocation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together all the Springer metadata associated to a book related publication (book or book chapter)</a:documentation>
+         <text/>
+      </element>
+   </define>
+   <define name="PublisherImprintName">
+      <element name="PublisherImprintName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PublisherURL">
+      <element name="PublisherURL">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PublisherLogo">
+      <element name="PublisherLogo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Figure"/>
+      </element>
+   </define>
+   <define name="CoPublisher">
+      <element name="CoPublisher">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Series">
+      <element name="Series">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together all the Springer metadata associated to a book related publication (book or book chapter)</a:documentation>
+         <group>
+            <ref name="SeriesInfo"/>
+            <group>
+               <optional>
+                  <ref name="SeriesHeader"/>
+               </optional>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="Book"/>
+                     <ref name="SubSeries"/>
+                  </choice>
+               </zeroOrMore>
+            </group>
+         </group>
+      </element>
+   </define>
+   <define name="SeriesInfo">
+      <element name="SeriesInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="SeriesID"/>
+               <ref name="SeriesPrintISSN"/>
+               <ref name="SeriesElectronicISSN"/>
+               <ref name="SeriesTitle"/>
+               <ref name="SeriesAbbreviatedTitle"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="TocLevels">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="SeriesType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SeriesID">
+      <element name="SeriesID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubSeriesID">
+      <element name="SubSeriesID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SeriesPrintISSN">
+      <element name="SeriesPrintISSN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubSeriesPrintISSN">
+      <element name="SubSeriesPrintISSN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SeriesElectronicISSN">
+      <element name="SeriesElectronicISSN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubSeriesElectronicISSN">
+      <element name="SubSeriesElectronicISSN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SeriesTitle">
+      <element name="SeriesTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubSeriesTitle">
+      <element name="SubSeriesTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SeriesAbbreviatedTitle">
+      <element name="SeriesAbbreviatedTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubSeriesAbbreviatedTitle">
+      <element name="SubSeriesAbbreviatedTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubSeriesSubTitle">
+      <element name="SubSeriesSubTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Book">
+      <element name="Book">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="BookInfo"/>
+            <optional>
+               <ref name="Cover"/>
+            </optional>
+            <optional>
+               <ref name="BookHeader"/>
+            </optional>
+            <choice>
+               <ref name="NoBody"/>
+               <group>
+                  <zeroOrMore>
+                     <ref name="BodyRef"/>
+                  </zeroOrMore>
+                  <optional>
+                     <ref name="BookFrontmatter"/>
+                  </optional>
+                  <optional>
+                     <choice>
+                        <oneOrMore>
+                           <ref name="Part"/>
+                        </oneOrMore>
+                        <oneOrMore>
+                           <ref name="Chapter"/>
+                        </oneOrMore>
+                     </choice>
+                  </optional>
+                  <optional>
+                     <ref name="BookBackmatter"/>
+                  </optional>
+               </group>
+               <ref name="BookOnlineFirst"/>
+            </choice>
+         </group>
+         <ref name="att.language.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookOnlineFirst">
+      <element name="BookOnlineFirst">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <choice>
+            <oneOrMore>
+               <ref name="Part"/>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="Chapter"/>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="BookInfo">
+      <element name="BookInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="IFIPentity"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="BookID"/>
+               <ref name="BookTitle"/>
+               <ref name="BookSubTitle"/>
+               <ref name="BookVolumeNumber"/>
+               <ref name="BookSequenceNumber"/>
+               <ref name="BookDOI"/>
+               <ref name="BookTitleID"/>
+               <ref name="BookPrintISBN"/>
+               <ref name="BookElectronicISBN"/>
+               <ref name="BookChapterCount"/>
+               <ref name="BookCopyright"/>
+               <ref name="BookHistory"/>
+               <ref name="BookContext"/>
+               <ref name="ConferenceInfo"/>
+               <ref name="EditionNumber"/>
+               <ref name="BookEdition"/>
+               <ref name="PaperInfo"/>
+               <ref name="BookSubjectGroup"/>
+               <ref name="BookstoreLocation"/>
+               <ref name="CatalogingInformation"/>
+               <ref name="BookClassification"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.language.attributes"/>
+         <ref name="att.numbered.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="BookProductType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TocLevels">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ContainsESM">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="MediaType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookHeader">
+      <element name="BookHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="EditorGroup"/>
+      </element>
+   </define>
+   <define name="BookEdition">
+      <element name="BookEdition">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubSeries">
+      <element name="SubSeries">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="SubSeriesInfo"/>
+         <optional>
+            <ref name="BookOnlineFirst"/>
+         </optional>
+         <optional>
+            <ref name="SubSeriesHeader"/>
+         </optional>
+         <optional>
+            <ref name="Toc"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="Book"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="SubSeriesInfo">
+      <element name="SubSeriesInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="SubSeriesID"/>
+         <optional>
+            <ref name="SubSeriesPrintISSN"/>
+         </optional>
+         <optional>
+            <ref name="SubSeriesElectronicISSN"/>
+         </optional>
+         <ref name="SubSeriesTitle"/>
+         <optional>
+            <ref name="SubSeriesSubTitle"/>
+         </optional>
+         <optional>
+            <ref name="SubSeriesAbbreviatedTitle"/>
+         </optional>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="SeriesType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>Series</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Subseries</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>VirtualSeries</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>VolumePackage</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Hierarchy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubSeriesHeader">
+      <element name="SubSeriesHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <optional>
+            <ref name="EditorGroup"/>
+         </optional>
+         <optional>
+            <ref name="CollaboratorGroup"/>
+         </optional>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="CatalogingInformation">
+      <element name="CatalogingInformation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.verySimpleText"/>
+               <ref name="InlineEquation"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="Library">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="Chapter">
+      <element name="Chapter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="ChapterInfo"/>
+            <optional>
+               <ref name="ChapterHeader"/>
+            </optional>
+            <choice>
+               <ref name="NoBody"/>
+               <oneOrMore>
+                  <ref name="BodyRef"/>
+               </oneOrMore>
+               <group>
+                  <ref name="Body"/>
+                  <zeroOrMore>
+                     <ref name="BodyRef"/>
+                  </zeroOrMore>
+               </group>
+            </choice>
+            <optional>
+               <ref name="BodyRef"/>
+            </optional>
+            <optional>
+               <ref name="ChapterBackmatter"/>
+            </optional>
+         </group>
+         <ref name="att.language.attributes"/>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterInfo">
+      <element name="ChapterInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="IFIPentity"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="ChapterID"/>
+               <ref name="ChapterDOI"/>
+               <ref name="ChapterSequenceNumber"/>
+               <ref name="ChapterTitle"/>
+               <ref name="ChapterSubTitle"/>
+               <ref name="ChapterFirstPage"/>
+               <ref name="ChapterLastPage"/>
+               <ref name="ChapterCopyright"/>
+               <ref name="ChapterContext"/>
+               <ref name="ChapterHistory"/>
+               <ref name="ChapterRelatedObject"/>
+               <ref name="ChapterCategory"/>
+               <ref name="ChapterGrants"/>
+               <ref name="ConferenceReference"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.numbered.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <ref name="att.language.attributes"/>
+         <optional>
+            <attribute name="ChapterType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TocLevels">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ContainsESM">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="ConferenceReference">
+      <element name="ConferenceReference">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterGrants">
+      <element name="ChapterGrants">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterHeader">
+      <element name="ChapterHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="AuthorGroup"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="Abstract"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="KeywordGroup"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="ArticleNote"/>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="ArticleNote">
+      <element name="ArticleNote">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="SimplePara"/>
+                  <ref name="FormalPara"/>
+               </choice>
+            </oneOrMore>
+         </group>
+         <ref name="att.Typed.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="NoBody">
+      <element name="NoBody">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Body">
+      <element name="Body">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Section1"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="BodyRef">
+      <element name="BodyRef">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="FileRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TargetType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PDFType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="Section1">
+      <element name="Section1">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Heading"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Section2"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Section2">
+      <element name="Section2">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Heading"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Section3"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Section3">
+      <element name="Section3">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Heading"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Section4"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Section4">
+      <element name="Section4">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Heading"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookID">
+      <element name="BookID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookTitle">
+      <element name="BookTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="BookSubTitle">
+      <element name="BookSubTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookVolumeNumber">
+      <element name="BookVolumeNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookSequenceNumber">
+      <element name="BookSequenceNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookDOI">
+      <element name="BookDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookTitleID">
+      <element name="BookTitleID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookPrintISBN">
+      <element name="BookPrintISBN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookElectronicISBN">
+      <element name="BookElectronicISBN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookChapterCount">
+      <element name="BookChapterCount">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PaperInfo">
+      <element name="PaperInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookSubjectGroup">
+      <element name="BookSubjectGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="BookSubject"/>
+         </oneOrMore>
+         <optional>
+            <ref name="SubjectCollection"/>
+         </optional>
+      </element>
+   </define>
+   <define name="BookSubject">
+      <element name="BookSubject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.Typed.attributes"/>
+         <optional>
+            <attribute name="Code">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Priority">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubjectCollection">
+      <element name="SubjectCollection">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="Code">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookstoreLocation">
+      <element name="BookstoreLocation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookClassification">
+      <element name="BookClassification">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="CharacteristicValue"/>
+               <ref name="ClassificationGroup"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="Appendix">
+      <element name="Appendix">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="TocAppendix"/>
+         </optional>
+         <oneOrMore>
+            <ref name="Section1"/>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="TocAppendix">
+      <element name="TocAppendix">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <optional>
+            <ref name="SubHeading"/>
+         </optional>
+         <optional>
+            <ref name="TocEntry"/>
+            <zeroOrMore>
+               <choice>
+                  <ref name="Author"/>
+                  <ref name="InstitutionalAuthor"/>
+               </choice>
+            </zeroOrMore>
+         </optional>
+         <zeroOrMore>
+            <ref name="TocSection1"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="TocSection1">
+      <element name="TocSection1">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="BookCopyright">
+      <element name="BookCopyright">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="CopyrightHolderName"/>
+               <ref name="CopyrightYear"/>
+               <ref name="SpringerReferenceLine"/>
+               <ref name="SpringerLocationsLine"/>
+               <ref name="CopyrightStandardText"/>
+               <ref name="TrademarkQualifierText"/>
+               <ref name="ProductLiability"/>
+               <ref name="CopyrightComment"/>
+               <ref name="License"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="BookHistory">
+      <element name="BookHistory">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="OnlineDate"/>
+         </optional>
+         <optional>
+            <ref name="PrintDate"/>
+         </optional>
+      </element>
+   </define>
+   <define name="CopyrightHolderName">
+      <element name="CopyrightHolderName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CopyrightYear">
+      <element name="CopyrightYear">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CopyrightComment">
+      <element name="CopyrightComment">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="SimplePara"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="SpringerReferenceLine">
+      <element name="SpringerReferenceLine">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="SimplePara"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.language.attributes"/>
+         <optional>
+            <attribute name="Country">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SpringerLocationsLine">
+      <element name="SpringerLocationsLine">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CopyrightStandardText">
+      <element name="CopyrightStandardText">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <optional>
+            <attribute name="Country">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="TrademarkQualifierText">
+      <element name="TrademarkQualifierText">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <optional>
+            <attribute name="Country">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="ProductLiability">
+      <element name="ProductLiability">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.language.attributes"/>
+         <optional>
+            <attribute name="Country">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookContext">
+      <element name="BookContext">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="SeriesID"/>
+         </optional>
+         <optional>
+            <ref name="SubSeriesID"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="BookSetID"/>
+            <ref name="BookSetTitle"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="VolumePackageID"/>
+         </optional>
+      </element>
+   </define>
+   <define name="BookSetID">
+      <element name="BookSetID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookSetTitle">
+      <element name="BookSetTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="VolumePackageID">
+      <element name="VolumePackageID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Part">
+      <element name="Part">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="PartInfo"/>
+         <optional>
+            <ref name="BookFrontmatter"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="BodyRef"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="SubPart"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Chapter"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="BookFrontmatter"/>
+         </optional>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="PartInfo">
+      <element name="PartInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.PartInfoPart"/>
+         </oneOrMore>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="TocLevels">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="PartID">
+      <element name="PartID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PartNumber">
+      <element name="PartNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PartSequenceNumber">
+      <element name="PartSequenceNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PartTitle">
+      <element name="PartTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="PartSubTitle">
+      <element name="PartSubTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="PartChapterCount">
+      <element name="PartChapterCount">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PartContext">
+      <element name="PartContext">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="SeriesID"/>
+            </optional>
+            <optional>
+               <ref name="SubSeriesID"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="BookSetID"/>
+               <ref name="BookSetTitle"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="VolumePackageID"/>
+            </optional>
+            <optional>
+               <ref name="BookID"/>
+            </optional>
+            <optional>
+               <ref name="BookTitle"/>
+            </optional>
+         </group>
+      </element>
+   </define>
+   <define name="SubPart">
+      <element name="SubPart">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="SubPartInfo"/>
+         <optional>
+            <ref name="SubPartHeader"/>
+         </optional>
+         <optional>
+            <ref name="BookFrontmatter"/>
+         </optional>
+         <oneOrMore>
+            <ref name="Chapter"/>
+         </oneOrMore>
+         <optional>
+            <ref name="BookBackmatter"/>
+         </optional>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubPartHeader">
+      <element name="SubPartHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <optional>
+            <ref name="EditorGroup"/>
+         </optional>
+         <optional>
+            <ref name="CollaboratorGroup"/>
+         </optional>
+         <optional>
+            <ref name="Abstract"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="KeywordGroup"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="ArticleNote"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="SubPartInfo">
+      <element name="SubPartInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="SubPartID"/>
+         <optional>
+            <ref name="SubPartNumber"/>
+         </optional>
+         <optional>
+            <ref name="SubPartSequenceNumber"/>
+         </optional>
+         <ref name="SubPartTitle"/>
+         <optional>
+            <ref name="SubPartSubTitle"/>
+         </optional>
+         <optional>
+            <ref name="SubPartChapterCount"/>
+         </optional>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="TocLevels">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SubPartID">
+      <element name="SubPartID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubPartNumber">
+      <element name="SubPartNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubPartSequenceNumber">
+      <element name="SubPartSequenceNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="SubPartTitle">
+      <element name="SubPartTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="SubPartSubTitle">
+      <element name="SubPartSubTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="SubPartChapterCount">
+      <element name="SubPartChapterCount">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookFrontmatter">
+      <element name="BookFrontmatter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="BookFrontmatterInfo"/>
+         </optional>
+         <optional>
+            <ref name="BookFrontmatterHeader"/>
+         </optional>
+         <choice>
+            <ref name="NoBody"/>
+            <oneOrMore>
+               <ref name="BodyRef"/>
+            </oneOrMore>
+            <group>
+               <ref name="BodyFrontmatter"/>
+               <zeroOrMore>
+                  <ref name="BodyRef"/>
+               </zeroOrMore>
+            </group>
+         </choice>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookFrontmatterInfo">
+      <element name="BookFrontmatterInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="BookFrontmatterDOI"/>
+         </optional>
+         <optional>
+            <ref name="BookFrontmatterHeader"/>
+         </optional>
+         <ref name="BookFrontmatterFirstPage"/>
+         <ref name="BookFrontmatterLastPage"/>
+      </element>
+   </define>
+   <define name="BookFrontmatterDOI">
+      <element name="BookFrontmatterDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookFrontmatterFirstPage">
+      <element name="BookFrontmatterFirstPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookFrontmatterLastPage">
+      <element name="BookFrontmatterLastPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookFrontmatterHeader">
+      <element name="BookFrontmatterHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="PageHeaders"/>
+         </optional>
+      </element>
+   </define>
+   <define name="BodyFrontmatter">
+      <element name="BodyFrontmatter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Frontispiece"/>
+         </optional>
+         <optional>
+            <ref name="Dedication"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="Foreword"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="Preface"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="BookNotes"/>
+         </optional>
+         <optional>
+            <ref name="Toc"/>
+         </optional>
+      </element>
+   </define>
+   <define name="Frontispiece">
+      <element name="Frontispiece">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Figure"/>
+      </element>
+   </define>
+   <define name="Dedication">
+      <element name="Dedication">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <oneOrMore>
+            <ref name="SimplePara"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="Foreword">
+      <element name="Foreword">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="ForewordInfo"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <ref name="Body"/>
+      </element>
+   </define>
+   <define name="ForewordInfo">
+      <element name="ForewordInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="ForewordTitle"/>
+         <optional>
+            <ref name="ForewordDate"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="ForewordLocation"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="ForewordTitle">
+      <element name="ForewordTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ForewordDate">
+      <element name="ForewordDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ForewordLocation">
+      <element name="ForewordLocation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Preface">
+      <element name="Preface">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="PrefaceInfo"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <ref name="Body"/>
+      </element>
+   </define>
+   <define name="PrefaceInfo">
+      <element name="PrefaceInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="PrefaceTitle"/>
+         <optional>
+            <ref name="PrefaceDate"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="PrefaceLocation"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="PrefaceTitle">
+      <element name="PrefaceTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="PrefaceDate">
+      <element name="PrefaceDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PrefaceLocation">
+      <element name="PrefaceLocation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookNotes">
+      <element name="BookNotes">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="BookNotesTitle"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <ref name="Body"/>
+      </element>
+   </define>
+   <define name="BookNotesTitle">
+      <element name="BookNotesTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Toc">
+      <element name="Toc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Heading"/>
+         <optional>
+            <ref name="SubHeading"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="TocFront"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="TocPart"/>
+               <ref name="TocChapter"/>
+            </choice>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="TocBack"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="TocFront">
+      <element name="TocFront">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <optional>
+            <attribute name="PageNumber">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="TocPart">
+      <element name="TocPart">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="TocEntry"/>
+         <zeroOrMore>
+            <ref name="Author"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="TocChapter"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="TocEntry">
+      <element name="TocEntry">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.simpleText"/>
+               <ref name="ExternalRef"/>
+            </choice>
+         </zeroOrMore>
+         <optional>
+            <attribute name="PageNumber">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TargetID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="TocChapter">
+      <element name="TocChapter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <optional>
+            <ref name="SubHeading"/>
+         </optional>
+         <optional>
+            <ref name="TocEntry"/>
+            <zeroOrMore>
+               <ref name="Author"/>
+            </zeroOrMore>
+         </optional>
+      </element>
+   </define>
+   <define name="TocBack">
+      <element name="TocBack">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <optional>
+            <attribute name="PageNumber">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookBackmatter">
+      <element name="BookBackmatter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="BookBackmatterInfo"/>
+         </optional>
+         <optional>
+            <ref name="BookBackmatterHeader"/>
+         </optional>
+         <choice>
+            <ref name="NoBody"/>
+            <oneOrMore>
+               <ref name="BodyRef"/>
+            </oneOrMore>
+            <group>
+               <ref name="BodyBackmatter"/>
+               <zeroOrMore>
+                  <ref name="BodyRef"/>
+               </zeroOrMore>
+            </group>
+         </choice>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookBackmatterInfo">
+      <element name="BookBackmatterInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="BookBackmatterDOI"/>
+         </optional>
+         <ref name="BookBackmatterFirstPage"/>
+         <ref name="BookBackmatterLastPage"/>
+      </element>
+   </define>
+   <define name="BookBackmatterHeader">
+      <element name="BookBackmatterHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="PageHeaders"/>
+         </optional>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <optional>
+            <ref name="TocChapter"/>
+         </optional>
+         <optional>
+            <ref name="Abstract"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="KeywordGroup"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="ArticleNote"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="BookBackmatterDOI">
+      <element name="BookBackmatterDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookBackmatterFirstPage">
+      <element name="BookBackmatterFirstPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BookBackmatterLastPage">
+      <element name="BookBackmatterLastPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BodyBackmatter">
+      <element name="BodyBackmatter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="PageHeaders">
+      <element name="PageHeaders">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="OpeningHeader"/>
+         </optional>
+         <optional>
+            <ref name="OpeningFigure"/>
+         </optional>
+         <oneOrMore>
+            <ref name="RunningTitle"/>
+         </oneOrMore>
+         <optional>
+            <ref name="RunningAuthor"/>
+         </optional>
+      </element>
+   </define>
+   <define name="OpeningHeader">
+      <element name="OpeningHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="OpeningFigure">
+      <element name="OpeningFigure">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="MediaObject"/>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <attribute name="Float">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <attribute name="Category">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="RunningTitle">
+      <element name="RunningTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="RunningAuthor">
+      <element name="RunningAuthor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConferenceInfo">
+      <element name="ConferenceInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.ConferenceInfoPart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ConfSeriesName">
+      <element name="ConfSeriesName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ConfSeriesID">
+      <element name="ConfSeriesID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ConfEventID">
+      <element name="ConfEventID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ConfEventAbbreviation">
+      <element name="ConfEventAbbreviation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConfNumber">
+      <element name="ConfNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConfEventLocation">
+      <element name="ConfEventLocation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="City"/>
+               <ref name="Country"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="ConfEventURL">
+      <element name="ConfEventURL">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConfEventDate">
+      <element name="ConfEventDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConfEventDateStart">
+      <element name="ConfEventDateStart">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.DatePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ConfEventDateEnd">
+      <element name="ConfEventDateEnd">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.DatePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="JournalTitle">
+      <element name="JournalTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ArticleTitle">
+      <element name="ArticleTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="AuthorGroup">
+      <element name="AuthorGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <oneOrMore>
+               <choice>
+                  <ref name="Author"/>
+                  <ref name="InstitutionalAuthor"/>
+               </choice>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="Affiliation"/>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="Author">
+      <element name="Author">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="AuthorName"/>
+            <optional>
+               <ref name="Contact"/>
+            </optional>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="AffiliationIDS">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="CorrespondingAffiliationID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PresentAffiliationID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ORCID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="AuthorName">
+      <element name="AuthorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.NamePart"/>
+         </oneOrMore>
+         <ref name="att.DisplayOrder.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="CollaboratorGroup">
+      <element name="CollaboratorGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <oneOrMore>
+               <ref name="Collaborator"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="Affiliation"/>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="Collaborator">
+      <element name="Collaborator">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="CollaboratorName"/>
+            <optional>
+               <ref name="Contact"/>
+            </optional>
+         </group>
+         <ref name="att.Typed.attributes"/>
+         <optional>
+            <attribute name="AffiliationIDS">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ORCID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="CollaboratorName">
+      <element name="CollaboratorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.NamePart"/>
+         </oneOrMore>
+         <ref name="att.DisplayOrder.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Abstract">
+      <element name="Abstract">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="Para"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.language.attributes"/>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Para">
+      <element name="Para">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.FullTextModel"/>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="TextBreak">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>Yes</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>No</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="SimplePara">
+      <element name="SimplePara">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.simpleText"/>
+               <ref name="Figure"/>
+               <ref name="Table"/>
+               <ref name="model.referenceElements"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.Typed.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="FormalPara">
+      <element name="FormalPara">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="Heading"/>
+            <oneOrMore>
+               <ref name="Para"/>
+            </oneOrMore>
+         </group>
+         <ref name="att.Typed.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="ID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="RenderingStyle">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="KeywordGroup">
+      <element name="KeywordGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <oneOrMore>
+               <ref name="Keyword"/>
+            </oneOrMore>
+         </group>
+         <ref name="att.language.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <optional>
+            <attribute name="Source">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="Heading">
+      <element name="Heading">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.simpleText"/>
+               <ref name="model.referenceElements"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="SubHeading">
+      <element name="SubHeading">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.simpleText"/>
+               <ref name="model.referenceElements"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Keyword">
+      <element name="Keyword">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="EditorGroup">
+      <element name="EditorGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <oneOrMore>
+               <ref name="Editor"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="Affiliation"/>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="Editor">
+      <element name="Editor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="EditorName"/>
+            <optional>
+               <ref name="Contact"/>
+            </optional>
+         </group>
+         <optional>
+            <attribute name="AffiliationIDS">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PresentAffiliationID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ORCID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="EditorName">
+      <element name="EditorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="model.NamePart"/>
+         </zeroOrMore>
+         <ref name="att.DisplayOrder.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="GivenName">
+      <element name="GivenName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="NoGivenName">
+      <element name="NoGivenName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="Initials">
+      <element name="Initials">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="NoInitials">
+      <element name="NoInitials">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="Particle">
+      <element name="Particle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="FamilyName">
+      <element name="FamilyName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Suffix">
+      <element name="Suffix">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Prefix">
+      <element name="Prefix">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Degrees">
+      <element name="Degrees">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="NativeName">
+      <element name="NativeName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Contact">
+      <element name="Contact">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.ContactPart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="Phone">
+      <element name="Phone">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Fax">
+      <element name="Fax">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Email">
+      <element name="Email">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="URL">
+      <element name="URL">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Affiliation">
+      <element name="Affiliation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <zeroOrMore>
+               <ref name="OrgID"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="OrgDivision"/>
+            </optional>
+            <optional>
+               <ref name="OrgName"/>
+            </optional>
+            <choice>
+               <ref name="OrgAddress"/>
+               <ref name="URL"/>
+            </choice>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="ObjectID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="OrgDivision">
+      <element name="OrgDivision">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="OrgName">
+      <element name="OrgName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="OrgID">
+      <element name="OrgID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.Typed.attributes"/>
+         <optional>
+            <attribute name="Level">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="OrgAddress">
+      <element name="OrgAddress">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.ContactPart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="Street">
+      <element name="Street">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Postbox">
+      <element name="Postbox">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Postcode">
+      <element name="Postcode">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="City">
+      <element name="City">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="State">
+      <element name="State">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Country">
+      <element name="Country">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="Code">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterID">
+      <element name="ChapterID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterDOI">
+      <element name="ChapterDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterSequenceNumber">
+      <element name="ChapterSequenceNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterTitle">
+      <element name="ChapterTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterSubTitle">
+      <element name="ChapterSubTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterFirstPage">
+      <element name="ChapterFirstPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterLastPage">
+      <element name="ChapterLastPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterCopyright">
+      <element name="ChapterCopyright">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="CopyrightHolderName"/>
+            <ref name="CopyrightYear"/>
+            <optional>
+               <ref name="CopyrightComment"/>
+            </optional>
+            <optional>
+               <ref name="License"/>
+            </optional>
+         </group>
+      </element>
+   </define>
+   <define name="License">
+      <element name="License">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="SimplePara"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="Type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="SubType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="ChapterHistory">
+      <element name="ChapterHistory">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="RegistrationDate"/>
+               <ref name="OnlineDate"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="OnlineDate">
+      <element name="OnlineDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.DatePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="PrintDate">
+      <element name="PrintDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.DatePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="RegistrationDate">
+      <element name="RegistrationDate">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.DatePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ChapterContext">
+      <element name="ChapterContext">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="SeriesID"/>
+               <ref name="SubSeriesID"/>
+               <ref name="BookSetID"/>
+               <ref name="BookSetTitle"/>
+               <ref name="VolumePackageID"/>
+               <ref name="PartID"/>
+               <ref name="SubPartID"/>
+               <ref name="BookID"/>
+               <ref name="BookTitle"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="ChapterRelatedObject">
+      <element name="ChapterRelatedObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="RelatedObjectDOI"/>
+         <optional>
+            <attribute name="RelatedObjectType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="RelatedObjectDOI">
+      <element name="RelatedObjectDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterCategory">
+      <element name="ChapterCategory">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ChapterBackmatter">
+      <element name="ChapterBackmatter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Acknowledgments"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="Appendix"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="Bibliography"/>
+         </optional>
+      </element>
+   </define>
+   <define name="Acknowledgments">
+      <element name="Acknowledgments">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="SimplePara"/>
+               <ref name="FormalPara"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="Bibliography">
+      <element name="Bibliography">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <ref name="BibSection"/>
+                  <ref name="Citation"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="BibSection">
+      <element name="BibSection">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="Citation"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Citation">
+      <element name="Citation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="CitationNumber"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <ref name="BibUnstructured"/>
+                  <ref name="BibChapter"/>
+                  <ref name="BibArticle"/>
+                  <ref name="BibBook"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="CitationNumber">
+      <element name="CitationNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibUnstructured">
+      <element name="BibUnstructured">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.simpleText"/>
+               <ref name="ExternalRef"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="ExternalRef">
+      <element name="ExternalRef">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="RefSource"/>
+            <oneOrMore>
+               <ref name="RefTarget"/>
+            </oneOrMore>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="InternalRef">
+      <element name="InternalRef">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="RefID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="RefSource">
+      <element name="RefSource">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="RefTarget">
+      <element name="RefTarget">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="TargetType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Address">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TargetRefID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BibChapter">
+      <element name="BibChapter">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="BibAuthorName"/>
+               <ref name="InstitutionalAuthorName"/>
+               <ref name="Etal"/>
+               <ref name="Year"/>
+               <ref name="ChapterTitle"/>
+               <ref name="ChapterSubTitle"/>
+               <ref name="BookTitle"/>
+               <ref name="PublisherName"/>
+               <ref name="PublisherLocation"/>
+               <ref name="SeriesTitle"/>
+               <ref name="BibEditorName"/>
+               <ref name="BibInstitutionalEditorName"/>
+               <ref name="ConfEventName"/>
+               <ref name="ConfEventLocation"/>
+               <ref name="ConfEventDate"/>
+               <ref name="ConfEventDateStart"/>
+               <ref name="ConfEventDateEnd"/>
+               <ref name="NumberInSeries"/>
+               <ref name="FirstPage"/>
+               <ref name="LastPage"/>
+               <ref name="Occurrence"/>
+               <ref name="BibComments"/>
+               <ref name="Eds"/>
+               <ref name="EditionNumber"/>
+               <ref name="NoChapterTitle"/>
+               <ref name="BibChapterDOI"/>
+               <ref name="BibBookDOI"/>
+               <ref name="ISBN"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="NoChapterTitle">
+      <element name="NoChapterTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="NoArticleTitle">
+      <element name="NoArticleTitle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="BibArticle">
+      <element name="BibArticle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="Etal"/>
+               <ref name="BibAuthorName"/>
+               <ref name="InstitutionalAuthorName"/>
+               <ref name="Year"/>
+               <ref name="ArticleTitle"/>
+               <ref name="JournalTitle"/>
+               <ref name="PublisherName"/>
+               <ref name="PublisherLocation"/>
+               <ref name="SeriesTitle"/>
+               <ref name="BibEditorName"/>
+               <ref name="ConfEventName"/>
+               <ref name="ConfEventLocation"/>
+               <ref name="ConfEventDate"/>
+               <ref name="ConfEventDateStart"/>
+               <ref name="ConfEventDateEnd"/>
+               <ref name="NumberInSeries"/>
+               <ref name="FirstPage"/>
+               <ref name="LastPage"/>
+               <ref name="Occurrence"/>
+               <ref name="VolumeID"/>
+               <ref name="IssueID"/>
+               <ref name="BibComments"/>
+               <ref name="Eds"/>
+               <ref name="BibArticleDOI"/>
+               <ref name="NoArticleTitle"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="BibBook">
+      <element name="BibBook">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="BibAuthorName"/>
+               <ref name="InstitutionalAuthorName"/>
+               <ref name="Etal"/>
+               <ref name="Year"/>
+               <ref name="ChapterTitle"/>
+               <ref name="ChapterSubTitle"/>
+               <ref name="BookTitle"/>
+               <ref name="PublisherName"/>
+               <ref name="PublisherLocation"/>
+               <ref name="SeriesTitle"/>
+               <ref name="BibEditorName"/>
+               <ref name="ConfEventName"/>
+               <ref name="ConfEventLocation"/>
+               <ref name="ConfEventDate"/>
+               <ref name="ConfEventDateStart"/>
+               <ref name="ConfEventDateEnd"/>
+               <ref name="NumberInSeries"/>
+               <ref name="FirstPage"/>
+               <ref name="LastPage"/>
+               <ref name="Occurrence"/>
+               <ref name="BibComments"/>
+               <ref name="Eds"/>
+               <ref name="EditionNumber"/>
+               <ref name="InstitutionalAuthorName"/>
+               <ref name="BibBookDOI"/>
+               <ref name="ISBN"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="VolumeID">
+      <element name="VolumeID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="IssueID">
+      <element name="IssueID">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="EditionNumber">
+      <element name="EditionNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibAuthorName">
+      <element name="BibAuthorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="model.NamePart"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="InstitutionalAuthor">
+      <element name="InstitutionalAuthor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="InstitutionalAuthorName"/>
+            <optional>
+               <ref name="Contact"/>
+            </optional>
+         </group>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="AffiliationIDS">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="SAPID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="SpringerReferenceID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="InstitutionalAuthorName">
+      <element name="InstitutionalAuthorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibInstitutionalEditorName">
+      <element name="BibInstitutionalEditorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Etal">
+      <element name="Etal">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="BibArticleDOI">
+      <element name="BibArticleDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibChapterDOI">
+      <element name="BibChapterDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibBookDOI">
+      <element name="BibBookDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibEditorName">
+      <element name="BibEditorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="model.NamePart"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Year">
+      <element name="Year">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Month">
+      <element name="Month">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Day">
+      <element name="Day">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Hour">
+      <element name="Hour">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ConfEventName">
+      <element name="ConfEventName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="NumberInSeries">
+      <element name="NumberInSeries">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="FirstPage">
+      <element name="FirstPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="LastPage">
+      <element name="LastPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Occurrence">
+      <element name="Occurrence">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <choice>
+            <ref name="Handle"/>
+            <ref name="URL"/>
+         </choice>
+         <optional>
+            <attribute name="Type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="Handle">
+      <element name="Handle">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibComments">
+      <element name="BibComments">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="Eds">
+      <element name="Eds">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="Caption">
+      <element name="Caption">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="CaptionNumber"/>
+         </optional>
+         <ref name="CaptionContent"/>
+         <ref name="att.language.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="CaptionNumber">
+      <element name="CaptionNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CaptionContent">
+      <element name="CaptionContent">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="SimplePara"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="Credit"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Credit">
+      <element name="Credit">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="SimplePara"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="JobSheet">
+      <element name="JobSheet">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="BookJobSheet"/>
+         </oneOrMore>
+         <optional>
+            <attribute name="Version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ObjectID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="JobSheetDate">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Supplier">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BookJobSheet">
+      <element name="BookJobSheet">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <ref name="PublisherInfo"/>
+            <zeroOrMore>
+               <choice>
+                  <ref name="SeriesInfo"/>
+                  <ref name="SubSeriesInfo"/>
+                  <ref name="SeriesHeader"/>
+                  <ref name="SubSeriesHeader"/>
+               </choice>
+            </zeroOrMore>
+            <ref name="BookInfo"/>
+            <optional>
+               <ref name="AuthorGroup"/>
+            </optional>
+            <optional>
+               <ref name="EditorGroup"/>
+            </optional>
+            <optional>
+               <ref name="CollaboratorGroup"/>
+            </optional>
+            <ref name="ProductionInfo"/>
+         </group>
+      </element>
+   </define>
+   <define name="SeriesHeader">
+      <element name="SeriesHeader">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="AuthorGroup"/>
+         </optional>
+         <optional>
+            <ref name="EditorGroup"/>
+         </optional>
+         <optional>
+            <ref name="CollaboratorGroup"/>
+         </optional>
+         <optional>
+            <ref name="SeriesInformationText"/>
+         </optional>
+         <optional>
+            <ref name="Abstract"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="KeywordGroup"/>
+         </zeroOrMore>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="SeriesInformationText">
+      <element name="SeriesInformationText">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Para"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="ProductionInfo">
+      <element name="ProductionInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="ProductionEditorName">
+      <element name="ProductionEditorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.NamePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ContactPersonName">
+      <element name="ContactPersonName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.NamePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="EditorialContactName">
+      <element name="EditorialContactName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="model.NamePart"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="PublishingSegment">
+      <element name="PublishingSegment">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="LayoutColorName">
+      <element name="LayoutColorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="PrintingColorName">
+      <element name="PrintingColorName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Share">
+      <element name="Share">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <ref name="att.Typed.attributes"/>
+         <optional>
+            <attribute name="Quantity">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="ProductionClassification">
+      <element name="ProductionClassification">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ISBN">
+      <element name="ISBN">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="Reason">
+      <element name="Reason">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ProofRecipient">
+      <element name="ProofRecipient">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <attribute name="ProofType">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="CorrectionsRequired">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="DeliverablesForCompoundBookObjects">
+      <element name="DeliverablesForCompoundBookObjects">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <empty/>
+         <optional>
+            <attribute name="BackmatterElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BackmatterXML">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BookDeltaPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BookElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BookEpsilonPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BookPrintPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="BookProofFeedbackPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterOnlineMediaObjects">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterPrintMediaObjects">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterTEX">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterXMLWithBody">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ChapterXMLWithBodyRefsOnly">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="CoverFigure">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="CoverPrintPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="DustJacketPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="FrontmatterElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="FrontmatterXML">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Manuscript">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartBackmatterElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartBackmatterManuscripts">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartBackmatterXML">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartFrontmatterElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartFrontmatterManuscripts">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="PartFrontmatterXML">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Pit-Stop-Reports">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="TocElectronicPDF">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="Table">
+      <element name="Table">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="att.ID.attributes"/>
+         <optional>
+            <attribute name="Float">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="colspec">
+      <element name="colspec">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="att.TableQualifiers.attributes"/>
+         <optional>
+            <attribute name="char">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tbody">
+      <element name="tbody">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="thead">
+      <element name="thead">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+      </element>
+   </define>
+   <define name="att.TableQualifiers.attributes">
+      <ref name="att.TableQualifiers.attribute.colnum"/>
+      <ref name="att.TableQualifiers.attribute.colname"/>
+      <ref name="att.TableQualifiers.attribute.align"/>
+      <ref name="att.TableQualifiers.attribute.colwidth"/>
+   </define>
+   <define name="att.TableQualifiers.attribute.colnum">
+      <optional>
+         <attribute name="colnum">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.TableQualifiers.attribute.colname">
+      <optional>
+         <attribute name="colname">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.TableQualifiers.attribute.align">
+      <optional>
+         <attribute name="align">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.TableQualifiers.attribute.colwidth">
+      <optional>
+         <attribute name="colwidth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="Equation">
+      <element name="Equation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="EquationNumber"/>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="MediaObject"/>
+               <ref name="EquationSource"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="EquationNumber">
+      <element name="EquationNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="EquationSource">
+      <element name="EquationSource">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <attribute name="Format">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>TEX</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>MATHML</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>MATHTYPE</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>XML</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="NOTATION">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>TEX</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>MATHML</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>MATHTYPE</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>XML</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="InlineEquation">
+      <element name="InlineEquation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="InlineMediaObject"/>
+               <ref name="EquationSource"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="ClassificationGroup">
+      <element name="ClassificationGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="CharacteristicValue"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="CharacteristicValue">
+      <element name="CharacteristicValue">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <optional>
+            <attribute name="Characteristic">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="att.OutputMedium.attributes">
+      <ref name="att.OutputMedium.attribute.OutputMedium"/>
+   </define>
+   <define name="att.OutputMedium.attribute.OutputMedium">
+      <optional>
+         <attribute name="OutputMedium">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ID.attributes">
+      <ref name="att.ID.attribute.ID"/>
+   </define>
+   <define name="att.ID.attribute.ID">
+      <optional>
+         <attribute name="ID">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="ID"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.language.attributes">
+      <ref name="att.language.attribute.Language"/>
+   </define>
+   <define name="att.language.attribute.Language">
+      <optional>
+         <attribute name="Language">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the working language of the content of the element</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.numbered.attributes">
+      <ref name="att.numbered.attribute.NumberingStyle"/>
+      <ref name="att.numbered.attribute.NumberingDepth"/>
+   </define>
+   <define name="att.numbered.attribute.NumberingStyle">
+      <optional>
+         <attribute name="NumberingStyle">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.numbered.attribute.NumberingDepth">
+      <optional>
+         <attribute name="NumberingDepth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.Typed.attributes">
+      <ref name="att.Typed.attribute.Type"/>
+   </define>
+   <define name="att.Typed.attribute.Type">
+      <optional>
+         <attribute name="Type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.Granted.attribute.Grant">
+      <optional>
+         <attribute name="Grant">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.FileChildrenQualifiers.attribute.FileRef">
+      <optional>
+         <attribute name="FileRef">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.FileChildrenQualifiers.attribute.TargetType">
+      <optional>
+         <attribute name="TargetType">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.FileChildrenQualifiers.attribute.ItemType">
+      <optional>
+         <attribute name="ItemType">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.FileChildrenQualifiers.attribute.Content">
+      <optional>
+         <attribute name="Content">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.FileChildrenQualifiers.attribute.ObjectID">
+      <optional>
+         <attribute name="ObjectID">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="model.ConferenceInfoPart">
+      <choice>
+         <ref name="ConfSeriesName"/>
+         <ref name="ConfSeriesID"/>
+         <ref name="ConfEventID"/>
+         <ref name="ConfEventAbbreviation"/>
+         <ref name="ConfNumber"/>
+         <ref name="ConfEventLocation"/>
+         <ref name="ConfEventURL"/>
+         <ref name="ConfEventDateStart"/>
+         <ref name="ConfEventDateEnd"/>
+      </choice>
+   </define>
+   <define name="model.ContactPart">
+      <choice>
+         <ref name="Phone"/>
+         <ref name="Fax"/>
+         <ref name="Email"/>
+         <ref name="URL"/>
+         <ref name="Street"/>
+         <ref name="Postbox"/>
+         <ref name="Postcode"/>
+         <ref name="City"/>
+         <ref name="State"/>
+         <ref name="Country"/>
+      </choice>
+   </define>
+   <define name="model.DatePart">
+      <choice>
+         <ref name="Year"/>
+         <ref name="Month"/>
+         <ref name="Day"/>
+      </choice>
+   </define>
+   <define name="model.PartInfoPart">
+      <choice>
+         <ref name="PartID"/>
+         <ref name="PartNumber"/>
+         <ref name="PartSequenceNumber"/>
+         <ref name="PartTitle"/>
+         <ref name="PartSubTitle"/>
+         <ref name="PartChapterCount"/>
+         <ref name="PartContext"/>
+      </choice>
+   </define>
+   <define name="model.NamePart">
+      <choice>
+         <ref name="GivenName"/>
+         <ref name="NoGivenName"/>
+         <ref name="Initials"/>
+         <ref name="NoInitials"/>
+         <ref name="Particle"/>
+         <ref name="FamilyName"/>
+         <ref name="Suffix"/>
+         <ref name="Prefix"/>
+         <ref name="Degrees"/>
+         <ref name="NativeName"/>
+      </choice>
+   </define>
+   <define name="model.referenceElements">
+      <choice>
+         <ref name="ExternalRef"/>
+         <ref name="InternalRef"/>
+         <ref name="CitationRef"/>
+      </choice>
+   </define>
+   <define name="Superscript">
+      <element name="Superscript">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="Emphasis"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Subscript">
+      <element name="Subscript">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="Emphasis"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Stack">
+      <element name="Stack">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="Subscript"/>
+               <ref name="Superscript"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Emphasis">
+      <element name="Emphasis">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <ref name="att.Typed.attributes"/>
+         <optional>
+            <attribute name="FontCategory">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="BlockQuote">
+      <element name="BlockQuote">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="model.fullTextBlock"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="CitationRef">
+      <element name="CitationRef">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+         <optional>
+            <attribute name="CitationID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="AdditionalCitationIDS">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="model.verySimpleText">
+      <choice>
+         <ref name="Superscript"/>
+         <ref name="Subscript"/>
+         <ref name="Stack"/>
+         <ref name="Emphasis"/>
+      </choice>
+   </define>
+   <define name="model.verySimpleText_alternation">
+      <choice>
+         <ref name="Superscript"/>
+         <ref name="Subscript"/>
+         <ref name="Stack"/>
+         <ref name="Emphasis"/>
+      </choice>
+   </define>
+   <define name="model.verySimpleText_sequence">
+      <ref name="Superscript"/>
+      <ref name="Subscript"/>
+      <ref name="Stack"/>
+      <ref name="Emphasis"/>
+   </define>
+   <define name="model.verySimpleText_sequenceOptional">
+      <optional>
+         <ref name="Superscript"/>
+      </optional>
+      <optional>
+         <ref name="Subscript"/>
+      </optional>
+      <optional>
+         <ref name="Stack"/>
+      </optional>
+      <optional>
+         <ref name="Emphasis"/>
+      </optional>
+   </define>
+   <define name="model.verySimpleText_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="Superscript"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="Subscript"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="Stack"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="Emphasis"/>
+      </zeroOrMore>
+   </define>
+   <define name="model.verySimpleText_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="Superscript"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="Subscript"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="Stack"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="Emphasis"/>
+      </oneOrMore>
+   </define>
+   <define name="model.simpleText">
+      <choice>
+         <ref name="InlineEquation"/>
+         <ref name="model.verySimpleText"/>
+         <ref name="Literal"/>
+         <ref name="Footnote"/>
+         <ref name="Sidebar"/>
+         <ref name="InlineMediaObject"/>
+      </choice>
+   </define>
+   <define name="Literal">
+      <element name="Literal">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="Emphasis"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="Footnote">
+      <element name="Footnote">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Para"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Sidebar">
+      <element name="Sidebar">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Para"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <ref name="att.Typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Cover">
+      <element name="Cover">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="CoverInfo"/>
+         <optional>
+            <ref name="CoverFigure"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="BodyRef"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="Type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="CoverInfo">
+      <element name="CoverInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="CoverFirstPage"/>
+         <ref name="CoverLastPage"/>
+      </element>
+   </define>
+   <define name="CoverFirstPage">
+      <element name="CoverFirstPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CoverLastPage">
+      <element name="CoverLastPage">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="CoverFigure">
+      <element name="CoverFigure">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="MediaObject"/>
+      </element>
+   </define>
+   <define name="model.ListElements">
+      <choice>
+         <ref name="OrderedList"/>
+         <ref name="UnorderedList"/>
+         <ref name="DefinitionList"/>
+      </choice>
+   </define>
+   <define name="model.fullText">
+      <choice>
+         <ref name="Table"/>
+         <ref name="Equation"/>
+         <ref name="model.referenceElements"/>
+         <ref name="BlockQuote"/>
+         <ref name="model.simpleText"/>
+         <ref name="model.ListElements"/>
+         <ref name="Figure"/>
+         <ref name="MediaObject"/>
+      </choice>
+   </define>
+   <define name="Figure">
+      <element name="Figure">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="MediaObject"/>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <attribute name="Float">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>Yes</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>No</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <attribute name="Category">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>Schema</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Structure</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Standard</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Logo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="MediaObject">
+      <element name="MediaObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="ImageObject"/>
+               <ref name="VideoObject"/>
+               <ref name="AudioObject"/>
+               <ref name="DataObject"/>
+               <ref name="TextObject"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="VideoObject">
+      <element name="VideoObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="FileRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="VideoID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="AudioObject">
+      <element name="AudioObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="FileRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="AudioID">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="DataObject">
+      <element name="DataObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="FileRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="TextObject">
+      <element name="TextObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Para"/>
+         </zeroOrMore>
+         <optional>
+            <attribute name="FileRef">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="InlineMediaObject">
+      <element name="InlineMediaObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <choice>
+               <ref name="ImageObject"/>
+               <ref name="VideoObject"/>
+               <ref name="AudioObject"/>
+               <ref name="DataObject"/>
+               <ref name="TextObject"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ImageObject">
+      <element name="ImageObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <attribute name="FileRef">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <attribute name="Format">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>GIF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>TIFF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>EPS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>JPEG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>PNG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SVG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <attribute name="Color">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>Color</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>BlackWhite</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="Type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>Linedraw</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Halftone</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>LinedrawHalftone</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Rendition">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>Print</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>HTML</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>ProofPDF</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Preview</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="OrderedList">
+      <element name="OrderedList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <oneOrMore>
+            <ref name="ListItem"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ListItem">
+      <element name="ListItem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="ItemNumber"/>
+         <ref name="ItemContent"/>
+      </element>
+   </define>
+   <define name="ItemNumber">
+      <element name="ItemNumber">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="ItemContent">
+      <element name="ItemContent">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="Para"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="UnorderedList">
+      <element name="UnorderedList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <oneOrMore>
+            <ref name="ItemContent"/>
+         </oneOrMore>
+         <attribute name="Mark">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="DefinitionList">
+      <element name="DefinitionList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <oneOrMore>
+            <ref name="DefinitionListEntry"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="DefinitionListEntry">
+      <element name="DefinitionListEntry">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="Term"/>
+         <ref name="Description"/>
+      </element>
+   </define>
+   <define name="Term">
+      <element name="Term">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="Description">
+      <element name="Description">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="Para"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="model.fullTextBlock">
+      <choice>
+         <ref name="Para"/>
+         <ref name="FormalPara"/>
+         <ref name="Table"/>
+         <ref name="Figure"/>
+         <ref name="MediaObject"/>
+      </choice>
+   </define>
+   <define name="att.DisplayOrder.attributes">
+      <ref name="att.DisplayOrder.attribute.DisplayOrder"/>
+   </define>
+   <define name="att.DisplayOrder.attribute.DisplayOrder">
+      <optional>
+         <attribute name="DisplayOrder">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>Western</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Eastern</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <start>
+      <choice>
+         <ref name="Publisher"/>
+         <ref name="Chapter"/>
+         <ref name="JobSheet"/>
+      </choice>
+   </start>
+</grammar>
