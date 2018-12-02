@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2018-06-07T12:49:24Z. .CC-BY
-TEI Edition: Version 3.3.0. Last updated on
-	31st January 2018, revision f4d8439
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
+DTD generated from ODD source 2018-12-02T17:04:35Z. .CC-BY
+TEI Edition: Version 3.4.0. Last updated on
+	23rd July 2018, revision 1fa0b54
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
 
 -->
 
@@ -101,6 +101,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
 <!ENTITY % model.simpleText_sequenceOptional "InlineEquation?, %model.verySimpleText;?, Literal?, Footnote?, Sidebar?, InlineMediaObject?"> 
 <!ENTITY % model.simpleText_sequenceOptionalRepeatable "InlineEquation*, %model.verySimpleText;*, Literal*, Footnote*, Sidebar*, InlineMediaObject*"> 
 <!ENTITY % model.simpleText_sequenceRepeatable "InlineEquation+, %model.verySimpleText;+, Literal+, Footnote+, Sidebar+, InlineMediaObject+"> 
+<!ENTITY % model.MathML "math"> 
+<!ENTITY % model.MathML_sequence "math"> 
+<!ENTITY % model.MathML_sequenceOptional "math?"> 
+<!ENTITY % model.MathML_sequenceOptionalRepeatable "math*"> 
+<!ENTITY % model.MathML_sequenceRepeatable "math+"> 
 <!ENTITY % model.ListElements "OrderedList |UnorderedList |DefinitionList"> 
 <!ENTITY % model.ListElements_sequence "OrderedList, UnorderedList, DefinitionList"> 
 <!ENTITY % model.ListElements_sequenceOptional "OrderedList?, UnorderedList?, DefinitionList?"> 
@@ -116,6 +121,16 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
 <!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
 <!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, FormalPara*, Table*, Figure*, MediaObject*"> 
 <!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, FormalPara+, Table+, Figure+, MediaObject+"> 
+<!ENTITY % model.TokenExpression "mi |mo |mspace |mn |mtext"> 
+<!ENTITY % model.TokenExpression_sequence "mi, mo, mspace, mn, mtext"> 
+<!ENTITY % model.TokenExpression_sequenceOptional "mi?, mo?, mspace?, mn?, mtext?"> 
+<!ENTITY % model.TokenExpression_sequenceOptionalRepeatable "mi*, mo*, mspace*, mn*, mtext*"> 
+<!ENTITY % model.TokenExpression_sequenceRepeatable "mi+, mo+, mspace+, mn+, mtext+"> 
+<!ENTITY % model.PresentationExpression "mrow |mroot |msub |menclose |mtable |msup |msubsup |mfrac |mstyle |msqrt |mpadded |munder |mover |munderover |mfenced |%model.TokenExpression;"> 
+<!ENTITY % model.PresentationExpression_sequence "mrow, mroot, msub, menclose, mtable, msup, msubsup, mfrac, mstyle, msqrt, mpadded, munder, mover, munderover, mfenced, %model.TokenExpression;"> 
+<!ENTITY % model.PresentationExpression_sequenceOptional "mrow?, mroot?, msub?, menclose?, mtable?, msup?, msubsup?, mfrac?, mstyle?, msqrt?, mpadded?, munder?, mover?, munderover?, mfenced?, %model.TokenExpression;?"> 
+<!ENTITY % model.PresentationExpression_sequenceOptionalRepeatable "mrow*, mroot*, msub*, menclose*, mtable*, msup*, msubsup*, mfrac*, mstyle*, msqrt*, mpadded*, munder*, mover*, munderover*, mfenced*, %model.TokenExpression;*"> 
+<!ENTITY % model.PresentationExpression_sequenceRepeatable "mrow+, mroot+, msub+, menclose+, mtable+, msup+, msubsup+, mfrac+, mstyle+, msqrt+, mpadded+, munder+, mover+, munderover+, mfenced+, %model.TokenExpression;+"> 
 <!-- end of predeclared classes -->
 
 <!ENTITY % model.nameLike.agent ""> 
@@ -432,6 +447,11 @@ ObjectID CDATA #IMPLIED'>
 <!ENTITY % model.simpleText_sequenceOptional "InlineEquation?, %model.verySimpleText;?, Literal?, Footnote?, Sidebar?, InlineMediaObject?"> 
 <!ENTITY % model.simpleText_sequenceOptionalRepeatable "InlineEquation*, %model.verySimpleText;*, Literal*, Footnote*, Sidebar*, InlineMediaObject*"> 
 <!ENTITY % model.simpleText_sequenceRepeatable "InlineEquation+, %model.verySimpleText;+, Literal+, Footnote+, Sidebar+, InlineMediaObject+"> 
+<!ENTITY % model.MathML "math"> 
+<!ENTITY % model.MathML_sequence "math"> 
+<!ENTITY % model.MathML_sequenceOptional "math?"> 
+<!ENTITY % model.MathML_sequenceOptionalRepeatable "math*"> 
+<!ENTITY % model.MathML_sequenceRepeatable "math+"> 
 <!ENTITY % model.ListElements "OrderedList |UnorderedList |DefinitionList"> 
 <!ENTITY % model.ListElements_sequence "OrderedList, UnorderedList, DefinitionList"> 
 <!ENTITY % model.ListElements_sequenceOptional "OrderedList?, UnorderedList?, DefinitionList?"> 
@@ -447,19 +467,33 @@ ObjectID CDATA #IMPLIED'>
 <!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
 <!ENTITY % model.fullTextBlock_sequenceOptionalRepeatable "Para*, FormalPara*, Table*, Figure*, MediaObject*"> 
 <!ENTITY % model.fullTextBlock_sequenceRepeatable "Para+, FormalPara+, Table+, Figure+, MediaObject+"> 
+<!ENTITY % model.TokenExpression "mi |mo |mspace |mn |mtext"> 
+<!ENTITY % model.TokenExpression_sequence "mi, mo, mspace, mn, mtext"> 
+<!ENTITY % model.TokenExpression_sequenceOptional "mi?, mo?, mspace?, mn?, mtext?"> 
+<!ENTITY % model.TokenExpression_sequenceOptionalRepeatable "mi*, mo*, mspace*, mn*, mtext*"> 
+<!ENTITY % model.TokenExpression_sequenceRepeatable "mi+, mo+, mspace+, mn+, mtext+"> 
+<!ENTITY % model.PresentationExpression "mrow |mroot |msub |menclose |mtable |msup |msubsup |mfrac |mstyle |msqrt |mpadded |munder |mover |munderover |mfenced |%model.TokenExpression;"> 
+<!ENTITY % model.PresentationExpression_sequence "mrow, mroot, msub, menclose, mtable, msup, msubsup, mfrac, mstyle, msqrt, mpadded, munder, mover, munderover, mfenced, %model.TokenExpression;"> 
+<!ENTITY % model.PresentationExpression_sequenceOptional "mrow?, mroot?, msub?, menclose?, mtable?, msup?, msubsup?, mfrac?, mstyle?, msqrt?, mpadded?, munder?, mover?, munderover?, mfenced?, %model.TokenExpression;?"> 
+<!ENTITY % model.PresentationExpression_sequenceOptionalRepeatable "mrow*, mroot*, msub*, menclose*, mtable*, msup*, msubsup*, mfrac*, mstyle*, msqrt*, mpadded*, munder*, mover*, munderover*, mfenced*, %model.TokenExpression;*"> 
+<!ENTITY % model.PresentationExpression_sequenceRepeatable "mrow+, mroot+, msub+, menclose+, mtable+, msup+, msubsup+, mfrac+, mstyle+, msqrt+, mpadded+, munder+, mover+, munderover+, mfenced+, %model.TokenExpression;+"> 
 <!ENTITY % att.DisplayOrder.attribute.DisplayOrder '
 DisplayOrder (Western|Eastern) #IMPLIED'>
 <!ENTITY % att.DisplayOrder.attributes '
  %att.DisplayOrder.attribute.DisplayOrder;'> 
 <!-- start rest of patterns -->
 
-<!ENTITY % macro.anyXML ' ANY' >
-
 <!ENTITY % macro.SimpleTextModel '(#PCDATA|%model.simpleText;)*' >
 
 <!ENTITY % macro.FullTextModel '(#PCDATA|%model.fullText;)*' >
 
 <!ENTITY % macro.tbl.tgroup.mdl '(colspec*,thead?,tbody)' >
+
+<!ENTITY % macro.EquationSourceModel '(#PCDATA|%model.verySimpleText;|%model.MathML;)*' >
+
+<!ENTITY % macro.token.content '(#PCDATA|mglyph|malignmark)*' >
+
+<!ENTITY % macro.MathExpression '(#PCDATA|%model.PresentationExpression;)*' >
 
 <!-- end patterns -->
 
@@ -597,7 +631,7 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Body ((%model.fullTextBlock;)*,(Section1)*)>
 <!--doc: -->
-<!ELEMENT BodyBackmatter %macro.anyXML;>
+<!ELEMENT BodyBackmatter (Appendix*,Bibliography?,Index*)>
 <!--doc: -->
 <!ELEMENT BodyFrontmatter ((Frontispiece)?,(Dedication)?,(Foreword)*,(Preface)*,(BookNotes)?,(Toc)?)>
 <!--doc: -->
@@ -751,7 +785,7 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterFirstPage  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT ChapterGrants %macro.anyXML;>
+<!ELEMENT ChapterGrants (MetadataGrant,AbstractGrant?,BodyPDFGrant?,BodyHTMLGrant?,BibliographyGrant?,ESMGrant?)>
 <!ATTLIST ChapterGrants
  %att.Typed.attributes; >
 <!--doc: -->
@@ -837,7 +871,7 @@ PrintingColorCount CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CompanyName  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CompoundBookObjectInfo %macro.anyXML;>
+<!ELEMENT CompoundBookObjectInfo (ISBN|EAN|BookMultiVolumeCount|PurchaseOrderNumber)*>
 <!ATTLIST CompoundBookObjectInfo
  %att.ID.attributes;
  %att.Typed.attributes;
@@ -858,7 +892,7 @@ PrintImagesBlackWhite CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CompoundObjectNumberOfRomanPages  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CompoundObjectTechnicalInfo %macro.anyXML;>
+<!ELEMENT CompoundObjectTechnicalInfo (ManuscriptNumberOfPages|CompoundObjectTotalNumberOfPages|CompoundObjectNumberOfArabicPages|CompoundObjectNumberOfRomanPages|CompoundObjectNumberOfColorPages|CompoundObjectNumberOfImages|ColorImagesInPrint|ColorImagesOnPage|ProductionClassification|PrintQuality|PrintRun|Shares|FormatTrimSize|CopyEditing|Typesetting)*>
 <!--doc: -->
 <!ELEMENT CompoundObjectTotalNumberOfPages  (#PCDATA)>
 <!ATTLIST CompoundObjectTotalNumberOfPages
@@ -902,7 +936,7 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ContactPersonName (%model.NamePart;)+>
 <!--doc: -->
-<!ELEMENT ContentFiles %macro.anyXML;>
+<!ELEMENT ContentFiles (File)*>
 <!--doc: -->
 <!ELEMENT CopyEditing EMPTY>
 <!ATTLIST CopyEditing
@@ -939,7 +973,7 @@ Type CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT CoverLastPage  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT CoverProductionInfo %macro.anyXML;>
+<!ELEMENT CoverProductionInfo (CoverExteriorColorName|CoverInteriorColorName|EndsheetsLayoutColorName|EndsheetsPrintingColorName|SpineWidth)*>
 <!ATTLIST CoverProductionInfo
 Style CDATA #IMPLIED
 PaperStock CDATA #IMPLIED
@@ -962,7 +996,7 @@ FileRef CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Day  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Deadline %macro.anyXML;>
+<!ELEMENT Deadline (FixedPublicationDate|S50TypesetterDeadline|S200TypesetterDeadline|S300TypesetterDeadline|S600TypesetterDeadline|S650TypesetterDeadline|S700ElectronicDistributionDeadline|S700PrinterDeadline|S800PrintDistributionDeadline|S900ElectronicDistributionDeadline)*>
 <!--doc: -->
 <!ELEMENT Dedication ((Heading)?,(SimplePara)+)>
 <!--doc: -->
@@ -1006,7 +1040,7 @@ TocElectronicPDF CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Description (Para)+>
 <!--doc: -->
-<!ELEMENT DiscreteBookObjectInfo %macro.anyXML;>
+<!ELEMENT DiscreteBookObjectInfo (CoverInfo|BookFrontmatterInfo|ChapterInfo|BookBackmatterInfo|AuthorGroup|DiscreteObjectTechnicalInfo)*>
 <!ATTLIST DiscreteBookObjectInfo
  %att.ID.attributes;
 CompoundObjectID CDATA #IMPLIED >
@@ -1066,7 +1100,7 @@ FontCategory CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT EquationNumber  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT EquationSource %macro.anyXML;>
+<!ELEMENT EquationSource %macro.EquationSourceModel;>
 <!ATTLIST EquationSource
 Format (TEX|MATHML|MATHTYPE|XML) #IMPLIED
 NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
@@ -1087,14 +1121,16 @@ NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
 Float (Yes|No) #REQUIRED
 Category (Schema|Structure|Standard|Logo) #REQUIRED >
 <!--doc: -->
-<!ELEMENT File %macro.anyXML;>
+<!ELEMENT File (AplusplusRootFile|MediaObject|RenditionItem|WorkItem|Archive|Cover|APageFile)*>
 <!ATTLIST File
 DiscreteObjectID CDATA #IMPLIED
 CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT FilesToPublisher %macro.anyXML;>
+<!ELEMENT FilesToApplication (ContentFiles|NoFiles)>
 <!--doc: -->
-<!ELEMENT FilesToSupplier %macro.anyXML;>
+<!ELEMENT FilesToPublisher (ContentFiles|NoFiles)>
+<!--doc: -->
+<!ELEMENT FilesToSupplier (ContentFiles|NoFiles)>
 <!--doc: -->
 <!ELEMENT FirstPage  (#PCDATA)>
 <!--doc: -->
@@ -1133,13 +1169,15 @@ TrimWidthInch CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Frontispiece (Figure)>
 <!--doc: -->
-<!ELEMENT FullServiceVendor %macro.anyXML;>
+<!ELEMENT FullServiceVendor (CompanyName|Contact|ContactPerson|RemarkTo|CopyEditing|ProofInfo|FilesToSupplier|Deliverables|CompanyName|FilesToPublisher)*>
 <!--doc: -->
 <!ELEMENT GivenName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Handle  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Heading (#PCDATA|%model.simpleText;|%model.referenceElements;)*>
+<!--doc: -->
+<!ELEMENT HistoryStyle  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT Hour  (#PCDATA)>
 <!--doc:groups together all IFIP specific descriptors (TC, SC, etc.) -->
@@ -1157,11 +1195,11 @@ Color (Color|BlackWhite) #REQUIRED
 Type (Linedraw|Halftone|LinedrawHalftone) #IMPLIED
 Rendition (Print|HTML|ProofPDF|Preview) #IMPLIED >
 <!--doc: -->
-<!ELEMENT Index %macro.anyXML;>
+<!ELEMENT Index (Heading,SubHeading?)>
 <!ATTLIST Index
  %att.ID.attributes; >
 <!--doc: -->
-<!ELEMENT IndexEntry %macro.anyXML;>
+<!ELEMENT IndexEntry (PrimaryIE|SecondaryIE|TertiaryIE|SeeIE|SeeAlsoIE)*>
 <!--doc: -->
 <!ELEMENT Initials  (#PCDATA)>
 <!--doc: -->
@@ -1226,7 +1264,7 @@ Version CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Literal (#PCDATA|Emphasis)*>
 <!--doc: -->
-<!ELEMENT ManuscriptInfo %macro.anyXML;>
+<!ELEMENT ManuscriptInfo (PeerReviewSystem|EditorialManuscriptNumber|ManuscriptNumberOfPages|ManuscriptNumberOfGraphics|ManuscriptNumberOfTables|RemarkByEditor|ElectronicDelivery|PostalDelivery)*>
 <!--doc: -->
 <!ELEMENT ManuscriptNumberOfGraphics  (#PCDATA)>
 <!--doc: -->
@@ -1316,7 +1354,7 @@ TextBreak (Yes|No) #IMPLIED >
  %att.OutputMedium.attributes;
 TocLevels CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT PartInfoGroup %macro.anyXML;>
+<!ELEMENT PartInfoGroup (PartInfo|AuthorGroup|EditorGroup|DiscreteBookObjectInfo)*>
 <!--doc: -->
 <!ELEMENT PartNumber  (#PCDATA)>
 <!--doc: -->
@@ -1390,13 +1428,13 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ProductionEditorName (%model.NamePart;)+>
 <!--doc: -->
-<!ELEMENT ProductionInfo %macro.anyXML;>
+<!ELEMENT ProductionInfo (SPACEInfo|ManuscriptInfo)*>
 <!--doc: -->
 <!ELEMENT ProofInfo (ProofRecipient)*>
 <!ATTLIST ProofInfo
 ProofStage CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT ProofRecipient %macro.anyXML;>
+<!ELEMENT ProofRecipient (Author|ProductionEditor|Editor|InstitutionalAuthor)*>
 <!ATTLIST ProofRecipient
 ProofType CDATA #IMPLIED
 CorrectionsRequired CDATA #IMPLIED >
@@ -1421,7 +1459,7 @@ CorrectionsRequired CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT PurchaseOrderNumber  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT QualifyingProductionNotes %macro.anyXML;>
+<!ELEMENT QualifyingProductionNotes (QualifyingProductionNotesAds|QualifyingProductionNotesCdDvdEsm|QualifyingProductionNotesComplimentaryCopies|QualifyingProductionNotesCopyEditing|QualifyingProductionNotesFrontmatter|QualifyingProductionNotesIndex|QualifyingProductionNotesProductionClassification|QualifyingProductionNotesSpringerDotCom|QualifyingProductionNotesMiscellaneous|QualifyingProductionNotesManuscriptMaterial|QualifyingProductionNotesLayout|QualifyingProductionNotesProof|QualifyingProductionNotesColorFigures)*>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesAds  (#PCDATA)>
 <!--doc: -->
@@ -1542,7 +1580,7 @@ SupplierSPACEID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT SeriesID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT SeriesIndex %macro.anyXML;>
+<!ELEMENT SeriesIndex (Heading,SubHeading?)>
 <!--doc: -->
 <!ELEMENT SeriesInfo (SeriesID|SeriesPrintISSN|SeriesElectronicISSN|SeriesTitle|SeriesAbbreviatedTitle)+>
 <!ATTLIST SeriesInfo
@@ -1635,7 +1673,7 @@ TocLevels CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT SubSeriesID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT SubSeriesIndex %macro.anyXML;>
+<!ELEMENT SubSeriesIndex (Heading,SubHeading?)>
 <!--doc: -->
 <!ELEMENT SubSeriesInfo (SubSeriesID,(SubSeriesPrintISSN)?,(SubSeriesElectronicISSN)?,SubSeriesTitle,(SubSeriesSubTitle)?,(SubSeriesAbbreviatedTitle)?)>
 <!ATTLIST SubSeriesInfo
@@ -1662,16 +1700,16 @@ Code CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Superscript (#PCDATA|Emphasis)*>
 <!--doc: -->
-<!ELEMENT Supplier %macro.anyXML;>
+<!ELEMENT Supplier (FullServiceVendor)*>
 <!--doc:provides a technical committee number -->
 <!ELEMENT TC  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Table %macro.anyXML;>
+<!ELEMENT Table (Caption|tgroup|tfooter)*>
 <!ATTLIST Table
  %att.ID.attributes;
 Float CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT TechnicalInfo %macro.anyXML;>
+<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|CitationStyle)*>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
 <!--doc: -->
@@ -1689,6 +1727,8 @@ Bleeds CDATA #IMPLIED
 TypeareaHeight CDATA #IMPLIED
 TypeareaWidth CDATA #IMPLIED
 PaperStock CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT TitleAdditionalLanguage  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT TitleUpperCase EMPTY>
 <!ATTLIST TitleUpperCase
@@ -1715,7 +1755,19 @@ PageNumber CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT TocPart (TocEntry,(Author)*,(TocChapter)*)>
 <!--doc: -->
-<!ELEMENT TocSection1 %macro.anyXML;>
+<!ELEMENT TocSection1 (TocEntry,TocSection2*)>
+<!--doc: -->
+<!ELEMENT TocSection2 (TocEntry,TocSection3*)>
+<!--doc: -->
+<!ELEMENT TocSection3 (TocEntry,TocSection4*)>
+<!--doc: -->
+<!ELEMENT TocSection4 (TocEntry,TocSection5*)>
+<!--doc: -->
+<!ELEMENT TocSection5 (TocEntry,TocSection6*)>
+<!--doc: -->
+<!ELEMENT TocSection6 (TocEntry,TocSection7*)>
+<!--doc: -->
+<!ELEMENT TocSection7 (TocEntry)>
 <!--doc: -->
 <!ELEMENT TrademarkQualifierText  (#PCDATA)>
 <!ATTLIST TrademarkQualifierText
@@ -1753,18 +1805,18 @@ VideoID CDATA #IMPLIED >
 <!ATTLIST WorkItem
  %att.FileChildrenQualifiers.attributes; >
 <!--doc: -->
-<!ELEMENT WorkflowInfo %macro.anyXML;>
+<!ELEMENT WorkflowInfo (Priority|Deadline|Supplier)*>
 <!ATTLIST WorkflowInfo
 TaskType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Year  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT colspec %macro.anyXML;>
+<!ELEMENT colspec EMPTY>
 <!ATTLIST colspec
  %att.TableQualifiers.attributes;
 char CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT entry %macro.anyXML;>
+<!ELEMENT entry (#PCDATA|SimplePara)*>
 <!ATTLIST entry
  %att.TableQualifiers.attributes;
 namest CDATA #IMPLIED
@@ -1772,31 +1824,37 @@ nameend CDATA #IMPLIED
 morerows CDATA #IMPLIED
 char CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT math %macro.anyXML;>
+<!ELEMENT malignmark EMPTY>
+<!--doc: -->
+<!ELEMENT math %macro.MathExpression;>
 <!ATTLIST math
 display CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT menclose %macro.anyXML;>
+<!ELEMENT menclose %macro.MathExpression;>
 <!ATTLIST menclose
 notation CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mfenced %macro.anyXML;>
+<!ELEMENT mfenced %macro.MathExpression;>
 <!ATTLIST mfenced
 open CDATA #IMPLIED
 close CDATA #IMPLIED
 separators CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mfrac %macro.anyXML;>
+<!ELEMENT mfrac %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT mi %macro.anyXML;>
+<!ELEMENT mglyph EMPTY>
+<!--doc: -->
+<!ELEMENT mi %macro.token.content;>
 <!ATTLIST mi
 mathvariant CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mn %macro.anyXML;>
+<!ELEMENT mlabeledtr %macro.MathExpression;>
+<!--doc: -->
+<!ELEMENT mn %macro.token.content;>
 <!ATTLIST mn
 mathvariant CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mo %macro.anyXML;>
+<!ELEMENT mo %macro.token.content;>
 <!ATTLIST mo
 mathvariant CDATA #IMPLIED
 form CDATA  #IMPLIED
@@ -1823,12 +1881,12 @@ indentshiftfirst CDATA #IMPLIED
 indentalignlast CDATA  #IMPLIED
 indentshiftlast CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mover %macro.anyXML;>
+<!ELEMENT mover %macro.MathExpression;>
 <!ATTLIST mover
 accent CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT mpadded %macro.anyXML;>
+<!ELEMENT mpadded %macro.MathExpression;>
 <!ATTLIST mpadded
 height CDATA #IMPLIED
 depth CDATA #IMPLIED
@@ -1836,20 +1894,20 @@ width CDATA #IMPLIED
 lspace CDATA #IMPLIED
 voffset CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mroot %macro.anyXML;>
+<!ELEMENT mroot %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT mrow %macro.anyXML;>
+<!ELEMENT mrow %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT mspace %macro.anyXML;>
+<!ELEMENT mspace EMPTY>
 <!ATTLIST mspace
 width CDATA #IMPLIED
 height CDATA #IMPLIED
 depth CDATA #IMPLIED
 linebreak CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT msqrt %macro.anyXML;>
+<!ELEMENT msqrt %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT mstyle %macro.anyXML;>
+<!ELEMENT mstyle %macro.MathExpression;>
 <!ATTLIST mstyle
 scriptlevel CDATA #IMPLIED
 displaystyle CDATA  #IMPLIED
@@ -1859,40 +1917,42 @@ infixlinebreakstyle CDATA  #IMPLIED
 decimalpoint CDATA #IMPLIED
 mathsize CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT msub %macro.anyXML;>
+<!ELEMENT msub %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT msubsup %macro.anyXML;>
+<!ELEMENT msubsup %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT msup %macro.anyXML;>
+<!ELEMENT msup %macro.MathExpression;>
 <!--doc: -->
-<!ELEMENT mtable %macro.anyXML;>
+<!ELEMENT mtable (mtr|mlabeledtr)*>
 <!ATTLIST mtable
 columnspacing CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mtd %macro.anyXML;>
+<!ELEMENT mtd %macro.MathExpression;>
 <!ATTLIST mtd
 columnalign CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mtext %macro.anyXML;>
+<!ELEMENT mtext %macro.token.content;>
+<!ATTLIST mtext
+mathvariant CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT mtr %macro.anyXML;>
+<!ELEMENT mtr (mtd)*>
 <!--doc: -->
-<!ELEMENT munder %macro.anyXML;>
+<!ELEMENT munder %macro.MathExpression;>
 <!ATTLIST munder
 accentunder CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT munderover %macro.anyXML;>
+<!ELEMENT munderover %macro.MathExpression;>
 <!ATTLIST munderover
 accent CDATA  #IMPLIED
 accentunder CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT row %macro.anyXML;>
+<!ELEMENT row (entry)+>
 <!--doc: -->
-<!ELEMENT tbody %macro.anyXML;>
+<!ELEMENT tbody (row)*>
 <!--doc: -->
-<!ELEMENT tfooter %macro.anyXML;>
+<!ELEMENT tfooter (row|SimplePara)*>
 <!--doc: -->
 <!ELEMENT tgroup %macro.tbl.tgroup.mdl;>
 <!ATTLIST tgroup
@@ -1901,5 +1961,5 @@ colsep CDATA #IMPLIED
 rowsep CDATA #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
-<!ELEMENT thead %macro.anyXML;>
+<!ELEMENT thead (row)*>
 <!-- end elements -->
