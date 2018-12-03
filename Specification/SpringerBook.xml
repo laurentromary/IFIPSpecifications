@@ -4253,6 +4253,8 @@
                                     <rng:ref name="TextSpecifications"/>
                                     <rng:ref name="ColorSpecifications"/>
                                     <rng:ref name="CoverProductionInfo"/>
+                                    <rng:ref name="Binding"/>
+                                    
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
