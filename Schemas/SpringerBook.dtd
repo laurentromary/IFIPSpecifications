@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-12-03T14:54:38Z. .CC-BY
+DTD generated from ODD source 2018-12-03T15:07:19Z. .CC-BY
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1709,7 +1709,7 @@ Code CDATA #IMPLIED >
  %att.ID.attributes;
 Float CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|CitationStyle|BodyMarkup)*>
+<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|CitationStyle|BodyMarkup|Typesetting|CompoundObjectTechnicalInfo)*>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
 <!--doc: -->

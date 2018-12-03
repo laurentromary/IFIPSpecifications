@@ -4247,6 +4247,8 @@
                                     <rng:ref name="BibliographyStyle"/>
                                     <rng:ref name="CitationStyle"/>
                                     <rng:ref name="BodyMarkup"/>
+                                    <rng:ref name="Typesetting"/>
+                                    <rng:ref name="CompoundObjectTechnicalInfo"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
