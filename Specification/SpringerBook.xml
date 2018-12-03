@@ -4252,7 +4252,7 @@
                                     <rng:ref name="CompoundObjectTechnicalInfo"/>
                                     <rng:ref name="TextSpecifications"/>
                                     <rng:ref name="ColorSpecifications"/>
-
+                                    <rng:ref name="CoverProductionInfo"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
