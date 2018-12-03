@@ -3894,7 +3894,9 @@
                         </content>
                     </elementSpec>
 
-                    <!-- <!ELEMENT ProductionInfo (SPACEInfo?, ManuscriptInfo?, GrantNumber?, ProductionEditor?, ContactPerson?, ProductionCostCenter?, ProductionLocation?, EditorialInfo?, QualifyingProductionNotes?, SupplementInfo?, TechnicalInfo?, (DiscreteObjectTechnicalInfo? | (CompoundObjectTechnicalInfo?, ((CompoundIssueObjectInfo?, DiscreteIssueObjectInfo*) | (CompoundBookObjectInfo*, (PartInfoGroup?, DiscreteBookObjectInfo?)*)))), WorkflowInfo)>
+                    <!-- <!ELEMENT ProductionInfo (SPACEInfo?, ManuscriptInfo?, GrantNumber?, ProductionEditor?, ContactPerson?, ProductionCostCenter?,
+                        ProductionLocation?, EditorialInfo?, QualifyingProductionNotes?, SupplementInfo?, TechnicalInfo?, 
+                        (DiscreteObjectTechnicalInfo? | (CompoundObjectTechnicalInfo?, ((CompoundIssueObjectInfo?, DiscreteIssueObjectInfo*) | (CompoundBookObjectInfo*, (PartInfoGroup?, DiscreteBookObjectInfo?)*)))), WorkflowInfo)>
  -->
                     <elementSpec ident="ProductionInfo">
                         <content>
@@ -3902,6 +3904,16 @@
                                 <rng:choice>
                                     <rng:ref name="SPACEInfo"/>
                                     <rng:ref name="ManuscriptInfo"/>
+                                    <rng:ref name="ProductionEditor"/>
+                                    <rng:ref name="ContactPerson"/>
+                                    <rng:ref name="EditorialInfo"/>
+                                    <rng:ref name="QualifyingProductionNotes"/>
+                                    <rng:ref name="TechnicalInfo"/>
+                                    <rng:ref name="DiscreteObjectTechnicalInfo"/>
+                                    <rng:ref name="CompoundBookObjectInfo"/>
+                                    <rng:ref name="PartInfoGroup"/>
+                                    <rng:ref name="DiscreteBookObjectInfo"/>
+                                    <rng:ref name="WorkflowInfo"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
