@@ -3915,6 +3915,7 @@
                                     <rng:ref name="DiscreteBookObjectInfo"/>
                                     <rng:ref name="WorkflowInfo"/>
                                     <rng:ref name="EditorialContact"/>
+                                    <rng:ref name="CompoundObjectTechnicalInfo"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
@@ -4250,6 +4251,8 @@
                                     <rng:ref name="Typesetting"/>
                                     <rng:ref name="CompoundObjectTechnicalInfo"/>
                                     <rng:ref name="TextSpecifications"/>
+                                    <rng:ref name="ColorSpecifications"/>
+
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
