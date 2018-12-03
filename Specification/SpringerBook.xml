@@ -4249,6 +4249,7 @@
                                     <rng:ref name="BodyMarkup"/>
                                     <rng:ref name="Typesetting"/>
                                     <rng:ref name="CompoundObjectTechnicalInfo"/>
+                                    <rng:ref name="TextSpecifications"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
