@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-12-03T14:38:44Z. .CC-BY
+DTD generated from ODD source 2018-12-03T14:54:38Z. .CC-BY
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -996,7 +996,7 @@ FileRef CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT Day  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Deadline (FixedPublicationDate|S50TypesetterDeadline|S200TypesetterDeadline|S300TypesetterDeadline|S600TypesetterDeadline|S650TypesetterDeadline|S700ElectronicDistributionDeadline|S700PrinterDeadline|S800PrintDistributionDeadline|S900ElectronicDistributionDeadline)*>
+<!ELEMENT Deadline (FixedPublicationDate|S50TypesetterDeadline|S200TypesetterDeadline|S300TypesetterDeadline|S600TypesetterDeadline|S650TypesetterDeadline|S700ElectronicDistributionDeadline|S700PrinterDeadline|S800PrintDistributionDeadline|S900ElectronicDistributionDeadline|PlannedPublicationDate)*>
 <!--doc: -->
 <!ELEMENT Dedication ((Heading)?,(SimplePara)+)>
 <!--doc: -->
@@ -1428,7 +1428,7 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ProductionEditorName (%model.NamePart;)+>
 <!--doc: -->
-<!ELEMENT ProductionInfo (SPACEInfo|ManuscriptInfo|ProductionEditor|ContactPerson|EditorialInfo|QualifyingProductionNotes|TechnicalInfo|DiscreteObjectTechnicalInfo|CompoundBookObjectInfo|PartInfoGroup|DiscreteBookObjectInfo|WorkflowInfo)*>
+<!ELEMENT ProductionInfo (SPACEInfo|ManuscriptInfo|ProductionEditor|ContactPerson|EditorialInfo|QualifyingProductionNotes|TechnicalInfo|DiscreteObjectTechnicalInfo|CompoundBookObjectInfo|PartInfoGroup|DiscreteBookObjectInfo|WorkflowInfo|EditorialContact)*>
 <!--doc: -->
 <!ELEMENT ProofInfo (ProofRecipient)*>
 <!ATTLIST ProofInfo
@@ -1709,7 +1709,7 @@ Code CDATA #IMPLIED >
  %att.ID.attributes;
 Float CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|CitationStyle)*>
+<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|CitationStyle|BodyMarkup)*>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
 <!--doc: -->

@@ -3914,6 +3914,7 @@
                                     <rng:ref name="PartInfoGroup"/>
                                     <rng:ref name="DiscreteBookObjectInfo"/>
                                     <rng:ref name="WorkflowInfo"/>
+                                    <rng:ref name="EditorialContact"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
@@ -4245,6 +4246,7 @@
                                     <rng:ref name="KeywordsInDocumentLanguage"/>
                                     <rng:ref name="BibliographyStyle"/>
                                     <rng:ref name="CitationStyle"/>
+                                    <rng:ref name="BodyMarkup"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
@@ -5167,6 +5169,7 @@
                                     <rng:ref name="S700PrinterDeadline"/>
                                     <rng:ref name="S800PrintDistributionDeadline"/>
                                     <rng:ref name="S900ElectronicDistributionDeadline"/>
+                                    <rng:ref name="PlannedPublicationDate"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
