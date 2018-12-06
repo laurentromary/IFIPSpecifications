@@ -5712,13 +5712,19 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                             <memberOf key="model.fullText"/>
                         </classes>
                         <content>
-                            <rng:zeroOrMore>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="Caption"/>
+                                <elementRef key="tgroup"/>
+                                <elementRef key="tfooter"/>
+                                <elementRef key="MediaObject"/>
+                            </alternate>
+                            <!--<rng:zeroOrMore>
                                 <rng:choice>
                                     <rng:ref name="Caption"/>
                                     <rng:ref name="tgroup"/>
                                     <rng:ref name="tfooter"/>
                                 </rng:choice>
-                            </rng:zeroOrMore>
+                            </rng:zeroOrMore>-->
                         </content>
                         <attList>
                             <attDef ident="Float">

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-12-03T16:27:44Z. .CC-BY
+DTD generated from ODD source 2018-12-06T20:07:55Z. .CC-BY
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1704,7 +1704,7 @@ Code CDATA #IMPLIED >
 <!--doc:provides a technical committee number -->
 <!ELEMENT TC  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT Table (Caption|tgroup|tfooter)*>
+<!ELEMENT Table (Caption|tgroup|tfooter|MediaObject)+>
 <!ATTLIST Table
  %att.ID.attributes;
 Float CDATA #IMPLIED >
