@@ -7215,6 +7215,13 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         <content>
                             <rng:ref name="macro.MathExpression"/>
                         </content>
+                        <attList>
+                            <attDef ident="linethickness">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="mstyle">

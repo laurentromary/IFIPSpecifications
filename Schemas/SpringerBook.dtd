@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2018-12-06T20:07:55Z. .CC-BY
+DTD generated from ODD source 2019-01-10T14:29:07Z. .CC-BY
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1841,6 +1841,8 @@ close CDATA #IMPLIED
 separators CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mfrac %macro.MathExpression;>
+<!ATTLIST mfrac
+linethickness CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mglyph EMPTY>
 <!--doc: -->
