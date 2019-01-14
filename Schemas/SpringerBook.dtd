@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2019-01-10T14:29:07Z. .CC-BY
+DTD generated from ODD source 2019-01-14T17:24:56Z. .CC-BY
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1084,6 +1084,8 @@ ORCID CDATA #IMPLIED >
 Delivery (Complete|Incomplete|None) #REQUIRED >
 <!--doc: -->
 <!ELEMENT Email  (#PCDATA)>
+<!ATTLIST Email
+ %att.OutputMedium.attributes; >
 <!--doc: -->
 <!ELEMENT Emphasis  (#PCDATA)>
 <!ATTLIST Emphasis

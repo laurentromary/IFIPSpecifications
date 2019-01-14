@@ -2884,6 +2884,7 @@
                     <elementSpec ident="Email">
                         <classes>
                             <memberOf key="model.ContactPart"/>
+                            <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
                             <rng:text/>
