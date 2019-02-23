@@ -593,6 +593,7 @@
                                 <rng:choice>
                                     <rng:ref name="ChapterID"/>
                                     <rng:ref name="ChapterDOI"/>
+                                    <rng:ref name="ChapterNumber"/>
                                     <rng:ref name="ChapterSequenceNumber"/>
                                     <rng:ref name="ChapterTitle"/>
                                     <rng:ref name="ChapterSubTitle"/>
@@ -3042,6 +3043,12 @@
                         </content>
                     </elementSpec>
 
+                    <elementSpec ident="ChapterNumber">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
                     <elementSpec ident="ChapterSequenceNumber">
                         <content>
                             <rng:text/>
@@ -4140,6 +4147,7 @@
                                     <rng:ref name="QualifyingProductionNotesLayout"/>
                                     <rng:ref name="QualifyingProductionNotesProof"/>
                                     <rng:ref name="QualifyingProductionNotesColorFigures"/>
+                                    <rng:ref name="QualifyingProductionNotesCoverDesignSpecs"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
@@ -4222,7 +4230,13 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="QualifyingProductionNotesCoverDesignSpecs">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+                    
                     <!-- ....................................................................... -->
                     <!-- TechnicalInfo                                                               -->
                     <!-- ....................................................................... -->
@@ -4255,7 +4269,7 @@
                                     <rng:ref name="ColorSpecifications"/>
                                     <rng:ref name="CoverProductionInfo"/>
                                     <rng:ref name="Binding"/>
-                                    
+
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>

@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2019-01-14T17:24:56Z. .CC-BY
-TEI Edition: Version 3.4.0. Last updated on
-	23rd July 2018, revision 1fa0b54
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
+DTD generated from ODD source 2019-02-23T06:49:30Z. .CC-BY
+TEI Edition: Version 3.5.0. Last updated on
+	29th January 2019, revision 3c0c64ec4
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
 
 -->
 
@@ -18,8 +18,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
 <!ENTITY % teidata.count ' CDATA ' >
 
 <!ENTITY % teidata.temporal.w3c ' CDATA ' >
-
-<!ENTITY % teidata.duration.iso ' CDATA ' >
 
 <!ENTITY % teidata.duration.w3c ' CDATA ' >
 
@@ -46,6 +44,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
 <!ENTITY % teidata.enumerated '%teidata.word;' >
 
 <!ENTITY % teidata.probCert ' CDATA ' >
+
+<!ENTITY % teidata.duration.iso ' CDATA ' >
 
 <!-- end datatypes -->
 
@@ -795,7 +795,7 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterID  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory|ChapterGrants|ConferenceReference)+)>
+<!ELEMENT ChapterInfo ((IFIPentity)*,(ChapterID|ChapterDOI|ChapterNumber|ChapterSequenceNumber|ChapterTitle|ChapterSubTitle|ChapterFirstPage|ChapterLastPage|ChapterCopyright|ChapterContext|ChapterHistory|ChapterRelatedObject|ChapterCategory|ChapterGrants|ConferenceReference)+)>
 <!ATTLIST ChapterInfo
  %att.numbered.attributes;
  %att.OutputMedium.attributes;
@@ -805,6 +805,8 @@ TocLevels CDATA #IMPLIED
 ContainsESM CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterLastPage  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT ChapterNumber  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT ChapterRelatedObject (RelatedObjectDOI)>
 <!ATTLIST ChapterRelatedObject
@@ -1461,7 +1463,7 @@ CorrectionsRequired CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT PurchaseOrderNumber  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT QualifyingProductionNotes (QualifyingProductionNotesAds|QualifyingProductionNotesCdDvdEsm|QualifyingProductionNotesComplimentaryCopies|QualifyingProductionNotesCopyEditing|QualifyingProductionNotesFrontmatter|QualifyingProductionNotesIndex|QualifyingProductionNotesProductionClassification|QualifyingProductionNotesSpringerDotCom|QualifyingProductionNotesMiscellaneous|QualifyingProductionNotesManuscriptMaterial|QualifyingProductionNotesLayout|QualifyingProductionNotesProof|QualifyingProductionNotesColorFigures)*>
+<!ELEMENT QualifyingProductionNotes (QualifyingProductionNotesAds|QualifyingProductionNotesCdDvdEsm|QualifyingProductionNotesComplimentaryCopies|QualifyingProductionNotesCopyEditing|QualifyingProductionNotesFrontmatter|QualifyingProductionNotesIndex|QualifyingProductionNotesProductionClassification|QualifyingProductionNotesSpringerDotCom|QualifyingProductionNotesMiscellaneous|QualifyingProductionNotesManuscriptMaterial|QualifyingProductionNotesLayout|QualifyingProductionNotesProof|QualifyingProductionNotesColorFigures|QualifyingProductionNotesCoverDesignSpecs)*>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesAds  (#PCDATA)>
 <!--doc: -->
@@ -1472,6 +1474,8 @@ CorrectionsRequired CDATA #IMPLIED >
 <!ELEMENT QualifyingProductionNotesComplimentaryCopies  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesCopyEditing  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT QualifyingProductionNotesCoverDesignSpecs  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT QualifyingProductionNotesFrontmatter  (#PCDATA)>
 <!--doc: -->
