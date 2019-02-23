@@ -6676,6 +6676,21 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <valItem ident="Preview"/>
                                 </valList>
                             </attDef>
+                            <attDef ident="Height">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Resolution">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Width">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
