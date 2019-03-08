@@ -3226,18 +3226,28 @@
 
                     <elementSpec ident="ChapterBackmatter">
                         <content>
-                            <rng:optional>
-                                <rng:ref name="Acknowledgments"/>
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="Appendix"/>
-                            </rng:zeroOrMore>
-                            <rng:optional>
-                                <rng:ref name="Bibliography"/>
-                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:ref name="Acknowledgments"/>
+                                    <rng:ref name="Appendix"/>
+                                    <rng:ref name="Bibliography"/>
+                                </rng:choice>
+                            </rng:oneOrMore>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="FundingInformation">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    
                     <!-- <!ELEMENT Acknowledgments (Heading?, (SimplePara | FormalPara)+)> -->
 
                     <elementSpec ident="Acknowledgments">
@@ -4230,13 +4240,13 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="QualifyingProductionNotesCoverDesignSpecs">
                         <content>
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- ....................................................................... -->
                     <!-- TechnicalInfo                                                               -->
                     <!-- ....................................................................... -->
