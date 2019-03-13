@@ -510,6 +510,17 @@
                             <rng:optional>
                                 <rng:ref name="CollaboratorGroup"/>
                             </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="SubSeriesInformationText"/>
+                            </rng:optional>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="SubSeriesInformationText">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Para"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
