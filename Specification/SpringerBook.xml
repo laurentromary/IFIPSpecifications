@@ -3242,6 +3242,7 @@
                                     <rng:ref name="Acknowledgments"/>
                                     <rng:ref name="Appendix"/>
                                     <rng:ref name="Bibliography"/>
+                                    <rng:ref name="Ethics"/>
                                     <rng:ref name="FundingInformation"/>
                                 </rng:choice>
                             </rng:oneOrMore>
@@ -3249,6 +3250,17 @@
                     </elementSpec>
                     
                     <elementSpec ident="FundingInformation">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="Ethics">
                         <content>
                             <rng:optional>
                                 <rng:ref name="Heading"/>

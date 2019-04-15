@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2019-03-13T12:20:58Z. .CC-BY
+DTD generated from ODD source 2019-04-15T14:33:07Z. .CC-BY
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -773,7 +773,7 @@ Library CDATA #IMPLIED >
  %att.ID.attributes;
  %att.OutputMedium.attributes; >
 <!--doc: -->
-<!ELEMENT ChapterBackmatter (Acknowledgments|Appendix|Bibliography|FundingInformation)+>
+<!ELEMENT ChapterBackmatter (Acknowledgments|Appendix|Bibliography|Ethics|FundingInformation)+>
 <!--doc: -->
 <!ELEMENT ChapterCategory  (#PCDATA)>
 <!--doc: -->
@@ -1110,6 +1110,8 @@ Format (TEX|MATHML|MATHTYPE|XML) #IMPLIED
 NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
 <!--doc: -->
 <!ELEMENT Etal EMPTY>
+<!--doc: -->
+<!ELEMENT Ethics ((Heading)?,(SimplePara)+)>
 <!--doc: -->
 <!ELEMENT ExternalRef (RefSource,RefTarget+)>
 <!ATTLIST ExternalRef
