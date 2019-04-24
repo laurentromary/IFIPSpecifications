@@ -2612,6 +2612,7 @@
                         <classes>
                             <memberOf key="att.Typed"/>
                             <memberOf key="att.OutputMedium"/>
+                            <memberOf key="att.language"/>
                         </classes>
                         <content>
                             <rng:zeroOrMore>
