@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="tei_odds.rnc" type="application/relax-ng-compact-syntax"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,7 +38,8 @@
                     <moduleRef key="tei"/>
 
                     <elementSpec ident="Publisher">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:group>
                                 <rng:ref name="PublisherInfo"/>
@@ -131,7 +134,8 @@
                     </elementSpec>
 
                     <elementSpec ident="PublisherLocation">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:text/>
                         </content>
@@ -169,7 +173,8 @@
 > -->
 
                     <elementSpec ident="Series">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:group>
                                 <rng:ref name="SeriesInfo"/>
@@ -515,7 +520,7 @@
                             </rng:optional>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="SubSeriesInformationText">
                         <content>
                             <rng:zeroOrMore>
@@ -3250,7 +3255,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="FundingInformation">
                         <content>
                             <rng:optional>
@@ -3261,7 +3266,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="AuthorContribution">
                         <content>
                             <rng:optional>
@@ -3272,19 +3277,23 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="Ethics">
                         <content>
-                            <rng:optional>
-                                <rng:ref name="Heading"/>
-                            </rng:optional>
-                            <rng:oneOrMore>
-                                <rng:ref name="SimplePara"/>
-                            </rng:oneOrMore>
+                            <rng:choice>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="Heading"/>
+                                    </rng:optional>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="SimplePara"/>
+                                    </rng:oneOrMore>
+                                </rng:group>
+                                <rng:ref name="FormalPara"/>
+                            </rng:choice>
                         </content>
                     </elementSpec>
-                    
-                    
+
                     <!-- <!ELEMENT Acknowledgments (Heading?, (SimplePara | FormalPara)+)> -->
 
                     <elementSpec ident="Acknowledgments">
@@ -5995,7 +6004,8 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <valItem ident="XML"/>
                                 </valList>
                                 <remarks>
-                                    <p>This attribute has been observed, even if it does not exist in the official SPringer DTD</p>
+                                    <p>This attribute has been observed, even if it does not exist in the official
+                                        SPringer DTD</p>
                                 </remarks>
                             </attDef>
                             <attDef ident="NOTATION">
@@ -6006,7 +6016,8 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <valItem ident="XML"/>
                                 </valList>
                                 <remarks>
-                                    <p>Official declaration in the Springer DTD (note should normally be a Required attribute)</p>
+                                    <p>Official declaration in the Springer DTD (note should normally be a Required
+                                        attribute)</p>
                                 </remarks>
                             </attDef>
                         </attList>
@@ -6157,8 +6168,10 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                     <classSpec ident="att.roled" type="atts">
                         <attList>
                             <attDef ident="role">
-                                <desc>A contextual role or relationship for the person, family, corporate body, or geographic location. In linking elements such as <gi>ptr</gi>, information that
-                                    explains to application software the part that a remote resource plays in a link.</desc>
+                                <desc>A contextual role or relationship for the person, family, corporate body, or
+                                    geographic location. In linking elements such as <gi>ptr</gi>, information that
+                                    explains to application software the part that a remote resource plays in a
+                                    link.</desc>
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
@@ -6250,7 +6263,8 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                         <desc>Creates a resource link, which indicates a specific resource.</desc>
                                     </valItem>
                                     <valItem ident="title">
-                                        <desc>Creates a title link. Such elements are useful for internationalization purposes.</desc>
+                                        <desc>Creates a title link. Such elements are useful for internationalization
+                                            purposes.</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
