@@ -3245,12 +3245,24 @@
                                     <rng:ref name="Bibliography"/>
                                     <rng:ref name="Ethics"/>
                                     <rng:ref name="FundingInformation"/>
+                                    <rng:ref name="AuthorContribution"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
                     
                     <elementSpec ident="FundingInformation">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="AuthorContribution">
                         <content>
                             <rng:optional>
                                 <rng:ref name="Heading"/>
@@ -5492,7 +5504,6 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                             <rng:empty/>
                         </content>
                         <attList>
-
                             <attDef ident="BackmatterElectronicPDF">
                                 <datatype>
                                     <rng:text/>
@@ -5624,6 +5635,16 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                 </datatype>
                             </attDef>
                             <attDef ident="TocElectronicPDF">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="AuthorshipChangeRequestForm">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="PeerReviewPDFs">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
