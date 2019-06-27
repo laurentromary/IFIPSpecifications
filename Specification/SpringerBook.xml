@@ -4317,6 +4317,7 @@
                                     <rng:ref name="StructuredAbstract"/>
                                     <rng:ref name="KeywordsInDocumentLanguage"/>
                                     <rng:ref name="BibliographyStyle"/>
+                                    <rng:ref name="BibliographyPosition"/>
                                     <rng:ref name="CitationStyle"/>
                                     <rng:ref name="BodyMarkup"/>
                                     <rng:ref name="Typesetting"/>
@@ -4325,7 +4326,6 @@
                                     <rng:ref name="ColorSpecifications"/>
                                     <rng:ref name="CoverProductionInfo"/>
                                     <rng:ref name="Binding"/>
-
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
@@ -4335,6 +4335,19 @@
                         <content>
                             <rng:text/>
                         </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="BibliographyPosition">
+                        <content>
+                            <rng:text/>
+                        </content>
+                        <attList>
+                            <attDef ident="Position">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="HistoryStyle">
