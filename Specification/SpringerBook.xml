@@ -4336,7 +4336,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BibliographyPosition">
                         <content>
                             <rng:text/>
@@ -4568,7 +4568,9 @@
 
                     <elementSpec ident="Typesetting">
                         <content>
-                            <rng:empty/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="FrontmatterTechnicalInfo"/>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="Layout">
@@ -4602,6 +4604,19 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="Profile">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="FrontmatterTechnicalInfo">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="IncludeMoreMediaNote">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
