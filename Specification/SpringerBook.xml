@@ -6523,9 +6523,9 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                     <elementSpec ident="Cover">
                         <content>
                             <rng:ref name="CoverInfo"/>
-                            <rng:optional>
+                            <rng:zeroOrMore>
                                 <rng:ref name="CoverFigure"/>
-                            </rng:optional>
+                            </rng:zeroOrMore>
                             <rng:zeroOrMore>
                                 <rng:ref name="BodyRef"/>
                             </rng:zeroOrMore>

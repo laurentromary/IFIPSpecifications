@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-03-02T07:14:45Z. .CC-BY
+DTD generated from ODD source 2021-03-02T07:19:20Z. .CC-BY
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -965,7 +965,7 @@ Country CDATA #IMPLIED >
 <!ATTLIST Country
 Code CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT Cover (CoverInfo,(CoverFigure)?,(BodyRef)*)>
+<!ELEMENT Cover (CoverInfo,(CoverFigure)*,(BodyRef)*)>
 <!ATTLIST Cover
 Type CDATA  #IMPLIED >
 <!--doc: -->
