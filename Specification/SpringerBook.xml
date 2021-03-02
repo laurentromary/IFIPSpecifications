@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="tei_odds.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
     xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -5611,6 +5609,11 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="BackCoverFigure">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                             <attDef ident="CoverPrintPDF">
                                 <datatype>
                                     <rng:text/>
@@ -6560,6 +6563,13 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         <content>
                             <rng:ref name="MediaObject"/>
                         </content>
+                        <attList>
+                            <attDef ident="Position">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <classSpec ident="model.ListElements" type="model">
@@ -7552,7 +7562,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
 
                     <!-- Defining Text Macros -->
 
-                    <macroSpec type="pe" ident="macro.SimpleTextModel">
+                    <macroSpec ident="macro.SimpleTextModel">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -7563,7 +7573,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                     </macroSpec>
 
-                    <macroSpec type="pe" ident="macro.FullTextModel">
+                    <macroSpec ident="macro.FullTextModel">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -7574,7 +7584,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                     </macroSpec>
 
-                    <macroSpec type="pe" ident="macro.VerySimpleTextModel">
+                    <macroSpec ident="macro.VerySimpleTextModel">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -7585,7 +7595,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                     </macroSpec>
 
-                    <macroSpec type="pe" ident="macro.NameModel">
+                    <macroSpec ident="macro.NameModel">
                         <content>
                             <rng:optional>
                                 <rng:ref name="Prefix"/>
@@ -7612,7 +7622,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                     </macroSpec>
 
-                    <macroSpec type="pe" ident="macro.tbl.tgroup.mdl">
+                    <macroSpec ident="macro.tbl.tgroup.mdl">
                         <content>
                             <rng:group>
                                 <rng:zeroOrMore>
@@ -7628,7 +7638,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
 
 
                     <!-- <!ENTITY % EquationSourceModel "%VerySimpleTextModel; %MathMLModel;">-->
-                    <macroSpec type="pe" ident="macro.EquationSourceModel">
+                    <macroSpec ident="macro.EquationSourceModel">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -7642,7 +7652,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
 
                     <!--                    <!ENTITY % token.content "#PCDATA|%mglyph.qname;|%malignmark.qname;">-->
 
-                    <macroSpec type="pe" ident="macro.token.content">
+                    <macroSpec ident="macro.token.content">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -7656,7 +7666,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
 
                     <!--<!ENTITY % MathExpression "%ContExp;|%PresentationExpression;">-->
 
-                    <macroSpec type="pe" ident="macro.MathExpression">
+                    <macroSpec ident="macro.MathExpression">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>

@@ -1,11 +1,13 @@
 default namespace = ""
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
+namespace tei = "http://www.tei-c.org/ns/1.0"
+namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-01-16T17:41:16Z. .
-# TEI Edition: Version 2.9.1. Last updated on
-#	15th October 2015, revision 46ac023
-# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
+# Schema generated from ODD source 2021-03-02T07:15:07Z. .
+# TEI Edition: Version 4.1.0. Last updated on
+#	19th August 2020, revision b414ba550
+# TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
 #
 
 # CC-BY
@@ -13,6 +15,11 @@ namespace xlink = "http://www.w3.org/1999/xlink"
 sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
 macro.SimpleTextModel = (text | model.simpleText)*
 macro.FullTextModel = (text | model.fullText)*
+macro.tbl.tgroup.mdl = colspec*, thead?, tbody
+macro.EquationSourceModel =
+  (text | model.verySimpleText | model.MathML)*
+macro.token.content = (text | mglyph | malignmark)*
+macro.MathExpression = (text | model.PresentationExpression)*
 model.nameLike.agent = notAllowed
 model.nameLike.agent_alternation = notAllowed
 model.nameLike.agent_sequence = empty
@@ -156,12 +163,14 @@ PublisherInfo =
     (PublisherName
      | PublisherLocation
      | PublisherImprintName
-     | PublisherURL)*
+     | PublisherURL
+     | PublisherLogo
+     | CoPublisher)*
   }
 PublisherName =
   
   ## name of the publisher
-  element PublisherName { text }
+  element PublisherName { text, att.DisplayOrder.attributes, empty }
 PublisherLocation =
   
   ## groups together all the Springer metadata associated to a book related publication (book or book chapter)
@@ -174,10 +183,21 @@ PublisherURL =
   
   ##
   element PublisherURL { text }
+PublisherLogo =
+  
+  ##
+  element PublisherLogo { Figure }
+CoPublisher =
+  
+  ##
+  element CoPublisher { text }
 Series =
   
   ## groups together all the Springer metadata associated to a book related publication (book or book chapter)
-  element Series { SeriesInfo, Book }
+  element Series {
+    SeriesInfo,
+    (SeriesHeader?, (Book | SubSeries)*)
+  }
 SeriesInfo =
   
   ##
@@ -208,20 +228,42 @@ SeriesPrintISSN =
   
   ##
   element SeriesPrintISSN { text }
+SubSeriesPrintISSN =
+  
+  ##
+  element SubSeriesPrintISSN { text }
 SeriesElectronicISSN =
   
   ##
   element SeriesElectronicISSN { text }
+SubSeriesElectronicISSN =
+  
+  ##
+  element SubSeriesElectronicISSN { text }
 SeriesTitle =
   
   ##
   element SeriesTitle { text, att.language.attributes, empty }
+SubSeriesTitle =
+  
+  ##
+  element SubSeriesTitle { text, att.language.attributes, empty }
 SeriesAbbreviatedTitle =
   
   ##
   element SeriesAbbreviatedTitle {
     text, att.language.attributes, empty
   }
+SubSeriesAbbreviatedTitle =
+  
+  ##
+  element SubSeriesAbbreviatedTitle {
+    text, att.language.attributes, empty
+  }
+SubSeriesSubTitle =
+  
+  ##
+  element SubSeriesSubTitle { text, att.language.attributes, empty }
 Book =
   
   ##
@@ -230,9 +272,13 @@ Book =
      Cover?,
      BookHeader?,
      (NoBody
-      | (BodyRef*, BookFrontmatter?, (Part+ | Chapter+)?)
+      | (BodyRef*,
+         BookFrontmatter?,
+         (Part+ | Chapter+)?,
+         BookBackmatter?)
       | BookOnlineFirst)),
     att.language.attributes,
+    att.OutputMedium.attributes,
     empty
   }
 BookOnlineFirst =
@@ -255,13 +301,16 @@ BookInfo =
      | BookElectronicISBN
      | BookChapterCount
      | BookCopyright
+     | BookHistory
      | BookContext
      | ConferenceInfo
      | EditionNumber
      | BookEdition
      | PaperInfo
      | BookSubjectGroup
-     | BookstoreLocation)+,
+     | BookstoreLocation
+     | CatalogingInformation
+     | BookClassification)+,
     att.language.attributes,
     att.numbered.attributes,
     att.OutputMedium.attributes,
@@ -274,6 +323,9 @@ BookInfo =
     
     ##
     attribute ContainsESM { text }?,
+    
+    ##
+    attribute MediaType { text }?,
     empty
   }
 BookHeader =
@@ -284,13 +336,76 @@ BookEdition =
   
   ##
   element BookEdition { text }
+SubSeries =
+  
+  ##
+  element SubSeries {
+    SubSeriesInfo, BookOnlineFirst?, SubSeriesHeader?, Toc?, Book*
+  }
+SubSeriesInfo =
+  
+  ##
+  element SubSeriesInfo {
+    SubSeriesID,
+    SubSeriesPrintISSN?,
+    SubSeriesElectronicISSN?,
+    SubSeriesTitle,
+    SubSeriesSubTitle?,
+    SubSeriesAbbreviatedTitle?,
+    att.OutputMedium.attributes,
+    
+    ##
+    attribute SeriesType {
+      
+      ##
+      "Series"
+      | 
+        ##
+        "Subseries"
+      | 
+        ##
+        "VirtualSeries"
+      | 
+        ##
+        "VolumePackage"
+      | 
+        ##
+        "Hierarchy"
+    }?,
+    empty
+  }
+SubSeriesHeader =
+  
+  ##
+  element SubSeriesHeader {
+    AuthorGroup?,
+    EditorGroup?,
+    CollaboratorGroup?,
+    SubSeriesInformationText?,
+    att.OutputMedium.attributes,
+    empty
+  }
+SubSeriesInformationText =
+  
+  ##
+  element SubSeriesInformationText { Para* }
+CatalogingInformation =
+  
+  ##
+  element CatalogingInformation {
+    (text | model.verySimpleText | InlineEquation)*,
+    
+    ##
+    attribute Library { text }?,
+    empty
+  }
 Chapter =
   
   ##
   element Chapter {
     (ChapterInfo,
-     ChapterHeader,
-     (NoBody | Body),
+     ChapterHeader?,
+     (NoBody | BodyRef+ | (Body, BodyRef*)),
      BodyRef?,
      ChapterBackmatter?),
     att.language.attributes,
@@ -305,6 +420,7 @@ ChapterInfo =
     IFIPentity*,
     (ChapterID
      | ChapterDOI
+     | ChapterNumber
      | ChapterSequenceNumber
      | ChapterTitle
      | ChapterSubTitle
@@ -314,7 +430,9 @@ ChapterInfo =
      | ChapterContext
      | ChapterHistory
      | ChapterRelatedObject
-     | ChapterCategory)+,
+     | ChapterCategory
+     | ChapterGrants
+     | ConferenceReference)+,
     att.numbered.attributes,
     att.OutputMedium.attributes,
     att.language.attributes,
@@ -329,6 +447,47 @@ ChapterInfo =
     attribute ContainsESM { text }?,
     empty
   }
+ConferenceReference =
+  
+  ##
+  element ConferenceReference { text }
+ChapterGrants =
+  
+  ##
+  element ChapterGrants {
+    (MetadataGrant,
+     AbstractGrant?,
+     BodyPDFGrant?,
+     BodyHTMLGrant?,
+     BibliographyGrant?,
+     ESMGrant?),
+    att.Typed.attributes,
+    empty
+  }
+MetadataGrant =
+  
+  ##
+  element MetadataGrant { empty, att.Granted.attributes, empty }
+AbstractGrant =
+  
+  ##
+  element AbstractGrant { empty, att.Granted.attributes, empty }
+BodyPDFGrant =
+  
+  ##
+  element BodyPDFGrant { empty, att.Granted.attributes, empty }
+BodyHTMLGrant =
+  
+  ##
+  element BodyHTMLGrant { empty, att.Granted.attributes, empty }
+BibliographyGrant =
+  
+  ##
+  element BibliographyGrant { empty, att.Granted.attributes, empty }
+ESMGrant =
+  
+  ##
+  element ESMGrant { empty, att.Granted.attributes, empty }
 ChapterHeader =
   
   ##
@@ -339,7 +498,10 @@ ArticleNote =
   
   ##
   element ArticleNote {
-    (Heading?, SimplePara+), att.Typed.attributes, empty
+    (Heading?, (SimplePara | FormalPara)+),
+    att.Typed.attributes,
+    att.OutputMedium.attributes,
+    empty
   }
 NoBody =
   
@@ -348,12 +510,13 @@ NoBody =
 Body =
   
   ##
-  element Body { Section1+ }
+  element Body { model.fullTextBlock*, Section1* }
 BodyRef =
   
   ##
   element BodyRef {
     empty,
+    att.OutputMedium.attributes,
     
     ##
     attribute FileRef { text }?,
@@ -368,7 +531,50 @@ BodyRef =
 Section1 =
   
   ##
-  element Section1 { Heading?, Para*, att.ID.attributes, empty }
+  element Section1 {
+    Heading,
+    AuthorGroup?,
+    model.fullTextBlock*,
+    Section2*,
+    att.ID.attributes,
+    att.Typed.attributes,
+    empty
+  }
+Section2 =
+  
+  ##
+  element Section2 {
+    Heading,
+    AuthorGroup?,
+    model.fullTextBlock*,
+    Section3*,
+    att.ID.attributes,
+    att.Typed.attributes,
+    empty
+  }
+Section3 =
+  
+  ##
+  element Section3 {
+    Heading,
+    AuthorGroup?,
+    model.fullTextBlock*,
+    Section4*,
+    att.ID.attributes,
+    att.Typed.attributes,
+    empty
+  }
+Section4 =
+  
+  ##
+  element Section4 {
+    Heading,
+    AuthorGroup?,
+    model.fullTextBlock*,
+    att.ID.attributes,
+    att.Typed.attributes,
+    empty
+  }
 BookID =
   
   ##
@@ -376,7 +582,7 @@ BookID =
 BookTitle =
   
   ##
-  element BookTitle { text }
+  element BookTitle { macro.SimpleTextModel }
 BookSubTitle =
   
   ##
@@ -416,7 +622,7 @@ PaperInfo =
 BookSubjectGroup =
   
   ##
-  element BookSubjectGroup { BookSubject* }
+  element BookSubjectGroup { BookSubject+, SubjectCollection? }
 BookSubject =
   
   ##
@@ -431,10 +637,73 @@ BookSubject =
     attribute Priority { text }?,
     empty
   }
+SubjectCollection =
+  
+  ##
+  element SubjectCollection {
+    text,
+    
+    ##
+    attribute Code { text }?,
+    empty
+  }
 BookstoreLocation =
   
   ##
   element BookstoreLocation { text }
+BookClassification =
+  
+  ##
+  element BookClassification {
+    (CharacteristicValue | ClassificationGroup)+
+  }
+Appendix =
+  
+  ##
+  element Appendix {
+    TocAppendix?,
+    Section1+,
+    att.ID.attributes,
+    att.OutputMedium.attributes,
+    empty
+  }
+TocAppendix =
+  
+  ##
+  element TocAppendix {
+    Heading?,
+    SubHeading?,
+    (TocEntry, (Author | InstitutionalAuthor)*)?,
+    TocSection1*
+  }
+TocSection1 =
+  
+  ##
+  element TocSection1 { TocEntry, TocSection2* }
+TocSection2 =
+  
+  ##
+  element TocSection2 { TocEntry, TocSection3* }
+TocSection3 =
+  
+  ##
+  element TocSection3 { TocEntry, TocSection4* }
+TocSection4 =
+  
+  ##
+  element TocSection4 { TocEntry, TocSection5* }
+TocSection5 =
+  
+  ##
+  element TocSection5 { TocEntry, TocSection6* }
+TocSection6 =
+  
+  ##
+  element TocSection6 { TocEntry, TocSection7* }
+TocSection7 =
+  
+  ##
+  element TocSection7 { TocEntry }
 BookCopyright =
   
   ##
@@ -442,8 +711,17 @@ BookCopyright =
     (CopyrightHolderName
      | CopyrightYear
      | SpringerReferenceLine
-     | SpringerLocationsLine)+
+     | SpringerLocationsLine
+     | CopyrightStandardText
+     | TrademarkQualifierText
+     | ProductLiability
+     | CopyrightComment
+     | License)+
   }
+BookHistory =
+  
+  ##
+  element BookHistory { OnlineDate?, PrintDate? }
 CopyrightHolderName =
   
   ##
@@ -452,14 +730,58 @@ CopyrightYear =
   
   ##
   element CopyrightYear { text }
+CopyrightComment =
+  
+  ##
+  element CopyrightComment { (text | SimplePara)* }
 SpringerReferenceLine =
   
   ##
-  element SpringerReferenceLine { text, att.language.attributes, empty }
+  element SpringerReferenceLine {
+    (text | SimplePara)*,
+    att.language.attributes,
+    
+    ##
+    attribute Country { text }?,
+    empty
+  }
 SpringerLocationsLine =
   
   ##
   element SpringerLocationsLine { text }
+CopyrightStandardText =
+  
+  ##
+  element CopyrightStandardText {
+    text,
+    att.language.attributes,
+    
+    ##
+    attribute Country { text }?,
+    empty
+  }
+TrademarkQualifierText =
+  
+  ##
+  element TrademarkQualifierText {
+    text,
+    att.language.attributes,
+    
+    ##
+    attribute Country { text }?,
+    empty
+  }
+ProductLiability =
+  
+  ##
+  element ProductLiability {
+    text,
+    att.language.attributes,
+    
+    ##
+    attribute Country { text }?,
+    empty
+  }
 BookContext =
   
   ##
@@ -485,7 +807,15 @@ Part =
   
   ##
   element Part {
-    PartInfo, Chapter*, BookFrontmatter?, att.ID.attributes, empty
+    PartInfo,
+    BookFrontmatter?,
+    BodyRef*,
+    SubPart*,
+    Chapter*,
+    BookFrontmatter?,
+    att.ID.attributes,
+    att.OutputMedium.attributes,
+    empty
   }
 PartInfo =
   
@@ -533,13 +863,76 @@ PartContext =
     BookID?,
     BookTitle?
   }
+SubPart =
+  
+  ##
+  element SubPart {
+    SubPartInfo,
+    SubPartHeader?,
+    BookFrontmatter?,
+    Chapter+,
+    BookBackmatter?,
+    att.ID.attributes,
+    empty
+  }
+SubPartHeader =
+  
+  ##
+  element SubPartHeader {
+    AuthorGroup?,
+    EditorGroup?,
+    CollaboratorGroup?,
+    Abstract?,
+    KeywordGroup*,
+    ArticleNote*
+  }
+SubPartInfo =
+  
+  ##
+  element SubPartInfo {
+    SubPartID,
+    SubPartNumber?,
+    SubPartSequenceNumber?,
+    SubPartTitle,
+    SubPartSubTitle?,
+    SubPartChapterCount?,
+    att.OutputMedium.attributes,
+    
+    ##
+    attribute TocLevels { text }?,
+    empty
+  }
+SubPartID =
+  
+  ##
+  element SubPartID { text }
+SubPartNumber =
+  
+  ##
+  element SubPartNumber { text }
+SubPartSequenceNumber =
+  
+  ##
+  element SubPartSequenceNumber { text }
+SubPartTitle =
+  
+  ##
+  element SubPartTitle { macro.SimpleTextModel }
+SubPartSubTitle =
+  
+  ##
+  element SubPartSubTitle { macro.SimpleTextModel }
+SubPartChapterCount =
+  
+  ##
+  element SubPartChapterCount { text }
 BookFrontmatter =
   
   ##
   element BookFrontmatter {
     BookFrontmatterInfo?,
     BookFrontmatterHeader?,
-    NoBody,
+    (NoBody | BodyRef+ | (BodyFrontmatter, BodyRef*)),
     att.OutputMedium.attributes,
     empty
   }
@@ -568,6 +961,190 @@ BookFrontmatterHeader =
   
   ##
   element BookFrontmatterHeader { PageHeaders? }
+BodyFrontmatter =
+  
+  ##
+  element BodyFrontmatter {
+    Frontispiece?, Dedication?, Foreword*, Preface*, BookNotes?, Toc?
+  }
+Frontispiece =
+  
+  ##
+  element Frontispiece { Figure }
+Dedication =
+  
+  ##
+  element Dedication { Heading?, SimplePara+ }
+Foreword =
+  
+  ##
+  element Foreword { ForewordInfo, AuthorGroup?, Body }
+ForewordInfo =
+  
+  ##
+  element ForewordInfo {
+    ForewordTitle, ForewordDate?, ForewordLocation*
+  }
+ForewordTitle =
+  
+  ##
+  element ForewordTitle {
+    macro.SimpleTextModel, att.language.attributes, empty
+  }
+ForewordDate =
+  
+  ##
+  element ForewordDate { text }
+ForewordLocation =
+  
+  ##
+  element ForewordLocation { text }
+Preface =
+  
+  ##
+  element Preface { PrefaceInfo, AuthorGroup?, Body }
+PrefaceInfo =
+  
+  ##
+  element PrefaceInfo { PrefaceTitle, PrefaceDate?, PrefaceLocation* }
+PrefaceTitle =
+  
+  ##
+  element PrefaceTitle {
+    macro.SimpleTextModel, att.language.attributes, empty
+  }
+PrefaceDate =
+  
+  ##
+  element PrefaceDate { text }
+PrefaceLocation =
+  
+  ##
+  element PrefaceLocation { text }
+BookNotes =
+  
+  ##
+  element BookNotes { BookNotesTitle, AuthorGroup?, Body }
+BookNotesTitle =
+  
+  ##
+  element BookNotesTitle {
+    macro.SimpleTextModel, att.language.attributes, empty
+  }
+Toc =
+  
+  ##
+  element Toc {
+    Heading, SubHeading?, TocFront*, (TocPart | TocChapter)*, TocBack*
+  }
+TocFront =
+  
+  ##
+  element TocFront {
+    macro.SimpleTextModel,
+    
+    ##
+    attribute PageNumber { text }?,
+    empty
+  }
+TocPart =
+  
+  ##
+  element TocPart { TocEntry, Author*, TocChapter* }
+TocEntry =
+  
+  ##
+  element TocEntry {
+    (text | model.simpleText | ExternalRef)*,
+    
+    ##
+    attribute PageNumber { text }?,
+    
+    ##
+    attribute TargetID { text }?,
+    empty
+  }
+TocChapter =
+  
+  ##
+  element TocChapter { Heading?, SubHeading?, (TocEntry, Author*)? }
+TocBack =
+  
+  ##
+  element TocBack {
+    macro.SimpleTextModel,
+    
+    ##
+    attribute PageNumber { text }?,
+    empty
+  }
+BookBackmatter =
+  
+  ##
+  element BookBackmatter {
+    BookBackmatterInfo?,
+    BookBackmatterHeader?,
+    (NoBody | BodyRef+ | (BodyBackmatter, BodyRef*)),
+    att.OutputMedium.attributes,
+    empty
+  }
+BookBackmatterInfo =
+  
+  ##
+  element BookBackmatterInfo {
+    BookBackmatterDOI?, BookBackmatterFirstPage, BookBackmatterLastPage
+  }
+BookBackmatterHeader =
+  
+  ##
+  element BookBackmatterHeader {
+    PageHeaders?,
+    AuthorGroup?,
+    TocChapter?,
+    Abstract?,
+    KeywordGroup*,
+    ArticleNote*
+  }
+BookBackmatterDOI =
+  
+  ##
+  element BookBackmatterDOI { text }
+BookBackmatterFirstPage =
+  
+  ##
+  element BookBackmatterFirstPage { text }
+BookBackmatterLastPage =
+  
+  ##
+  element BookBackmatterLastPage { text }
+BodyBackmatter =
+  
+  ##
+  element BodyBackmatter { Appendix*, Bibliography?, Index* }
+Index =
+  
+  ##
+  element Index { (Heading, SubHeading?), att.ID.attributes, empty }
+PrimaryIE =
+  
+  ##
+  element PrimaryIE { macro.SimpleTextModel }
+SecondaryIE =
+  
+  ##
+  element SecondaryIE { macro.SimpleTextModel }
+TertiaryIE =
+  
+  ##
+  element TertiaryIE { macro.SimpleTextModel }
+SeeIE =
+  
+  ##
+  element SeeIE { macro.SimpleTextModel }
+SeeAlsoIE =
+  
+  ##
+  element SeeAlsoIE { macro.SimpleTextModel }
 PageHeaders =
   
   ##
@@ -609,6 +1186,14 @@ ConfSeriesName =
   
   ##
   element ConfSeriesName { text, att.ID.attributes, empty }
+ConfSeriesID =
+  
+  ##
+  element ConfSeriesID { text, att.Typed.attributes, empty }
+ConfEventID =
+  
+  ##
+  element ConfEventID { text, att.Typed.attributes, empty }
 ConfEventAbbreviation =
   
   ##
@@ -621,6 +1206,10 @@ ConfEventLocation =
   
   ##
   element ConfEventLocation { (text | City | Country)* }
+ConfEventURL =
+  
+  ##
+  element ConfEventURL { text }
 ConfEventDate =
   
   ##
@@ -646,24 +1235,33 @@ ArticleTitle =
 AuthorGroup =
   
   ##
-  element AuthorGroup { Author+, Affiliation* }
+  element AuthorGroup { (Author | InstitutionalAuthor)+, Affiliation* }
 Author =
   
   ##
   element Author {
     (AuthorName, Contact?),
+    att.ID.attributes,
     
     ##
     attribute AffiliationIDS { text }?,
     
     ##
     attribute CorrespondingAffiliationID { text }?,
+    
+    ##
+    attribute PresentAffiliationID { text }?,
+    
+    ##
+    attribute ORCID { text }?,
     empty
   }
 AuthorName =
   
   ##
-  element AuthorName { model.NamePart+ }
+  element AuthorName {
+    model.NamePart+, att.DisplayOrder.attributes, empty
+  }
 CollaboratorGroup =
   
   ##
@@ -677,12 +1275,17 @@ Collaborator =
     
     ##
     attribute AffiliationIDS { text }?,
+    
+    ##
+    attribute ORCID { text }?,
     empty
   }
 CollaboratorName =
   
   ##
-  element CollaboratorName { model.NamePart+ }
+  element CollaboratorName {
+    model.NamePart+, att.DisplayOrder.attributes, empty
+  }
 Abstract =
   
   ##
@@ -696,12 +1299,51 @@ Abstract =
 Para =
   
   ##
-  element Para { macro.FullTextModel }
+  element Para {
+    macro.FullTextModel,
+    att.ID.attributes,
+    att.Typed.attributes,
+    att.OutputMedium.attributes,
+    
+    ##
+    attribute TextBreak {
+      
+      ##
+      "Yes"
+      | 
+        ##
+        "No"
+    }?,
+    empty
+  }
 SimplePara =
   
   ##
   element SimplePara {
-    (text | model.simpleText | Figure | model.referenceElements)*
+    (text
+     | model.simpleText
+     | Figure
+     | Table
+     | model.referenceElements)*,
+    att.Typed.attributes,
+    att.OutputMedium.attributes,
+    att.language.attributes,
+    empty
+  }
+FormalPara =
+  
+  ##
+  element FormalPara {
+    (Heading, Para+),
+    att.Typed.attributes,
+    att.OutputMedium.attributes,
+    
+    ##
+    attribute ID { xsd:ID }?,
+    
+    ##
+    attribute RenderingStyle { text }?,
+    empty
   }
 KeywordGroup =
   
@@ -710,12 +1352,23 @@ KeywordGroup =
     (Heading?, Keyword+),
     att.language.attributes,
     att.OutputMedium.attributes,
+    
+    ##
+    attribute Source { text }?,
     empty
   }
 Heading =
   
   ##
-  element Heading { text }
+  element Heading {
+    (text | model.simpleText | model.referenceElements)*
+  }
+SubHeading =
+  
+  ##
+  element SubHeading {
+    (text | model.simpleText | model.referenceElements)*
+  }
 Keyword =
   
   ##
@@ -723,7 +1376,7 @@ Keyword =
 EditorGroup =
   
   ##
-  element EditorGroup { Editor+, Affiliation+ }
+  element EditorGroup { Editor+, Affiliation* }
 Editor =
   
   ##
@@ -732,16 +1385,28 @@ Editor =
     
     ##
     attribute AffiliationIDS { text }?,
+    
+    ##
+    attribute PresentAffiliationID { text }?,
+    
+    ##
+    attribute ORCID { text }?,
     empty
   }
 EditorName =
   
   ##
-  element EditorName { model.NamePart* }
+  element EditorName {
+    model.NamePart*, att.DisplayOrder.attributes, empty
+  }
 GivenName =
   
   ##
   element GivenName { text }
+NoGivenName =
+  
+  ##
+  element NoGivenName { empty }
 Initials =
   
   ##
@@ -762,14 +1427,34 @@ Suffix =
   
   ##
   element Suffix { text }
+Prefix =
+  
+  ##
+  element Prefix { text }
+Degrees =
+  
+  ##
+  element Degrees { text }
+NativeName =
+  
+  ##
+  element NativeName { text }
 Contact =
   
   ##
   element Contact { model.ContactPart+ }
+Phone =
+  
+  ##
+  element Phone { text }
+Fax =
+  
+  ##
+  element Fax { text }
 Email =
   
   ##
-  element Email { text }
+  element Email { text, att.OutputMedium.attributes, empty }
 URL =
   
   ##
@@ -778,7 +1463,12 @@ Affiliation =
   
   ##
   element Affiliation {
-    (OrgDivision | OrgName | OrgAddress)+, att.ID.attributes, empty
+    (OrgID*, OrgDivision?, OrgName?, (OrgAddress | URL)),
+    att.ID.attributes,
+    
+    ##
+    attribute ObjectID { text }?,
+    empty
   }
 OrgDivision =
   
@@ -788,6 +1478,17 @@ OrgName =
   
   ##
   element OrgName { text }
+OrgID =
+  
+  ##
+  element OrgID {
+    text,
+    att.Typed.attributes,
+    
+    ##
+    attribute Level { text }?,
+    empty
+  }
 OrgAddress =
   
   ##
@@ -815,7 +1516,13 @@ State =
 Country =
   
   ##
-  element Country { text }
+  element Country {
+    text,
+    
+    ##
+    attribute Code { text }?,
+    empty
+  }
 ChapterID =
   
   ##
@@ -824,6 +1531,10 @@ ChapterDOI =
   
   ##
   element ChapterDOI { text }
+ChapterNumber =
+  
+  ##
+  element ChapterNumber { text }
 ChapterSequenceNumber =
   
   ##
@@ -851,7 +1562,25 @@ ChapterLastPage =
 ChapterCopyright =
   
   ##
-  element ChapterCopyright { CopyrightHolderName, CopyrightYear }
+  element ChapterCopyright {
+    CopyrightHolderName, CopyrightYear, CopyrightComment?, License?
+  }
+License =
+  
+  ##
+  element License {
+    SimplePara*,
+    
+    ##
+    attribute Type { text }?,
+    
+    ##
+    attribute SubType { text }?,
+    
+    ##
+    attribute Version { text }?,
+    empty
+  }
 ChapterHistory =
   
   ##
@@ -860,6 +1589,10 @@ OnlineDate =
   
   ##
   element OnlineDate { model.DatePart+ }
+PrintDate =
+  
+  ##
+  element PrintDate { model.DatePart+ }
 RegistrationDate =
   
   ##
@@ -867,7 +1600,17 @@ RegistrationDate =
 ChapterContext =
   
   ##
-  element ChapterContext { (SeriesID | BookID | BookTitle | PartID)* }
+  element ChapterContext {
+    (SeriesID
+     | SubSeriesID
+     | BookSetID
+     | BookSetTitle
+     | VolumePackageID
+     | PartID
+     | SubPartID
+     | BookID
+     | BookTitle)*
+  }
 ChapterRelatedObject =
   
   ##
@@ -889,17 +1632,43 @@ ChapterCategory =
 ChapterBackmatter =
   
   ##
-  element ChapterBackmatter { Acknowledgments?, Bibliography? }
+  element ChapterBackmatter {
+    (Acknowledgments
+     | Appendix
+     | Bibliography
+     | Ethics
+     | FundingInformation
+     | AuthorContribution)+
+  }
+FundingInformation =
+  
+  ##
+  element FundingInformation { Heading?, SimplePara+ }
+AuthorContribution =
+  
+  ##
+  element AuthorContribution { Heading?, SimplePara+ }
+Ethics =
+  
+  ##
+  element Ethics { (Heading?, SimplePara+) | FormalPara }
 Acknowledgments =
   
   ##
-  element Acknowledgments { Heading?, SimplePara* }
+  element Acknowledgments { Heading?, (SimplePara | FormalPara)+ }
 Bibliography =
   
   ##
   element Bibliography {
-    (Heading?, Citation*), att.ID.attributes, empty
+    (Heading?, (BibSection | Citation)*),
+    att.ID.attributes,
+    att.OutputMedium.attributes,
+    empty
   }
+BibSection =
+  
+  ##
+  element BibSection { (Heading?, Citation*), att.ID.attributes, empty }
 Citation =
   
   ##
@@ -927,7 +1696,12 @@ InternalRef =
   
   ##
   element InternalRef {
-    (RefSource, RefTarget+), att.ID.attributes, empty
+    macro.SimpleTextModel,
+    att.ID.attributes,
+    
+    ##
+    attribute RefID { text }?,
+    empty
   }
 RefSource =
   
@@ -944,6 +1718,9 @@ RefTarget =
     
     ##
     attribute Address { text }?,
+    
+    ##
+    attribute TargetRefID { text }?,
     empty
   }
 BibChapter =
@@ -961,16 +1738,23 @@ BibChapter =
      | PublisherLocation
      | SeriesTitle
      | BibEditorName
+     | BibInstitutionalEditorName
      | ConfEventName
      | ConfEventLocation
      | ConfEventDate
+     | ConfEventDateStart
+     | ConfEventDateEnd
      | NumberInSeries
      | FirstPage
      | LastPage
+     | Occurrence
      | BibComments
      | Eds
      | EditionNumber
-     | NoChapterTitle)*
+     | NoChapterTitle
+     | BibChapterDOI
+     | BibBookDOI
+     | ISBN)*
   }
 NoChapterTitle =
   
@@ -997,9 +1781,12 @@ BibArticle =
      | ConfEventName
      | ConfEventLocation
      | ConfEventDate
+     | ConfEventDateStart
+     | ConfEventDateEnd
      | NumberInSeries
      | FirstPage
      | LastPage
+     | Occurrence
      | VolumeID
      | IssueID
      | BibComments
@@ -1025,13 +1812,18 @@ BibBook =
      | ConfEventName
      | ConfEventLocation
      | ConfEventDate
+     | ConfEventDateStart
+     | ConfEventDateEnd
      | NumberInSeries
      | FirstPage
      | LastPage
+     | Occurrence
      | BibComments
      | Eds
      | EditionNumber
-     | InstitutionalAuthorName)*
+     | InstitutionalAuthorName
+     | BibBookDOI
+     | ISBN)*
   }
 VolumeID =
   
@@ -1049,10 +1841,31 @@ BibAuthorName =
   
   ##
   element BibAuthorName { model.NamePart* }
+InstitutionalAuthor =
+  
+  ##
+  element InstitutionalAuthor {
+    (InstitutionalAuthorName, Contact?),
+    att.ID.attributes,
+    
+    ##
+    attribute AffiliationIDS { text }?,
+    
+    ##
+    attribute SAPID { text }?,
+    
+    ##
+    attribute SpringerReferenceID { text }?,
+    empty
+  }
 InstitutionalAuthorName =
   
   ##
-  element InstitutionalAuthorName { model.NamePart* }
+  element InstitutionalAuthorName { text }
+BibInstitutionalEditorName =
+  
+  ##
+  element BibInstitutionalEditorName { text }
 Etal =
   
   ##
@@ -1061,6 +1874,14 @@ BibArticleDOI =
   
   ##
   element BibArticleDOI { text }
+BibChapterDOI =
+  
+  ##
+  element BibChapterDOI { text }
+BibBookDOI =
+  
+  ##
+  element BibBookDOI { text }
 BibEditorName =
   
   ##
@@ -1077,10 +1898,14 @@ Day =
   
   ##
   element Day { text }
+Hour =
+  
+  ##
+  element Hour { text }
 ConfEventName =
   
   ##
-  element ConfEventName { text }
+  element ConfEventName { macro.SimpleTextModel }
 NumberInSeries =
   
   ##
@@ -1093,10 +1918,24 @@ LastPage =
   
   ##
   element LastPage { text }
+Occurrence =
+  
+  ##
+  element Occurrence {
+    (Handle | URL),
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+Handle =
+  
+  ##
+  element Handle { text }
 BibComments =
   
   ##
-  element BibComments { text }
+  element BibComments { macro.SimpleTextModel }
 Eds =
   
   ##
@@ -1114,7 +1953,11 @@ CaptionNumber =
 CaptionContent =
   
   ##
-  element CaptionContent { SimplePara+ }
+  element CaptionContent { SimplePara+, Credit* }
+Credit =
+  
+  ##
+  element Credit { SimplePara+ }
 JobSheet =
   
   ##
@@ -1139,16 +1982,26 @@ BookJobSheet =
   ##
   element BookJobSheet {
     PublisherInfo,
-    SeriesInfo,
-    SeriesHeader,
+    (SeriesInfo | SubSeriesInfo | SeriesHeader | SubSeriesHeader)*,
     BookInfo,
-    EditorGroup,
+    AuthorGroup?,
+    EditorGroup?,
+    CollaboratorGroup?,
     ProductionInfo
   }
 SeriesHeader =
   
   ##
-  element SeriesHeader { CollaboratorGroup?, SeriesInformationText? }
+  element SeriesHeader {
+    AuthorGroup?,
+    EditorGroup?,
+    CollaboratorGroup?,
+    SeriesInformationText?,
+    Abstract?,
+    KeywordGroup*,
+    att.OutputMedium.attributes,
+    empty
+  }
 SeriesInformationText =
   
   ##
@@ -1156,13 +2009,1183 @@ SeriesInformationText =
 ProductionInfo =
   
   ##
-  element ProductionInfo { text }
+  element ProductionInfo {
+    (SPACEInfo
+     | ManuscriptInfo
+     | ProductionEditor
+     | ContactPerson
+     | EditorialInfo
+     | QualifyingProductionNotes
+     | TechnicalInfo
+     | DiscreteObjectTechnicalInfo
+     | CompoundBookObjectInfo
+     | PartInfoGroup
+     | DiscreteBookObjectInfo
+     | WorkflowInfo
+     | EditorialContact
+     | CompoundObjectTechnicalInfo)*
+  }
+SPACEInfo =
+  
+  ##
+  element SPACEInfo {
+    empty,
+    
+    ##
+    attribute PublicationObjectID { text }?,
+    
+    ##
+    attribute SupplierSPACEID { text }?,
+    empty
+  }
+ManuscriptInfo =
+  
+  ##
+  element ManuscriptInfo {
+    (PeerReviewSystem
+     | EditorialManuscriptNumber
+     | ManuscriptNumberOfPages
+     | ManuscriptNumberOfGraphics
+     | ManuscriptNumberOfTables
+     | RemarkByEditor
+     | ElectronicDelivery
+     | PostalDelivery)*
+  }
+PeerReviewSystem =
+  
+  ##
+  element PeerReviewSystem { text }
+EditorialManuscriptNumber =
+  
+  ##
+  element EditorialManuscriptNumber { text }
+ManuscriptNumberOfPages =
+  
+  ##
+  element ManuscriptNumberOfPages { text }
+ManuscriptNumberOfGraphics =
+  
+  ##
+  element ManuscriptNumberOfGraphics { text }
+ManuscriptNumberOfTables =
+  
+  ##
+  element ManuscriptNumberOfTables { text }
+RemarkByEditor =
+  
+  ##
+  element RemarkByEditor { text }
+ElectronicDelivery =
+  
+  ##
+  element ElectronicDelivery {
+    empty,
+    
+    ##
+    attribute Delivery {
+      
+      ##
+      "Complete"
+      | 
+        ##
+        "Incomplete"
+      | 
+        ##
+        "None"
+    },
+    empty
+  }
+PostalDelivery =
+  
+  ##
+  element PostalDelivery {
+    empty,
+    
+    ##
+    attribute Delivery {
+      
+      ##
+      "Complete"
+      | 
+        ##
+        "Incomplete"
+      | 
+        ##
+        "None"
+    },
+    empty
+  }
+ProductionEditor =
+  
+  ##
+  element ProductionEditor { ProductionEditorName, Contact }
+ProductionEditorName =
+  
+  ##
+  element ProductionEditorName { model.NamePart+ }
+ContactPerson =
+  
+  ##
+  element ContactPerson { (ContactPersonName | Contact)* }
+ContactPersonName =
+  
+  ##
+  element ContactPersonName { model.NamePart+ }
+EditorialContact =
+  
+  ##
+  element EditorialContact { (EditorialContactName | Contact)* }
+EditorialContactName =
+  
+  ##
+  element EditorialContactName { model.NamePart+ }
+EditorialInfo =
+  
+  ##
+  element EditorialInfo { PublishingSegment* }
+PublishingSegment =
+  
+  ##
+  element PublishingSegment { text }
+QualifyingProductionNotes =
+  
+  ##
+  element QualifyingProductionNotes {
+    (QualifyingProductionNotesAds
+     | QualifyingProductionNotesCdDvdEsm
+     | QualifyingProductionNotesComplimentaryCopies
+     | QualifyingProductionNotesCopyEditing
+     | QualifyingProductionNotesFrontmatter
+     | QualifyingProductionNotesIndex
+     | QualifyingProductionNotesProductionClassification
+     | QualifyingProductionNotesSpringerDotCom
+     | QualifyingProductionNotesMiscellaneous
+     | QualifyingProductionNotesManuscriptMaterial
+     | QualifyingProductionNotesLayout
+     | QualifyingProductionNotesProof
+     | QualifyingProductionNotesColorFigures
+     | QualifyingProductionNotesCoverDesignSpecs)*
+  }
+QualifyingProductionNotesAds =
+  
+  ##
+  element QualifyingProductionNotesAds { text }
+QualifyingProductionNotesCdDvdEsm =
+  
+  ##
+  element QualifyingProductionNotesCdDvdEsm { text }
+QualifyingProductionNotesComplimentaryCopies =
+  
+  ##
+  element QualifyingProductionNotesComplimentaryCopies { text }
+QualifyingProductionNotesCopyEditing =
+  
+  ##
+  element QualifyingProductionNotesCopyEditing { text }
+QualifyingProductionNotesFrontmatter =
+  
+  ##
+  element QualifyingProductionNotesFrontmatter { text }
+QualifyingProductionNotesIndex =
+  
+  ##
+  element QualifyingProductionNotesIndex { text }
+QualifyingProductionNotesProductionClassification =
+  
+  ##
+  element QualifyingProductionNotesProductionClassification { text }
+QualifyingProductionNotesSpringerDotCom =
+  
+  ##
+  element QualifyingProductionNotesSpringerDotCom { text }
+QualifyingProductionNotesMiscellaneous =
+  
+  ##
+  element QualifyingProductionNotesMiscellaneous { text }
+QualifyingProductionNotesManuscriptMaterial =
+  
+  ##
+  element QualifyingProductionNotesManuscriptMaterial { text }
+QualifyingProductionNotesLayout =
+  
+  ##
+  element QualifyingProductionNotesLayout { text }
+QualifyingProductionNotesProof =
+  
+  ##
+  element QualifyingProductionNotesProof { text }
+QualifyingProductionNotesColorFigures =
+  
+  ##
+  element QualifyingProductionNotesColorFigures { text }
+QualifyingProductionNotesCoverDesignSpecs =
+  
+  ##
+  element QualifyingProductionNotesCoverDesignSpecs { text }
+TechnicalInfo =
+  
+  ##
+  element TechnicalInfo {
+    (TitleAdditionalLanguage
+     | TitleUpperCase
+     | AuthorInformationStyle
+     | HistoryStyle
+     | AbstractInDocumentLanguage
+     | AbstractAdditionalLanguage
+     | StructuredAbstract
+     | KeywordsInDocumentLanguage
+     | BibliographyStyle
+     | BibliographyPosition
+     | CitationStyle
+     | BodyMarkup
+     | Typesetting
+     | CompoundObjectTechnicalInfo
+     | TextSpecifications
+     | ColorSpecifications
+     | CoverProductionInfo
+     | Binding)*
+  }
+TitleAdditionalLanguage =
+  
+  ##
+  element TitleAdditionalLanguage { text }
+BibliographyPosition =
+  
+  ##
+  element BibliographyPosition {
+    text,
+    
+    ##
+    attribute Position { text }?,
+    empty
+  }
+HistoryStyle =
+  
+  ##
+  element HistoryStyle { text }
+TitleUpperCase =
+  
+  ##
+  element TitleUpperCase {
+    empty,
+    
+    ##
+    attribute Letters { text }?,
+    empty
+  }
+AuthorInformationStyle =
+  
+  ##
+  element AuthorInformationStyle {
+    empty,
+    
+    ##
+    attribute Biography { text }?,
+    
+    ##
+    attribute Photograph { text }?,
+    
+    ##
+    attribute CapturePrefix { text }?,
+    empty
+  }
+AbstractInDocumentLanguage =
+  
+  ##
+  element AbstractInDocumentLanguage {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+AbstractAdditionalLanguage =
+  
+  ##
+  element AbstractAdditionalLanguage {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+StructuredAbstract =
+  
+  ##
+  element StructuredAbstract {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+KeywordsInDocumentLanguage =
+  
+  ##
+  element KeywordsInDocumentLanguage {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+BibliographyStyle =
+  
+  ##
+  element BibliographyStyle {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+CitationStyle =
+  
+  ##
+  element CitationStyle {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+BodyMarkup =
+  
+  ##
+  element BodyMarkup {
+    empty,
+    
+    ##
+    attribute Type { text }?,
+    empty
+  }
+Typesetting =
+  
+  ##
+  element Typesetting {
+    FrontmatterTechnicalInfo*,
+    
+    ##
+    attribute Layout { text }?,
+    
+    ##
+    attribute StartPage { text }?,
+    
+    ##
+    attribute RunningHead { text }?,
+    
+    ##
+    attribute LogoOnFirstPage { text }?,
+    
+    ##
+    attribute EndsheetsContent { text }?,
+    
+    ##
+    attribute StandardFrontmatter { text }?,
+    
+    ##
+    attribute Profile { text }?,
+    empty
+  }
+FrontmatterTechnicalInfo =
+  
+  ##
+  element FrontmatterTechnicalInfo {
+    empty,
+    
+    ##
+    attribute IncludeMoreMediaNote { text }?,
+    empty
+  }
+TextSpecifications =
+  
+  ##
+  element TextSpecifications {
+    empty,
+    
+    ##
+    attribute GutterMargin { text }?,
+    
+    ##
+    attribute HeadMargin { text }?,
+    
+    ##
+    attribute Bleeds { text }?,
+    
+    ##
+    attribute TypeareaHeight { text }?,
+    
+    ##
+    attribute TypeareaWidth { text }?,
+    
+    ##
+    attribute PaperStock { text }?,
+    empty
+  }
+ColorSpecifications =
+  
+  ##
+  element ColorSpecifications {
+    (LayoutColorName | PrintingColorName)*,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    
+    ##
+    attribute LayoutColorCount { text }?,
+    
+    ##
+    attribute PrintingColorCount { text }?,
+    empty
+  }
+LayoutColorName =
+  
+  ##
+  element LayoutColorName { text }
+PrintingColorName =
+  
+  ##
+  element PrintingColorName { text }
+CoverProductionInfo =
+  
+  ##
+  element CoverProductionInfo {
+    (CoverExteriorColorName
+     | CoverInteriorColorName
+     | EndsheetsLayoutColorName
+     | EndsheetsPrintingColorName
+     | SpineWidth)*,
+    
+    ##
+    attribute Style { text }?,
+    
+    ##
+    attribute PaperStock { text }?,
+    
+    ##
+    attribute Printing { text }?,
+    
+    ##
+    attribute Stamping { text }?,
+    
+    ##
+    attribute BinderBoards { text }?,
+    
+    ##
+    attribute Finishing { text }?,
+    
+    ##
+    attribute ChangingImages { text }?,
+    
+    ##
+    attribute Creases { text }?,
+    
+    ##
+    attribute CoverExteriorColorCount { text }?,
+    
+    ##
+    attribute CoverInteriorColorCount { text }?,
+    
+    ##
+    attribute Dustjacket { text }?,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+SpineWidth =
+  
+  ##
+  element SpineWidth { text }
+CoverExteriorColorName =
+  
+  ##
+  element CoverExteriorColorName { text }
+CoverInteriorColorName =
+  
+  ##
+  element CoverInteriorColorName { text }
+EndsheetsLayoutColorName =
+  
+  ##
+  element EndsheetsLayoutColorName { text }
+EndsheetsPrintingColorName =
+  
+  ##
+  element EndsheetsPrintingColorName { text }
+Binding =
+  
+  ##
+  element Binding {
+    text,
+    att.Typed.attributes,
+    
+    ##
+    attribute EndsheetsPaper { text }?,
+    
+    ##
+    attribute BookBackType { text }?,
+    
+    ##
+    attribute BookmarkRibbonCount { text }?,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+CompoundObjectTechnicalInfo =
+  
+  ##
+  element CompoundObjectTechnicalInfo {
+    (ManuscriptNumberOfPages
+     | CompoundObjectTotalNumberOfPages
+     | CompoundObjectNumberOfArabicPages
+     | CompoundObjectNumberOfRomanPages
+     | CompoundObjectNumberOfColorPages
+     | CompoundObjectNumberOfImages
+     | ColorImagesInPrint
+     | ColorImagesOnPage
+     | ProductionClassification
+     | PrintQuality
+     | PrintRun
+     | Shares
+     | FormatTrimSize
+     | CopyEditing
+     | Typesetting)*
+  }
+CompoundObjectTotalNumberOfPages =
+  
+  ##
+  element CompoundObjectTotalNumberOfPages {
+    text,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+CompoundObjectNumberOfArabicPages =
+  
+  ##
+  element CompoundObjectNumberOfArabicPages { text }
+CompoundObjectNumberOfRomanPages =
+  
+  ##
+  element CompoundObjectNumberOfRomanPages { text }
+ColorImagesInPrint =
+  
+  ##
+  element ColorImagesInPrint { text }
+CompoundObjectNumberOfColorPages =
+  
+  ##
+  element CompoundObjectNumberOfColorPages {
+    text,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+ColorImagesOnPage =
+  
+  ##
+  element ColorImagesOnPage {
+    text,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+CompoundObjectNumberOfImages =
+  
+  ##
+  element CompoundObjectNumberOfImages {
+    text,
+    
+    ##
+    attribute Illustrations { text }?,
+    
+    ##
+    attribute PrintImagesColor { text }?,
+    
+    ##
+    attribute PrintImagesBlackWhite { text }?,
+    empty
+  }
+Shares =
+  
+  ##
+  element Shares {
+    Share+,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+Share =
+  
+  ##
+  element Share {
+    empty,
+    att.Typed.attributes,
+    
+    ##
+    attribute Quantity { text }?,
+    empty
+  }
+ProductionClassification =
+  
+  ##
+  element ProductionClassification {
+    empty, att.Typed.attributes, empty
+  }
+PrintQuality =
+  
+  ##
+  element PrintQuality {
+    empty,
+    
+    ##
+    attribute Level { text }?,
+    empty
+  }
+PrintRun =
+  
+  ##
+  element PrintRun {
+    empty,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    
+    ##
+    attribute Total { text }?,
+    empty
+  }
+FormatTrimSize =
+  
+  ##
+  element FormatTrimSize {
+    text,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    
+    ##
+    attribute TrimHeightMm { text }?,
+    
+    ##
+    attribute TrimWidthMm { text }?,
+    
+    ##
+    attribute TrimHeightInch { text }?,
+    
+    ##
+    attribute TrimWidthInch { text }?,
+    empty
+  }
+CopyEditing =
+  
+  ##
+  element CopyEditing {
+    empty,
+    
+    ##
+    attribute Category { text }?,
+    empty
+  }
+CompoundBookObjectInfo =
+  
+  ##
+  element CompoundBookObjectInfo {
+    (ISBN | EAN | BookMultiVolumeCount | PurchaseOrderNumber)*,
+    att.ID.attributes,
+    att.Typed.attributes,
+    
+    ##
+    attribute SeriesID { text }?,
+    
+    ##
+    attribute MediaType { text }?,
+    empty
+  }
+ISBN =
+  
+  ##
+  element ISBN { text }
+EAN =
+  
+  ##
+  element EAN { text }
+BookMultiVolumeCount =
+  
+  ##
+  element BookMultiVolumeCount { text }
+PurchaseOrderNumber =
+  
+  ##
+  element PurchaseOrderNumber { text }
+DiscreteBookObjectInfo =
+  
+  ##
+  element DiscreteBookObjectInfo {
+    (CoverInfo
+     | BookFrontmatterInfo
+     | ChapterInfo
+     | BookBackmatterInfo
+     | AuthorGroup
+     | DiscreteObjectTechnicalInfo)*,
+    att.ID.attributes,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+DiscreteObjectTechnicalInfo =
+  
+  ##
+  element DiscreteObjectTechnicalInfo {
+    ProductionClassification?,
+    
+    ##
+    attribute ContainsColorImages { text }?,
+    empty
+  }
+PartInfoGroup =
+  
+  ##
+  element PartInfoGroup {
+    (PartInfo | AuthorGroup | EditorGroup | DiscreteBookObjectInfo)*
+  }
+WorkflowInfo =
+  
+  ##
+  element WorkflowInfo {
+    (Priority | Deadline | Supplier)*,
+    
+    ##
+    attribute TaskType { text }?,
+    empty
+  }
+Priority =
+  
+  ##
+  element Priority {
+    empty,
+    
+    ##
+    attribute Level { text }?,
+    empty
+  }
+Deadline =
+  
+  ##
+  element Deadline {
+    (FixedPublicationDate
+     | S50TypesetterDeadline
+     | S200TypesetterDeadline
+     | S300TypesetterDeadline
+     | S600TypesetterDeadline
+     | S650TypesetterDeadline
+     | S700ElectronicDistributionDeadline
+     | S700PrinterDeadline
+     | S800PrintDistributionDeadline
+     | S900ElectronicDistributionDeadline
+     | PlannedPublicationDate)*
+  }
+S50TypesetterDeadline =
+  
+  ##
+  element S50TypesetterDeadline { model.DatePart+ }
+S200TypesetterDeadline =
+  
+  ##
+  element S200TypesetterDeadline { model.DatePart+ }
+S300TypesetterDeadline =
+  
+  ##
+  element S300TypesetterDeadline { model.DatePart+ }
+S600TypesetterDeadline =
+  
+  ##
+  element S600TypesetterDeadline { model.DatePart+ }
+S650TypesetterDeadline =
+  
+  ##
+  element S650TypesetterDeadline { model.DatePart+ }
+S700ElectronicDistributionDeadline =
+  
+  ##
+  element S700ElectronicDistributionDeadline { model.DatePart+ }
+S700PrinterDeadline =
+  
+  ##
+  element S700PrinterDeadline { model.DatePart+ }
+S800PrintDistributionDeadline =
+  
+  ##
+  element S800PrintDistributionDeadline { model.DatePart+ }
+S900ElectronicDistributionDeadline =
+  
+  ##
+  element S900ElectronicDistributionDeadline { model.DatePart+ }
+PlannedPublicationDate =
+  
+  ##
+  element PlannedPublicationDate {
+    model.DatePart+,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+FixedPublicationDate =
+  
+  ##
+  element FixedPublicationDate { model.DatePart+, Hour?, Reason? }
+Reason =
+  
+  ##
+  element Reason { text }
+Supplier =
+  
+  ##
+  element Supplier { FullServiceVendor* }
+FullServiceVendor =
+  
+  ##
+  element FullServiceVendor {
+    (CompanyName
+     | Contact
+     | ContactPerson
+     | RemarkTo
+     | CopyEditing
+     | ProofInfo
+     | FilesToSupplier
+     | Deliverables
+     | CompanyName
+     | FilesToPublisher)*
+  }
+CompanyName =
+  
+  ##
+  element CompanyName { text }
+ProofInfo =
+  
+  ##
+  element ProofInfo {
+    ProofRecipient*,
+    
+    ##
+    attribute ProofStage { text }?,
+    empty
+  }
+RemarkTo =
+  
+  ##
+  element RemarkTo { text }
+ProofRecipient =
+  
+  ##
+  element ProofRecipient {
+    (Author | ProductionEditor | Editor | InstitutionalAuthor)*,
+    
+    ##
+    attribute ProofType { text }?,
+    
+    ##
+    attribute CorrectionsRequired { text }?,
+    empty
+  }
+FilesToSupplier =
+  
+  ##
+  element FilesToSupplier { ContentFiles | NoFiles }
+FilesToPublisher =
+  
+  ##
+  element FilesToPublisher { ContentFiles | NoFiles }
+NoFiles =
+  
+  ##
+  element NoFiles { empty }
+Deliverables =
+  
+  ##
+  element Deliverables { DeliverablesForCompoundBookObjects? }
+DeliverablesForCompoundBookObjects =
+  
+  ##
+  element DeliverablesForCompoundBookObjects {
+    empty,
+    
+    ##
+    attribute BackmatterElectronicPDF { text }?,
+    
+    ##
+    attribute BackmatterXML { text }?,
+    
+    ##
+    attribute BookDeltaPDF { text }?,
+    
+    ##
+    attribute BookElectronicPDF { text }?,
+    
+    ##
+    attribute BookEpsilonPDF { text }?,
+    
+    ##
+    attribute BookPrintPDF { text }?,
+    
+    ##
+    attribute BookProofFeedbackPDF { text }?,
+    
+    ##
+    attribute ChapterElectronicPDF { text }?,
+    
+    ##
+    attribute ChapterOnlineMediaObjects { text }?,
+    
+    ##
+    attribute ChapterPrintMediaObjects { text }?,
+    
+    ##
+    attribute ChapterTEX { text }?,
+    
+    ##
+    attribute ChapterXMLWithBody { text }?,
+    
+    ##
+    attribute ChapterXMLWithBodyRefsOnly { text }?,
+    
+    ##
+    attribute CoverFigure { text }?,
+    
+    ##
+    attribute BackCoverFigure { text }?,
+    
+    ##
+    attribute CoverPrintPDF { text }?,
+    
+    ##
+    attribute DustJacketPDF { text }?,
+    
+    ##
+    attribute FrontmatterElectronicPDF { text }?,
+    
+    ##
+    attribute FrontmatterXML { text }?,
+    
+    ##
+    attribute Manuscript { text }?,
+    
+    ##
+    attribute PartBackmatterElectronicPDF { text }?,
+    
+    ##
+    attribute PartBackmatterManuscripts { text }?,
+    
+    ##
+    attribute PartBackmatterXML { text }?,
+    
+    ##
+    attribute PartFrontmatterElectronicPDF { text }?,
+    
+    ##
+    attribute PartFrontmatterManuscripts { text }?,
+    
+    ##
+    attribute PartFrontmatterXML { text }?,
+    
+    ##
+    attribute Pit-Stop-Reports { text }?,
+    
+    ##
+    attribute TocElectronicPDF { text }?,
+    
+    ##
+    attribute AuthorshipChangeRequestForm { text }?,
+    
+    ##
+    attribute PeerReviewPDFs { text }?,
+    empty
+  }
+ContentFiles =
+  
+  ##
+  element ContentFiles { File* }
+File =
+  
+  ##
+  element File {
+    (AplusplusRootFile
+     | MediaObject
+     | RenditionItem
+     | WorkItem
+     | Archive
+     | Cover
+     | APageFile)*,
+    
+    ##
+    attribute DiscreteObjectID { text }?,
+    
+    ##
+    attribute CompoundObjectID { text }?,
+    empty
+  }
+RenditionItem =
+  
+  ##
+  element RenditionItem {
+    empty,
+    att.FileChildrenQualifiers.attributes,
+    
+    ##
+    attribute colorProfile { text }?,
+    
+    ##
+    attribute grayscaleProfile { text }?,
+    empty
+  }
+WorkItem =
+  
+  ##
+  element WorkItem {
+    empty, att.FileChildrenQualifiers.attributes, empty
+  }
+Archive =
+  
+  ##
+  element Archive {
+    empty, att.FileChildrenQualifiers.attributes, empty
+  }
+AplusplusRootFile =
+  
+  ##
+  element AplusplusRootFile {
+    empty, att.FileChildrenQualifiers.attributes, empty
+  }
+APageFile =
+  
+  ##
+  element APageFile {
+    empty,
+    att.FileChildrenQualifiers.attributes,
+    att.Typed.attributes,
+    
+    ##
+    attribute Position { text }?,
+    
+    ##
+    attribute FirstPage { text }?,
+    
+    ##
+    attribute LastPage { text }?,
+    empty
+  }
+Table =
+  
+  ##
+  element Table {
+    (Caption | tgroup | tfooter | MediaObject)+,
+    att.ID.attributes,
+    
+    ##
+    attribute Float { text }?,
+    empty
+  }
+tgroup =
+  
+  ##
+  element tgroup {
+    macro.tbl.tgroup.mdl,
+    
+    ##
+    attribute cols { text }?,
+    
+    ##
+    attribute colsep { text }?,
+    
+    ##
+    attribute rowsep { text }?,
+    
+    ##
+    attribute align { text }?,
+    empty
+  }
+colspec =
+  
+  ##
+  element colspec {
+    empty,
+    att.TableQualifiers.attributes,
+    
+    ##
+    attribute char { text }?,
+    empty
+  }
+tbody =
+  
+  ##
+  element tbody { row* }
+thead =
+  
+  ##
+  element thead { row* }
+tfooter =
+  
+  ##
+  element tfooter { (row | SimplePara)* }
+entry =
+  
+  ##
+  element entry {
+    (text | SimplePara)*,
+    att.TableQualifiers.attributes,
+    
+    ##
+    attribute namest { text }?,
+    
+    ##
+    attribute nameend { text }?,
+    
+    ##
+    attribute morerows { text }?,
+    
+    ##
+    attribute char { text }?,
+    empty
+  }
+row =
+  
+  ##
+  element row { entry+ }
+att.TableQualifiers.attributes =
+  att.TableQualifiers.attribute.colnum,
+  att.TableQualifiers.attribute.colname,
+  att.TableQualifiers.attribute.align,
+  att.TableQualifiers.attribute.colwidth
+att.TableQualifiers.attribute.colnum =
+  
+  ##
+  attribute colnum { text }?
+att.TableQualifiers.attribute.colname =
+  
+  ##
+  attribute colname { text }?
+att.TableQualifiers.attribute.align =
+  
+  ##
+  attribute align { text }?
+att.TableQualifiers.attribute.colwidth =
+  
+  ##
+  attribute colwidth { text }?
 Equation =
   
   ##
   element Equation {
     EquationNumber?,
-    (MediaObject, EquationSource)+,
+    (MediaObject | EquationSource)+,
     att.ID.attributes,
     empty
   }
@@ -1174,7 +3197,7 @@ EquationSource =
   
   ##
   element EquationSource {
-    text,
+    macro.EquationSourceModel,
     
     ##
     attribute Format {
@@ -1215,6 +3238,20 @@ InlineEquation =
   element InlineEquation {
     (InlineMediaObject | EquationSource)+, att.ID.attributes, empty
   }
+ClassificationGroup =
+  
+  ##
+  element ClassificationGroup { CharacteristicValue+ }
+CharacteristicValue =
+  
+  ##
+  element CharacteristicValue {
+    macro.SimpleTextModel,
+    
+    ##
+    attribute Characteristic { text }?,
+    empty
+  }
 att.OutputMedium.attributes = att.OutputMedium.attribute.OutputMedium
 att.OutputMedium.attribute.OutputMedium =
   
@@ -1246,15 +3283,58 @@ att.Typed.attribute.Type =
   
   ##
   attribute Type { text }?
+att.Granted.attributes = att.Granted.attribute.Grant
+att.Granted.attribute.Grant =
+  
+  ##
+  attribute Grant { text }?
+att.FileChildrenQualifiers.attributes =
+  att.FileChildrenQualifiers.attribute.FileRef,
+  att.FileChildrenQualifiers.attribute.TargetType,
+  att.FileChildrenQualifiers.attribute.ItemType,
+  att.FileChildrenQualifiers.attribute.Content,
+  att.FileChildrenQualifiers.attribute.ObjectID
+att.FileChildrenQualifiers.attribute.FileRef =
+  
+  ##
+  attribute FileRef { text }?
+att.FileChildrenQualifiers.attribute.TargetType =
+  
+  ##
+  attribute TargetType { text }?
+att.FileChildrenQualifiers.attribute.ItemType =
+  
+  ##
+  attribute ItemType { text }?
+att.FileChildrenQualifiers.attribute.Content =
+  
+  ##
+  attribute Content { text }?
+att.FileChildrenQualifiers.attribute.ObjectID =
+  
+  ##
+  attribute ObjectID { text }?
 model.ConferenceInfoPart =
   ConfSeriesName
+  | ConfSeriesID
+  | ConfEventID
   | ConfEventAbbreviation
   | ConfNumber
   | ConfEventLocation
+  | ConfEventURL
   | ConfEventDateStart
   | ConfEventDateEnd
 model.ContactPart =
-  Email | URL | Street | Postbox | Postcode | City | State | Country
+  Phone
+  | Fax
+  | Email
+  | URL
+  | Street
+  | Postbox
+  | Postcode
+  | City
+  | State
+  | Country
 model.DatePart = Year | Month | Day
 model.PartInfoPart =
   PartID
@@ -1265,7 +3345,16 @@ model.PartInfoPart =
   | PartChapterCount
   | PartContext
 model.NamePart =
-  GivenName | Initials | NoInitials | Particle | FamilyName | Suffix
+  GivenName
+  | NoGivenName
+  | Initials
+  | NoInitials
+  | Particle
+  | FamilyName
+  | Suffix
+  | Prefix
+  | Degrees
+  | NativeName
 model.referenceElements = ExternalRef | InternalRef | CitationRef
 Superscript =
   
@@ -1278,7 +3367,7 @@ Subscript =
 Stack =
   
   ##
-  element Stack { text }
+  element Stack { (text | Subscript | Superscript)* }
 Emphasis =
   
   ##
@@ -1290,6 +3379,10 @@ Emphasis =
     attribute FontCategory { text }?,
     empty
   }
+BlockQuote =
+  
+  ##
+  element BlockQuote { Heading?, model.fullTextBlock* }
 CitationRef =
   
   ##
@@ -1298,6 +3391,9 @@ CitationRef =
     
     ##
     attribute CitationID { text }?,
+    
+    ##
+    attribute AdditionalCitationIDS { text }?,
     empty
   }
 model.verySimpleText = Superscript | Subscript | Stack | Emphasis
@@ -1317,6 +3413,7 @@ model.simpleText =
   | Footnote
   | Sidebar
   | InlineMediaObject
+model.MathML = math
 Literal =
   
   ##
@@ -1358,11 +3455,19 @@ CoverLastPage =
 CoverFigure =
   
   ##
-  element CoverFigure { MediaObject }
+  element CoverFigure {
+    MediaObject,
+    
+    ##
+    attribute Position { text }?,
+    empty
+  }
 model.ListElements = OrderedList | UnorderedList | DefinitionList
 model.fullText =
-  Equation
+  Table
+  | Equation
   | model.referenceElements
+  | BlockQuote
   | model.simpleText
   | model.ListElements
   | Figure
@@ -1370,15 +3475,103 @@ model.fullText =
 Figure =
   
   ##
-  element Figure { Caption*, MediaObject+, att.ID.attributes, empty }
+  element Figure {
+    Caption*,
+    MediaObject+,
+    att.ID.attributes,
+    
+    ##
+    attribute Float {
+      
+      ##
+      "Yes"
+      | 
+        ##
+        "No"
+    },
+    
+    ##
+    attribute Category {
+      
+      ##
+      "Schema"
+      | 
+        ##
+        "Structure"
+      | 
+        ##
+        "Standard"
+      | 
+        ##
+        "Logo"
+    },
+    empty
+  }
 MediaObject =
   
   ##
-  element MediaObject { Caption?, ImageObject+ }
+  element MediaObject {
+    Caption*,
+    (ImageObject
+     | VideoObject
+     | AudioObject
+     | DataObject
+     | TextObject)+,
+    att.ID.attributes,
+    empty
+  }
+VideoObject =
+  
+  ##
+  element VideoObject {
+    Caption*,
+    
+    ##
+    attribute FileRef { text }?,
+    
+    ##
+    attribute VideoID { text }?,
+    empty
+  }
+AudioObject =
+  
+  ##
+  element AudioObject {
+    Caption*,
+    
+    ##
+    attribute FileRef { text }?,
+    
+    ##
+    attribute AudioID { text }?,
+    empty
+  }
+DataObject =
+  
+  ##
+  element DataObject {
+    Caption*,
+    
+    ##
+    attribute FileRef { text }?,
+    empty
+  }
+TextObject =
+  
+  ##
+  element TextObject {
+    Para*,
+    
+    ##
+    attribute FileRef { text }?,
+    empty
+  }
 InlineMediaObject =
   
   ##
-  element InlineMediaObject { ImageObject+ }
+  element InlineMediaObject {
+    (ImageObject | VideoObject | AudioObject | DataObject | TextObject)+
+  }
 ImageObject =
   
   ##
@@ -1448,6 +3641,15 @@ ImageObject =
         ##
         "Preview"
     }?,
+    
+    ##
+    attribute Height { text }?,
+    
+    ##
+    attribute Resolution { text }?,
+    
+    ##
+    attribute Width { text }?,
     empty
   }
 OrderedList =
@@ -1493,4 +3695,361 @@ Description =
   
   ##
   element Description { Para+ }
+math =
+  
+  ##
+  element math {
+    macro.MathExpression,
+    
+    ##
+    attribute display { text }?,
+    empty
+  }
+mrow =
+  
+  ##
+  element mrow { macro.MathExpression }
+mroot =
+  
+  ##
+  element mroot { macro.MathExpression }
+mi =
+  
+  ##
+  element mi {
+    macro.token.content,
+    
+    ##
+    attribute mathvariant { text }?,
+    empty
+  }
+mo =
+  
+  ##
+  element mo {
+    macro.token.content,
+    
+    ##
+    attribute mathvariant { text }?,
+    
+    ##
+    attribute form { text }?,
+    
+    ##
+    attribute fence { text }?,
+    
+    ##
+    attribute separator { text }?,
+    
+    ##
+    attribute lspace { text }?,
+    
+    ##
+    attribute rspace { text }?,
+    
+    ##
+    attribute stretchy { text }?,
+    
+    ##
+    attribute symmetric { text }?,
+    
+    ##
+    attribute maxsize { text }?,
+    
+    ##
+    attribute minsize { text }?,
+    
+    ##
+    attribute largeop { text }?,
+    
+    ##
+    attribute movablelimits { text }?,
+    
+    ##
+    attribute accent { text }?,
+    
+    ##
+    attribute linebreak { text }?,
+    
+    ##
+    attribute lineleading { text }?,
+    
+    ##
+    attribute linebreakstyle { text }?,
+    
+    ##
+    attribute linebreakmultchar { text }?,
+    
+    ##
+    attribute indentalign { text }?,
+    
+    ##
+    attribute indentshift { text }?,
+    
+    ##
+    attribute indenttarget { text }?,
+    
+    ##
+    attribute indentalignfirst { text }?,
+    
+    ##
+    attribute indentshiftfirst { text }?,
+    
+    ##
+    attribute indentalignlast { text }?,
+    
+    ##
+    attribute indentshiftlast { text }?,
+    empty
+  }
+mspace =
+  
+  ##
+  element mspace {
+    empty,
+    
+    ##
+    attribute width { text }?,
+    
+    ##
+    attribute height { text }?,
+    
+    ##
+    attribute depth { text }?,
+    
+    ##
+    attribute linebreak { text }?,
+    empty
+  }
+msub =
+  
+  ##
+  element msub { macro.MathExpression }
+mglyph =
+  
+  ##
+  element mglyph { empty }
+malignmark =
+  
+  ##
+  element malignmark { empty }
+menclose =
+  
+  ##
+  element menclose {
+    macro.MathExpression,
+    
+    ##
+    attribute notation { text }?,
+    empty
+  }
+mn =
+  
+  ##
+  element mn {
+    macro.token.content,
+    
+    ##
+    attribute mathvariant { text }?,
+    empty
+  }
+mtable =
+  
+  ##
+  element mtable {
+    (mtr | mlabeledtr)*,
+    
+    ##
+    attribute columnspacing { text }?,
+    empty
+  }
+mtr =
+  
+  ##
+  element mtr { mtd* }
+mlabeledtr =
+  
+  ##
+  element mlabeledtr { macro.MathExpression }
+mtd =
+  
+  ##
+  element mtd {
+    macro.MathExpression,
+    
+    ##
+    attribute columnalign { text }?,
+    empty
+  }
+msup =
+  
+  ##
+  element msup { macro.MathExpression }
+msubsup =
+  
+  ##
+  element msubsup { macro.MathExpression }
+mtext =
+  
+  ##
+  element mtext {
+    macro.token.content,
+    
+    ##
+    attribute mathvariant { text }?,
+    empty
+  }
+mfrac =
+  
+  ##
+  element mfrac {
+    macro.MathExpression,
+    
+    ##
+    attribute linethickness { text }?,
+    empty
+  }
+mstyle =
+  
+  ##
+  element mstyle {
+    macro.MathExpression,
+    
+    ##
+    attribute scriptlevel { text }?,
+    
+    ##
+    attribute displaystyle { text }?,
+    
+    ##
+    attribute scriptsizemultiplier { text }?,
+    
+    ##
+    attribute scriptminsize { text }?,
+    
+    ##
+    attribute infixlinebreakstyle { text }?,
+    
+    ##
+    attribute decimalpoint { text }?,
+    
+    ##
+    attribute mathsize { text }?,
+    empty
+  }
+msqrt =
+  
+  ##
+  element msqrt { macro.MathExpression }
+mpadded =
+  
+  ##
+  element mpadded {
+    macro.MathExpression,
+    
+    ##
+    attribute height { text }?,
+    
+    ##
+    attribute depth { text }?,
+    
+    ##
+    attribute width { text }?,
+    
+    ##
+    attribute lspace { text }?,
+    
+    ##
+    attribute voffset { text }?,
+    empty
+  }
+munder =
+  
+  ##
+  element munder {
+    macro.MathExpression,
+    
+    ##
+    attribute accentunder { text }?,
+    
+    ##
+    attribute align { text }?,
+    empty
+  }
+mover =
+  
+  ##
+  element mover {
+    macro.MathExpression,
+    
+    ##
+    attribute accent { text }?,
+    
+    ##
+    attribute align { text }?,
+    empty
+  }
+munderover =
+  
+  ##
+  element munderover {
+    macro.MathExpression,
+    
+    ##
+    attribute accent { text }?,
+    
+    ##
+    attribute accentunder { text }?,
+    
+    ##
+    attribute align { text }?,
+    empty
+  }
+mfenced =
+  
+  ##
+  element mfenced {
+    macro.MathExpression,
+    
+    ##
+    attribute open { text }?,
+    
+    ##
+    attribute close { text }?,
+    
+    ##
+    attribute separators { text }?,
+    empty
+  }
+model.fullTextBlock = Para | FormalPara | Table | Figure | MediaObject
+model.TokenExpression = mi | mo | mspace | mn | mtext
+model.PresentationExpression =
+  mrow
+  | mroot
+  | msub
+  | menclose
+  | mtable
+  | msup
+  | msubsup
+  | mfrac
+  | mstyle
+  | msqrt
+  | mpadded
+  | munder
+  | mover
+  | munderover
+  | mfenced
+  | model.TokenExpression
+att.DisplayOrder.attributes = att.DisplayOrder.attribute.DisplayOrder
+att.DisplayOrder.attribute.DisplayOrder =
+  
+  ##
+  attribute DisplayOrder {
+    
+    ##
+    "Western"
+    | 
+      ##
+      "Eastern"
+  }?
 start = Publisher | Chapter | JobSheet

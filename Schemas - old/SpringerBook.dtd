@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2021-03-02T07:14:45Z. .CC-BY
-TEI Edition: Version 4.1.0. Last updated on
-	19th August 2020, revision b414ba550
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
+DTD generated from ODD source 2019-07-26T07:20:57Z. .CC-BY
+TEI Edition: Version 3.6.0. Last updated on
+	16th July 2019, revision 4d9d1971f
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
 
 -->
 
@@ -303,11 +303,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
 <!ENTITY % model.quoteLike_sequenceOptional ""> 
 <!ENTITY % model.quoteLike_sequenceOptionalRepeatable ""> 
 <!ENTITY % model.quoteLike_sequenceRepeatable ""> 
-<!ENTITY % model.attributable ""> 
-<!ENTITY % model.attributable_sequence ""> 
-<!ENTITY % model.attributable_sequenceOptional ""> 
-<!ENTITY % model.attributable_sequenceOptionalRepeatable ""> 
-<!ENTITY % model.attributable_sequenceRepeatable ""> 
+<!ENTITY % model.qLike ""> 
+<!ENTITY % model.qLike_sequence ""> 
+<!ENTITY % model.qLike_sequenceOptional ""> 
+<!ENTITY % model.qLike_sequenceOptionalRepeatable ""> 
+<!ENTITY % model.qLike_sequenceRepeatable ""> 
 <!ENTITY % model.addressLike ""> 
 <!ENTITY % model.addressLike_sequence ""> 
 <!ENTITY % model.addressLike_sequenceOptional ""> 
@@ -972,8 +972,6 @@ Type CDATA  #IMPLIED >
 <!ELEMENT CoverExteriorColorName  (#PCDATA)>
 <!--doc: -->
 <!ELEMENT CoverFigure (MediaObject)>
-<!ATTLIST CoverFigure
-Position CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CoverFirstPage  (#PCDATA)>
 <!--doc: -->
@@ -1034,7 +1032,6 @@ ChapterTEX CDATA #IMPLIED
 ChapterXMLWithBody CDATA #IMPLIED
 ChapterXMLWithBodyRefsOnly CDATA #IMPLIED
 CoverFigure CDATA #IMPLIED
-BackCoverFigure CDATA #IMPLIED
 CoverPrintPDF CDATA #IMPLIED
 DustJacketPDF CDATA #IMPLIED
 FrontmatterElectronicPDF CDATA #IMPLIED

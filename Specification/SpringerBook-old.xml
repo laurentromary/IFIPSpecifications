@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="tei_odds.rnc" type="application/relax-ng-compact-syntax"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:olac="http://www.language-archives.org/OLAC/1.0/" xmlns:iso="http://www.iso.org/ns/1.0" xml:lang="en"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,7 +38,8 @@
                     <moduleRef key="tei"/>
 
                     <elementSpec ident="Publisher">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:group>
                                 <rng:ref name="PublisherInfo"/>
@@ -131,7 +134,8 @@
                     </elementSpec>
 
                     <elementSpec ident="PublisherLocation">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:text/>
                         </content>
@@ -169,7 +173,8 @@
 > -->
 
                     <elementSpec ident="Series">
-                        <desc>groups together all the Springer metadata associated to a book related publication (book or book chapter)</desc>
+                        <desc>groups together all the Springer metadata associated to a book related publication (book
+                            or book chapter)</desc>
                         <content>
                             <rng:group>
                                 <rng:ref name="SeriesInfo"/>
@@ -510,6 +515,17 @@
                             <rng:optional>
                                 <rng:ref name="CollaboratorGroup"/>
                             </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="SubSeriesInformationText"/>
+                            </rng:optional>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="SubSeriesInformationText">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Para"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -593,6 +609,7 @@
                                 <rng:choice>
                                     <rng:ref name="ChapterID"/>
                                     <rng:ref name="ChapterDOI"/>
+                                    <rng:ref name="ChapterNumber"/>
                                     <rng:ref name="ChapterSequenceNumber"/>
                                     <rng:ref name="ChapterTitle"/>
                                     <rng:ref name="ChapterSubTitle"/>
@@ -635,10 +652,9 @@
                     </elementSpec>
 
 
-                    <!-- <!ENTITY % GrantsModel "(MetadataGrant, AbstractGrant?, BodyPDFGrant?, BodyHTMLGrant?, BibliographyGrant?, ESMGrant?)">
-<!ELEMENT ChapterGrants (%GrantsModel;)>
-<
->
+                    <!-- <!ENTITY % GrantsModel "(MetadataGrant, AbstractGrant?, 
+                        BodyPDFGrant?, BodyHTMLGrant?, BibliographyGrant?, ESMGrant?)">
+                        <!ELEMENT ChapterGrants (%GrantsModel;)>
                     -->
 
                     <elementSpec ident="ChapterGrants">
@@ -646,7 +662,24 @@
                             <memberOf key="att.Typed"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:group>
+                                <rng:ref name="MetadataGrant"/>
+                                <rng:optional>
+                                    <rng:ref name="AbstractGrant"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="BodyPDFGrant"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="BodyHTMLGrant"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="BibliographyGrant"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="ESMGrant"/>
+                                </rng:optional>
+                            </rng:group>
                         </content>
                     </elementSpec>
 
@@ -1042,12 +1075,6 @@
                         </content>
                     </elementSpec>
 
-                    <elementSpec ident="TocSection1">
-                        <content>
-                            <rng:ref name="macro.anyXML"/>
-                        </content>
-                    </elementSpec>
-
                     <!-- <!ELEMENT TocSection1 (TocEntry, TocSection2*)>
 <!ELEMENT TocSection2 (TocEntry, TocSection3*)>
 <!ELEMENT TocSection3 (TocEntry, TocSection4*)>
@@ -1055,6 +1082,78 @@
 <!ELEMENT TocSection5 (TocEntry, TocSection6*)>
 <!ELEMENT TocSection6 (TocEntry, TocSection7*)>
 <!ELEMENT TocSection7 (TocEntry)> -->
+
+                    <elementSpec ident="TocSection1">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection2"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection2">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection3"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection3">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection4"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection4">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection5"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection5">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection6"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection6">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="TocEntry"/>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="TocSection7"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="TocSection7">
+                        <content>
+                            <rng:ref name="TocEntry"/>
+                        </content>
+                    </elementSpec>
 
                     <!-- Start of Book Copyright informaiton -->
 
@@ -1979,7 +2078,17 @@
 
                     <elementSpec ident="BodyBackmatter">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="Appendix"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="Bibliography"/>
+                                </rng:optional>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="Index"/>
+                                </rng:zeroOrMore>
+                            </rng:group>
                         </content>
                     </elementSpec>
 
@@ -1998,14 +2107,24 @@
                             <memberOf key="att.ID"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:group>
+                                <rng:ref name="Heading"/>
+                                <rng:optional>
+                                    <rng:ref name="SubHeading"/>
+                                </rng:optional>
+                            </rng:group>
                         </content>
                     </elementSpec>
 
                     <!--<!ELEMENT SeriesIndex (Heading, SubHeading?, (IndexDiv* | IndexEntry*))>-->
                     <elementSpec ident="SeriesIndex">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:group>
+                                <rng:ref name="Heading"/>
+                                <rng:optional>
+                                    <rng:ref name="SubHeading"/>
+                                </rng:optional>
+                            </rng:group>
                         </content>
                     </elementSpec>
 
@@ -2013,9 +2132,15 @@
 
                     <elementSpec ident="SubSeriesIndex">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:group>
+                                <rng:ref name="Heading"/>
+                                <rng:optional>
+                                    <rng:ref name="SubHeading"/>
+                                </rng:optional>
+                            </rng:group>
                         </content>
                     </elementSpec>
+
                     <!--<!ELEMENT IndexDiv (Heading, SubHeading?, IndexEntry+)>
                     
                     -->
@@ -2024,7 +2149,15 @@
 
                     <elementSpec ident="IndexEntry">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="PrimaryIE"/>
+                                    <rng:ref name="SecondaryIE"/>
+                                    <rng:ref name="TertiaryIE"/>
+                                    <rng:ref name="SeeIE"/>
+                                    <rng:ref name="SeeAlsoIE"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -2310,7 +2443,7 @@
 
 
                     <!-- ChapterHeader subelements -->
-                    
+
                     <!-- <!ELEMENT AuthorGroup ((Author | InstitutionalAuthor)+, Affiliation*)> -->
 
                     <elementSpec ident="AuthorGroup">
@@ -2484,6 +2617,7 @@
                         <classes>
                             <memberOf key="att.Typed"/>
                             <memberOf key="att.OutputMedium"/>
+                            <memberOf key="att.language"/>
                         </classes>
                         <content>
                             <rng:zeroOrMore>
@@ -2768,6 +2902,7 @@
                     <elementSpec ident="Email">
                         <classes>
                             <memberOf key="model.ContactPart"/>
+                            <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
                             <rng:text/>
@@ -2920,6 +3055,12 @@
                     </elementSpec>
 
                     <elementSpec ident="ChapterDOI">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="ChapterNumber">
                         <content>
                             <rng:text/>
                         </content>
@@ -3102,15 +3243,54 @@
 
                     <elementSpec ident="ChapterBackmatter">
                         <content>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:ref name="Acknowledgments"/>
+                                    <rng:ref name="Appendix"/>
+                                    <rng:ref name="Bibliography"/>
+                                    <rng:ref name="Ethics"/>
+                                    <rng:ref name="FundingInformation"/>
+                                    <rng:ref name="AuthorContribution"/>
+                                </rng:choice>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="FundingInformation">
+                        <content>
                             <rng:optional>
-                                <rng:ref name="Acknowledgments"/>
+                                <rng:ref name="Heading"/>
                             </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="Appendix"/>
-                            </rng:zeroOrMore>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="AuthorContribution">
+                        <content>
                             <rng:optional>
-                                <rng:ref name="Bibliography"/>
+                                <rng:ref name="Heading"/>
                             </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="Ethics">
+                        <content>
+                            <rng:choice>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="Heading"/>
+                                    </rng:optional>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="SimplePara"/>
+                                    </rng:oneOrMore>
+                                </rng:group>
+                                <rng:ref name="FormalPara"/>
+                            </rng:choice>
                         </content>
                     </elementSpec>
 
@@ -3439,7 +3619,7 @@
                             </rng:zeroOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <!--
                         <!ELEMENT InstitutionalAuthor (InstitutionalAuthorName, Contact?)>
 <!ATTLIST InstitutionalAuthor
@@ -3450,7 +3630,7 @@
 	ID ID #IMPLIED
 >
                     -->
-                    
+
                     <elementSpec ident="InstitutionalAuthor">
                         <classes>
                             <memberOf key="att.ID"/>
@@ -3778,9 +3958,30 @@
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT ProductionInfo (SPACEInfo?, ManuscriptInfo?, GrantNumber?, ProductionEditor?, ContactPerson?, ProductionCostCenter?,
+                        ProductionLocation?, EditorialInfo?, QualifyingProductionNotes?, SupplementInfo?, TechnicalInfo?, 
+                        (DiscreteObjectTechnicalInfo? | (CompoundObjectTechnicalInfo?, ((CompoundIssueObjectInfo?, DiscreteIssueObjectInfo*) | (CompoundBookObjectInfo*, (PartInfoGroup?, DiscreteBookObjectInfo?)*)))), WorkflowInfo)>
+ -->
                     <elementSpec ident="ProductionInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="SPACEInfo"/>
+                                    <rng:ref name="ManuscriptInfo"/>
+                                    <rng:ref name="ProductionEditor"/>
+                                    <rng:ref name="ContactPerson"/>
+                                    <rng:ref name="EditorialInfo"/>
+                                    <rng:ref name="QualifyingProductionNotes"/>
+                                    <rng:ref name="TechnicalInfo"/>
+                                    <rng:ref name="DiscreteObjectTechnicalInfo"/>
+                                    <rng:ref name="CompoundBookObjectInfo"/>
+                                    <rng:ref name="PartInfoGroup"/>
+                                    <rng:ref name="DiscreteBookObjectInfo"/>
+                                    <rng:ref name="WorkflowInfo"/>
+                                    <rng:ref name="EditorialContact"/>
+                                    <rng:ref name="CompoundObjectTechnicalInfo"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -3810,9 +4011,23 @@
                     <!-- ManuscriptInfo elements                                                 -->
                     <!-- ....................................................................... -->
 
+                    <!--<!ELEMENT ManuscriptInfo (PeerReviewSystem?, EditorialManuscriptNumber?, ManuscriptNumberOfPages?, ManuscriptNumberOfGraphics?, ManuscriptNumberOfTables?, RemarkByEditor?, ElectronicDelivery, PostalDelivery)>
+                    -->
+
                     <elementSpec ident="ManuscriptInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="PeerReviewSystem"/>
+                                    <rng:ref name="EditorialManuscriptNumber"/>
+                                    <rng:ref name="ManuscriptNumberOfPages"/>
+                                    <rng:ref name="ManuscriptNumberOfGraphics"/>
+                                    <rng:ref name="ManuscriptNumberOfTables"/>
+                                    <rng:ref name="RemarkByEditor"/>
+                                    <rng:ref name="ElectronicDelivery"/>
+                                    <rng:ref name="PostalDelivery"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -3963,9 +4178,34 @@
                     <!-- QualifyingProductionNotes                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT QualifyingProductionNotes (QualifyingProductionNotesAds?, QualifyingProductionNotesCdDvdEsm?, 
+                        QualifyingProductionNotesComplimentaryCopies?, QualifyingProductionNotesCopyEditing?, 
+                        QualifyingProductionNotesFrontmatter?, QualifyingProductionNotesIndex?, QualifyingProductionNotesManufacturing?, 
+                        QualifyingProductionNotesProductionClassification?, QualifyingProductionNotesSpringerDotCom?, 
+                        QualifyingProductionNotesMiscellaneous?, QualifyingProductionNotesManuscriptMaterial?, 
+                        QualifyingProductionNotesLayout?, QualifyingProductionNotesProof?, QualifyingProductionNotesColorFigures?)>
+ -->
+
                     <elementSpec ident="QualifyingProductionNotes">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="QualifyingProductionNotesAds"/>
+                                    <rng:ref name="QualifyingProductionNotesCdDvdEsm"/>
+                                    <rng:ref name="QualifyingProductionNotesComplimentaryCopies"/>
+                                    <rng:ref name="QualifyingProductionNotesCopyEditing"/>
+                                    <rng:ref name="QualifyingProductionNotesFrontmatter"/>
+                                    <rng:ref name="QualifyingProductionNotesIndex"/>
+                                    <rng:ref name="QualifyingProductionNotesProductionClassification"/>
+                                    <rng:ref name="QualifyingProductionNotesSpringerDotCom"/>
+                                    <rng:ref name="QualifyingProductionNotesMiscellaneous"/>
+                                    <rng:ref name="QualifyingProductionNotesManuscriptMaterial"/>
+                                    <rng:ref name="QualifyingProductionNotesLayout"/>
+                                    <rng:ref name="QualifyingProductionNotesProof"/>
+                                    <rng:ref name="QualifyingProductionNotesColorFigures"/>
+                                    <rng:ref name="QualifyingProductionNotesCoverDesignSpecs"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -4047,15 +4287,75 @@
                         </content>
                     </elementSpec>
 
+                    <elementSpec ident="QualifyingProductionNotesCoverDesignSpecs">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
                     <!-- ....................................................................... -->
                     <!-- TechnicalInfo                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT TechnicalInfo (TitleAdditionalLanguage*, TitleUpperCase?, AuthorInformationStyle?, HistoryStyle?, 
+                        AbstractInDocumentLanguage?, AbstractAdditionalLanguage*, StructuredAbstract?, KeywordsInDocumentLanguage?, 
+                        KeywordsAdditionalLanguage*, CaptionAdditionalLanguage*, ClassificationStyle*, BibliographyStyle?, 
+                        CitationStyle?, BodyMarkup?, Typesetting?, TextSpecifications?, ColorSpecifications*, Inserts*, 
+                        FormatTrimSize*, TocInfo?, NumberOfVolumes?, SpecialShippingRemark?, CoverProductionInfo*, 
+                        BookComponents*, Binding*, ReferencePDFStyle?, PeerReviewPDFsStyle?, FixedArticleStructure?)>
+ -->
                     <elementSpec ident="TechnicalInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="TitleAdditionalLanguage"/>
+                                    <rng:ref name="TitleUpperCase"/>
+                                    <rng:ref name="AuthorInformationStyle"/>
+                                    <rng:ref name="HistoryStyle"/>
+                                    <rng:ref name="AbstractInDocumentLanguage"/>
+                                    <rng:ref name="AbstractAdditionalLanguage"/>
+                                    <rng:ref name="StructuredAbstract"/>
+                                    <rng:ref name="KeywordsInDocumentLanguage"/>
+                                    <rng:ref name="BibliographyStyle"/>
+                                    <rng:ref name="BibliographyPosition"/>
+                                    <rng:ref name="CitationStyle"/>
+                                    <rng:ref name="BodyMarkup"/>
+                                    <rng:ref name="Typesetting"/>
+                                    <rng:ref name="CompoundObjectTechnicalInfo"/>
+                                    <rng:ref name="TextSpecifications"/>
+                                    <rng:ref name="ColorSpecifications"/>
+                                    <rng:ref name="CoverProductionInfo"/>
+                                    <rng:ref name="Binding"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
+
+                    <elementSpec ident="TitleAdditionalLanguage">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="BibliographyPosition">
+                        <content>
+                            <rng:text/>
+                        </content>
+                        <attList>
+                            <attDef ident="Position">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="HistoryStyle">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
+
 
                     <!-- <!ELEMENT TitleUpperCase EMPTY>
                         <!ATTLIST TitleUpperCase
@@ -4268,7 +4568,9 @@
 
                     <elementSpec ident="Typesetting">
                         <content>
-                            <rng:empty/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="FrontmatterTechnicalInfo"/>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="Layout">
@@ -4302,6 +4604,19 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="Profile">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="FrontmatterTechnicalInfo">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="IncludeMoreMediaNote">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
@@ -4387,9 +4702,21 @@
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT CoverProductionInfo (CoverExteriorColorName*, CoverInteriorColorName*, 
+                        EndsheetsLayoutColorName*, EndsheetsPrintingColorName*, SpineWidth*)>
+ -->
+
                     <elementSpec ident="CoverProductionInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="CoverExteriorColorName"/>
+                                    <rng:ref name="CoverInteriorColorName"/>
+                                    <rng:ref name="EndsheetsLayoutColorName"/>
+                                    <rng:ref name="EndsheetsPrintingColorName"/>
+                                    <rng:ref name="SpineWidth"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="Style">
@@ -4521,9 +4848,38 @@
                     <!-- CompoundObjectTechnicalInfo                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT CompoundObjectTechnicalInfo (SplittingNumberOfParts?, SplittingNumberOfChapters?, SplittingNumberOfAPageObjects?, 
+                        ManuscriptNumberOfPages?, CompoundObjectFirstPage?, CompoundObjectLastPage?, 
+                        CompoundObjectNumberOfAPages?, CompoundObjectTotalNumberOfPages*, 
+                        CompoundObjectNumberOfArabicPages?, CompoundObjectNumberOfRomanPages?, 
+                        CompoundObjectNumberOfColorPages*, CompoundObjectNumberOfImages?, 
+                        ColorImagesInPrint?, ColorImagesOnPage*, CompoundObjectProductionHistory?, 
+                        ProductionClassification?, PODInformation*, ManufacturingProfile?, PrintQuality?, 
+                        PrintRun*, Shares*, ReprintNumber*, FormatTrimSize*, NumberOfVolumes?, CopyEditing?, 
+                        Typesetting?, ProductionEvent*)>
+ -->
+
                     <elementSpec ident="CompoundObjectTechnicalInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="ManuscriptNumberOfPages"/>
+                                    <rng:ref name="CompoundObjectTotalNumberOfPages"/>
+                                    <rng:ref name="CompoundObjectNumberOfArabicPages"/>
+                                    <rng:ref name="CompoundObjectNumberOfRomanPages"/>
+                                    <rng:ref name="CompoundObjectNumberOfColorPages"/>
+                                    <rng:ref name="CompoundObjectNumberOfImages"/>
+                                    <rng:ref name="ColorImagesInPrint"/>
+                                    <rng:ref name="ColorImagesOnPage"/>
+                                    <rng:ref name="ProductionClassification"/>
+                                    <rng:ref name="PrintQuality"/>
+                                    <rng:ref name="PrintRun"/>
+                                    <rng:ref name="Shares"/>
+                                    <rng:ref name="FormatTrimSize"/>
+                                    <rng:ref name="CopyEditing"/>
+                                    <rng:ref name="Typesetting"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -4741,13 +5097,22 @@
                     <!-- CompoundBookObjectInfo                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT CompoundBookObjectInfo (ISBN, EAN?, BookMultiVolumeCount?, BookMultiVolumeSplitAfterChapter*, PurchaseOrderNumber?)>
+ -->
                     <elementSpec ident="CompoundBookObjectInfo">
                         <classes>
                             <memberOf key="att.ID"/>
                             <memberOf key="att.Typed"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="ISBN"/>
+                                    <rng:ref name="EAN"/>
+                                    <rng:ref name="BookMultiVolumeCount"/>
+                                    <rng:ref name="PurchaseOrderNumber"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="SeriesID">
@@ -4791,12 +5156,25 @@
                     <!-- DiscreteBookObjectInfo                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT DiscreteBookObjectInfo ((CoverInfo | BookFrontmatterInfo | AdvertisementInfo | 
+                        ChapterInfo | BookBackmatterInfo), AuthorGroup?, DiscreteObjectTechnicalInfo?)>
+ -->
+
                     <elementSpec ident="DiscreteBookObjectInfo">
                         <classes>
                             <memberOf key="att.ID"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="CoverInfo"/>
+                                    <rng:ref name="BookFrontmatterInfo"/>
+                                    <rng:ref name="ChapterInfo"/>
+                                    <rng:ref name="BookBackmatterInfo"/>
+                                    <rng:ref name="AuthorGroup"/>
+                                    <rng:ref name="DiscreteObjectTechnicalInfo"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="CompoundObjectID">
@@ -4828,9 +5206,18 @@
                     <!-- PartInfoGroup                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT PartInfoGroup (PartInfo, AuthorGroup?, EditorGroup?, DiscreteBookObjectInfo*)>
+ -->
                     <elementSpec ident="PartInfoGroup">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="PartInfo"/>
+                                    <rng:ref name="AuthorGroup"/>
+                                    <rng:ref name="EditorGroup"/>
+                                    <rng:ref name="DiscreteBookObjectInfo"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -4838,9 +5225,17 @@
                     <!-- WorkflowInfo                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT WorkflowInfo (Priority, Deadline?, Supplier)>
+ -->
                     <elementSpec ident="WorkflowInfo">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="Priority"/>
+                                    <rng:ref name="Deadline"/>
+                                    <rng:ref name="Supplier"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="TaskType">
@@ -4864,11 +5259,32 @@
                         </attList>
                     </elementSpec>
 
+                    <!-- <!ELEMENT Deadline ((OnlineFirstDeadline, FixedPublicationDate?) | (TypesetterDeadline, FixedPublicationDate?) | (PrinterDeadline, FixedPublicationDate?) | (S200TypesetterDeadline, S300TypesetterDeadline, (S600TypesetterDeadline, S650TypesetterDeadline, ((S700PrinterDeadline, S800PrintDistributionDeadline, S900ElectronicDistributionDeadline) | S700ElectronicDistributionDeadline), FixedPublicationDate?, PlannedPublicationDate*)?) | (S50TypesetterDeadline, S200TypesetterDeadline?, S300TypesetterDeadline?, S600TypesetterDeadline, S650TypesetterDeadline, ((S700PrinterDeadline, S800PrintDistributionDeadline, S900ElectronicDistributionDeadline) | S700ElectronicDistributionDeadline), FixedPublicationDate?, PlannedPublicationDate*))>
+ -->
+
                     <elementSpec ident="Deadline">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="FixedPublicationDate"/>
+                                    <rng:ref name="S50TypesetterDeadline"/>
+                                    <rng:ref name="S200TypesetterDeadline"/>
+                                    <rng:ref name="S300TypesetterDeadline"/>
+                                    <rng:ref name="S600TypesetterDeadline"/>
+                                    <rng:ref name="S650TypesetterDeadline"/>
+                                    <rng:ref name="S700ElectronicDistributionDeadline"/>
+                                    <rng:ref name="S700PrinterDeadline"/>
+                                    <rng:ref name="S800PrintDistributionDeadline"/>
+                                    <rng:ref name="S900ElectronicDistributionDeadline"/>
+                                    <rng:ref name="PlannedPublicationDate"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
+
+
+
+
 
                     <elementSpec ident="S50TypesetterDeadline">
                         <content>
@@ -4984,15 +5400,38 @@
                     <!-- Supplier                                                               -->
                     <!-- ....................................................................... -->
 
+                    <!-- <!ELEMENT Supplier (FullServiceVendor | Printer | Application | AuthorQueryApplication | ExternalPublisher)>
+ -->
+
                     <elementSpec ident="Supplier">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="FullServiceVendor"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
+                    <!-- CompanyName, Contact?, ContactPerson?, RemarkFrom?, RemarkTo?, CopyEditing?, 
+ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher -->
+
                     <elementSpec ident="FullServiceVendor">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="CompanyName"/>
+                                    <rng:ref name="Contact"/>
+                                    <rng:ref name="ContactPerson"/>
+                                    <rng:ref name="RemarkTo"/>
+                                    <rng:ref name="CopyEditing"/>
+                                    <rng:ref name="ProofInfo"/>
+                                    <rng:ref name="FilesToSupplier"/>
+                                    <rng:ref name="Deliverables"/>
+                                    <rng:ref name="CompanyName"/>
+                                    <rng:ref name="FilesToPublisher"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -5023,10 +5462,19 @@
                         </content>
                     </elementSpec>
 
-
+                    <!-- <!ELEMENT ProofRecipient (Author | ProductionEditor | Editor | InstitutionalAuthor | InstitutionalEditor)>
+ -->
                     <elementSpec ident="ProofRecipient">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="Author"/>
+                                    <rng:ref name="ProductionEditor"/>
+                                    <rng:ref name="Editor"/>
+                                    <rng:ref name="InstitutionalAuthor"/>
+                                    <rng:ref name="InstitutionalEditor"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="ProofType">
@@ -5042,15 +5490,35 @@
                         </attList>
                     </elementSpec>
 
+                    <!-- <!ELEMENT FilesToSupplier (ContentFiles | NoFiles)>
+<!ELEMENT FilesToApplication (ContentFiles | NoFiles)>
+<!ELEMENT FilesToPublisher (ContentFiles | NoFiles | ToBeCompleted)>
+ -->
+
                     <elementSpec ident="FilesToSupplier">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:choice>
+                                <rng:ref name="ContentFiles"/>
+                                <rng:ref name="NoFiles"/>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="FilesToApplication">
+                        <content>
+                            <rng:choice>
+                                <rng:ref name="ContentFiles"/>
+                                <rng:ref name="NoFiles"/>
+                            </rng:choice>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="FilesToPublisher">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:choice>
+                                <rng:ref name="ContentFiles"/>
+                                <rng:ref name="NoFiles"/>
+                            </rng:choice>
                         </content>
                     </elementSpec>
 
@@ -5059,8 +5527,6 @@
                             <rng:empty/>
                         </content>
                     </elementSpec>
-
-
 
                     <elementSpec ident="Deliverables">
                         <content>
@@ -5075,7 +5541,6 @@
                             <rng:empty/>
                         </content>
                         <attList>
-
                             <attDef ident="BackmatterElectronicPDF">
                                 <datatype>
                                     <rng:text/>
@@ -5211,6 +5676,16 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="AuthorshipChangeRequestForm">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="PeerReviewPDFs">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 
@@ -5220,13 +5695,29 @@
 
                     <elementSpec ident="ContentFiles">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="File"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
+                    <!-- <!ELEMENT File (AplusplusRootFile | AplusplusRelatedObjectFile | 
+                        MediaObject | TextFile | SupportingItem | RenditionItem | WorkItem | Archive | 
+                        Cover | AdditionalCover | Advertisement | APageFile | BlankPage)>
+ -->
                     <elementSpec ident="File">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="AplusplusRootFile"/>
+                                    <rng:ref name="MediaObject"/>
+                                    <rng:ref name="RenditionItem"/>
+                                    <rng:ref name="WorkItem"/>
+                                    <rng:ref name="Archive"/>
+                                    <rng:ref name="Cover"/>
+                                    <rng:ref name="APageFile"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="DiscreteObjectID">
@@ -5329,7 +5820,19 @@
                             <memberOf key="model.fullText"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="Caption"/>
+                                <elementRef key="tgroup"/>
+                                <elementRef key="tfooter"/>
+                                <elementRef key="MediaObject"/>
+                            </alternate>
+                            <!--<rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="Caption"/>
+                                    <rng:ref name="tgroup"/>
+                                    <rng:ref name="tfooter"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>-->
                         </content>
                         <attList>
                             <attDef ident="Float">
@@ -5377,7 +5880,7 @@
                             <memberOf key="att.TableQualifiers"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:empty/>
                         </content>
                         <attList>
                             <attDef ident="char">
@@ -5390,19 +5893,28 @@
 
                     <elementSpec ident="tbody">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="row"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="thead">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="row"/>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="tfooter">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="row"/>
+                                    <rng:ref name="SimplePara"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                     </elementSpec>
 
@@ -5411,7 +5923,12 @@
                             <memberOf key="att.TableQualifiers"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="SimplePara"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="namest">
@@ -5439,7 +5956,9 @@
 
                     <elementSpec ident="row">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:oneOrMore>
+                                <rng:ref name="entry"/>
+                            </rng:oneOrMore>
                         </content>
                     </elementSpec>
 
@@ -5502,7 +6021,7 @@
                     <!-- <!ELEMENT EquationSource (%EquationSourceModel;)*> -->
                     <elementSpec ident="EquationSource">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.EquationSourceModel"/>
                         </content>
                         <attList>
                             <attDef ident="Format">
@@ -5513,7 +6032,8 @@
                                     <valItem ident="XML"/>
                                 </valList>
                                 <remarks>
-                                    <p>This attribute has been observed, even if it does not exist in the official SPringer DTD</p>
+                                    <p>This attribute has been observed, even if it does not exist in the official
+                                        SPringer DTD</p>
                                 </remarks>
                             </attDef>
                             <attDef ident="NOTATION">
@@ -5524,24 +6044,31 @@
                                     <valItem ident="XML"/>
                                 </valList>
                                 <remarks>
-                                    <p>Official declaration in the Springer DTD (note should normally be a Required attribute)</p>
+                                    <p>Official declaration in the Springer DTD (note should normally be a Required
+                                        attribute)</p>
                                 </remarks>
                             </attDef>
                         </attList>
                     </elementSpec>
 
+                    <!-- Experimenting Pure ODD - 2018-12-03 -->
                     <elementSpec ident="InlineEquation">
                         <classes>
                             <memberOf key="att.ID"/>
                             <memberOf key="model.simpleText"/>
                         </classes>
                         <content>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="InlineMediaObject"/>
+                                <elementRef key="EquationSource"/>
+                            </alternate>
+                            <!--
                             <rng:oneOrMore>
                                 <rng:choice>
                                     <rng:ref name="InlineMediaObject"/>
                                     <rng:ref name="EquationSource"/>
                                 </rng:choice>
-                            </rng:oneOrMore>
+                            </rng:oneOrMore>-->
                         </content>
                     </elementSpec>
 
@@ -5669,8 +6196,10 @@
                     <classSpec ident="att.roled" type="atts">
                         <attList>
                             <attDef ident="role">
-                                <desc>A contextual role or relationship for the person, family, corporate body, or geographic location. In linking elements such as <gi>ptr</gi>, information that
-                                    explains to application software the part that a remote resource plays in a link.</desc>
+                                <desc>A contextual role or relationship for the person, family, corporate body, or
+                                    geographic location. In linking elements such as <gi>ptr</gi>, information that
+                                    explains to application software the part that a remote resource plays in a
+                                    link.</desc>
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
@@ -5762,7 +6291,8 @@
                                         <desc>Creates a resource link, which indicates a specific resource.</desc>
                                     </valItem>
                                     <valItem ident="title">
-                                        <desc>Creates a title link. Such elements are useful for internationalization purposes.</desc>
+                                        <desc>Creates a title link. Such elements are useful for internationalization
+                                            purposes.</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -5924,6 +6454,11 @@
                         </classes>
                     </classSpec>
 
+                    <!-- Definition of the model for MathML elements -->
+                    <!-- Not used yet... -->
+
+                    <classSpec ident="model.MathML" type="model"/>
+
 
                     <elementSpec ident="Literal">
                         <classes>
@@ -5964,9 +6499,6 @@
                         </content>
                     </elementSpec>
 
-
-
-
                     <!--       
                     <!ELEMENT Stack (Subscript, Superscript)>
                     
@@ -6005,7 +6537,6 @@
                         </attList>
                     </elementSpec>
 
-
                     <elementSpec ident="CoverInfo">
                         <content>
                             <rng:ref name="CoverFirstPage"/>
@@ -6040,7 +6571,6 @@
                             <p>"OrderedList | UnorderedList | DefinitionList"</p>
                         </remarks>
                     </classSpec>
-
 
                     <!-- <!ENTITY % FullTextModel "%SimpleTextModel; | %ListElements; | %ReferenceElements; | Figure | MediaObject | Table | BlockQuote | Equation | Quiz"> -->
 
@@ -6105,12 +6635,12 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="VideoObject">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:ref name="Caption"/>
-                            </rng:zeroOrMore>       
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="FileRef">
@@ -6125,12 +6655,12 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="AudioObject">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:ref name="Caption"/>
-                            </rng:zeroOrMore>       
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="FileRef">
@@ -6145,12 +6675,12 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="DataObject">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:ref name="Caption"/>
-                            </rng:zeroOrMore>       
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="FileRef">
@@ -6160,12 +6690,12 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <elementSpec ident="TextObject">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:ref name="Para"/>
-                            </rng:zeroOrMore>       
+                            </rng:zeroOrMore>
                         </content>
                         <attList>
                             <attDef ident="FileRef">
@@ -6175,7 +6705,7 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                 
+
 
                     <!-- <!ELEMENT InlineMediaObject ((VideoObject | AudioObject | ImageObject | DataObject), (VideoObject | AudioObject | ImageObject | DataObject | TextObject)*)>
  -->
@@ -6243,6 +6773,21 @@
                                     <valItem ident="ProofPDF"/>
                                     <valItem ident="Preview"/>
                                 </valList>
+                            </attDef>
+                            <attDef ident="Height">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Resolution">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Width">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
                             </attDef>
                         </attList>
                     </elementSpec>
@@ -6378,9 +6923,13 @@
                     <!-- MathML elements -->
                     <!-- Note: Springer does not use namespaces ... sigh -->
 
+
                     <elementSpec ident="math">
+                        <classes>
+                            <memberOf key="model.MathML"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="display">
@@ -6392,20 +6941,29 @@
                     </elementSpec>
 
                     <elementSpec ident="mrow">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="mroot">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="mi">
+                        <classes>
+                            <memberOf key="model.TokenExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.token.content"/>
                         </content>
                         <attList>
                             <attDef ident="mathvariant">
@@ -6417,8 +6975,11 @@
                     </elementSpec>
 
                     <elementSpec ident="mo">
+                        <classes>
+                            <memberOf key="model.TokenExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.token.content"/>
                         </content>
                         <attList>
                             <!-- mathvariant     ( normal | bold | italic | bold-italic | double-struck | 
@@ -6602,8 +7163,11 @@
                     </elementSpec>
 
                     <elementSpec ident="mspace">
+                        <classes>
+                            <memberOf key="model.TokenExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:empty/>
                         </content>
                         <attList>
                             <attDef ident="width">
@@ -6635,14 +7199,33 @@
                     </elementSpec>
 
                     <elementSpec ident="msub">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
-                    <elementSpec ident="menclose">
+                    <elementSpec ident="mglyph">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="malignmark">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                    </elementSpec>
+
+
+                    <elementSpec ident="menclose">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="notation">
@@ -6654,8 +7237,11 @@
                     </elementSpec>
 
                     <elementSpec ident="mn">
+                        <classes>
+                            <memberOf key="model.TokenExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.token.content"/>
                         </content>
                         <attList>
                             <attDef ident="mathvariant">
@@ -6667,8 +7253,17 @@
                     </elementSpec>
 
                     <elementSpec ident="mtable">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="mtr"/>
+                                    <rng:ref name="mlabeledtr"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+
                         </content>
                         <attList>
                             <attDef ident="columnspacing">
@@ -6682,13 +7277,21 @@
 
                     <elementSpec ident="mtr">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:zeroOrMore>
+                                <rng:ref name="mtd"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="mlabeledtr">
+                        <content>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="mtd">
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="columnalign">
@@ -6700,32 +7303,61 @@
                     </elementSpec>
 
                     <elementSpec ident="msup">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="msubsup">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="mtext">
+                        <classes>
+                            <memberOf key="model.TokenExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.token.content"/>
                         </content>
+                        <attList>
+                            <attDef ident="mathvariant">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="mfrac">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
+                        <attList>
+                            <attDef ident="linethickness">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="mstyle">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="scriptlevel">
@@ -6770,14 +7402,20 @@
                     </elementSpec>
 
                     <elementSpec ident="msqrt">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="mpadded">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="height">
@@ -6809,8 +7447,11 @@
                     </elementSpec>
 
                     <elementSpec ident="munder">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="accentunder">
@@ -6830,8 +7471,11 @@
                     </elementSpec>
 
                     <elementSpec ident="mover">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="accent">
@@ -6851,8 +7495,11 @@
                     </elementSpec>
 
                     <elementSpec ident="munderover">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="accent">
@@ -6878,8 +7525,11 @@
                     </elementSpec>
 
                     <elementSpec ident="mfenced">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
                         <content>
-                            <rng:ref name="macro.anyXML"/>
+                            <rng:ref name="macro.MathExpression"/>
                         </content>
                         <attList>
                             <attDef ident="open">
@@ -6935,8 +7585,6 @@
                         </content>
                     </macroSpec>
 
-
-
                     <macroSpec type="pe" ident="macro.NameModel">
                         <content>
                             <rng:optional>
@@ -6979,15 +7627,70 @@
                     </macroSpec>
 
 
+                    <!-- <!ENTITY % EquationSourceModel "%VerySimpleTextModel; %MathMLModel;">-->
+                    <macroSpec type="pe" ident="macro.EquationSourceModel">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.verySimpleText"/>
+                                    <rng:ref name="model.MathML"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </macroSpec>
+
+                    <!--                    <!ENTITY % token.content "#PCDATA|%mglyph.qname;|%malignmark.qname;">-->
+
+                    <macroSpec type="pe" ident="macro.token.content">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="mglyph"/>
+                                    <rng:ref name="malignmark"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </macroSpec>
+
+                    <!--<!ENTITY % MathExpression "%ContExp;|%PresentationExpression;">-->
+
+                    <macroSpec type="pe" ident="macro.MathExpression">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <!-- We could drop text at some point since it does not seem in the spec 'mathml3.dtd' -->
+                                    <rng:text/>
+                                    <!--<rng:ref name="model.ContExp"/>-->
+                                    <rng:ref name="model.PresentationExpression"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </macroSpec>
 
 
                     <!-- Model classes - spread declarations to be gathered here... -->
 
                     <classSpec ident="model.fullTextBlock" type="model"/>
 
+                    <!-- Model class to gather math ml content models -->
+
+                    <classSpec ident="model.ContExp" type="model"/>
+
+                    <classSpec ident="model.TokenExpression" type="model">
+                        <classes>
+                            <memberOf key="model.PresentationExpression"/>
+                        </classes>
+                    </classSpec>
+
+
+                    <classSpec ident="model.PresentationExpression" type="model"/>
+
+
                     <!-- Attributes classe (to me all moved here) -->
 
-                    <!-- For all name laike objects -->
+                    <!-- For all name like objects -->
 
                     <classSpec ident="att.DisplayOrder" type="atts">
                         <attList>
@@ -6999,6 +7702,9 @@
                             </attDef>
                         </attList>
                     </classSpec>
+
+
+
                 </schemaSpec>
             </div>
         </body>
