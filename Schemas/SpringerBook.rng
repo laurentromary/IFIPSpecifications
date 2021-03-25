@@ -5,10 +5,10 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-03-02T07:19:27Z. .
-TEI Edition: Version 4.1.0. Last updated on
-	19th August 2020, revision b414ba550
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
+Schema generated from ODD source 2021-03-25T14:56:30Z. .
+TEI Edition: Version 4.2.1. Last updated on
+	1st March 2021, revision 654a5c551
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
   
 --><!--CC-BY-->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3501,6 +3501,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
    <define name="CaptionContent">
       <element name="CaptionContent">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
          <oneOrMore>
             <ref name="SimplePara"/>
          </oneOrMore>

@@ -3833,6 +3833,9 @@
 
                     <elementSpec ident="CaptionContent">
                         <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
                             <rng:oneOrMore>
                                 <rng:ref name="SimplePara"/>
                             </rng:oneOrMore>

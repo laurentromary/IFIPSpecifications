@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2021-03-02T07:19:20Z. .CC-BY
-TEI Edition: Version 4.1.0. Last updated on
-	19th August 2020, revision b414ba550
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
+DTD generated from ODD source 2021-03-25T14:56:13Z. .CC-BY
+TEI Edition: Version 4.2.1. Last updated on
+	1st March 2021, revision 654a5c551
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
 
 -->
 
@@ -765,7 +765,7 @@ Priority CDATA #IMPLIED >
 <!ATTLIST Caption
  %att.language.attributes; >
 <!--doc: -->
-<!ELEMENT CaptionContent ((SimplePara)+,(Credit)*)>
+<!ELEMENT CaptionContent ((Heading)?,(SimplePara)+,(Credit)*)>
 <!--doc: -->
 <!ELEMENT CaptionNumber  (#PCDATA)>
 <!--doc: -->
