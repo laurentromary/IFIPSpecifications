@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-03-25T14:56:13Z. .CC-BY
+DTD generated from ODD source 2021-03-29T13:33:54Z. .CC-BY
 TEI Edition: Version 4.2.1. Last updated on
 	1st March 2021, revision 654a5c551
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
@@ -919,6 +919,8 @@ CompoundObjectID CDATA #IMPLIED >
  %att.Typed.attributes; >
 <!--doc: -->
 <!ELEMENT ConfEventLocation (#PCDATA|City|Country)*>
+<!ATTLIST ConfEventLocation
+LocationType CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT ConfEventName %macro.SimpleTextModel;>
 <!--doc: -->
