@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-03-29T13:33:44Z. .
+Schema generated from ODD source 2021-04-06T13:42:52Z. .
 TEI Edition: Version 4.2.1. Last updated on
 	1st March 2021, revision 654a5c551
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
@@ -5535,6 +5535,63 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
          <empty/>
       </element>
    </define>
+   <define name="ProgramCode">
+      <element name="ProgramCode">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <choice>
+            <oneOrMore>
+               <ref name="LineGroup"/>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="FixedLine"/>
+            </oneOrMore>
+         </choice>
+         <zeroOrMore>
+            <ref name="Caption"/>
+         </zeroOrMore>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="Verse">
+      <element name="Verse">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <optional>
+            <ref name="Heading"/>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <ref name="LineGroup"/>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="FixedLine"/>
+            </oneOrMore>
+         </choice>
+         <ref name="att.ID.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="LineGroup">
+      <element name="LineGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <oneOrMore>
+            <ref name="FixedLine"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="FixedLine">
+      <element name="FixedLine">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.SimpleTextModel"/>
+         <optional>
+            <attribute name="LineNumber">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="InlineEquation">
       <element name="InlineEquation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -6008,6 +6065,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
       <choice>
          <ref name="Table"/>
          <ref name="Equation"/>
+         <ref name="ProgramCode"/>
+         <ref name="Verse"/>
          <ref name="model.referenceElements"/>
          <ref name="BlockQuote"/>
          <ref name="model.simpleText"/>

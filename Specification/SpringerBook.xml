@@ -2364,7 +2364,7 @@
                                 <valList>
                                     <valItem ident="InPerson"/>
                                     <valItem ident="Virtual"/>
-                                    <valItem ident="Hybrid"/>                       
+                                    <valItem ident="Hybrid"/>
                                 </valList>
                             </attDef>
                         </attList>
@@ -6062,6 +6062,71 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <p>Official declaration in the Springer DTD (note should normally be a Required
                                         attribute)</p>
                                 </remarks>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- ....................................................................... -->
+                    <!-- ProgramCode and Verse                                                   -->
+                    <!-- ....................................................................... -->
+
+                    <elementSpec ident="ProgramCode">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="model.fullText"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="LineGroup"/>
+                                </rng:oneOrMore>
+                                <rng:oneOrMore>
+                                    <rng:ref name="FixedLine"/>
+                                </rng:oneOrMore>
+                            </rng:choice>
+                            <rng:zeroOrMore>
+                                <rng:ref name="Caption"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="Verse">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="model.fullText"/>
+                        </classes>
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="LineGroup"/>
+                                </rng:oneOrMore>
+                                <rng:oneOrMore>
+                                    <rng:ref name="FixedLine"/>
+                                </rng:oneOrMore>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="LineGroup">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:ref name="FixedLine"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="FixedLine">
+                        <content>
+                            <rng:ref name="macro.SimpleTextModel"/>
+                        </content>
+                        <attList>
+                            <attDef ident="LineNumber">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
                             </attDef>
                         </attList>
                     </elementSpec>

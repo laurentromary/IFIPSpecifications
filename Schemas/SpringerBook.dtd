@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-03-29T13:33:54Z. .CC-BY
+DTD generated from ODD source 2021-04-06T13:42:40Z. .CC-BY
 TEI Edition: Version 4.2.1. Last updated on
 	1st March 2021, revision 654a5c551
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
@@ -111,11 +111,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
 <!ENTITY % model.ListElements_sequenceOptional "OrderedList?, UnorderedList?, DefinitionList?"> 
 <!ENTITY % model.ListElements_sequenceOptionalRepeatable "OrderedList*, UnorderedList*, DefinitionList*"> 
 <!ENTITY % model.ListElements_sequenceRepeatable "OrderedList+, UnorderedList+, DefinitionList+"> 
-<!ENTITY % model.fullText "Table |Equation |%model.referenceElements; |BlockQuote |%model.simpleText; |%model.ListElements; |Figure |MediaObject"> 
-<!ENTITY % model.fullText_sequence "Table, Equation, %model.referenceElements;, BlockQuote, %model.simpleText;, %model.ListElements;, Figure, MediaObject"> 
-<!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
-<!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
-<!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
+<!ENTITY % model.fullText "Table |Equation |ProgramCode |Verse |%model.referenceElements; |BlockQuote |%model.simpleText; |%model.ListElements; |Figure |MediaObject"> 
+<!ENTITY % model.fullText_sequence "Table, Equation, ProgramCode, Verse, %model.referenceElements;, BlockQuote, %model.simpleText;, %model.ListElements;, Figure, MediaObject"> 
+<!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, ProgramCode?, Verse?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
+<!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, ProgramCode*, Verse*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
+<!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, ProgramCode+, Verse+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
 <!ENTITY % model.fullTextBlock "Para |FormalPara |Table |Figure |MediaObject"> 
 <!ENTITY % model.fullTextBlock_sequence "Para, FormalPara, Table, Figure, MediaObject"> 
 <!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
@@ -457,11 +457,11 @@ ObjectID CDATA #IMPLIED'>
 <!ENTITY % model.ListElements_sequenceOptional "OrderedList?, UnorderedList?, DefinitionList?"> 
 <!ENTITY % model.ListElements_sequenceOptionalRepeatable "OrderedList*, UnorderedList*, DefinitionList*"> 
 <!ENTITY % model.ListElements_sequenceRepeatable "OrderedList+, UnorderedList+, DefinitionList+"> 
-<!ENTITY % model.fullText "Table |Equation |%model.referenceElements; |BlockQuote |%model.simpleText; |%model.ListElements; |Figure |MediaObject"> 
-<!ENTITY % model.fullText_sequence "Table, Equation, %model.referenceElements;, BlockQuote, %model.simpleText;, %model.ListElements;, Figure, MediaObject"> 
-<!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
-<!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
-<!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
+<!ENTITY % model.fullText "Table |Equation |ProgramCode |Verse |%model.referenceElements; |BlockQuote |%model.simpleText; |%model.ListElements; |Figure |MediaObject"> 
+<!ENTITY % model.fullText_sequence "Table, Equation, ProgramCode, Verse, %model.referenceElements;, BlockQuote, %model.simpleText;, %model.ListElements;, Figure, MediaObject"> 
+<!ENTITY % model.fullText_sequenceOptional "Table?, Equation?, ProgramCode?, Verse?, %model.referenceElements;?, BlockQuote?, %model.simpleText;?, %model.ListElements;?, Figure?, MediaObject?"> 
+<!ENTITY % model.fullText_sequenceOptionalRepeatable "Table*, Equation*, ProgramCode*, Verse*, %model.referenceElements;*, BlockQuote*, %model.simpleText;*, %model.ListElements;*, Figure*, MediaObject*"> 
+<!ENTITY % model.fullText_sequenceRepeatable "Table+, Equation+, ProgramCode+, Verse+, %model.referenceElements;+, BlockQuote+, %model.simpleText;+, %model.ListElements;+, Figure+, MediaObject+"> 
 <!ENTITY % model.fullTextBlock "Para |FormalPara |Table |Figure |MediaObject"> 
 <!ENTITY % model.fullTextBlock_sequence "Para, FormalPara, Table, Figure, MediaObject"> 
 <!ENTITY % model.fullTextBlock_sequenceOptional "Para?, FormalPara?, Table?, Figure?, MediaObject?"> 
@@ -1153,6 +1153,10 @@ CompoundObjectID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT FirstPage  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT FixedLine %macro.SimpleTextModel;>
+<!ATTLIST FixedLine
+LineNumber CDATA #IMPLIED >
+<!--doc: -->
 <!ELEMENT FixedPublicationDate ((%model.DatePart;)+,Hour?,Reason?)>
 <!--doc: -->
 <!ELEMENT Footnote (Para)*>
@@ -1287,6 +1291,8 @@ Type CDATA  #IMPLIED >
 Type CDATA #IMPLIED
 SubType CDATA #IMPLIED
 Version CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT LineGroup (FixedLine)+>
 <!--doc: -->
 <!ELEMENT ListItem (ItemNumber,ItemContent)>
 <!--doc: -->
@@ -1457,6 +1463,10 @@ Country CDATA #IMPLIED >
 <!ELEMENT ProductionEditorName (%model.NamePart;)+>
 <!--doc: -->
 <!ELEMENT ProductionInfo (SPACEInfo|ManuscriptInfo|ProductionEditor|ContactPerson|EditorialInfo|QualifyingProductionNotes|TechnicalInfo|DiscreteObjectTechnicalInfo|CompoundBookObjectInfo|PartInfoGroup|DiscreteBookObjectInfo|WorkflowInfo|EditorialContact|CompoundObjectTechnicalInfo)*>
+<!--doc: -->
+<!ELEMENT ProgramCode ((LineGroup+|FixedLine+),(Caption)*)>
+<!ATTLIST ProgramCode
+ %att.ID.attributes; >
 <!--doc: -->
 <!ELEMENT ProofInfo (ProofRecipient)*>
 <!ATTLIST ProofInfo
@@ -1822,6 +1832,10 @@ Profile CDATA #IMPLIED >
 <!ELEMENT UnorderedList ((Heading)?,(ItemContent)+)>
 <!ATTLIST UnorderedList
 Mark CDATA  #REQUIRED >
+<!--doc: -->
+<!ELEMENT Verse ((Heading)?,(LineGroup+|FixedLine+))>
+<!ATTLIST Verse
+ %att.ID.attributes; >
 <!--doc: -->
 <!ELEMENT VideoObject (Caption)*>
 <!ATTLIST VideoObject

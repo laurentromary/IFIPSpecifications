@@ -4,7 +4,7 @@ namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2021-03-29T13:34:00Z. .
+# Schema generated from ODD source 2021-04-06T13:42:46Z. .
 # TEI Edition: Version 4.2.1. Last updated on
 #	1st March 2021, revision 654a5c551
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
@@ -3238,6 +3238,32 @@ EquationSource =
     }?,
     empty
   }
+ProgramCode =
+  
+  ##
+  element ProgramCode {
+    (LineGroup+ | FixedLine+), Caption*, att.ID.attributes, empty
+  }
+Verse =
+  
+  ##
+  element Verse {
+    Heading?, (LineGroup+ | FixedLine+), att.ID.attributes, empty
+  }
+LineGroup =
+  
+  ##
+  element LineGroup { FixedLine+ }
+FixedLine =
+  
+  ##
+  element FixedLine {
+    macro.SimpleTextModel,
+    
+    ##
+    attribute LineNumber { text }?,
+    empty
+  }
 InlineEquation =
   
   ##
@@ -3472,6 +3498,8 @@ model.ListElements = OrderedList | UnorderedList | DefinitionList
 model.fullText =
   Table
   | Equation
+  | ProgramCode
+  | Verse
   | model.referenceElements
   | BlockQuote
   | model.simpleText
