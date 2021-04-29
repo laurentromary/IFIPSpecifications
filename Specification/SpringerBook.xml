@@ -4627,7 +4627,7 @@
                                     <rng:text/>
                                 </datatype>
                             </attDef>
-                            <attDef ident="Typesetting">
+                            <attDef ident="Complexity">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
