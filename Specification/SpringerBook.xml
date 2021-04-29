@@ -5984,6 +5984,9 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                     </elementSpec>
 
                     <elementSpec ident="row">
+                        <classes>
+                            <memberOf key="att.TableQualifiers"/>
+                        </classes>
                         <content>
                             <rng:oneOrMore>
                                 <rng:ref name="entry"/>

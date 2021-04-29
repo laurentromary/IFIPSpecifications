@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-04-29T12:34:31Z. .CC-BY
+DTD generated from ODD source 2021-04-29T12:39:42Z. .CC-BY
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -2013,6 +2013,8 @@ accentunder CDATA  #IMPLIED
 align CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT row (entry)+>
+<!ATTLIST row
+ %att.TableQualifiers.attributes; >
 <!--doc: -->
 <!ELEMENT tbody (row)*>
 <!--doc: -->
