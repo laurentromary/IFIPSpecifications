@@ -4,10 +4,10 @@ namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2021-04-06T13:42:46Z. .
-# TEI Edition: Version 4.2.1. Last updated on
-#	1st March 2021, revision 654a5c551
-# TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
+# Schema generated from ODD source 2021-04-29T12:28:38Z. .
+# TEI Edition: Version 4.2.2. Last updated on
+#	9th April 2021, revision 609a109b1
+# TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
 #
 
 # CC-BY
@@ -1798,6 +1798,7 @@ BibArticle =
      | BibComments
      | Eds
      | BibArticleDOI
+     | BibArticleNumber
      | NoArticleTitle)*
   }
 BibBook =
@@ -1880,6 +1881,10 @@ BibArticleDOI =
   
   ##
   element BibArticleDOI { text }
+BibArticleNumber =
+  
+  ##
+  element BibArticleNumber { text }
 BibChapterDOI =
   
   ##
@@ -2391,6 +2396,9 @@ Typesetting =
     
     ##
     attribute Profile { text }?,
+    
+    ##
+    attribute Typesetting { text }?,
     empty
   }
 FrontmatterTechnicalInfo =
@@ -3169,7 +3177,10 @@ att.TableQualifiers.attributes =
   att.TableQualifiers.attribute.colnum,
   att.TableQualifiers.attribute.colname,
   att.TableQualifiers.attribute.align,
-  att.TableQualifiers.attribute.colwidth
+  att.TableQualifiers.attribute.valign,
+  att.TableQualifiers.attribute.colwidth,
+  att.TableQualifiers.attribute.rowsep,
+  att.TableQualifiers.attribute.colsep
 att.TableQualifiers.attribute.colnum =
   
   ##
@@ -3182,10 +3193,22 @@ att.TableQualifiers.attribute.align =
   
   ##
   attribute align { text }?
+att.TableQualifiers.attribute.valign =
+  
+  ##
+  attribute valign { text }?
 att.TableQualifiers.attribute.colwidth =
   
   ##
   attribute colwidth { text }?
+att.TableQualifiers.attribute.rowsep =
+  
+  ##
+  attribute rowsep { text }?
+att.TableQualifiers.attribute.colsep =
+  
+  ##
+  attribute colsep { text }?
 Equation =
   
   ##

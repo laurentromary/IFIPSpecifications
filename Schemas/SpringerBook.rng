@@ -5,10 +5,10 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-04-06T13:42:52Z. .
-TEI Edition: Version 4.2.1. Last updated on
-	1st March 2021, revision 654a5c551
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
+Schema generated from ODD source 2021-04-29T12:28:46Z. .
+TEI Edition: Version 4.2.2. Last updated on
+	9th April 2021, revision 609a109b1
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
   
 --><!--CC-BY-->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3265,6 +3265,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
                <ref name="BibComments"/>
                <ref name="Eds"/>
                <ref name="BibArticleDOI"/>
+               <ref name="BibArticleNumber"/>
                <ref name="NoArticleTitle"/>
             </choice>
          </zeroOrMore>
@@ -3382,6 +3383,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
    </define>
    <define name="BibArticleDOI">
       <element name="BibArticleDOI">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <text/>
+      </element>
+   </define>
+   <define name="BibArticleNumber">
+      <element name="BibArticleNumber">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <text/>
       </element>
@@ -4150,6 +4157,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
          </optional>
          <optional>
             <attribute name="Profile">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="Typesetting">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <text/>
             </attribute>
@@ -5442,7 +5455,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
       <ref name="att.TableQualifiers.attribute.colnum"/>
       <ref name="att.TableQualifiers.attribute.colname"/>
       <ref name="att.TableQualifiers.attribute.align"/>
+      <ref name="att.TableQualifiers.attribute.valign"/>
       <ref name="att.TableQualifiers.attribute.colwidth"/>
+      <ref name="att.TableQualifiers.attribute.rowsep"/>
+      <ref name="att.TableQualifiers.attribute.colsep"/>
    </define>
    <define name="att.TableQualifiers.attribute.colnum">
       <optional>
@@ -5468,9 +5484,33 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
          </attribute>
       </optional>
    </define>
+   <define name="att.TableQualifiers.attribute.valign">
+      <optional>
+         <attribute name="valign">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.TableQualifiers.attribute.colwidth">
       <optional>
          <attribute name="colwidth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.TableQualifiers.attribute.rowsep">
+      <optional>
+         <attribute name="rowsep">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.TableQualifiers.attribute.colsep">
+      <optional>
+         <attribute name="colsep">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <text/>
          </attribute>

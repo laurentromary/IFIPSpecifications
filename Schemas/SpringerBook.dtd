@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2021-04-06T13:42:40Z. .CC-BY
-TEI Edition: Version 4.2.1. Last updated on
-	1st March 2021, revision 654a5c551
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.1/
+DTD generated from ODD source 2021-04-29T12:28:31Z. .CC-BY
+TEI Edition: Version 4.2.2. Last updated on
+	9th April 2021, revision 609a109b1
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
 
 -->
 
@@ -352,13 +352,25 @@ colname CDATA #IMPLIED'>
 <!ENTITY % att.TableQualifiers.attribute.align '
 align CDATA #IMPLIED'>
 
+<!ENTITY % att.TableQualifiers.attribute.valign '
+valign CDATA #IMPLIED'>
+
 <!ENTITY % att.TableQualifiers.attribute.colwidth '
 colwidth CDATA #IMPLIED'>
+
+<!ENTITY % att.TableQualifiers.attribute.rowsep '
+rowsep CDATA #IMPLIED'>
+
+<!ENTITY % att.TableQualifiers.attribute.colsep '
+colsep CDATA #IMPLIED'>
 <!ENTITY % att.TableQualifiers.attributes '
  %att.TableQualifiers.attribute.colnum;
  %att.TableQualifiers.attribute.colname;
  %att.TableQualifiers.attribute.align;
- %att.TableQualifiers.attribute.colwidth;'> 
+ %att.TableQualifiers.attribute.valign;
+ %att.TableQualifiers.attribute.colwidth;
+ %att.TableQualifiers.attribute.rowsep;
+ %att.TableQualifiers.attribute.colsep;'> 
 <!ENTITY % att.OutputMedium.attribute.OutputMedium '
 OutputMedium CDATA #IMPLIED'>
 <!ENTITY % att.OutputMedium.attributes '
@@ -582,9 +594,11 @@ CapturePrefix CDATA  #IMPLIED >
 <!ATTLIST AuthorName
  %att.DisplayOrder.attributes; >
 <!--doc: -->
-<!ELEMENT BibArticle (Etal|BibAuthorName|InstitutionalAuthorName|Year|ArticleTitle|JournalTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|Occurrence|VolumeID|IssueID|BibComments|Eds|BibArticleDOI|NoArticleTitle)*>
+<!ELEMENT BibArticle (Etal|BibAuthorName|InstitutionalAuthorName|Year|ArticleTitle|JournalTitle|PublisherName|PublisherLocation|SeriesTitle|BibEditorName|ConfEventName|ConfEventLocation|ConfEventDate|ConfEventDateStart|ConfEventDateEnd|NumberInSeries|FirstPage|LastPage|Occurrence|VolumeID|IssueID|BibComments|Eds|BibArticleDOI|BibArticleNumber|NoArticleTitle)*>
 <!--doc: -->
 <!ELEMENT BibArticleDOI  (#PCDATA)>
+<!--doc: -->
+<!ELEMENT BibArticleNumber (#PCDATA)>
 <!--doc: -->
 <!ELEMENT BibAuthorName (%model.NamePart;)*>
 <!--doc: -->
@@ -1825,7 +1839,8 @@ RunningHead CDATA #IMPLIED
 LogoOnFirstPage CDATA #IMPLIED
 EndsheetsContent CDATA #IMPLIED
 StandardFrontmatter CDATA #IMPLIED
-Profile CDATA #IMPLIED >
+Profile CDATA #IMPLIED
+Typesetting CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT URL  (#PCDATA)>
 <!--doc: -->

@@ -3556,6 +3556,7 @@
                                     <rng:ref name="BibComments"/>
                                     <rng:ref name="Eds"/>
                                     <rng:ref name="BibArticleDOI"/>
+                                    <rng:ref name="BibArticleNumber"/>
                                     <rng:ref name="NoArticleTitle"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
@@ -3692,7 +3693,15 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-
+                    
+                    <elementSpec ident="BibArticleNumber">
+                        <content>
+                            <textNode/>
+                            <!-- 
+                            <rng:text/> -->
+                        </content>
+                    </elementSpec>
+                    
                     <elementSpec ident="BibChapterDOI">
                         <content>
                             <rng:text/>
@@ -4614,6 +4623,11 @@
                                 </datatype>
                             </attDef>
                             <attDef ident="Profile">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="Typesetting">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
@@ -5996,7 +6010,22 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="valign" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                             <attDef ident="colwidth" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="rowsep" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="colsep" usage="opt">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
