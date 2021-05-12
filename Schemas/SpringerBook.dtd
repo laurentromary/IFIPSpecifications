@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-04-29T12:39:42Z. .CC-BY
+DTD generated from ODD source 2021-05-12T12:31:17Z. .CC-BY
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -520,6 +520,11 @@ Position CDATA #IMPLIED
 FirstPage CDATA #IMPLIED
 LastPage CDATA #IMPLIED >
 <!--doc: -->
+<!ELEMENT AbbreviationGroup (Heading?,DefinitionList+)>
+<!ATTLIST AbbreviationGroup
+ %att.language.attributes;
+ %att.OutputMedium.attributes; >
+<!--doc: -->
 <!ELEMENT Abstract (Heading?,Para*)>
 <!ATTLIST Abstract
  %att.language.attributes;
@@ -687,7 +692,7 @@ PDFType CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT BookBackmatterFirstPage  (#PCDATA)>
 <!--doc: -->
-<!ELEMENT BookBackmatterHeader ((PageHeaders)?,(AuthorGroup)?,(TocChapter)?,(Abstract)?,(KeywordGroup)*,(ArticleNote)*)>
+<!ELEMENT BookBackmatterHeader ((PageHeaders)?,(AuthorGroup)?,(TocChapter)?,(Abstract)?,(KeywordGroup)*,(AbbreviationGroup)?,(ArticleNote)*)>
 <!--doc: -->
 <!ELEMENT BookBackmatterInfo ((BookBackmatterDOI)?,BookBackmatterFirstPage,BookBackmatterLastPage)>
 <!--doc: -->

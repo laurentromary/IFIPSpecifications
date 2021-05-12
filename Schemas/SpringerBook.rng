@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-04-29T12:39:59Z. .
+Schema generated from ODD source 2021-05-12T12:31:35Z. .
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -2078,6 +2078,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
          <zeroOrMore>
             <ref name="KeywordGroup"/>
          </zeroOrMore>
+         <optional>
+            <ref name="AbbreviationGroup"/>
+         </optional>
          <zeroOrMore>
             <ref name="ArticleNote"/>
          </zeroOrMore>
@@ -2564,6 +2567,22 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
       <element name="Keyword">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <ref name="macro.SimpleTextModel"/>
+      </element>
+   </define>
+   <define name="AbbreviationGroup">
+      <element name="AbbreviationGroup">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <group>
+            <optional>
+               <ref name="Heading"/>
+            </optional>
+            <oneOrMore>
+               <ref name="DefinitionList"/>
+            </oneOrMore>
+         </group>
+         <ref name="att.language.attributes"/>
+         <ref name="att.OutputMedium.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="EditorGroup">
