@@ -4,7 +4,7 @@ namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2021-05-12T12:31:27Z. .
+# Schema generated from ODD source 2021-05-12T12:44:27Z. .
 # TEI Edition: Version 4.2.2. Last updated on
 #	9th April 2021, revision 609a109b1
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -492,7 +492,11 @@ ChapterHeader =
   
   ##
   element ChapterHeader {
-    AuthorGroup?, Abstract*, KeywordGroup*, ArticleNote*
+    AuthorGroup?,
+    Abstract*,
+    KeywordGroup*,
+    AbbreviationGroup?,
+    ArticleNote*
   }
 ArticleNote =
   

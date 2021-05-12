@@ -749,6 +749,9 @@
                                 <rng:zeroOrMore>
                                     <rng:ref name="KeywordGroup"/>
                                 </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="AbbreviationGroup"/>
+                                </rng:optional>
                                 <rng:zeroOrMore>
                                     <rng:ref name="ArticleNote"/>
                                 </rng:zeroOrMore>
