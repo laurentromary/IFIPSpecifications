@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-05-12T12:44:38Z. .
+Schema generated from ODD source 2021-05-31T11:34:15Z. .
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -2131,9 +2131,26 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
             <optional>
                <ref name="SubHeading"/>
             </optional>
+            <zeroOrMore>
+               <ref name="IndexEntry"/>
+            </zeroOrMore>
          </group>
          <ref name="att.ID.attributes"/>
          <empty/>
+      </element>
+   </define>
+   <define name="IndexEntry">
+      <element name="IndexEntry">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="PrimaryIE"/>
+               <ref name="SecondaryIE"/>
+               <ref name="TertiaryIE"/>
+               <ref name="SeeIE"/>
+               <ref name="SeeAlsoIE"/>
+            </choice>
+         </zeroOrMore>
       </element>
    </define>
    <define name="PrimaryIE">

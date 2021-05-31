@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-05-12T12:44:20Z. .CC-BY
+DTD generated from ODD source 2021-05-31T11:34:01Z. .CC-BY
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -1246,7 +1246,7 @@ Height CDATA #IMPLIED
 Resolution CDATA #IMPLIED
 Width CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT Index (Heading,SubHeading?)>
+<!ELEMENT Index ((Heading,(SubHeading)?,(IndexEntry)*))>
 <!ATTLIST Index
  %att.ID.attributes; >
 <!--doc: -->

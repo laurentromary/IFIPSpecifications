@@ -2108,12 +2108,17 @@
                             <memberOf key="att.ID"/>
                         </classes>
                         <content>
-                            <rng:group>
+                            <sequence>
+                                <elementRef key="Heading"/>
+                                <elementRef key="SubHeading" minOccurs="0"/>
+                                <elementRef key="IndexEntry" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
+                            <!--<rng:group>
                                 <rng:ref name="Heading"/>
                                 <rng:optional>
                                     <rng:ref name="SubHeading"/>
-                                </rng:optional>
-                            </rng:group>
+                                </rng:optional>    
+                            </rng:group>-->
                         </content>
                     </elementSpec>
 
@@ -2723,10 +2728,10 @@
                             <rng:ref name="macro.SimpleTextModel"/>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- AbbreviationGroup -->
                     <!-- <!ELEMENT AbbreviationGroup (Heading?, (AbbreviationGroupSection+ | DefinitionList))> -->
-                    
+
                     <elementSpec ident="AbbreviationGroup">
                         <classes>
                             <memberOf key="att.language"/>
@@ -2743,14 +2748,14 @@
                             </rng:group>
                         </content>
                     </elementSpec>
-                    
+
                     <!-- <!ELEMENT AbbreviationGroupSection (Heading, DefinitionList)>
 <!ATTLIST AbbreviationGroupSection
 	ID ID #REQUIRED
 	OutputMedium %OutputMediumAttrValues; #IMPLIED
 > -->
-<!-- To be done -->
-                    
+                    <!-- To be done -->
+
                     <!-- EditorGroup and subelements -->
 
                     <elementSpec ident="EditorGroup">
@@ -3723,7 +3728,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BibArticleNumber">
                         <content>
                             <textNode/>
@@ -3731,7 +3736,7 @@
                             <rng:text/> -->
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BibChapterDOI">
                         <content>
                             <rng:text/>
@@ -6171,7 +6176,7 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                             </rng:choice>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="LineGroup">
                         <content>
                             <rng:oneOrMore>
