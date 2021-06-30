@@ -4,7 +4,7 @@ namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2021-05-31T11:34:07Z. .
+# Schema generated from ODD source 2021-06-30T06:32:51Z. .
 # TEI Edition: Version 4.2.2. Last updated on
 #	9th April 2021, revision 609a109b1
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -737,7 +737,9 @@ CopyrightYear =
 CopyrightComment =
   
   ##
-  element CopyrightComment { (text | SimplePara)* }
+  element CopyrightComment {
+    (text | SimplePara)*, att.Typed.attributes, empty
+  }
 SpringerReferenceLine =
   
   ##

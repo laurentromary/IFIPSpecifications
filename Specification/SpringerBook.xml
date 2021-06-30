@@ -1206,6 +1206,9 @@
                     </elementSpec>
 
                     <elementSpec ident="CopyrightComment">
+                        <classes>
+                            <memberOf key="att.Typed"/>
+                        </classes>
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
