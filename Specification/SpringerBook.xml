@@ -1207,7 +1207,7 @@
 
                     <elementSpec ident="CopyrightComment">
                         <classes>
-                            <memberOf key="att.Typed"/>
+                            <memberOf key="att.Typeda"/>
                         </classes>
                         <content>
                             <rng:zeroOrMore>
@@ -2741,6 +2741,42 @@
                             <memberOf key="att.OutputMedium"/>
                         </classes>
                         <content>
+                            <sequence>
+                                <elementRef key="Heading" minOccurs="0"
+                                    maxOccurs="1"/>
+                                <alternate>
+                                    <elementRef key="AbbreviationGroupSection" minOccurs="1" maxOccurs="unbounded"/>
+                                    <elementRef key="DefinitionList"/>
+                                </alternate>
+                            </sequence>
+                            <!--<rng:group>
+                                <rng:optional>
+                                    <rng:ref name="Heading"/>
+                                </rng:optional>
+                                <rng:alternate>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="AbbreviationGroupSection"/>
+                                    </rng:oneOrMore>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="DefinitionList"/>
+                                    </rng:oneOrMore>
+                                </rng:alternate>
+                            </rng:group>-->
+                        </content>
+                    </elementSpec>
+
+                    <!-- <!ELEMENT AbbreviationGroupSection (Heading, DefinitionList)>
+<!ATTLIST AbbreviationGroupSection
+	ID ID #REQUIRED
+	OutputMedium %OutputMediumAttrValues; #IMPLIED
+> -->
+                    <elementSpec ident="AbbreviationGroupSection">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                            <memberOf key="att.language"/>
+                            <memberOf key="att.OutputMedium"/>
+                        </classes>
+                        <content>
                             <rng:group>
                                 <rng:optional>
                                     <rng:ref name="Heading"/>
@@ -2752,12 +2788,6 @@
                         </content>
                     </elementSpec>
 
-                    <!-- <!ELEMENT AbbreviationGroupSection (Heading, DefinitionList)>
-<!ATTLIST AbbreviationGroupSection
-	ID ID #REQUIRED
-	OutputMedium %OutputMediumAttrValues; #IMPLIED
-> -->
-                    <!-- To be done -->
 
                     <!-- EditorGroup and subelements -->
 

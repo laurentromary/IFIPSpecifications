@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-06-30T06:32:46Z. .CC-BY
+DTD generated from ODD source 2021-07-14T13:34:50Z. .CC-BY
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -520,8 +520,14 @@ Position CDATA #IMPLIED
 FirstPage CDATA #IMPLIED
 LastPage CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT AbbreviationGroup (Heading?,DefinitionList+)>
+<!ELEMENT AbbreviationGroup (((Heading)?,((AbbreviationGroupSection)+|DefinitionList)))>
 <!ATTLIST AbbreviationGroup
+ %att.language.attributes;
+ %att.OutputMedium.attributes; >
+<!--doc: -->
+<!ELEMENT AbbreviationGroupSection (Heading?,DefinitionList+)>
+<!ATTLIST AbbreviationGroupSection
+ %att.ID.attributes;
  %att.language.attributes;
  %att.OutputMedium.attributes; >
 <!--doc: -->
@@ -972,8 +978,6 @@ LocationType CDATA  #IMPLIED >
 Category CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT CopyrightComment (#PCDATA|SimplePara)*>
-<!ATTLIST CopyrightComment
- %att.Typed.attributes; >
 <!--doc: -->
 <!ELEMENT CopyrightHolderName  (#PCDATA)>
 <!--doc: -->
