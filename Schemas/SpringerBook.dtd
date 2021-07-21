@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2021-07-14T13:34:50Z. .CC-BY
+DTD generated from ODD source 2021-07-21T19:15:02Z. .CC-BY
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -810,7 +810,9 @@ Library CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ChapterContext (SeriesID|SubSeriesID|BookSetID|BookSetTitle|VolumePackageID|PartID|SubPartID|BookID|BookTitle)*>
 <!--doc: -->
-<!ELEMENT ChapterCopyright (CopyrightHolderName,CopyrightYear,CopyrightComment?,License?)>
+<!ELEMENT ChapterCopyright (CopyrightHolderName|CopyrightYear|CopyrightComment|License|ChapterCorrectionYear)+>
+<!--doc: -->
+<!ELEMENT ChapterCorrectionYear Year>
 <!--doc: -->
 <!ELEMENT ChapterDOI  (#PCDATA)>
 <!--doc: -->
