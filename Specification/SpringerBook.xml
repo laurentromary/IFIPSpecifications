@@ -3201,7 +3201,9 @@
                     
                     <elementSpec ident="ChapterCorrectionYear">
                         <content>
-                            <elementRef key="Year"/>
+                            <alternate>
+                                <elementRef key="Year"/>
+                            </alternate>
                         </content>
                     </elementSpec>
 
