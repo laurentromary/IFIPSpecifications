@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns=""><!--
-Schema generated from ODD source 2021-07-21T19:19:56Z. .
+Schema generated from ODD source 2021-07-21T19:27:56Z. .
 TEI Edition: Version 4.2.2. Last updated on
 	9th April 2021, revision 609a109b1
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
@@ -1372,8 +1372,17 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
                <ref name="ProductLiability"/>
                <ref name="CopyrightComment"/>
                <ref name="License"/>
+               <ref name="BookCorrectionYear"/>
             </choice>
          </oneOrMore>
+      </element>
+   </define>
+   <define name="BookCorrectionYear">
+      <element name="BookCorrectionYear">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <choice>
+            <ref name="Year"/>
+         </choice>
       </element>
    </define>
    <define name="BookHistory">

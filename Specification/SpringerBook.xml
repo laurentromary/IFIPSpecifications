@@ -1171,8 +1171,17 @@
                                     <rng:ref name="ProductLiability"/>
                                     <rng:ref name="CopyrightComment"/>
                                     <rng:ref name="License"/>
+                                    <rng:ref name="BookCorrectionYear"/>
                                 </rng:choice>
                             </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="BookCorrectionYear">
+                        <content>
+                            <alternate>
+                                <elementRef key="Year"/>
+                            </alternate>
                         </content>
                     </elementSpec>
 
