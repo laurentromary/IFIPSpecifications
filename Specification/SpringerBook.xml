@@ -3179,7 +3179,14 @@
 
                     <elementSpec ident="ChapterCopyright">
                         <content>
-                            <rng:group>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="CopyrightHolderName"/>
+                                <elementRef key="CopyrightYear"/>
+                                <elementRef key="CopyrightComment"/>
+                                <elementRef key="License"/>
+                                <elementRef key="ChapterCorrectionYear"/>
+                            </alternate>
+                            <!--<rng:group>
                                 <rng:ref name="CopyrightHolderName"/>
                                 <rng:ref name="CopyrightYear"/>
                                 <rng:optional>
@@ -3188,7 +3195,13 @@
                                 <rng:optional>
                                     <rng:ref name="License"/>
                                 </rng:optional>
-                            </rng:group>
+                            </rng:group>-->
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="ChapterCorrectionYear">
+                        <content>
+                            <elementRef key="Year"/>
                         </content>
                     </elementSpec>
 
