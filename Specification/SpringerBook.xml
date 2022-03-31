@@ -7560,6 +7560,12 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <rng:text/>
                                 </datatype>
                             </attDef>
+                            <attDef ident="bevelled">
+                                <datatype>
+                                    <!-- should be true/false -->
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
                         </attList>
                     </elementSpec>
 

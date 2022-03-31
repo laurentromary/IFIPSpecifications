@@ -1919,7 +1919,8 @@ separators CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mfrac %macro.MathExpression;>
 <!ATTLIST mfrac
-linethickness CDATA #IMPLIED >
+linethickness CDATA #IMPLIED
+bevelled CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mglyph EMPTY>
 <!--doc: -->
