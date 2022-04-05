@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2021-07-21T19:27:36Z. .CC-BY
-TEI Edition: Version 4.2.2. Last updated on
-	9th April 2021, revision 609a109b1
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
+DTD generated from ODD source 2022-04-05T14:34:24Z. .CC-BY
+TEI Edition: Version 4.3.0. Last updated on
+        31st August 2021, revision b4f72b1ff
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
 
 -->
 
@@ -2005,7 +2005,8 @@ mathsize CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mtable (mtr|mlabeledtr)*>
 <!ATTLIST mtable
-columnspacing CDATA #IMPLIED >
+columnspacing CDATA #IMPLIED
+rowlines CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT mtd %macro.MathExpression;>
 <!ATTLIST mtd

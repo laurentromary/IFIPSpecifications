@@ -7474,10 +7474,14 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                     <rng:ref name="mlabeledtr"/>
                                 </rng:choice>
                             </rng:zeroOrMore>
-
                         </content>
                         <attList>
                             <attDef ident="columnspacing">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="rowlines">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
