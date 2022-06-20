@@ -1216,7 +1216,7 @@
 
                     <elementSpec ident="CopyrightComment">
                         <classes>
-                            <memberOf key="att.Typeda"/>
+                            <memberOf key="att.Typed"/>
                         </classes>
                         <content>
                             <rng:zeroOrMore>
