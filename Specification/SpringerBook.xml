@@ -3388,7 +3388,9 @@
                                         <rng:ref name="SimplePara"/>
                                     </rng:oneOrMore>
                                 </rng:group>
-                                <rng:ref name="FormalPara"/>
+                                <rng:oneOrMore>
+                                    <rng:ref name="FormalPara"/>
+                                </rng:oneOrMore>
                             </rng:choice>
                         </content>
                     </elementSpec>

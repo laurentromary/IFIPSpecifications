@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2022-06-20T18:48:33Z. .CC-BY
+DTD generated from ODD source 2022-07-19T05:37:32Z. .CC-BY
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -1155,7 +1155,7 @@ NOTATION (TEX|MATHML|MATHTYPE|XML) #IMPLIED >
 <!--doc: -->
 <!ELEMENT Etal EMPTY>
 <!--doc: -->
-<!ELEMENT Ethics ((Heading?,SimplePara+)|FormalPara)>
+<!ELEMENT Ethics ((Heading?,SimplePara+)|FormalPara+)>
 <!--doc: -->
 <!ELEMENT ExternalRef (RefSource,RefTarget+)>
 <!ATTLIST ExternalRef
