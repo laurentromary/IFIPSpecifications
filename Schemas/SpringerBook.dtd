@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2022-07-19T05:37:32Z. .CC-BY
+DTD generated from ODD source 2022-07-27T05:32:19Z. .CC-BY
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -548,6 +548,10 @@ Type CDATA  #IMPLIED >
 <!ELEMENT AbstractInDocumentLanguage EMPTY>
 <!ATTLIST AbstractInDocumentLanguage
 Type CDATA  #IMPLIED >
+<!--doc: -->
+<!ELEMENT AccessibilityInfo  EMPTY>
+<!ATTLIST AccessibilityInfo
+Accessibility (Yes|No) #IMPLIED >
 <!--doc: -->
 <!ELEMENT Acknowledgments ((Heading)?,(SimplePara|FormalPara)+)>
 <!--doc: -->
@@ -1783,7 +1787,7 @@ Code CDATA #IMPLIED >
  %att.ID.attributes;
 Float CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|BibliographyPosition|CitationStyle|BodyMarkup|Typesetting|CompoundObjectTechnicalInfo|TextSpecifications|ColorSpecifications|CoverProductionInfo|Binding)*>
+<!ELEMENT TechnicalInfo (TitleAdditionalLanguage|AccessibilityInfo|TitleUpperCase|AuthorInformationStyle|HistoryStyle|AbstractInDocumentLanguage|AbstractAdditionalLanguage|StructuredAbstract|KeywordsInDocumentLanguage|BibliographyStyle|BibliographyPosition|CitationStyle|BodyMarkup|Typesetting|CompoundObjectTechnicalInfo|TextSpecifications|ColorSpecifications|CoverProductionInfo|Binding)*>
 <!--doc: -->
 <!ELEMENT Term %macro.SimpleTextModel;>
 <!--doc: -->

@@ -4417,11 +4417,14 @@
                         FormatTrimSize*, TocInfo?, NumberOfVolumes?, SpecialShippingRemark?, CoverProductionInfo*, 
                         BookComponents*, Binding*, ReferencePDFStyle?, PeerReviewPDFsStyle?, FixedArticleStructure?)>
  -->
+                    <!-- <AccessibilityInfo Accessibility="No"/> -->
+                    
                     <elementSpec ident="TechnicalInfo">
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
                                     <rng:ref name="TitleAdditionalLanguage"/>
+                                    <rng:ref name="AccessibilityInfo"/>
                                     <rng:ref name="TitleUpperCase"/>
                                     <rng:ref name="AuthorInformationStyle"/>
                                     <rng:ref name="HistoryStyle"/>
@@ -4448,6 +4451,20 @@
                         <content>
                             <rng:text/>
                         </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="AccessibilityInfo">
+                        <content>
+                            <empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="Accessibility">
+                                <valList type="closed">
+                                    <valItem ident="Yes"/>
+                                    <valItem ident="No"/>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <elementSpec ident="BibliographyPosition">
