@@ -1,9 +1,9 @@
 
 <!--
-DTD generated from ODD source 2022-07-27T05:32:19Z. .CC-BY
-TEI Edition: Version 4.4.0. Last updated on
-        19th April 2022, revision ff9cc28b0
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
+DTD generated from ODD source 2023-06-06T07:43:18Z. .CC-BY
+TEI Edition: Version 4.6.0. Last updated on
+        4th April 2023, revision f18deffba
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.6.0/
 
 -->
 
@@ -338,6 +338,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
 <!ENTITY % model.phrase_sequenceOptional ""> 
 <!ENTITY % model.phrase_sequenceOptionalRepeatable ""> 
 <!ENTITY % model.phrase_sequenceRepeatable ""> 
+<!ENTITY % model.paraPart ""> 
+<!ENTITY % model.paraPart_sequence ""> 
+<!ENTITY % model.paraPart_sequenceOptional ""> 
+<!ENTITY % model.paraPart_sequenceOptionalRepeatable ""> 
+<!ENTITY % model.paraPart_sequenceRepeatable ""> 
 <!ENTITY % model.limitedPhrase ""> 
 <!ENTITY % model.limitedPhrase_sequence ""> 
 <!ENTITY % model.limitedPhrase_sequenceOptional ""> 
@@ -1070,6 +1075,7 @@ ChapterPrintMediaObjects CDATA #IMPLIED
 ChapterTEX CDATA #IMPLIED
 ChapterXMLWithBody CDATA #IMPLIED
 ChapterXMLWithBodyRefsOnly CDATA #IMPLIED
+PDFComplianceReport CDATA #IMPLIED
 CoverFigure CDATA #IMPLIED
 BackCoverFigure CDATA #IMPLIED
 CoverPrintPDF CDATA #IMPLIED

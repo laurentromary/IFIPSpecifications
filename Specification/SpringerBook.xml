@@ -1176,7 +1176,7 @@
                             </rng:oneOrMore>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="BookCorrectionYear">
                         <content>
                             <alternate>
@@ -2751,8 +2751,7 @@
                         </classes>
                         <content>
                             <sequence>
-                                <elementRef key="Heading" minOccurs="0"
-                                    maxOccurs="1"/>
+                                <elementRef key="Heading" minOccurs="0" maxOccurs="1"/>
                                 <alternate>
                                     <elementRef key="AbbreviationGroupSection" minOccurs="1" maxOccurs="unbounded"/>
                                     <elementRef key="DefinitionList"/>
@@ -3207,7 +3206,7 @@
                             </rng:group>-->
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="ChapterCorrectionYear">
                         <content>
                             <alternate>
@@ -4418,7 +4417,7 @@
                         BookComponents*, Binding*, ReferencePDFStyle?, PeerReviewPDFsStyle?, FixedArticleStructure?)>
  -->
                     <!-- <AccessibilityInfo Accessibility="No"/> -->
-                    
+
                     <elementSpec ident="TechnicalInfo">
                         <content>
                             <rng:zeroOrMore>
@@ -4452,7 +4451,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="AccessibilityInfo">
                         <content>
                             <empty/>
@@ -5737,6 +5736,11 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                 </datatype>
                             </attDef>
                             <attDef ident="ChapterXMLWithBodyRefsOnly">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="PDFComplianceReport">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
