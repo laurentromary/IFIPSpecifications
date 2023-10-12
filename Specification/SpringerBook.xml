@@ -5574,7 +5574,9 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                             <rng:text/>
                         </content>
                     </elementSpec>
-
+                    
+                    <!-- <ProofInfo ProofStage="DiscreteAndCompound" ProofAuthorDays="4"
+                            ProofRevisionNumber="0"> -->
                     <elementSpec ident="ProofInfo">
                         <content>
                             <rng:zeroOrMore>
@@ -5583,6 +5585,16 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                         <attList>
                             <attDef ident="ProofStage">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ProofAuthorDays">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ProofRevisionNumber">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>

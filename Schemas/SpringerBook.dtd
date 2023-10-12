@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2023-06-06T07:43:18Z. .CC-BY
+DTD generated from ODD source 2023-10-12T06:05:06Z. .CC-BY
 TEI Edition: Version 4.6.0. Last updated on
         4th April 2023, revision f18deffba
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.6.0/
@@ -1511,7 +1511,9 @@ Country CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ProofInfo (ProofRecipient)*>
 <!ATTLIST ProofInfo
-ProofStage CDATA #IMPLIED >
+ProofStage CDATA #IMPLIED
+ProofAuthorDays CDATA #IMPLIED
+ProofRevisionNumber CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT ProofRecipient (Author|ProductionEditor|Editor|InstitutionalAuthor)*>
 <!ATTLIST ProofRecipient
