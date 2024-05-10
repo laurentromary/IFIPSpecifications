@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Publisher PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Publisher>
+	<PublisherInfo>
+		<PublisherName>Springer Nature Switzerland</PublisherName>
+		<PublisherLocation>Cham</PublisherLocation>
+		<PublisherImprintName>Springer</PublisherImprintName>
+		<PublisherLogo>
+			<Figure Category="Standard" Float="No" ID="Figa">
+				
+<MediaObject ID="MO1">
+					
+<ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_HTML.png" Format="PNG" Color="BlackWhite" Type="Linedraw" Rendition="HTML" Height="97" Resolution="300" Width="364"></ImageObject><ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_Print.eps" Format="EPS" Color="BlackWhite" Type="Linedraw" Rendition="Print"></ImageObject>
+</MediaObject>
+
+			</Figure>
+		</PublisherLogo>
+		<PublisherURL>http://www.springer.com</PublisherURL>
+	</PublisherInfo>
+	<Series>
+		<SeriesInfo ID="Series_6102" SeriesType="Series">
+			<SeriesID>6102</SeriesID>
+			<SeriesPrintISSN>1868-4238</SeriesPrintISSN>
+			<SeriesElectronicISSN>1868-422X</SeriesElectronicISSN>
+			<SeriesTitle Language="En">IFIP Advances in Information and Communication Technology</SeriesTitle>
+			<SeriesAbbreviatedTitle>IFIP Advs Information</SeriesAbbreviatedTitle>
+		</SeriesInfo>
+		<SeriesHeader>
+			<CollaboratorGroup>
+				<Collaborator AffiliationIDS="Aff1" Type="Editor-in-Chief">
+					<CollaboratorName>
+						<GivenName>Kai</GivenName>
+						<FamilyName>Rannenberg</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff2" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-5037-2588">
+					<CollaboratorName>
+						<GivenName>Luís</GivenName>
+						<FamilyName>Soares Barbosa</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff3" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Michael</GivenName>
+						<FamilyName>Goedicke</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff4" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-4317-971X">
+					<CollaboratorName>
+						<GivenName>Arthur</GivenName>
+						<FamilyName>Tatnall</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff5" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Erich</GivenName>
+						<GivenName>J.</GivenName>
+						<FamilyName>Neuhold</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff6" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Burkhard</GivenName>
+						<FamilyName>Stiller</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff7" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Fredi</GivenName>
+						<FamilyName>Tröltzsch</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff8" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Jan</GivenName>
+						<FamilyName>Pries-Heje</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff9" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-5776-2888">
+					<CollaboratorName>
+						<GivenName>David</GivenName>
+						<FamilyName>Kreps</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff10" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0001-5781-5858">
+					<CollaboratorName>
+						<GivenName>Ricardo</GivenName>
+						<FamilyName>Reis</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff11" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-0984-7542">
+					<CollaboratorName>
+						<GivenName>Steven</GivenName>
+						<FamilyName>Furnell</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff12" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-2303-7263">
+					<CollaboratorName>
+						<GivenName>Eunika</GivenName>
+						<FamilyName>Mercier-Laurent</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff13" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-0756-6934">
+					<CollaboratorName>
+						<GivenName>Marco</GivenName>
+						<FamilyName>Winckler</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Collaborator AffiliationIDS="Aff14" Type="Editorial Board Member">
+					<CollaboratorName>
+						<GivenName>Rainer</GivenName>
+						<FamilyName>Malaka</FamilyName>
+					</CollaboratorName>
+				</Collaborator>
+				<Affiliation ID="Aff1">
+					<OrgName>Goethe University Frankfurt</OrgName>
+					<OrgAddress>
+						<Country Code="DE">Germany</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff2">
+					<OrgName>University of Minho</OrgName>
+					<OrgAddress>
+						<City>Braga</City>
+						<Country Code="PT">Portugal</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff3">
+					<OrgName>University of Duisburg-Essen</OrgName>
+					<OrgAddress>
+						<Country Code="DE">Germany</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff4">
+					<OrgName>Victoria University</OrgName>
+					<OrgAddress>
+						<City>Melbourne</City>
+						<Country Code="AU">Australia</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff5">
+					<OrgName>University of Vienna</OrgName>
+					<OrgAddress>
+						<Country Code="AT">Austria</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff6">
+					<OrgName>University of Zurich</OrgName>
+					<OrgAddress>
+						<City>Zürich</City>
+						<Country Code="CH">Switzerland</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff7">
+					<OrgName>TU Berlin</OrgName>
+					<OrgAddress>
+						<Country Code="DE">Germany</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff8">
+					<OrgName>Roskilde University</OrgName>
+					<OrgAddress>
+						<Country Code="DK">Denmark</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff9">
+					<OrgName>National University of Ireland</OrgName>
+					<OrgAddress>
+						<City>Galway</City>
+						<Country Code="IE">Ireland</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff10">
+					<OrgName>Federal University of Rio Grande do Sul</OrgName>
+					<OrgAddress>
+						<City>Porto Alegre</City>
+						<Country Code="BR">Brazil</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff11">
+					<OrgName>Plymouth University</OrgName>
+					<OrgAddress>
+						<Country Code="GB">UK</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff12">
+					<OrgName>University of Reims Champagne-Ardenne</OrgName>
+					<OrgAddress>
+						<City>Reims</City>
+						<Country Code="FR">France</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff13">
+					<OrgName>University of Nice Sophia Antipolis</OrgName>
+					<OrgAddress>
+						<Country Code="FR">France</Country>
+					</OrgAddress>
+				</Affiliation>
+				<Affiliation ID="Aff14">
+					<OrgName>University of Bremen</OrgName>
+					<OrgAddress>
+						<Country Code="DE">Germany</Country>
+					</OrgAddress>
+				</Affiliation>
+			</CollaboratorGroup>
+			<SeriesInformationText>
+				<Para>
+					<Emphasis Type="Bold">IFIP Advances in Information and Communication Technology</Emphasis>
+				</Para>
+				<Para>The IFIP AICT series publishes state-of-the-art results in the sciences and technologies of information and communication. The scope of the series includes: foundations of computer science; software theory and practice; education; computer applications in technology; communication systems; systems modeling and optimization; information systems; ICT and society; computer systems technology; security and protection in information processing systems; artificial intelligence; and human-computer interaction.</Para>
+				<Para>Edited volumes and proceedings of refereed international conferences in computer science and interdisciplinary fields are featured. These results often precede journal publication and represent the most current research.</Para>
+				<Para>The principal aim of the IFIP AICT series is to encourage education and the dissemination and exchange of information about all aspects of computing.</Para>
+				<Para>More information about this series at <ExternalRef>
+						<RefSource>https://link.springer.com/bookseries/6102</RefSource>
+						<RefTarget Address="https://link.springer.com/bookseries/6102" TargetType="URL"/>
+					</ExternalRef>
+				</Para>
+			</SeriesInformationText>
+		</SeriesHeader>
+		<Book Language="En">
+			<BookInfo Language="En" BookProductType="Proceedings" TocLevels="0" ContainsESM="No" NumberingStyle="ContentOnly" NumberingDepth="3" OutputMedium="All" MediaType="Book">
+				<BookID>543965_1_En</BookID>
+				<BookTitle>Analysis, Estimations, and Applications of Embedded Systems</BookTitle>
+				<BookSubTitle>6th IFIP TC 10 International Embedded Systems Symposium, IESS 2019, Friedrichshafen, Germany, September 9–11, 2019, Revised Selected Papers</BookSubTitle>
+				<BookVolumeNumber>576</BookVolumeNumber>
+				<BookDOI>10.1007/978-3-031-26500-6</BookDOI>
+				<BookTitleID>543965</BookTitleID>
+				<BookPrintISBN>978-3-031-26499-3</BookPrintISBN>
+				<BookElectronicISBN>978-3-031-26500-6</BookElectronicISBN>
+				<EditionNumber>1</EditionNumber>
+				<BookChapterCount>15</BookChapterCount>
+				<BookCopyright>
+					<CopyrightHolderName>IFIP International Federation for Information Processing</CopyrightHolderName>
+					<CopyrightYear>2023</CopyrightYear>
+					<CopyrightStandardText Language="En">This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or part of the material is concerned, specifically the rights of translation, reprinting, reuse of illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way, and transmission or information storage and retrieval, electronic adaptation, computer software, or by similar or dissimilar methodology now known or hereafter developed.</CopyrightStandardText>
+					<TrademarkQualifierText Language="En">The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective laws and regulations and therefore free for general use.</TrademarkQualifierText>
+					<ProductLiability Language="En">The publisher, the authors, and the editors are safe to assume that the advice and information in this book are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the editors give a warranty, expressed or implied, with respect to the material contained herein or for any errors or omissions that may have been made. The publisher remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</ProductLiability>
+					<SpringerReferenceLine Language="En">
+						<SimplePara>This Springer imprint is published by the registered company Springer Nature Switzerland AG</SimplePara>
+						<SimplePara>The registered company address is: Gewerbestrasse 11, 6330 Cham, Switzerland</SimplePara>
+					</SpringerReferenceLine>
+				</BookCopyright>
+				<BookSubjectGroup>
+					<BookSubject Code="SCI" Type="Primary">Computer Science</BookSubject>
+					<BookSubject Code="SCI13030" Type="Secondary" Priority="1">Special Purpose and Application-Based Systems</BookSubject>
+				</BookSubjectGroup>
+				<BookContext>
+					<SeriesID>6102</SeriesID>
+				</BookContext>
+				<ConferenceInfo>
+					<ConfSeriesName>International Embedded Systems Symposium</ConfSeriesName>
+					<ConfSeriesID Type="Springer">iess</ConfSeriesID>
+					<ConfSeriesID Type="DBLP">iess</ConfSeriesID>
+					<ConfEventID Type="Springer">iess2019</ConfEventID>
+					<ConfEventAbbreviation>IESS</ConfEventAbbreviation>
+					<ConfNumber>6</ConfNumber>
+					<ConfEventLocation LocationType="InPerson">
+						<City>Friedrichshafen</City>
+						<Country Code="DE">Germany</Country>
+					</ConfEventLocation>
+					<ConfEventDateStart>
+						<Year>2019</Year>
+						<Month>09</Month>
+						<Day>09</Day>
+					</ConfEventDateStart>
+					<ConfEventDateEnd>
+						<Year>2019</Year>
+						<Month>09</Month>
+						<Day>11</Day>
+					</ConfEventDateEnd>
+					<ConfEventURL>https://iess.org/IESS2019/</ConfEventURL>
+				</ConferenceInfo>
+			</BookInfo>
+			<BookHeader>
+				<EditorGroup>
+					<Editor AffiliationIDS="Aff15" ORCID="https://orcid.org/0000-0002-1415-5527">
+						<EditorName>
+							<GivenName>Marco</GivenName>
+							<GivenName>A.</GivenName>
+							<FamilyName>Wehrmeister</FamilyName>
+						</EditorName>
+					</Editor>
+					<Editor AffiliationIDS="Aff16" ORCID="https://orcid.org/0000-0002-5684-7310">
+						<EditorName>
+							<GivenName>Márcio</GivenName>
+							<FamilyName>Kreutz</FamilyName>
+						</EditorName>
+					</Editor>
+					<Editor AffiliationIDS="Aff17" ORCID="https://orcid.org/0000-0001-6003-9247">
+						<EditorName>
+							<GivenName>Marcelo</GivenName>
+							<FamilyName>Götz</FamilyName>
+						</EditorName>
+					</Editor>
+					<Editor AffiliationIDS="Aff18">
+						<EditorName>
+							<GivenName>Stefan</GivenName>
+							<FamilyName>Henkler</FamilyName>
+						</EditorName>
+					</Editor>
+					<Editor AffiliationIDS="Aff19">
+						<EditorName>
+							<GivenName>Andy</GivenName>
+							<GivenName>D.</GivenName>
+							<FamilyName>Pimentel</FamilyName>
+						</EditorName>
+					</Editor>
+					<Editor AffiliationIDS="Aff20">
+						<EditorName>
+							<GivenName>Achim</GivenName>
+							<FamilyName>Rettberg</FamilyName>
+						</EditorName>
+					</Editor>
+					<Affiliation ID="Aff15">
+						<OrgName>Federal University of Technology – Parana – UTFPR</OrgName>
+						<OrgAddress>
+							<City>Curitiba</City>
+							<Country Code="BR">Brazil</Country>
+						</OrgAddress>
+					</Affiliation>
+					<Affiliation ID="Aff16">
+						<OrgName>Federal University of Rio Grande do Norte – UFRN</OrgName>
+						<OrgAddress>
+							<City>Natal</City>
+							<Country Code="BR">Brazil</Country>
+						</OrgAddress>
+					</Affiliation>
+					<Affiliation ID="Aff17">
+						<OrgName>Federal University of Rio Grande do Sul – UFRGS</OrgName>
+						<OrgAddress>
+							<City>Porto Alegre</City>
+							<Country Code="BR">Brazil</Country>
+						</OrgAddress>
+					</Affiliation>
+					<Affiliation ID="Aff18">
+						<OrgName>University of Applied Sciences Hamm-Lippstadt</OrgName>
+						<OrgAddress>
+							<City>Hamm</City>
+							<Country Code="DE">Germany</Country>
+						</OrgAddress>
+					</Affiliation>
+					<Affiliation ID="Aff19">
+						<OrgName>University of Amsterdam</OrgName>
+						<OrgAddress>
+							<City>Amsterdam</City>
+							<Country Code="NL">The Netherlands</Country>
+						</OrgAddress>
+					</Affiliation>
+					<Affiliation ID="Aff20">
+						<OrgName>University of Applied Sciences Hamm-Lippstadt</OrgName>
+						<OrgAddress>
+							<City>Hamm</City>
+							<Country Code="DE">Germany</Country>
+						</OrgAddress>
+					</Affiliation>
+				</EditorGroup>
+			</BookHeader>
+			<BookFrontmatter>
+				<BookFrontmatterInfo>
+					<BookFrontmatterFirstPage>i</BookFrontmatterFirstPage>
+					<BookFrontmatterLastPage>xii</BookFrontmatterLastPage>
+				</BookFrontmatterInfo>
+				<BodyFrontmatter>
+					<Preface>
+						<PrefaceInfo>
+							<PrefaceTitle Language="En">Preface</PrefaceTitle>
+							<PrefaceDate>December 2022</PrefaceDate>
+						</PrefaceInfo>
+						<AuthorGroup>
+							<Author>
+								<AuthorName>
+									<GivenName>Marco</GivenName>
+									<GivenName>A.</GivenName>
+									<FamilyName>Wehrmeister</FamilyName>
+								</AuthorName>
+							</Author>
+							<Author>
+								<AuthorName>
+									<GivenName>Márcio</GivenName>
+									<FamilyName>Kreutz</FamilyName>
+								</AuthorName>
+							</Author>
+							<Author>
+								<AuthorName>
+									<GivenName>Marcelo</GivenName>
+									<FamilyName>Götz</FamilyName>
+								</AuthorName>
+							</Author>
+							<Author>
+								<AuthorName>
+									<GivenName>Stefan</GivenName>
+									<FamilyName>Henkler</FamilyName>
+								</AuthorName>
+							</Author>
+							<Author>
+								<AuthorName>
+									<GivenName>Andy</GivenName>
+									<GivenName>D.</GivenName>
+									<FamilyName>Pimentel</FamilyName>
+								</AuthorName>
+							</Author>
+							<Author>
+								<AuthorName>
+									<GivenName>Achim</GivenName>
+									<FamilyName>Rettberg</FamilyName>
+								</AuthorName>
+							</Author>
+						</AuthorGroup>
+						<Body>
+							<Para ID="Par1">This book publishes the research and technical works presented at the International Embedded Systems Symposium (IESS) 2019. Deep and fruitful discussions occurred during the event covering several aspects of modern embedded and cyber-physical systems. This book presents tendencies and solutions for problems tightly coupled to industry, ranging from new methodologies to novel hardware designs, analysis approaches, and real-world application examples.</Para>
+							<Para ID="Par2">A broad discussion on the design, analysis, and verification of embedded and cyber-physical systems is presented in a complementary view throughout the chapters of this book. The presented research and technical works cover system-level design methods, algorithms, verification and validation techniques, estimation of system properties and characteristics, performance analysis, and real-time systems design. Also, the book presents industrial and real-world application case studies that discuss the challenges and realizations of embedded systems.</Para>
+							<Para ID="Par3">Technological advances over recent years have provided a resourceful infrastructure to embedded systems through enormous processing and storage capacity. Formerly external components can now be integrated into a single System-on-Chip. This tendency results in a dramatic reduction in the size and cost of embedded systems. Such hardware infrastructures enable increasing numbers of services, allowing embedded systems to support many application areas (including cyber-physical applications). As a unique technology, the design of embedded systems is an essential element of many innovations.</Para>
+							<Para ID="Par4">Embedded systems meet their performance goals, including real-time constraints, employing a combination of special-purpose hardware and software components tailored to the system requirements. Both the development of new features and the reuse of existing intellectual property components are essential to keep up with ever-demanding customer requirements. Furthermore, design complexities are steadily growing with an increasing number of components that must cooperate properly. Embedded system designers must cope with multiple goals and constraints simultaneously, including timing, power, reliability, dependability, maintenance, packaging, and, last but not least, price.</Para>
+							<Para ID="Par5">The significance and importance of these constraints vary depending on the target application area. Typical embedded applications include consumer electronics, automotive, avionics, medical, industrial automation, robotics, communication devices, and others.</Para>
+							<Para ID="Par6">The International Embedded Systems Symposium (IESS) is a unique forum to present novel ideas, exchange timely research results, and discuss the state of the art and future trends in the field of embedded systems. Contributors and participants from both industry and academia take an active part in this symposium. The IESS conference is organized by the Computer Systems Technology committee (TC10) of the International Federation for Information Processing (IFIP), especially the Working Group 10.2 “Embedded Systems”.</Para>
+							<Para ID="Par7">IESS is a truly interdisciplinary conference on the design of embedded systems. Computer Science and Electrical Engineering are the predominant academic disciplines concerned with the topics covered in IESS, but many applications also involve civil, mechanical, aerospace, and automotive engineering, as well as various medical disciplines.</Para>
+							<Para ID="Par8">In 2005, IESS was held for the first time in Manaus, Brazil. IESS 2005 was very successful, with 30 accepted papers ranging from specification to embedded systems applications. IESS 2007 was the second edition of the symposium held in Irvine in the US, with 35 accepted papers and 2 tutorials ranging from analysis and design methodologies to case studies from automotive and medical applications. IESS 2009 took place in the wonderful Schloß Montfort in Langenargen, Germany with 28 accepted papers and 2 tutorials ranging from efficient modeling towards challenges for designers of fault-tolerant embedded systems. IESS 2013 was held in Paderborn, Germany, at the Heinz Nixdorf MuseumsForum (HNF) with 22 full papers, and 8 short papers. IESS 2015 was held in Foz do Iguaçu, Brazil, close to the beautiful Iguaçu Falls, with 12 full papers and 6 short papers.</Para>
+							<Para ID="Par9">The sixth edition, IESS 2019, was held in Friedrichshafen, Germany, on the northern shoreline of the delightful Lake Constance (Bodensee). The articles presented in this book are the result of a rigorous review process implemented by the technical program committee. Out of 32 valid submissions, 16 full papers were accepted, yielding an acceptance rate of 50%. Also, 4 short papers are included yielding an overall acceptance rate of 62.5%. From this total, 4 full papers were published as an extended version in the International Journal of Parallel Programming, Springer. Since that journal issue was published before this proceedings volume, these were not included in this publication.</Para>
+							<Para ID="Par10">The technical program of IESS 2019 included sessions with complementary and interdisciplinary themes, e.g., embedded real-time systems, system architecture design, algorithms, embedded hardware, estimation and analysis, and applications. Remarkably interesting keynotes on diverse topics, such as computational self-awareness, a paradigm for adaptive, resilient embedded computing, were included in the technical program, along with some invited talks on evaluating soft errors in multi-core systems, digitalization in the automotive world, modern human-machine interfaces for the automotive industry, and scientific and technical presentations.</Para>
+							<Para ID="Par11">All editors of this volume cited below, besides their formal roles, were involved in the discussions and decisions made during the review phase, and during the development of this volume. We are a small group involved in the organization of this conference and previous editions, and we were pleased to organize a highly successful conference in 2019 with fruitful and lively discussions.</Para>
+							<Para ID="Par12">We thank our sponsors, ZF Friedrichshafen AG, BHTC GmbH, the IFIP WG 10.2 on Embedded Systems, the Gesellschaft für Informatik e.V. (GI), and the Hamm-Lippstadt University of Applied Sciences, for their generous financial support of this conference. Without these contributions, IESS 2019 would not have been possible in its current form. We would also like to thank IFIP as the organizational body for the promotion and support of the IESS conference. And, last but not least, we thank the authors for their interesting research contributions and the members of the technical program committee for their valuable time and effort in reviewing the articles.</Para>
+						</Body>
+					</Preface>
+					<BookNotes>
+						<BookNotesTitle Language="En">Organization</BookNotesTitle>
+						<Body>
+							<Section1 ID="Sec1">
+								<Heading>General Chairs</Heading>
+								<Para>
+									<DefinitionList>
+										<DefinitionListEntry>
+											<Term>Marco A. Wehrmeister</Term>
+											<Description>
+												<Para ID="Par19">Federal University of Technology, Parana, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Andy D. Pimentel</Term>
+											<Description>
+												<Para ID="Par20">University of Amsterdam, Netherlands</Para>
+											</Description>
+										</DefinitionListEntry>
+									</DefinitionList>
+								</Para>
+							</Section1>
+							<Section1 ID="Sec2">
+								<Heading>Program Chairs</Heading>
+								<Para>
+									<DefinitionList>
+										<DefinitionListEntry>
+											<Term>Stefan Henkler</Term>
+											<Description>
+												<Para ID="Par21">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marcio Kreutz</Term>
+											<Description>
+												<Para ID="Par22">Federal University of Rio Grande do Norte, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+									</DefinitionList>
+								</Para>
+							</Section1>
+							<Section1 ID="Sec3">
+								<Heading>Steering Committee</Heading>
+								<Para>
+									<DefinitionList>
+										<DefinitionListEntry>
+											<Term>Achim Rettberg</Term>
+											<Description>
+												<Para ID="Par23">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marcelo Götz</Term>
+											<Description>
+												<Para ID="Par24">Federal University of Rio Grande do Sul, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Mauro C. Zanella</Term>
+											<Description>
+												<Para ID="Par25">ZF Friedrichshafen AG, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Franz J. Rammig</Term>
+											<Description>
+												<Para ID="Par26">University of Paderborn, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+									</DefinitionList>
+								</Para>
+							</Section1>
+							<Section1 ID="Sec4">
+								<Heading>Technical Program Committee</Heading>
+								<Para>
+									<DefinitionList>
+										<DefinitionListEntry>
+											<Term>Samar Abdi</Term>
+											<Description>
+												<Para ID="Par27">Concordia University, Montreal, Canada</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Christian Allmann</Term>
+											<Description>
+												<Para ID="Par28">Audi Electronics Venture, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Michael Amann</Term>
+											<Description>
+												<Para ID="Par29">ZF Friedrichshafen, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Richard Anthony</Term>
+											<Description>
+												<Para ID="Par30">University of Greenwich, UK</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Jürgen Becker</Term>
+											<Description>
+												<Para ID="Par31">Karlsruher Institut für Technologie, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Alecio Binotto</Term>
+											<Description>
+												<Para ID="Par32">IBM Research, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Christophe Bobda</Term>
+											<Description>
+												<Para ID="Par33">University of Arkansas, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Luigi Carro</Term>
+											<Description>
+												<Para ID="Par34">Federal University of Rio Grande do Sul, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Florian Dittmann</Term>
+											<Description>
+												<Para ID="Par35">Kromberg &amp; Schubert, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Rainer Doemer</Term>
+											<Description>
+												<Para ID="Par36">University of California at Irvine, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Cecilia Ekelin</Term>
+											<Description>
+												<Para ID="Par37">Volvo Technology Corporation, Sweden</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Rolf Ernst</Term>
+											<Description>
+												<Para ID="Par38">Technical University Braunschweig, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Danubia B. Espindola</Term>
+											<Description>
+												<Para ID="Par39">Federal University of Rio Grande, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Mohammad Al Faruque</Term>
+											<Description>
+												<Para ID="Par40">University of California at Irvine, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Masahiro Fujita</Term>
+											<Description>
+												<Para ID="Par41">University of Tokyo, Japan</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marcelo Götz</Term>
+											<Description>
+												<Para ID="Par42">Federal University of Rio Grande do Sul, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Andreas Gerstlauer</Term>
+											<Description>
+												<Para ID="Par43">University of Texas Austin, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Tayfun Gezgin</Term>
+											<Description>
+												<Para ID="Par44">Lufthansa Cargo, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Kim Grüttner</Term>
+											<Description>
+												<Para ID="Par45">OFFIS, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Andreas Hein</Term>
+											<Description>
+												<Para ID="Par46">Carl von Ossietzky University Oldenburg, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Joerg Henkel</Term>
+											<Description>
+												<Para ID="Par47">Karlsruher Institut für Technologie, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Stefan Henkler</Term>
+											<Description>
+												<Para ID="Par48">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Carsten Homburg</Term>
+											<Description>
+												<Para ID="Par49">dSPACE, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Uwe Honekamp</Term>
+											<Description>
+												<Para ID="Par50">Vector Informatik, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Michael Huebner</Term>
+											<Description>
+												<Para ID="Par51">Ruhr-University Bochum, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marcel Jackowski</Term>
+											<Description>
+												<Para ID="Par52">University of Sao Paulo, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Ricardo Jacobi</Term>
+											<Description>
+												<Para ID="Par53">University of Brasilia, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Michael Keckeisen</Term>
+											<Description>
+												<Para ID="Par54">ZF Friedrichshafen, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Timo Kerstan</Term>
+											<Description>
+												<Para ID="Par55">Vector Informatik, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Amin Khajeh</Term>
+											<Description>
+												<Para ID="Par56">Intel, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Doo-Hyun Kim</Term>
+											<Description>
+												<Para ID="Par57">Konkuk University, Korea</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Hermann Kopetz</Term>
+											<Description>
+												<Para ID="Par58">Technical University Vienna, Austria</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marcio Kreutz</Term>
+											<Description>
+												<Para ID="Par59">Federal University of Rio Grande do Norte, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Horst Krimmel</Term>
+											<Description>
+												<Para ID="Par60">ZF Friedrichshafen, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Thomas Lehmann</Term>
+											<Description>
+												<Para ID="Par61">HAW Hamburg, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Armin Lichtblau</Term>
+											<Description>
+												<Para ID="Par62">Mentor Graphics, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Patrick Lysaght</Term>
+											<Description>
+												<Para ID="Par63">Xilinx Research Labs, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Roger May</Term>
+											<Description>
+												<Para ID="Par64">Altera, UK</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Adam Morawiec</Term>
+											<Description>
+												<Para ID="Par65">ECSI, France</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Wolfgang Nebel</Term>
+											<Description>
+												<Para ID="Par66">Carl von Ossietzky University Oldenburg, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Markus Oertel</Term>
+											<Description>
+												<Para ID="Par67">Vector Informatik, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Mike Olivarez</Term>
+											<Description>
+												<Para ID="Par68">Freescale Semiconductor, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Carlos Eduardo Pereira</Term>
+											<Description>
+												<Para ID="Par69">Federal University of Rio Grande do Sul, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Franz Rammig</Term>
+											<Description>
+												<Para ID="Par70">University of Paderborn, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Achim Rettberg</Term>
+											<Description>
+												<Para ID="Par71">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Stefan Schimpf</Term>
+											<Description>
+												<Para ID="Par72">ETAS, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Juergen Schirmer</Term>
+											<Description>
+												<Para ID="Par73">Robert Bosch, Stuttgart, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Aviral Shrivastava</Term>
+											<Description>
+												<Para ID="Par74">Arizona State University, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Charles Steinmetz</Term>
+											<Description>
+												<Para ID="Par75">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Joachim Stroop</Term>
+											<Description>
+												<Para ID="Par76">dSPACE, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Hamed Tabkhi</Term>
+											<Description>
+												<Para ID="Par77">Northeastern University Boston, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Hiroyuki Tomiyama</Term>
+											<Description>
+												<Para ID="Par78">Ritsumeikan University, Japan</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Flavio Rech Wagner</Term>
+											<Description>
+												<Para ID="Par79">Federal University of Rio Grande do Sul, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marco Wehrmeister</Term>
+											<Description>
+												<Para ID="Par80">Federal University of Technology Parana, Brazil</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Marilyn Wolf</Term>
+											<Description>
+												<Para ID="Par81">Georgia Institute of Technology, USA</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Mauro Zanella</Term>
+											<Description>
+												<Para ID="Par82">ZF Friedrichshafen, Germany</Para>
+											</Description>
+										</DefinitionListEntry>
+										<DefinitionListEntry>
+											<Term>Jianwen Zhu</Term>
+											<Description>
+												<Para ID="Par83">University of Toronto, Canada</Para>
+											</Description>
+										</DefinitionListEntry>
+									</DefinitionList>
+								</Para>
+							</Section1>
+							<Section1 ID="Sec5">
+								<Heading>Co-organizing Institution</Heading>
+								<Para ID="Par84">IFIP TC 10, WG 10.2 and WG 10.5</Para>
+							</Section1>
+						</Body>
+					</BookNotes>
+					<Toc>
+						<Heading>Contents</Heading>
+						<TocPart>
+							<TocEntry>Embedded Real-Time Systems</TocEntry>
+							<TocChapter>
+								<TocEntry PageNumber="3">
+									<ExternalRef>
+										<RefSource>A Real-Time Operating System for Cyber-Physical Systems Based on Physical Time and Logical Time</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_1"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Keiko</GivenName>
+										<FamilyName>Amadera</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Ayumu</GivenName>
+										<FamilyName>Ichimura</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Takanori</GivenName>
+										<FamilyName>Yokoyama</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Myungryun</GivenName>
+										<FamilyName>Yoo</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="15">
+									<ExternalRef>
+										<RefSource>A Proposal to Trace and Maintain Requirements Constraints of Real-time Embedded Systems</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_2"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Fabíola</GivenName>
+										<GivenName>Gonçalves</GivenName>
+										<GivenName>C.</GivenName>
+										<FamilyName>Ribeiro</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Achim</GivenName>
+										<FamilyName>Rettberg</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Carlos</GivenName>
+										<GivenName>E.</GivenName>
+										<FamilyName>Pereira</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Charles</GivenName>
+										<FamilyName>Steinmetz</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Michel</GivenName>
+										<GivenName>S.</GivenName>
+										<FamilyName>Soares</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="27">
+									<ExternalRef>
+										<RefSource>A Comparative Analysis Between SysML and AADL When Modeling a Real-Time System</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_3"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Quelita</GivenName>
+										<GivenName>A.</GivenName>
+										<GivenName>D.</GivenName>
+										<GivenName>S.</GivenName>
+										<FamilyName>Ribeiro</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Achim</GivenName>
+										<FamilyName>Rettberg</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Fabíola</GivenName>
+										<GivenName>Gonçalves</GivenName>
+										<GivenName>C.</GivenName>
+										<FamilyName>Ribeiro</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Michel</GivenName>
+										<GivenName>S.</GivenName>
+										<FamilyName>Soares</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="39">
+									<ExternalRef>
+										<RefSource>Design, Implementation, and Evaluation of a Real Time Localization System for the Optimization of Agitation Processes</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_4"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Andreas</GivenName>
+										<FamilyName>Heller</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Ludwig</GivenName>
+										<FamilyName>Horsthemke</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Peter</GivenName>
+										<FamilyName>Glösekötter</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+						</TocPart>
+						<TocPart>
+							<TocEntry>Estimations</TocEntry>
+							<TocChapter>
+								<TocEntry PageNumber="53">
+									<ExternalRef>
+										<RefSource>Improving Estimations for Latencies of Cause-Effect Chains</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_5"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Max</GivenName>
+										<GivenName>J.</GivenName>
+										<FamilyName>Friese</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Thorsten</GivenName>
+										<FamilyName>Ehlers</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Dirk</GivenName>
+										<FamilyName>Nowotka</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="65">
+									<ExternalRef>
+										<RefSource>Workload Characterization for Memory Management in Emerging Embedded Platforms</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_6"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Biswadip</GivenName>
+										<FamilyName>Maity</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Bryan</GivenName>
+										<FamilyName>Donyanavard</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Nalini</GivenName>
+										<FamilyName>Venkatasubramanian</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Nikil</GivenName>
+										<FamilyName>Dutt</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="77">
+									<ExternalRef>
+										<RefSource>Tool and Method for Obtaining End-to-End Reliability Parameters of Wireless Industrial Networks</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_7"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Christian</GivenName>
+										<GivenName>Alan</GivenName>
+										<FamilyName>Krötz</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Max</GivenName>
+										<FamilyName>Feldman</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Gustavo</GivenName>
+										<GivenName>Pedroso</GivenName>
+										<FamilyName>Cainelli</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Gustavo</GivenName>
+										<FamilyName>Künzel</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Carlos</GivenName>
+										<GivenName>Eduardo</GivenName>
+										<FamilyName>Pereira</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Ivan</GivenName>
+										<FamilyName>Müller</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+						</TocPart>
+						<TocPart>
+							<TocEntry>Architecture and Application</TocEntry>
+							<TocChapter>
+								<TocEntry PageNumber="91">
+									<ExternalRef>
+										<RefSource>Towards ASIP Architecture-Driven Algorithm Development</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_8"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Manil</GivenName>
+										<GivenName>Dev</GivenName>
+										<FamilyName>Gomony</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Mihaela</GivenName>
+										<FamilyName>Jivanescu</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Nikolas</GivenName>
+										<FamilyName>Olaziregi</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="101">
+									<ExternalRef>
+										<RefSource>Using Data Mining and Mobile Devices to Assist the Interactive Automotive Diagnostics</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_9"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Leonardo</GivenName>
+										<GivenName>P.</GivenName>
+										<Particle>de</Particle>
+										<FamilyName>Oliveira</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Marco</GivenName>
+										<GivenName>A.</GivenName>
+										<FamilyName>Wehrmeister</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Andre</GivenName>
+										<GivenName>S.</GivenName>
+										<Particle>de</Particle>
+										<FamilyName>Oliveira</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+						</TocPart>
+						<TocPart>
+							<TocEntry>Algorithm and System C</TocEntry>
+							<TocChapter>
+								<TocEntry PageNumber="117">
+									<ExternalRef>
+										<RefSource>An Untimed SystemC Model of GoogLeNet</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_10"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Emad</GivenName>
+										<GivenName>Malekzadeh</GivenName>
+										<FamilyName>Arasteh</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Rainer</GivenName>
+										<FamilyName>Dömer</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="130">
+									<ExternalRef>
+										<RefSource>An Efficient Lightweight Framework for Porting Vision Algorithms on Embedded SoCs</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_11"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Apurv</GivenName>
+										<FamilyName>Ashish</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Sohan</GivenName>
+										<FamilyName>Lal</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Ben</GivenName>
+										<FamilyName>Juurlink</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+						</TocPart>
+						<TocPart>
+							<TocEntry>Analysis</TocEntry>
+							<TocChapter>
+								<TocEntry PageNumber="145">
+									<ExternalRef>
+										<RefSource>IoT Assistant for People with Visual Impairment in Edge Computing</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_12"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Manoel</GivenName>
+										<GivenName>José</GivenName>
+										<GivenName>S.</GivenName>
+										<FamilyName>Júnior</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Horácio</GivenName>
+										<GivenName>F.</GivenName>
+										<FamilyName>Oliveira</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Raimundo</GivenName>
+										<GivenName>S.</GivenName>
+										<FamilyName>Barreto</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="155">
+									<ExternalRef>
+										<RefSource>Analysis of Low Cost Sensors Applied to the Detection of Obstacles in High Voltage Towers</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_13"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Guido</GivenName>
+										<GivenName>Szekir</GivenName>
+										<FamilyName>Berger</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Matheus</GivenName>
+										<GivenName>Fellype</GivenName>
+										<FamilyName>Ferraz</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Álvaro</GivenName>
+										<GivenName>Rogério</GivenName>
+										<FamilyName>Cantieri</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Marco</GivenName>
+										<GivenName>Aurélio</GivenName>
+										<FamilyName>Wehrmeister</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="167">
+									<ExternalRef>
+										<RefSource>Monitoring of an Artificial DNA in Dynamic Environments</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_14"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Mathias</GivenName>
+										<FamilyName>Pacher</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Uwe</GivenName>
+										<FamilyName>Brinkschulte</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+							<TocChapter>
+								<TocEntry PageNumber="179">
+									<ExternalRef>
+										<RefSource>Design and Analysis of an Online Update Approach for Embedded Microprocessors</RefSource>
+										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_15"/>
+									</ExternalRef>
+								</TocEntry>
+								<Author>
+									<AuthorName>
+										<GivenName>Patrick</GivenName>
+										<FamilyName>Uven</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Philipp</GivenName>
+										<FamilyName>Ittershagen</FamilyName>
+									</AuthorName>
+								</Author>
+								<Author>
+									<AuthorName>
+										<GivenName>Kim</GivenName>
+										<FamilyName>Grüttner</FamilyName>
+									</AuthorName>
+								</Author>
+							</TocChapter>
+						</TocPart>
+						<TocBack PageNumber="189">
+							<ExternalRef>
+								<RefSource>Author Index</RefSource>
+								<RefTarget TargetType="BackmatterID" Address="Ind1"/>
+							</ExternalRef>
+						</TocBack>
+					</Toc>
+				</BodyFrontmatter>
+				
+			<BodyRef FileRef="543965_1_En_BookFrontmatter_OnlinePDF.pdf" TargetType="OnlinePDF" PDFType="Typeset"/>
+	</BookFrontmatter>
+		</Book>
+	
+</Series>
+</Publisher>

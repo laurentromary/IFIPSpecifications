@@ -1,9 +1,8 @@
 
 <!--
-DTD generated from ODD source 2023-10-12T06:05:06Z. .CC-BY
-TEI Edition: Version 4.6.0. Last updated on
-        4th April 2023, revision f18deffba
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.6.0/
+DTD generated from ODD source 2024-05-10T06:54:09Z. .CC-BY
+TEI Edition: P5 Version 4.7.0. Last updated on 16th November 2023, revision e5dd73ed0 
+TEI Edition Location: https://www.tei-c.org/Vault/P5/4.7.0/
 
 -->
 
@@ -1824,7 +1823,7 @@ Letters CDATA  #IMPLIED >
 <!--doc: -->
 <!ELEMENT TocAppendix ((Heading)?,(SubHeading)?,(TocEntry,(Author|InstitutionalAuthor)*)?,(TocSection1)*)>
 <!--doc: -->
-<!ELEMENT TocBack %macro.SimpleTextModel;>
+<!ELEMENT TocBack (#PCDATA|%model.simpleText;|ExternalRef)*>
 <!ATTLIST TocBack
 PageNumber CDATA #IMPLIED >
 <!--doc: -->
