@@ -3774,6 +3774,44 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
+                    
+                    <elementSpec ident="InstitutionalEditor">
+                        <classes>
+                            <memberOf key="att.ID"/>
+                        </classes>
+                        <content>
+                            <rng:group>
+                                <rng:ref name="InstitutionalEditorName"/>
+                                <rng:optional>
+                                    <rng:ref name="Contact"/>
+                                </rng:optional>
+                            </rng:group>
+                        </content>
+                        <attList>
+                            <attDef ident="AffiliationIDS">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="SAPID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="SpringerReferenceID">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    
+                    <elementSpec ident="InstitutionalEditorName">
+                        <content>
+                            <rng:text/>
+                        </content>
+                    </elementSpec>
 
                     <elementSpec ident="BibInstitutionalEditorName">
                         <content>

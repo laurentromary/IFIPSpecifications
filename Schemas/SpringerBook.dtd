@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2024-05-10T06:54:09Z. .CC-BY
+DTD generated from ODD source 2024-06-17T14:42:14Z. .CC-BY
 TEI Edition: P5 Version 4.7.0. Last updated on 16th November 2023, revision e5dd73ed0 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.7.0/
 
@@ -1290,6 +1290,15 @@ SpringerReferenceID CDATA #IMPLIED >
 <!--doc: -->
 <!ELEMENT InstitutionalAuthorName  (#PCDATA)>
 <!--doc: -->
+<!ELEMENT InstitutionalEditor (InstitutionalEditorName,Contact?)>
+<!ATTLIST InstitutionalEditor
+ %att.ID.attributes;
+AffiliationIDS CDATA #IMPLIED
+SAPID CDATA #IMPLIED
+SpringerReferenceID CDATA #IMPLIED >
+<!--doc: -->
+<!ELEMENT InstitutionalEditorName  (#PCDATA)>
+<!--doc: -->
 <!ELEMENT InternalRef %macro.SimpleTextModel;>
 <!ATTLIST InternalRef
  %att.ID.attributes;
@@ -1514,7 +1523,7 @@ ProofStage CDATA #IMPLIED
 ProofAuthorDays CDATA #IMPLIED
 ProofRevisionNumber CDATA #IMPLIED >
 <!--doc: -->
-<!ELEMENT ProofRecipient (Author|ProductionEditor|Editor|InstitutionalAuthor)*>
+<!ELEMENT ProofRecipient (Author|ProductionEditor|Editor|InstitutionalAuthor|InstitutionalEditor)*>
 <!ATTLIST ProofRecipient
 ProofType CDATA #IMPLIED
 CorrectionsRequired CDATA #IMPLIED >

@@ -7,11 +7,14 @@
 		<PublisherImprintName>Springer</PublisherImprintName>
 		<PublisherLogo>
 			<Figure Category="Standard" Float="No" ID="Figa">
-				
-<MediaObject ID="MO1">
-					
-<ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_HTML.png" Format="PNG" Color="BlackWhite" Type="Linedraw" Rendition="HTML" Height="97" Resolution="300" Width="364"></ImageObject><ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_Print.eps" Format="EPS" Color="BlackWhite" Type="Linedraw" Rendition="Print"></ImageObject>
-</MediaObject>
+
+				<MediaObject ID="MO1">
+
+					<ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_HTML.png" Format="PNG" Color="BlackWhite"
+						Type="Linedraw" Rendition="HTML" Height="97" Resolution="300" Width="364"/>
+					<ImageObject FileRef="543965_1_En_BookFrontmatter_Figa_Print.eps" Format="EPS" Color="BlackWhite"
+						Type="Linedraw" Rendition="Print"/>
+				</MediaObject>
 
 			</Figure>
 		</PublisherLogo>
@@ -33,7 +36,8 @@
 						<FamilyName>Rannenberg</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff2" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-5037-2588">
+				<Collaborator AffiliationIDS="Aff2" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0002-5037-2588">
 					<CollaboratorName>
 						<GivenName>Luís</GivenName>
 						<FamilyName>Soares Barbosa</FamilyName>
@@ -45,7 +49,8 @@
 						<FamilyName>Goedicke</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff4" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-4317-971X">
+				<Collaborator AffiliationIDS="Aff4" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0003-4317-971X">
 					<CollaboratorName>
 						<GivenName>Arthur</GivenName>
 						<FamilyName>Tatnall</FamilyName>
@@ -76,31 +81,36 @@
 						<FamilyName>Pries-Heje</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff9" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-5776-2888">
+				<Collaborator AffiliationIDS="Aff9" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0002-5776-2888">
 					<CollaboratorName>
 						<GivenName>David</GivenName>
 						<FamilyName>Kreps</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff10" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0001-5781-5858">
+				<Collaborator AffiliationIDS="Aff10" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0001-5781-5858">
 					<CollaboratorName>
 						<GivenName>Ricardo</GivenName>
 						<FamilyName>Reis</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff11" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-0984-7542">
+				<Collaborator AffiliationIDS="Aff11" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0003-0984-7542">
 					<CollaboratorName>
 						<GivenName>Steven</GivenName>
 						<FamilyName>Furnell</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff12" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0003-2303-7263">
+				<Collaborator AffiliationIDS="Aff12" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0003-2303-7263">
 					<CollaboratorName>
 						<GivenName>Eunika</GivenName>
 						<FamilyName>Mercier-Laurent</FamilyName>
 					</CollaboratorName>
 				</Collaborator>
-				<Collaborator AffiliationIDS="Aff13" Type="Editorial Board Member" ORCID="https://orcid.org/0000-0002-0756-6934">
+				<Collaborator AffiliationIDS="Aff13" Type="Editorial Board Member"
+					ORCID="https://orcid.org/0000-0002-0756-6934">
 					<CollaboratorName>
 						<GivenName>Marco</GivenName>
 						<FamilyName>Winckler</FamilyName>
@@ -207,9 +217,17 @@
 				<Para>
 					<Emphasis Type="Bold">IFIP Advances in Information and Communication Technology</Emphasis>
 				</Para>
-				<Para>The IFIP AICT series publishes state-of-the-art results in the sciences and technologies of information and communication. The scope of the series includes: foundations of computer science; software theory and practice; education; computer applications in technology; communication systems; systems modeling and optimization; information systems; ICT and society; computer systems technology; security and protection in information processing systems; artificial intelligence; and human-computer interaction.</Para>
-				<Para>Edited volumes and proceedings of refereed international conferences in computer science and interdisciplinary fields are featured. These results often precede journal publication and represent the most current research.</Para>
-				<Para>The principal aim of the IFIP AICT series is to encourage education and the dissemination and exchange of information about all aspects of computing.</Para>
+				<Para>The IFIP AICT series publishes state-of-the-art results in the sciences and technologies of
+					information and communication. The scope of the series includes: foundations of computer science;
+					software theory and practice; education; computer applications in technology; communication systems;
+					systems modeling and optimization; information systems; ICT and society; computer systems
+					technology; security and protection in information processing systems; artificial intelligence; and
+					human-computer interaction.</Para>
+				<Para>Edited volumes and proceedings of refereed international conferences in computer science and
+					interdisciplinary fields are featured. These results often precede journal publication and represent
+					the most current research.</Para>
+				<Para>The principal aim of the IFIP AICT series is to encourage education and the dissemination and
+					exchange of information about all aspects of computing.</Para>
 				<Para>More information about this series at <ExternalRef>
 						<RefSource>https://link.springer.com/bookseries/6102</RefSource>
 						<RefTarget Address="https://link.springer.com/bookseries/6102" TargetType="URL"/>
@@ -218,10 +236,12 @@
 			</SeriesInformationText>
 		</SeriesHeader>
 		<Book Language="En">
-			<BookInfo Language="En" BookProductType="Proceedings" TocLevels="0" ContainsESM="No" NumberingStyle="ContentOnly" NumberingDepth="3" OutputMedium="All" MediaType="Book">
+			<BookInfo Language="En" BookProductType="Proceedings" TocLevels="0" ContainsESM="No"
+				NumberingStyle="ContentOnly" NumberingDepth="3" OutputMedium="All" MediaType="Book"><IFIPentity></IFIPentity>
 				<BookID>543965_1_En</BookID>
 				<BookTitle>Analysis, Estimations, and Applications of Embedded Systems</BookTitle>
-				<BookSubTitle>6th IFIP TC 10 International Embedded Systems Symposium, IESS 2019, Friedrichshafen, Germany, September 9–11, 2019, Revised Selected Papers</BookSubTitle>
+				<BookSubTitle>6th IFIP TC 10 International Embedded Systems Symposium, IESS 2019, Friedrichshafen,
+					Germany, September 9–11, 2019, Revised Selected Papers</BookSubTitle>
 				<BookVolumeNumber>576</BookVolumeNumber>
 				<BookDOI>10.1007/978-3-031-26500-6</BookDOI>
 				<BookTitleID>543965</BookTitleID>
@@ -232,17 +252,33 @@
 				<BookCopyright>
 					<CopyrightHolderName>IFIP International Federation for Information Processing</CopyrightHolderName>
 					<CopyrightYear>2023</CopyrightYear>
-					<CopyrightStandardText Language="En">This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or part of the material is concerned, specifically the rights of translation, reprinting, reuse of illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way, and transmission or information storage and retrieval, electronic adaptation, computer software, or by similar or dissimilar methodology now known or hereafter developed.</CopyrightStandardText>
-					<TrademarkQualifierText Language="En">The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective laws and regulations and therefore free for general use.</TrademarkQualifierText>
-					<ProductLiability Language="En">The publisher, the authors, and the editors are safe to assume that the advice and information in this book are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the editors give a warranty, expressed or implied, with respect to the material contained herein or for any errors or omissions that may have been made. The publisher remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</ProductLiability>
+					<CopyrightStandardText Language="En">This work is subject to copyright. All rights are reserved by
+						the Publisher, whether the whole or part of the material is concerned, specifically the rights
+						of translation, reprinting, reuse of illustrations, recitation, broadcasting, reproduction on
+						microfilms or in any other physical way, and transmission or information storage and retrieval,
+						electronic adaptation, computer software, or by similar or dissimilar methodology now known or
+						hereafter developed.</CopyrightStandardText>
+					<TrademarkQualifierText Language="En">The use of general descriptive names, registered names,
+						trademarks, service marks, etc. in this publication does not imply, even in the absence of a
+						specific statement, that such names are exempt from the relevant protective laws and regulations
+						and therefore free for general use.</TrademarkQualifierText>
+					<ProductLiability Language="En">The publisher, the authors, and the editors are safe to assume that
+						the advice and information in this book are believed to be true and accurate at the date of
+						publication. Neither the publisher nor the authors or the editors give a warranty, expressed or
+						implied, with respect to the material contained herein or for any errors or omissions that may
+						have been made. The publisher remains neutral with regard to jurisdictional claims in published
+						maps and institutional affiliations.</ProductLiability>
 					<SpringerReferenceLine Language="En">
-						<SimplePara>This Springer imprint is published by the registered company Springer Nature Switzerland AG</SimplePara>
-						<SimplePara>The registered company address is: Gewerbestrasse 11, 6330 Cham, Switzerland</SimplePara>
+						<SimplePara>This Springer imprint is published by the registered company Springer Nature
+							Switzerland AG</SimplePara>
+						<SimplePara>The registered company address is: Gewerbestrasse 11, 6330 Cham,
+							Switzerland</SimplePara>
 					</SpringerReferenceLine>
 				</BookCopyright>
 				<BookSubjectGroup>
 					<BookSubject Code="SCI" Type="Primary">Computer Science</BookSubject>
-					<BookSubject Code="SCI13030" Type="Secondary" Priority="1">Special Purpose and Application-Based Systems</BookSubject>
+					<BookSubject Code="SCI13030" Type="Secondary" Priority="1">Special Purpose and Application-Based
+						Systems</BookSubject>
 				</BookSubjectGroup>
 				<BookContext>
 					<SeriesID>6102</SeriesID>
@@ -407,18 +443,93 @@
 							</Author>
 						</AuthorGroup>
 						<Body>
-							<Para ID="Par1">This book publishes the research and technical works presented at the International Embedded Systems Symposium (IESS) 2019. Deep and fruitful discussions occurred during the event covering several aspects of modern embedded and cyber-physical systems. This book presents tendencies and solutions for problems tightly coupled to industry, ranging from new methodologies to novel hardware designs, analysis approaches, and real-world application examples.</Para>
-							<Para ID="Par2">A broad discussion on the design, analysis, and verification of embedded and cyber-physical systems is presented in a complementary view throughout the chapters of this book. The presented research and technical works cover system-level design methods, algorithms, verification and validation techniques, estimation of system properties and characteristics, performance analysis, and real-time systems design. Also, the book presents industrial and real-world application case studies that discuss the challenges and realizations of embedded systems.</Para>
-							<Para ID="Par3">Technological advances over recent years have provided a resourceful infrastructure to embedded systems through enormous processing and storage capacity. Formerly external components can now be integrated into a single System-on-Chip. This tendency results in a dramatic reduction in the size and cost of embedded systems. Such hardware infrastructures enable increasing numbers of services, allowing embedded systems to support many application areas (including cyber-physical applications). As a unique technology, the design of embedded systems is an essential element of many innovations.</Para>
-							<Para ID="Par4">Embedded systems meet their performance goals, including real-time constraints, employing a combination of special-purpose hardware and software components tailored to the system requirements. Both the development of new features and the reuse of existing intellectual property components are essential to keep up with ever-demanding customer requirements. Furthermore, design complexities are steadily growing with an increasing number of components that must cooperate properly. Embedded system designers must cope with multiple goals and constraints simultaneously, including timing, power, reliability, dependability, maintenance, packaging, and, last but not least, price.</Para>
-							<Para ID="Par5">The significance and importance of these constraints vary depending on the target application area. Typical embedded applications include consumer electronics, automotive, avionics, medical, industrial automation, robotics, communication devices, and others.</Para>
-							<Para ID="Par6">The International Embedded Systems Symposium (IESS) is a unique forum to present novel ideas, exchange timely research results, and discuss the state of the art and future trends in the field of embedded systems. Contributors and participants from both industry and academia take an active part in this symposium. The IESS conference is organized by the Computer Systems Technology committee (TC10) of the International Federation for Information Processing (IFIP), especially the Working Group 10.2 “Embedded Systems”.</Para>
-							<Para ID="Par7">IESS is a truly interdisciplinary conference on the design of embedded systems. Computer Science and Electrical Engineering are the predominant academic disciplines concerned with the topics covered in IESS, but many applications also involve civil, mechanical, aerospace, and automotive engineering, as well as various medical disciplines.</Para>
-							<Para ID="Par8">In 2005, IESS was held for the first time in Manaus, Brazil. IESS 2005 was very successful, with 30 accepted papers ranging from specification to embedded systems applications. IESS 2007 was the second edition of the symposium held in Irvine in the US, with 35 accepted papers and 2 tutorials ranging from analysis and design methodologies to case studies from automotive and medical applications. IESS 2009 took place in the wonderful Schloß Montfort in Langenargen, Germany with 28 accepted papers and 2 tutorials ranging from efficient modeling towards challenges for designers of fault-tolerant embedded systems. IESS 2013 was held in Paderborn, Germany, at the Heinz Nixdorf MuseumsForum (HNF) with 22 full papers, and 8 short papers. IESS 2015 was held in Foz do Iguaçu, Brazil, close to the beautiful Iguaçu Falls, with 12 full papers and 6 short papers.</Para>
-							<Para ID="Par9">The sixth edition, IESS 2019, was held in Friedrichshafen, Germany, on the northern shoreline of the delightful Lake Constance (Bodensee). The articles presented in this book are the result of a rigorous review process implemented by the technical program committee. Out of 32 valid submissions, 16 full papers were accepted, yielding an acceptance rate of 50%. Also, 4 short papers are included yielding an overall acceptance rate of 62.5%. From this total, 4 full papers were published as an extended version in the International Journal of Parallel Programming, Springer. Since that journal issue was published before this proceedings volume, these were not included in this publication.</Para>
-							<Para ID="Par10">The technical program of IESS 2019 included sessions with complementary and interdisciplinary themes, e.g., embedded real-time systems, system architecture design, algorithms, embedded hardware, estimation and analysis, and applications. Remarkably interesting keynotes on diverse topics, such as computational self-awareness, a paradigm for adaptive, resilient embedded computing, were included in the technical program, along with some invited talks on evaluating soft errors in multi-core systems, digitalization in the automotive world, modern human-machine interfaces for the automotive industry, and scientific and technical presentations.</Para>
-							<Para ID="Par11">All editors of this volume cited below, besides their formal roles, were involved in the discussions and decisions made during the review phase, and during the development of this volume. We are a small group involved in the organization of this conference and previous editions, and we were pleased to organize a highly successful conference in 2019 with fruitful and lively discussions.</Para>
-							<Para ID="Par12">We thank our sponsors, ZF Friedrichshafen AG, BHTC GmbH, the IFIP WG 10.2 on Embedded Systems, the Gesellschaft für Informatik e.V. (GI), and the Hamm-Lippstadt University of Applied Sciences, for their generous financial support of this conference. Without these contributions, IESS 2019 would not have been possible in its current form. We would also like to thank IFIP as the organizational body for the promotion and support of the IESS conference. And, last but not least, we thank the authors for their interesting research contributions and the members of the technical program committee for their valuable time and effort in reviewing the articles.</Para>
+							<Para ID="Par1">This book publishes the research and technical works presented at the
+								International Embedded Systems Symposium (IESS) 2019. Deep and fruitful discussions
+								occurred during the event covering several aspects of modern embedded and cyber-physical
+								systems. This book presents tendencies and solutions for problems tightly coupled to
+								industry, ranging from new methodologies to novel hardware designs, analysis approaches,
+								and real-world application examples.</Para>
+							<Para ID="Par2">A broad discussion on the design, analysis, and verification of embedded and
+								cyber-physical systems is presented in a complementary view throughout the chapters of
+								this book. The presented research and technical works cover system-level design methods,
+								algorithms, verification and validation techniques, estimation of system properties and
+								characteristics, performance analysis, and real-time systems design. Also, the book
+								presents industrial and real-world application case studies that discuss the challenges
+								and realizations of embedded systems.</Para>
+							<Para ID="Par3">Technological advances over recent years have provided a resourceful
+								infrastructure to embedded systems through enormous processing and storage capacity.
+								Formerly external components can now be integrated into a single System-on-Chip. This
+								tendency results in a dramatic reduction in the size and cost of embedded systems. Such
+								hardware infrastructures enable increasing numbers of services, allowing embedded
+								systems to support many application areas (including cyber-physical applications). As a
+								unique technology, the design of embedded systems is an essential element of many
+								innovations.</Para>
+							<Para ID="Par4">Embedded systems meet their performance goals, including real-time
+								constraints, employing a combination of special-purpose hardware and software components
+								tailored to the system requirements. Both the development of new features and the reuse
+								of existing intellectual property components are essential to keep up with
+								ever-demanding customer requirements. Furthermore, design complexities are steadily
+								growing with an increasing number of components that must cooperate properly. Embedded
+								system designers must cope with multiple goals and constraints simultaneously, including
+								timing, power, reliability, dependability, maintenance, packaging, and, last but not
+								least, price.</Para>
+							<Para ID="Par5">The significance and importance of these constraints vary depending on the
+								target application area. Typical embedded applications include consumer electronics,
+								automotive, avionics, medical, industrial automation, robotics, communication devices,
+								and others.</Para>
+							<Para ID="Par6">The International Embedded Systems Symposium (IESS) is a unique forum to
+								present novel ideas, exchange timely research results, and discuss the state of the art
+								and future trends in the field of embedded systems. Contributors and participants from
+								both industry and academia take an active part in this symposium. The IESS conference is
+								organized by the Computer Systems Technology committee (TC10) of the International
+								Federation for Information Processing (IFIP), especially the Working Group 10.2
+								“Embedded Systems”.</Para>
+							<Para ID="Par7">IESS is a truly interdisciplinary conference on the design of embedded
+								systems. Computer Science and Electrical Engineering are the predominant academic
+								disciplines concerned with the topics covered in IESS, but many applications also
+								involve civil, mechanical, aerospace, and automotive engineering, as well as various
+								medical disciplines.</Para>
+							<Para ID="Par8">In 2005, IESS was held for the first time in Manaus, Brazil. IESS 2005 was
+								very successful, with 30 accepted papers ranging from specification to embedded systems
+								applications. IESS 2007 was the second edition of the symposium held in Irvine in the
+								US, with 35 accepted papers and 2 tutorials ranging from analysis and design
+								methodologies to case studies from automotive and medical applications. IESS 2009 took
+								place in the wonderful Schloß Montfort in Langenargen, Germany with 28 accepted papers
+								and 2 tutorials ranging from efficient modeling towards challenges for designers of
+								fault-tolerant embedded systems. IESS 2013 was held in Paderborn, Germany, at the Heinz
+								Nixdorf MuseumsForum (HNF) with 22 full papers, and 8 short papers. IESS 2015 was held
+								in Foz do Iguaçu, Brazil, close to the beautiful Iguaçu Falls, with 12 full papers and 6
+								short papers.</Para>
+							<Para ID="Par9">The sixth edition, IESS 2019, was held in Friedrichshafen, Germany, on the
+								northern shoreline of the delightful Lake Constance (Bodensee). The articles presented
+								in this book are the result of a rigorous review process implemented by the technical
+								program committee. Out of 32 valid submissions, 16 full papers were accepted, yielding
+								an acceptance rate of 50%. Also, 4 short papers are included yielding an overall
+								acceptance rate of 62.5%. From this total, 4 full papers were published as an extended
+								version in the International Journal of Parallel Programming, Springer. Since that
+								journal issue was published before this proceedings volume, these were not included in
+								this publication.</Para>
+							<Para ID="Par10">The technical program of IESS 2019 included sessions with complementary and
+								interdisciplinary themes, e.g., embedded real-time systems, system architecture design,
+								algorithms, embedded hardware, estimation and analysis, and applications. Remarkably
+								interesting keynotes on diverse topics, such as computational self-awareness, a paradigm
+								for adaptive, resilient embedded computing, were included in the technical program,
+								along with some invited talks on evaluating soft errors in multi-core systems,
+								digitalization in the automotive world, modern human-machine interfaces for the
+								automotive industry, and scientific and technical presentations.</Para>
+							<Para ID="Par11">All editors of this volume cited below, besides their formal roles, were
+								involved in the discussions and decisions made during the review phase, and during the
+								development of this volume. We are a small group involved in the organization of this
+								conference and previous editions, and we were pleased to organize a highly successful
+								conference in 2019 with fruitful and lively discussions.</Para>
+							<Para ID="Par12">We thank our sponsors, ZF Friedrichshafen AG, BHTC GmbH, the IFIP WG 10.2
+								on Embedded Systems, the Gesellschaft für Informatik e.V. (GI), and the Hamm-Lippstadt
+								University of Applied Sciences, for their generous financial support of this conference.
+								Without these contributions, IESS 2019 would not have been possible in its current form.
+								We would also like to thank IFIP as the organizational body for the promotion and
+								support of the IESS conference. And, last but not least, we thank the authors for their
+								interesting research contributions and the members of the technical program committee
+								for their valuable time and effort in reviewing the articles.</Para>
 						</Body>
 					</Preface>
 					<BookNotes>
@@ -450,13 +561,15 @@
 										<DefinitionListEntry>
 											<Term>Stefan Henkler</Term>
 											<Description>
-												<Para ID="Par21">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+												<Para ID="Par21">University of Applied Sciences Hamm-Lippstadt,
+													Germany</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
 											<Term>Marcio Kreutz</Term>
 											<Description>
-												<Para ID="Par22">Federal University of Rio Grande do Norte, Brazil</Para>
+												<Para ID="Par22">Federal University of Rio Grande do Norte,
+													Brazil</Para>
 											</Description>
 										</DefinitionListEntry>
 									</DefinitionList>
@@ -469,7 +582,8 @@
 										<DefinitionListEntry>
 											<Term>Achim Rettberg</Term>
 											<Description>
-												<Para ID="Par23">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+												<Para ID="Par23">University of Applied Sciences Hamm-Lippstadt,
+													Germany</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
@@ -626,7 +740,8 @@
 										<DefinitionListEntry>
 											<Term>Stefan Henkler</Term>
 											<Description>
-												<Para ID="Par48">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+												<Para ID="Par48">University of Applied Sciences Hamm-Lippstadt,
+													Germany</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
@@ -692,7 +807,8 @@
 										<DefinitionListEntry>
 											<Term>Marcio Kreutz</Term>
 											<Description>
-												<Para ID="Par59">Federal University of Rio Grande do Norte, Brazil</Para>
+												<Para ID="Par59">Federal University of Rio Grande do Norte,
+													Brazil</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
@@ -764,7 +880,8 @@
 										<DefinitionListEntry>
 											<Term>Achim Rettberg</Term>
 											<Description>
-												<Para ID="Par71">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+												<Para ID="Par71">University of Applied Sciences Hamm-Lippstadt,
+													Germany</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
@@ -788,7 +905,8 @@
 										<DefinitionListEntry>
 											<Term>Charles Steinmetz</Term>
 											<Description>
-												<Para ID="Par75">University of Applied Sciences Hamm-Lippstadt, Germany</Para>
+												<Para ID="Par75">University of Applied Sciences Hamm-Lippstadt,
+													Germany</Para>
 											</Description>
 										</DefinitionListEntry>
 										<DefinitionListEntry>
@@ -855,7 +973,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="3">
 									<ExternalRef>
-										<RefSource>A Real-Time Operating System for Cyber-Physical Systems Based on Physical Time and Logical Time</RefSource>
+										<RefSource>A Real-Time Operating System for Cyber-Physical Systems Based
+											on Physical Time and Logical Time</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_1"/>
 									</ExternalRef>
 								</TocEntry>
@@ -887,7 +1006,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="15">
 									<ExternalRef>
-										<RefSource>A Proposal to Trace and Maintain Requirements Constraints of Real-time Embedded Systems</RefSource>
+										<RefSource>A Proposal to Trace and Maintain Requirements Constraints
+											of Real-time Embedded Systems</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_2"/>
 									</ExternalRef>
 								</TocEntry>
@@ -929,7 +1049,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="27">
 									<ExternalRef>
-										<RefSource>A Comparative Analysis Between SysML and AADL When Modeling a Real-Time System</RefSource>
+										<RefSource>A Comparative Analysis Between SysML and AADL When Modeling
+											a Real-Time System</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_3"/>
 									</ExternalRef>
 								</TocEntry>
@@ -967,7 +1088,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="39">
 									<ExternalRef>
-										<RefSource>Design, Implementation, and Evaluation of a Real Time Localization System for the Optimization of Agitation Processes</RefSource>
+										<RefSource>Design, Implementation, and Evaluation of a Real Time Localization
+											System for the Optimization of Agitation Processes</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_4"/>
 									</ExternalRef>
 								</TocEntry>
@@ -996,7 +1118,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="53">
 									<ExternalRef>
-										<RefSource>Improving Estimations for Latencies of Cause-Effect Chains</RefSource>
+										<RefSource>Improving Estimations for Latencies of Cause-Effect
+											Chains</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_5"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1023,7 +1146,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="65">
 									<ExternalRef>
-										<RefSource>Workload Characterization for Memory Management in Emerging Embedded Platforms</RefSource>
+										<RefSource>Workload Characterization for Memory Management in Emerging Embedded
+											Platforms</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_6"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1055,7 +1179,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="77">
 									<ExternalRef>
-										<RefSource>Tool and Method for Obtaining End-to-End Reliability Parameters of Wireless Industrial Networks</RefSource>
+										<RefSource>Tool and Method for Obtaining End-to-End Reliability Parameters
+											of Wireless Industrial Networks</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_7"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1132,7 +1257,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="101">
 									<ExternalRef>
-										<RefSource>Using Data Mining and Mobile Devices to Assist the Interactive Automotive Diagnostics</RefSource>
+										<RefSource>Using Data Mining and Mobile Devices to Assist the Interactive
+											Automotive Diagnostics</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_9"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1187,7 +1313,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="130">
 									<ExternalRef>
-										<RefSource>An Efficient Lightweight Framework for Porting Vision Algorithms on Embedded SoCs</RefSource>
+										<RefSource>An Efficient Lightweight Framework for Porting Vision Algorithms
+											on Embedded SoCs</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_11"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1216,7 +1343,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="145">
 									<ExternalRef>
-										<RefSource>IoT Assistant for People with Visual Impairment in Edge Computing</RefSource>
+										<RefSource>IoT Assistant for People with Visual Impairment in Edge
+											Computing</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_12"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1246,7 +1374,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="155">
 									<ExternalRef>
-										<RefSource>Analysis of Low Cost Sensors Applied to the Detection of Obstacles in High Voltage Towers</RefSource>
+										<RefSource>Analysis of Low Cost Sensors Applied to the Detection of Obstacles
+											in High Voltage Towers</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_13"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1302,7 +1431,8 @@
 							<TocChapter>
 								<TocEntry PageNumber="179">
 									<ExternalRef>
-										<RefSource>Design and Analysis of an Online Update Approach for Embedded Microprocessors</RefSource>
+										<RefSource>Design and Analysis of an Online Update Approach for Embedded
+											Microprocessors</RefSource>
 										<RefTarget TargetType="DOI" Address="10.1007/978-3-031-26500-6_15"/>
 									</ExternalRef>
 								</TocEntry>
@@ -1334,10 +1464,10 @@
 						</TocBack>
 					</Toc>
 				</BodyFrontmatter>
-				
-			<BodyRef FileRef="543965_1_En_BookFrontmatter_OnlinePDF.pdf" TargetType="OnlinePDF" PDFType="Typeset"/>
-	</BookFrontmatter>
+
+				<BodyRef FileRef="543965_1_En_BookFrontmatter_OnlinePDF.pdf" TargetType="OnlinePDF" PDFType="Typeset"/>
+			</BookFrontmatter>
 		</Book>
-	
-</Series>
+
+	</Series>
 </Publisher>
