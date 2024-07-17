@@ -3355,6 +3355,7 @@
                                     <rng:ref name="Ethics"/>
                                     <rng:ref name="FundingInformation"/>
                                     <rng:ref name="AuthorContribution"/>
+                                    <rng:ref name="DataAvailability"/>
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
@@ -3397,6 +3398,17 @@
                                     <rng:ref name="FormalPara"/>
                                 </rng:oneOrMore>
                             </rng:choice>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="DataAvailability">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="Heading"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="SimplePara"/>
+                            </rng:oneOrMore>
                         </content>
                     </elementSpec>
 
@@ -7556,6 +7568,11 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                         </content>
                         <attList>
                             <attDef ident="columnspacing">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="columnlines">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
