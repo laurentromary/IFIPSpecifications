@@ -1,8 +1,8 @@
 
 <!--
-DTD generated from ODD source 2024-07-17T14:00:21Z. .CC-BY
-TEI Edition: P5 Version 4.8.0. Last updated on 8th July 2024, revision 1f9891a87 
-TEI Edition Location: https://www.tei-c.org/Vault/P5/4.8.0/
+DTD generated from ODD source 2025-05-07T13:58:51Z. .CC-BY
+TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
+TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
 
 -->
 
@@ -1093,6 +1093,7 @@ PartFrontmatterElectronicPDF CDATA #IMPLIED
 PartFrontmatterManuscripts CDATA #IMPLIED
 PartFrontmatterXML CDATA #IMPLIED
 Pit-Stop-Reports CDATA #IMPLIED
+ReferencePDF CDATA #IMPLIED
 TocElectronicPDF CDATA #IMPLIED
 AuthorshipChangeRequestForm CDATA #IMPLIED
 PeerReviewPDFs CDATA #IMPLIED >

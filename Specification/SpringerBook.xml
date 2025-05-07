@@ -3400,7 +3400,7 @@
                             </rng:choice>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="DataAvailability">
                         <classes>
                             <memberOf key="att.Typed"/>
@@ -3789,7 +3789,7 @@
                             <rng:text/>
                         </content>
                     </elementSpec>
-                    
+
                     <elementSpec ident="InstitutionalEditor">
                         <classes>
                             <memberOf key="att.ID"/>
@@ -3820,8 +3820,8 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
-                    
+
+
                     <elementSpec ident="InstitutionalEditorName">
                         <content>
                             <rng:text/>
@@ -5882,6 +5882,11 @@ ProofInfo?, FilesToSupplier, Deliverables, DispatcherAddress?, FilesToPublisher 
                                 </datatype>
                             </attDef>
                             <attDef ident="Pit-Stop-Reports">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            <attDef ident="ReferencePDF">
                                 <datatype>
                                     <rng:text/>
                                 </datatype>
